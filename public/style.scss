@@ -9,7 +9,7 @@
     h1,h2,h3,h4,h5,h6{
         font-family: Josefin Sans;
     }
-    p{
+    p, button{
         font-family: Urbanist;
     }
     .screen {
@@ -17,7 +17,7 @@
         width: 100%;
         height: 100vh;
     }
-    i{
+    i, button{
         cursor: pointer;
     }
     .mainPage{
@@ -80,6 +80,44 @@
                     }
 
                 }
+                .textAndBtnsCon{
+                    width: 100%;
+                    .textCon{
+                        h1{
+                            font-size: 64px;
+                            font-weight: 700;
+                        }
+                        p{
+                            font-size: 24px;
+                            font-weight: 300;
+                            margin-top: 10px;
+                        }
+                    }
+                    .btnsCon{
+                        width: 565px;
+                        display: flex;
+                        justify-content: space-between;
+                        button{
+                            width: 243px;
+                            height: 89px;
+                            border-radius: 15px;
+                            border: 2px #fff solid;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            font-size: 32px;
+                            font-weight: 300;
+                            background-color: #ffffff00;
+                            color: #fff;
+                            transition: 0.5s ease-in-out;
+                        }
+                        button:hover{
+                            background-color: #fff;
+                            color: #45474B;
+                        }
+                    }
+                }
+
             }
         }
     }
