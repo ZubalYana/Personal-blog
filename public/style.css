@@ -56,6 +56,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  height: 5vh;
 }
 .wrap .mainPage .greeting .greeting_elements .header .logo {
   width: 195px;
@@ -131,9 +132,81 @@
   width: 100%;
   min-height: 100vh;
   display: none;
+  padding: 40px;
+}
+.wrap .blogPage .header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: #45474B;
+  align-items: flex-end;
+  height: 5vh;
+}
+.wrap .blogPage .header .logo {
+  width: 195px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 32px;
+  font-weight: 600;
+}
+.wrap .blogPage .header .nav {
+  width: 317px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
+  font-weight: 300;
+}
+.wrap .blogPage .header .nav .navEl {
+  cursor: pointer;
+  font-family: Urbanist;
+}
+.wrap .blogPage .header .nav .active {
+  font-weight: 500;
+}
+.wrap .blogPage .header .iconsCon {
+  width: 112px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 32px;
 }
 .wrap .helpPage {
   width: 100%;
   min-height: 100vh;
   display: none;
+  padding: 40px;
+}
+.wrap .helpPage .header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: #45474B;
+  align-items: flex-end;
+  height: 5vh;
+}
+.wrap .helpPage .header .logo {
+  width: 195px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 32px;
+  font-weight: 600;
+}
+.wrap .helpPage .header .nav {
+  width: 317px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
+  font-weight: 300;
+}
+.wrap .helpPage .header .nav .navEl {
+  cursor: pointer;
+  font-family: Urbanist;
+}
+.wrap .helpPage .header .nav .active {
+  font-weight: 500;
+}
+.wrap .helpPage .header .iconsCon {
+  width: 112px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 32px;
 }/*# sourceMappingURL=style.css.map */

@@ -52,6 +52,7 @@
                     display: flex;
                     justify-content: space-between;
                     align-items: flex-end;
+                    height: 5vh;
                     .logo{
                         width: 195px;
                         display: flex;
@@ -134,11 +135,85 @@
         width: 100%;
         min-height: 100vh;
         display: none;
+        padding: 40px;
+        .header{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            color: #45474B;
+            align-items: flex-end;
+            height: 5vh;
+            .logo{
+                width: 195px;
+                display: flex;
+                justify-content: space-between;
+                font-size: 32px;
+                font-weight: 600;
+            }
+            .nav{
+                width: 317px;
+                display: flex;
+                justify-content: space-between;
+                font-size: 24px;
+                font-weight: 300;
+                .navEl{
+                    cursor: pointer;
+                    font-family: Urbanist;
+                }
+                .active{
+                    font-weight: 500;
+                }
+            }
+            .iconsCon{
+                width: 112px;
+                display: flex;
+                justify-content: space-between;
+                font-size: 32px;
+            }
+
+        }
     }
     .helpPage{
         width: 100%;
         min-height: 100vh;
         display: none;
+        padding: 40px;
+        .header{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            color: #45474B;
+            align-items: flex-end;
+            height: 5vh;
+            .logo{
+                width: 195px;
+                display: flex;
+                justify-content: space-between;
+                font-size: 32px;
+                font-weight: 600;
+            }
+            .nav{
+                width: 317px;
+                display: flex;
+                justify-content: space-between;
+                font-size: 24px;
+                font-weight: 300;
+                .navEl{
+                    cursor: pointer;
+                    font-family: Urbanist;
+                }
+                .active{
+                    font-weight: 500;
+                }
+            }
+            .iconsCon{
+                width: 112px;
+                display: flex;
+                justify-content: space-between;
+                font-size: 32px;
+            }
+
+        }
     }
 }
 
