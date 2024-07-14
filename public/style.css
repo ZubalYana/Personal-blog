@@ -98,11 +98,13 @@
   font-size: 24px;
   font-weight: 300;
   margin-top: 10px;
+  width: 832px;
 }
 .wrap .mainPage .greeting .greeting_elements .textAndBtnsCon .btnsCon {
   width: 565px;
   display: flex;
   justify-content: space-between;
+  margin-top: 40px;
 }
 .wrap .mainPage .greeting .greeting_elements .textAndBtnsCon .btnsCon button {
   width: 243px;
