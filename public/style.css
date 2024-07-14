@@ -83,6 +83,12 @@
 }
 .wrap .mainPage .greeting .greeting_elements .textAndBtnsCon {
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  height: 88vh;
 }
 .wrap .mainPage .greeting .greeting_elements .textAndBtnsCon .textCon h1 {
   font-size: 64px;
