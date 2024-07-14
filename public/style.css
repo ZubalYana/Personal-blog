@@ -35,4 +35,46 @@
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.5254901961);
+}
+.wrap .mainPage .greeting .greeting_elements {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 40px;
+  color: #fff;
+}
+.wrap .mainPage .greeting .greeting_elements .header {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.wrap .mainPage .greeting .greeting_elements .header .logo {
+  width: 172px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 32px;
+  font-weight: 600;
+}
+.wrap .mainPage .greeting .greeting_elements .header .nav {
+  width: 317px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
+  font-weight: 300;
+}
+.wrap .mainPage .greeting .greeting_elements .header .nav .navEl {
+  cursor: pointer;
+}
+.wrap .mainPage .greeting .greeting_elements .header .nav .active {
+  font-weight: 400;
+}
+.wrap .mainPage .greeting .greeting_elements .header .iconsCon {
+  width: 112px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 32px;
 }/*# sourceMappingURL=style.css.map */

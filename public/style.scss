@@ -35,6 +35,49 @@
                 left: 0;
                 background-color: #00000086;
             }
+            .greeting_elements{
+                width: 100%;
+                height: 100vh;
+                position: absolute;
+                top: 0;
+                left: 0;
+                padding: 40px;
+                color: #fff;
+                .header{
+                    width: 100%;
+                    height: 10vh;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-end;
+                    .logo{
+                        width: 172px;
+                        display: flex;
+                        justify-content: space-between;
+                        font-size: 32px;
+                        font-weight: 600;
+                    }
+                    .nav{
+                        width: 317px;
+                        display: flex;
+                        justify-content: space-between;
+                        font-size: 24px;
+                        font-weight: 300;
+                        .navEl{
+                            cursor: pointer;
+                        }
+                        .active{
+                            font-weight: 400;
+                        }
+                    }
+                    .iconsCon{
+                        width: 112px;
+                        display: flex;
+                        justify-content: space-between;
+                        font-size: 32px;
+                    }
+
+                }
+            }
         }
     }
 }
