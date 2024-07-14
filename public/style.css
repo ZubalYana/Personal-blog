@@ -22,6 +22,9 @@
 .wrap i, .wrap button {
   cursor: pointer;
 }
+.wrap .mainPage {
+  width: 100%;
+}
 .wrap .mainPage .greeting .background-video {
   position: absolute;
   top: 0;
@@ -123,4 +126,14 @@
 .wrap .mainPage .greeting .greeting_elements .textAndBtnsCon .btnsCon button:hover {
   background-color: #fff;
   color: #45474B;
+}
+.wrap .blogPage {
+  width: 100%;
+  min-height: 100vh;
+  display: none;
+}
+.wrap .helpPage {
+  width: 100%;
+  min-height: 100vh;
+  display: none;
 }/*# sourceMappingURL=style.css.map */

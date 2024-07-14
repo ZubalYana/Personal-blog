@@ -21,6 +21,7 @@
         cursor: pointer;
     }
     .mainPage{
+        width: 100%;
         .greeting{
             .background-video {
                 position: absolute;
@@ -128,6 +129,16 @@
 
             }
         }
+    }
+    .blogPage{
+        width: 100%;
+        min-height: 100vh;
+        display: none;
+    }
+    .helpPage{
+        width: 100%;
+        min-height: 100vh;
+        display: none;
     }
 }
 
