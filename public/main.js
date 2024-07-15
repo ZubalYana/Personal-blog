@@ -43,3 +43,12 @@ $('.help').click(() => {
                 }, 100);
             }, 100);
         });
+
+        $('.icon').hover(
+            function() {
+                $(this).css('color', '#4F6F52');
+            }, 
+            function() {
+                $(this).css('color', '#45474B');
+            }
+        );
