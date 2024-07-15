@@ -179,9 +179,10 @@
         display: none;
         padding: 40px 40px 0 40px;
         flex-direction: column;
+        overflow: hidden;
         .helpArrow{
             position: absolute;
-            bottom: -60px;
+            bottom: 0px;
             left: 160px;
             width: 862px;
             z-index: 1;
