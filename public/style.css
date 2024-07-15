@@ -228,16 +228,20 @@
 .wrap .helpPage .content .info p {
   font-size: 24px;
   font-weight: 300;
+  margin: 10px 0 30px 0;
 }
 .wrap .helpPage .content .info h6 {
   font-size: 24px;
-  font-weight: italic;
+  font-weight: 500;
+  font-style: italic;
+  margin-top: 12px;
 }
 .wrap .helpPage .content .info .icons {
   width: 270px;
   display: flex;
   justify-content: space-between;
   font-size: 40px;
+  margin-top: 30px;
 }
 .wrap .helpPage .content .info .icons a {
   color: #45474B;
