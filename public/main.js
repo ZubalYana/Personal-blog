@@ -44,11 +44,19 @@ $('.help').click(() => {
             }, 100);
         });
 
-        $('i').hover(
+        $('.icon').hover(
             function() {
                 $(this).css('color', '#4F6F52');
             }, 
             function() {
                 $(this).css('color', '#45474B');
+            }
+        );
+        $('.iconWhite').hover(
+            function() {
+                $(this).css('color', '#4F6F52');
+            }, 
+            function() {
+                $(this).css('color', '#fff');
             }
         );
