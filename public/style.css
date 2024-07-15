@@ -21,6 +21,7 @@
 }
 .wrap i, .wrap button {
   cursor: pointer;
+  transition: 0.5s ease-in-out;
 }
 .wrap .mainPage {
   width: 100%;
@@ -260,6 +261,7 @@
 }
 .wrap .helpPage .content .info .icons i {
   cursor: pointer;
+  transition: 0.3s ease-in-out;
 }
 .wrap .helpPage .content .compassCon {
   width: 50%;

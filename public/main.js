@@ -44,7 +44,7 @@ $('.help').click(() => {
             }, 100);
         });
 
-        $('.icon').hover(
+        $('i').hover(
             function() {
                 $(this).css('color', '#4F6F52');
             }, 
