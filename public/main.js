@@ -16,17 +16,14 @@ $('.help').click(() => {
 });
 $('.helpCompass').css('transform', 'rotate(0deg)');
 
-// Hover event to rotate to 35 degrees
 $('.helpCompass').hover(
     function() {
-        $(this).css('transform', 'rotate(35deg)');
+        $(this).css('transform', 'rotate(-50deg)');
     }, 
     function() {
         $(this).css('transform', 'rotate(0deg)');
     }
 );
-
-// Click event to rotate to 58 degrees
 $('.helpCompass').click(function() {
-    $(this).css('transform', 'rotate(58deg)');
+    $(this).css('transform', 'rotate(-300deg)');
 });
