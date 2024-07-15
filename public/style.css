@@ -224,9 +224,12 @@
   bottom: -100px;
   left: 140px;
   width: 862px;
+  z-index: 1;
 }
 .wrap .helpPage .content .info {
   width: 50%;
+  position: relative;
+  z-index: 9999;
 }
 .wrap .helpPage .content .info h2 {
   font-size: 64px;
