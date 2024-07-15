@@ -178,6 +178,7 @@
         min-height: 100vh;
         display: none;
         padding: 40px;
+        flex-direction: column;
         .header{
             width: 100%;
             display: flex;
@@ -213,6 +214,49 @@
                 font-size: 32px;
             }
 
+        }
+        .content{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            color: #45474B;
+            margin-top: 75px;
+            .info{
+                width: 50%;
+                h2{
+                    font-size: 64px;
+                    font-weight: 700;
+                }
+                p{
+                    font-size: 24px;
+                    font-weight: 300;
+                }
+                h6{
+                    font-size: 24px;
+                    font-weight: italic;
+                }
+                .icons{
+                    width: 270px;
+                    display: flex;
+                    justify-content: space-between;
+                    font-size: 40px;
+                    a{
+                        color: #45474B;
+                        text-decoration: none;
+                    }
+                    i{
+                        cursor: pointer;
+                    }
+                }
+            }
+            .compassCon{
+                width: 50%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 130px;
+            }
         }
     }
 }
