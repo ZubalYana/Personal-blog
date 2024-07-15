@@ -173,8 +173,15 @@
   width: 100%;
   min-height: 100vh;
   display: none;
-  padding: 40px;
+  padding: 40px 40px 0 40px;
   flex-direction: column;
+}
+.wrap .helpPage .helpArrow {
+  position: absolute;
+  bottom: 0px;
+  left: 140px;
+  width: 862px;
+  z-index: 1;
 }
 .wrap .helpPage .header {
   width: 100%;
@@ -218,13 +225,6 @@
   color: #45474B;
   margin-top: 75px;
   position: relative;
-}
-.wrap .helpPage .content .helpArrow {
-  position: absolute;
-  bottom: -100px;
-  left: 140px;
-  width: 862px;
-  z-index: 1;
 }
 .wrap .helpPage .content .info {
   width: 50%;

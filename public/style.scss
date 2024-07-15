@@ -177,8 +177,15 @@
         width: 100%;
         min-height: 100vh;
         display: none;
-        padding: 40px;
+        padding: 40px 40px 0 40px;
         flex-direction: column;
+        .helpArrow{
+            position: absolute;
+            bottom: 0px;
+            left: 140px;
+            width: 862px;
+            z-index: 1;
+        }
         .header{
             width: 100%;
             display: flex;
@@ -222,13 +229,7 @@
             color: #45474B;
             margin-top: 75px;
             position: relative;
-            .helpArrow{
-                position: absolute;
-                bottom: -100px;
-                left: 140px;
-                width: 862px;
-                z-index: 1;
-            }
+
             .info{
                 width: 50%;
                 position: relative;
