@@ -14,16 +14,32 @@ $('.help').click(() => {
     $('.blogPage').css('display', 'none');
     $('.helpPage').css('display', 'flex');
 });
-$('.helpCompass').css('transform', 'rotate(0deg)');
+        $('.helpCompass').css('transform', 'rotate(0deg)');
 
-$('.helpCompass').hover(
-    function() {
-        $(this).css('transform', 'rotate(-50deg)');
-    }, 
-    function() {
-        $(this).css('transform', 'rotate(0deg)');
-    }
-);
-$('.helpCompass').click(function() {
-    $(this).css('transform', 'rotate(-300deg)');
-});
+        $('.helpCompass').hover(
+            function() {
+                $(this).css('transform', 'rotate(-50deg)');
+            }, 
+            function() {
+                $(this).css('transform', 'rotate(0deg)');
+            }
+        );
+
+        $('.helpCompass').click(function() {
+            var $this = $(this);
+            $this.css('transition', 'transform 0.1s ease');
+            $this.css('transform', 'rotate(-300deg)');
+            setTimeout(function() {
+                $this.css('transform', 'rotate(-200deg)');
+                setTimeout(function() {
+                    $this.css('transform', 'rotate(-250deg)');
+                    setTimeout(function() {
+                        $this.css('transform', 'rotate(-220deg)');
+                        setTimeout(function() {
+                            $this.css('transition', 'transform 0.3s ease');
+                            $this.css('transform', 'rotate(-50deg)');
+                        }, 100);
+                    }, 100);
+                }, 100);
+            }, 100);
+        });
