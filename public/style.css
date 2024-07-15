@@ -252,9 +252,9 @@
 }
 .wrap .helpPage .content .compassCon {
   width: 50%;
-  height: 100%;
+  height: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 130px;
+  font-size: 320px;
 }/*# sourceMappingURL=style.css.map */
