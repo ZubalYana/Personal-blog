@@ -217,6 +217,13 @@
   justify-content: space-between;
   color: #45474B;
   margin-top: 75px;
+  position: relative;
+}
+.wrap .helpPage .content .helpArrow {
+  position: absolute;
+  bottom: -100px;
+  left: 140px;
+  width: 862px;
 }
 .wrap .helpPage .content .info {
   width: 50%;

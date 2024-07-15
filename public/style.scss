@@ -221,6 +221,13 @@
             justify-content: space-between;
             color: #45474B;
             margin-top: 75px;
+            position: relative;
+            .helpArrow{
+                position: absolute;
+                bottom: -100px;
+                left: 140px;
+                width: 862px;
+            }
             .info{
                 width: 50%;
                 h2{
