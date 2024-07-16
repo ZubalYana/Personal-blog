@@ -77,12 +77,6 @@
 .wrap .registration .registrationForm .forms .registrationFormLeft .nameAndLastname .formGroup {
   width: 265px;
 }
-.wrap .registration .registrationForm .forms .registrationFormLeft .profile-picture {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 20px;
-}
 .wrap .registration .registrationForm .forms .registrationFormLeft .profile-picture label {
   cursor: pointer;
   display: block;
