@@ -76,6 +76,33 @@
                             }
                 
                         }
+                        .profile-picture {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            margin-bottom: 20px;
+                        
+                            label {
+                                cursor: pointer;
+                                display: block;
+                                width: 57px; 
+                                height: 57px; 
+                                border-radius: 50%;
+                                overflow: hidden;
+                                border: 1px solid #45474B; 
+                        
+                                img {
+                                    width: 100%;
+                                    height: 100%;
+                                    object-fit: cover;
+                                }
+                            }
+                        
+                            input[type="file"] {
+                                display: none;
+                            }
+                        }
+                        
                     }
                     .registrationFormRight{
                         width: 48%;

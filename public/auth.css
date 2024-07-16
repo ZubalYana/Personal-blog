@@ -77,6 +77,30 @@
 .wrap .registration .registrationForm .forms .registrationFormLeft .nameAndLastname .formGroup {
   width: 265px;
 }
+.wrap .registration .registrationForm .forms .registrationFormLeft .profile-picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.wrap .registration .registrationForm .forms .registrationFormLeft .profile-picture label {
+  cursor: pointer;
+  display: block;
+  width: 57px;
+  height: 57px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid #45474B;
+}
+.wrap .registration .registrationForm .forms .registrationFormLeft .profile-picture label img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.wrap .registration .registrationForm .forms .registrationFormLeft .profile-picture input[type=file] {
+  display: none;
+}
 .wrap .registration .registrationForm .forms .registrationFormRight {
   width: 48%;
 }/*# sourceMappingURL=auth.css.map */
