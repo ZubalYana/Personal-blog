@@ -7,6 +7,13 @@ const path = require('path');
 const app = express();
 const PORT = 3000;
 const JWT_SECRET = 'your_jwt_secret';
+
+mongoose.connect('mongodb+srv://root:ykuBxov2UUP7OPjI@cluster0.5ebgrqy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', { useNewUrlParser: true, useUnifiedTopology: true })
+    .then(() => {
+        console.log('Mongo connect');
+    })
+
+
 app.use(express.static(path.join(__dirname, 'public')))
 app.get('/', (req, res)=>{
     res.sendFile(__dirname, 'public', 'index.html')
