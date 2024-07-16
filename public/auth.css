@@ -39,4 +39,19 @@
   font-weight: 300;
   width: 646px;
   text-align: center;
+}
+.wrap .registration .registrationForm {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.wrap .registration .registrationForm .formGroup {
+  display: flex;
+  flex-direction: column;
+}
+.wrap .registration .registrationForm .formGroup label {
+  font-size: 14px;
+  font-weight: 300;
+  font-family: Urbanist;
+  color: #45474B;
 }/*# sourceMappingURL=auth.css.map */

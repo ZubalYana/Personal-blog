@@ -38,7 +38,11 @@
             width: 646px;
             text-align: center;
         }
-        // .profile-picture {
+        .registrationForm{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+                    // .profile-picture {
         //     display: flex;
         //     justify-content: center;
         //     align-items: center;
@@ -64,6 +68,19 @@
         //         display: none;
         //     }
         // }
+        .formGroup{
+            display: flex;
+            flex-direction: column;
+            label{
+                font-size: 14px;
+                font-weight: 300;
+                font-family: Urbanist;
+                color: #45474B;
+            }
+            #firstName, #lastName{}
+        }
+        }
+
         
     }
 
