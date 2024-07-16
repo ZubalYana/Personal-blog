@@ -88,9 +88,8 @@ const authMiddleware = (req, res, next) => {
 
 //public endpoint 
 app.get('/auth', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+    res.sendFile(path.join(__dirname, 'public', 'auth.html'));
 });
-
 
 app.get('/', (req, res)=>{
     res.sendFile(__dirname, 'public', 'index.html')
