@@ -13,13 +13,18 @@ mongoose.connect('mongodb+srv://root:ykuBxov2UUP7OPjI@cluster0.5ebgrqy.mongodb.n
         console.log('Mongo connect');
     })
 
-    const userSchema = new mongoose.Schema({
-        username: { type: String, required: true, unique: true },
-        password: { type: String, required: true }
-    });
+const userSchema = new mongoose.Schema({
+    username: { type: String, required: true, unique: true },
+    password: { type: String, required: true }
+});
     
-    const User = mongoose.model('User', userSchema);
+const User = mongoose.model('User', userSchema);
     
+app.use(express.json());
+app.use(cookieParser());
+app.use(express.static('public'));
+
+
 app.use(express.static(path.join(__dirname, 'public')))
 app.get('/', (req, res)=>{
     res.sendFile(__dirname, 'public', 'index.html')
