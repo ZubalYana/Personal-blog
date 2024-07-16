@@ -54,6 +54,7 @@
 .wrap .registration .registrationForm .forms .formGroup {
   display: flex;
   flex-direction: column;
+  margin-top: 10px;
 }
 .wrap .registration .registrationForm .forms .formGroup label {
   font-size: 14px;
@@ -74,7 +75,7 @@
   justify-content: space-between;
 }
 .wrap .registration .registrationForm .forms .registrationFormLeft .nameAndLastname .formGroup {
-  width: 204px;
+  width: 265px;
 }
 .wrap .registration .registrationForm .forms .registrationFormRight {
   width: 48%;
