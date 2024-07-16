@@ -40,34 +40,41 @@
   width: 646px;
   text-align: center;
 }
-.wrap .registration .forms {
+.wrap .registration .registrationForm {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wrap .registration .registrationForm .forms {
   width: 100%;
   display: flex;
 }
-.wrap .registration .forms .registrationForm {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-.wrap .registration .forms .registrationForm .nameAndLastname {
-  display: flex;
-  justify-content: space-between;
-}
-.wrap .registration .forms .registrationForm .nameAndLastname #firstName, .wrap .registration .forms .registrationForm .nameAndLastname #lastName {
-  width: 204px;
-}
-.wrap .registration .forms .registrationForm .formGroup {
+.wrap .registration .registrationForm .forms .formGroup {
   display: flex;
   flex-direction: column;
 }
-.wrap .registration .forms .registrationForm .formGroup label {
+.wrap .registration .registrationForm .forms .formGroup label {
   font-size: 14px;
   font-weight: 300;
   font-family: Urbanist;
   color: #45474B;
 }
-.wrap .registration .forms .registrationForm .formGroup input {
+.wrap .registration .registrationForm .forms .formGroup input {
   border: 1px #45474B solid;
   border-radius: 15px;
   height: 57px;
+}
+.wrap .registration .registrationForm .forms .registrationFormLeft {
+  width: 50%;
+}
+.wrap .registration .registrationForm .forms .registrationFormLeft .nameAndLastname {
+  display: flex;
+  justify-content: space-between;
+}
+.wrap .registration .registrationForm .forms .registrationFormLeft .nameAndLastname .formGroup {
+  width: 204px;
+}
+.wrap .registration .registrationForm .forms .registrationFormRight {
+  width: 50%;
 }/*# sourceMappingURL=auth.css.map */
