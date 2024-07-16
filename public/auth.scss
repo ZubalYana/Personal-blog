@@ -21,5 +21,26 @@
         cursor: pointer;
         transition: 0.5s ease-in-out;
     }
+    .registration{
+        width: 80%;
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .profile-picture {
+            grid-column: 1 / -1;
+            text-align: center;
+            img {
+                border-radius: 50%;
+                width: 100px;
+                height: 100px;
+                object-fit: cover;
+            }
+
+            input[type="file"] {
+                display: none;
+            }
+        }
+    }
 
 }

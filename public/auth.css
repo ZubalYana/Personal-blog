@@ -21,4 +21,25 @@
 .wrap i, .wrap button {
   cursor: pointer;
   transition: 0.5s ease-in-out;
+}
+.wrap .registration {
+  width: 80%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wrap .registration .profile-picture {
+  grid-column: 1/-1;
+  text-align: center;
+}
+.wrap .registration .profile-picture img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.wrap .registration .profile-picture input[type=file] {
+  display: none;
 }/*# sourceMappingURL=auth.css.map */
