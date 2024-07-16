@@ -104,4 +104,28 @@
 }
 .wrap .registration .registrationForm .forms .registrationFormRight {
   width: 48%;
+}
+.wrap .registration .registrationForm .buttons {
+  width: 380px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.wrap .registration .registrationForm .buttons button {
+  width: 160px;
+  height: 74px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 600;
+  border: 1px #45474B solid;
+  color: #45474B;
+}
+.wrap .registration .registrationForm .buttons .loginButton {
+  background-color: #fff;
+}
+.wrap .registration .registrationForm .buttons .signinButton {
+  background-color: #F5EFE6;
 }/*# sourceMappingURL=auth.css.map */

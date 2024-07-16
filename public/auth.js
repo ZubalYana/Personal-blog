@@ -6,11 +6,10 @@ document.getElementById('profile-pic').addEventListener('change', function(event
             const img = new Image();
             img.onload = function() {
                 const canvas = document.createElement('canvas');
-                const max_size = 100; // Adjust this value as needed
+                const max_size = 100; 
                 let width = img.width;
                 let height = img.height;
 
-                // Calculate the new dimensions
                 if (width > height) {
                     if (width > max_size) {
                         height *= max_size / width;
@@ -23,13 +22,11 @@ document.getElementById('profile-pic').addEventListener('change', function(event
                     }
                 }
 
-                // Resize the image using canvas
                 canvas.width = width;
                 canvas.height = height;
                 const ctx = canvas.getContext('2d');
                 ctx.drawImage(img, 0, 0, width, height);
 
-                // Convert the canvas back to a data URL
                 const resizedDataUrl = canvas.toDataURL('image/jpeg');
                 document.getElementById('profile-pic-preview').src = resizedDataUrl;
             };

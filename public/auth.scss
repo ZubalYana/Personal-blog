@@ -114,7 +114,30 @@
 
 
 
-            
+            .buttons{
+                width: 380px;
+                display: flex;
+                justify-content: space-between;
+                margin-top: 10px;
+                button{
+                    width: 160px;
+                    height: 74px;
+                    border-radius: 15px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 24px;
+                    font-weight: 600;
+                    border: 1px #45474B solid;
+                    color: #45474B;
+                }
+                .loginButton{
+                    background-color: #fff;
+                }
+                .signinButton{
+                    background-color: #F5EFE6;
+                }
+            }
         }
 
 
