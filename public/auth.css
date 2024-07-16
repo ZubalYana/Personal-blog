@@ -17,4 +17,78 @@
 .wrap i, .wrap button {
   cursor: pointer;
   transition: 0.5s ease-in-out;
+}
+.wrap .registration-container {
+  background-color: #fff;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  padding: 40px;
+}
+.wrap .registration-container h1 {
+  margin-bottom: 1rem;
+}
+.wrap .registration-container p {
+  margin-bottom: 2rem;
+  color: #666;
+}
+.wrap .registration-container .registration-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.wrap .registration-container .registration-form .profile-picture {
+  grid-column: 1/-1;
+  text-align: center;
+}
+.wrap .registration-container .registration-form .profile-picture img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.wrap .registration-container .registration-form .profile-picture input[type=file] {
+  display: none;
+}
+.wrap .registration-container .registration-form .form-group {
+  display: flex;
+  flex-direction: column;
+}
+.wrap .registration-container .registration-form .form-group label {
+  margin-bottom: 0.5rem;
+}
+.wrap .registration-container .registration-form .form-group input, .wrap .registration-container .registration-form .form-group textarea {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+.wrap .registration-container .registration-form .form-group textarea {
+  resize: vertical;
+}
+.wrap .registration-container .registration-form .form-group p {
+  font-size: 0.8rem;
+  color: #999;
+  margin-top: 0.5rem;
+}
+.wrap .registration-container .registration-form .buttons {
+  grid-column: 1/-1;
+  display: flex;
+  justify-content: space-between;
+}
+.wrap .registration-container .registration-form .buttons .login-button, .wrap .registration-container .registration-form .buttons .signin-button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.wrap .registration-container .registration-form .buttons .login-button {
+  background-color: #ccc;
+  color: #333;
+}
+.wrap .registration-container .registration-form .buttons .signin-button {
+  background-color: #007bff;
+  color: #fff;
 }/*# sourceMappingURL=auth.css.map */
