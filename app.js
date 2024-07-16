@@ -70,6 +70,21 @@ app.post('/auth/logout', (req, res) => {
     res.status(200).json({ message: 'Logged out successfully' });
 });
 
+const authMiddleware = (req, res, next) => {
+    const token = req.cookies.token;
+    if (!token) {
+        return res.status(401).json({ message: 'Unauthorized' });
+    }
+
+    try {
+        const decoded = jwt.verify(token, JWT_SECRET);
+        req.userId = decoded.userId;
+        next();
+    } catch (error) {
+        res.status(401).json({ message: 'Unauthorized' });
+    }
+};
+
 app.use(express.static(path.join(__dirname, 'public')))
 app.get('/', (req, res)=>{
     res.sendFile(__dirname, 'public', 'index.html')
