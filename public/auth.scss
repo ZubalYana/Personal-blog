@@ -105,6 +105,16 @@
                                 display: none;
                             }
                         }
+                        .passwordRules{
+                            display: flex;
+                            font-size: 14px;
+                            font-weight: 300;
+                            font-family: Urbanist;
+                            margin-top: 10px;
+                            .passwordRule{
+                                margin: 0 2px;
+                            }
+                        }
                         
                     }
                     .registrationFormRight{

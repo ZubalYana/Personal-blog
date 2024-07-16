@@ -102,6 +102,16 @@
 .wrap .registration .registrationForm .forms .registrationFormLeft .profile-picture input[type=file] {
   display: none;
 }
+.wrap .registration .registrationForm .forms .registrationFormLeft .passwordRules {
+  display: flex;
+  font-size: 14px;
+  font-weight: 300;
+  font-family: Urbanist;
+  margin-top: 10px;
+}
+.wrap .registration .registrationForm .forms .registrationFormLeft .passwordRules .passwordRule {
+  margin: 0 2px;
+}
 .wrap .registration .registrationForm .forms .registrationFormRight {
   width: 48%;
 }
