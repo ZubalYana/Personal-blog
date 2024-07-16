@@ -67,6 +67,12 @@
   border-radius: 15px;
   height: 57px;
 }
+.wrap .registration .registrationForm .forms .formGroup textarea {
+  border: 1px #45474B solid;
+  border-radius: 15px;
+  height: 76px;
+  resize: none;
+}
 .wrap .registration .registrationForm .forms .registrationFormLeft {
   width: 48%;
 }
