@@ -64,6 +64,12 @@ app.post('/auth/login', async (req, res) => {
     res.status(200).json({ message: 'Logged in successfully' });
 });
 
+//user logout
+app.post('/auth/logout', (req, res) => {
+    res.clearCookie('token');
+    res.status(200).json({ message: 'Logged out successfully' });
+});
+
 app.use(express.static(path.join(__dirname, 'public')))
 app.get('/', (req, res)=>{
     res.sendFile(__dirname, 'public', 'index.html')
