@@ -47,6 +47,7 @@
                 .forms{
                     width: 100%;
                     display: flex;
+                    justify-content: space-between;
                     .formGroup{
                         display: flex;
                         flex-direction: column;
@@ -64,7 +65,7 @@
             
                     }
                     .registrationFormLeft{
-                        width: 50%;
+                        width: 48%;
                         .nameAndLastname{
                             display: flex;
                             justify-content: space-between;
@@ -75,7 +76,7 @@
                         }
                     }
                     .registrationFormRight{
-                        width: 50%;
+                        width: 48%;
                     }
                 }
 
