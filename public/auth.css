@@ -40,18 +40,34 @@
   width: 646px;
   text-align: center;
 }
-.wrap .registration .registrationForm {
+.wrap .registration .forms {
+  width: 100%;
+  display: flex;
+}
+.wrap .registration .forms .registrationForm {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
-.wrap .registration .registrationForm .formGroup {
+.wrap .registration .forms .registrationForm .nameAndLastname {
+  display: flex;
+  justify-content: space-between;
+}
+.wrap .registration .forms .registrationForm .nameAndLastname #firstName, .wrap .registration .forms .registrationForm .nameAndLastname #lastName {
+  width: 204px;
+}
+.wrap .registration .forms .registrationForm .formGroup {
   display: flex;
   flex-direction: column;
 }
-.wrap .registration .registrationForm .formGroup label {
+.wrap .registration .forms .registrationForm .formGroup label {
   font-size: 14px;
   font-weight: 300;
   font-family: Urbanist;
   color: #45474B;
+}
+.wrap .registration .forms .registrationForm .formGroup input {
+  border: 1px #45474B solid;
+  border-radius: 15px;
+  height: 57px;
 }/*# sourceMappingURL=auth.css.map */

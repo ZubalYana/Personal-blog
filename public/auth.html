@@ -17,51 +17,59 @@
             <h2>Create your own travel blog with us</h2>
             <p>Let's complete a simple registration and start sharing your excellent travel experience.</p>
             <form class="registrationForm">
-                <div class="registrationFormLeft">
-                    <div class="profile-picture">
-                        <label for="profile-pic">
-                        </label>
-                        <img src="./materials/profile-pic-default.png" alt="Profile Picture" id="profile-pic-preview">
-
-                        <input type="file" id="profile-pic" name="profile-pic" accept="image/*">
+                <div class="forms">
+                    <div class="registrationFormLeft">
+                        <div class="profile-picture">
+                            <label for="profile-pic">
+                            </label>
+                            <img src="./materials/profile-pic-default.png" alt="Profile Picture" id="profile-pic-preview">
+    
+                            <input type="file" id="profile-pic" name="profile-pic" accept="image/*">
+                        </div>
+    
+                        <div class="nameAndLastname">
+                            <div class="formGroup">
+                                <label for="firstName">Name*</label>
+                                <input type="text" id="firstName" name="first-name" required>
+                            </div>
+                            <div class="formGroup">
+                                <label for="lastName">Last name</label>
+                                <input type="text" id="lastName" name="last-name">
+                            </div>
+                        </div>
+    
+                    <div class="formGroup">
+                        <label for="email">Email*</label>
+                        <input type="email" id="email" name="email" required>
                     </div>
-                <div class="formGroup">
-                    <label for="firstName">Name*</label>
-                    <input type="text" id="firstName" name="first-name" required>
+                    <div class="formGroup">
+                        <label for="password">Password*</label>
+                        <input type="password" id="password" name="password" required>
+                        <p>*8-12 characters, big and small letters, numbers, special symbols*</p>
+                    </div>
                 </div>
-                <div class="formGroup">
-                    <label for="lastName">Last name</label>
-                    <input type="text" id="lastName" name="last-name">
+                <div class="registrationFormRight">
+                    <div class="formGroup">
+                        <label for="profileDescription">Profile description (age, nationality, interests)</label>
+                        <textarea id="profileDescription" name="profile-description"></textarea>
+                    </div>
+                    <div class="formGroup">
+                        <label for="placesVisited">Places you've visited</label>
+                        <textarea id="placesVisited" name="places-visited"></textarea>
+                    </div>
+                    <div class="formGroup">
+                        <label for="placesToVisit">Places you want to visit</label>
+                        <textarea id="placesToVisit" name="places-to-visit"></textarea>
+                    </div>
                 </div>
-                <div class="formGroup">
-                    <label for="email">Email*</label>
-                    <input type="email" id="email" name="email" required>
                 </div>
-                <div class="formGroup">
-                    <label for="password">Password*</label>
-                    <input type="password" id="password" name="password" required>
-                    <p>*8-12 characters, big and small letters, numbers, special symbols*</p>
-                </div>
+
+            <div class="buttons">
+                <button type="button" class="login-button">Log in</button>
+                <button type="submit" class="signin-button">Sign in</button>
             </div>
-            <div class="registrationFormRight">
-                <div class="formGroup">
-                    <label for="profileDescription">Profile description (age, nationality, interests)</label>
-                    <textarea id="profileDescription" name="profile-description"></textarea>
-                </div>
-                <div class="formGroup">
-                    <label for="placesVisited">Places you've visited</label>
-                    <textarea id="placesVisited" name="places-visited"></textarea>
-                </div>
-                <div class="formGroup">
-                    <label for="placesToVisit">Places you want to visit</label>
-                    <textarea id="placesToVisit" name="places-to-visit"></textarea>
-                </div>
-            </div>
-                <div class="buttons">
-                    <button type="button" class="login-button">Log in</button>
-                    <button type="submit" class="signin-button">Sign in</button>
-                </div>
             </form>
+            
         </div>
         <div class="logIn"></div>
     </div>
