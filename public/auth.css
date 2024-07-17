@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body {
+  overflow: hidden;
+}
+
 .wrap {
   width: 100%;
   height: 100vh;
@@ -143,4 +147,9 @@
 .wrap .registration .placeCard {
   width: 270px;
   position: absolute;
+}
+.wrap .registration #placeCard1 {
+  transform: rotate(-47deg);
+  right: -130px;
+  top: 450px;
 }/*# sourceMappingURL=auth.css.map */
