@@ -183,4 +183,23 @@ body {
   left: -250px;
   top: 480px;
   z-index: 2;
+}
+.wrap .logIn {
+  width: 80%;
+  height: 80vh;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  color: #45474B;
+  position: relative;
+}
+.wrap .logIn h2 {
+  font-size: 48px;
+  font-weight: 700;
+}
+.wrap .logIn p {
+  font-size: 24px;
+  font-weight: 300;
+  width: 646px;
+  text-align: center;
 }/*# sourceMappingURL=auth.css.map */

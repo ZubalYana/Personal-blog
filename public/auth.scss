@@ -13,7 +13,6 @@ body{
     justify-content: center;
     align-items: center;
     padding: 40px;
-
     h1,h2,h3,h4,h5,h6{
         font-family: Josefin Sans;
     }
@@ -24,7 +23,6 @@ body{
         cursor: pointer;
         transition: 0.5s ease-in-out;
     }
-
     .registration{
         width: 80%;
         height: 80vh;
@@ -194,10 +192,25 @@ body{
             top: 480px;
             z-index: 2;
         }
-
-
-
-        
+    }
+    .logIn{
+        width: 80%;
+        height: 80vh;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        color: #45474B;
+        position: relative;
+        h2{
+            font-size: 48px;
+            font-weight: 700;
+        }
+        p{
+            font-size: 24px;
+            font-weight: 300;
+            width: 646px;
+            text-align: center;
+        }
     }
 
 }
