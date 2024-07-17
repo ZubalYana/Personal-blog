@@ -270,7 +270,12 @@ body{
             box-shadow: 3px 3px 8px #45474bcd;
             cursor: pointer;
         }
-
+        #placeCard9{
+            transform: rotate(57deg);
+            left: -160px;
+            top: 400px;
+            z-index: 3;
+        }
     }
 
 }

@@ -260,4 +260,10 @@ body {
   position: absolute;
   box-shadow: 3px 3px 8px rgba(69, 71, 75, 0.8039215686);
   cursor: pointer;
+}
+.wrap .logIn #placeCard9 {
+  transform: rotate(57deg);
+  left: -160px;
+  top: 400px;
+  z-index: 3;
 }/*# sourceMappingURL=auth.css.map */
