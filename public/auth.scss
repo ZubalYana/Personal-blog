@@ -159,7 +159,14 @@ body{
         #placeCard1{
             transform: rotate(-47deg);
             right: -130px;
-            top: 450px;
+            top: 480px;
+            z-index: 3;
+        }
+        #placeCard2{
+            transform: rotate(-24deg);
+            right: -250px;
+            top: 360px;
+            z-index: 2;
         }
 
 
