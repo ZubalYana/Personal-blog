@@ -27,13 +27,10 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 //user registration
 app.post('/auth/register', async (req, res) => {
-    const { username, password } = req.body;
-    if (!username || !password) {
-        return res.status(400).json({ message: 'Username and password are required' });
-    }
+    const { firstname, lastName, email, password, profileDescription, placesVisited, placesToVisit } = req.body;
 
     const hashedPassword = await bcrypt.hash(password, 10);
-    const user = new User({ username, password: hashedPassword });
+    const user = new User({ firstname, lastName, email, profileDescription, placesVisited, placesToVisit, password: hashedPassword });
 
     try {
         await user.save();
@@ -90,7 +87,6 @@ const authMiddleware = (req, res, next) => {
 app.get('/auth', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'auth.html'));
 });
-
 app.get('/', (req, res)=>{
     res.sendFile(__dirname, 'public', 'index.html')
 })
