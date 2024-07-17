@@ -204,6 +204,12 @@ body {
   text-align: center;
   margin-bottom: 35px;
 }
+.wrap .logIn form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .wrap .logIn form .formGroup {
   display: flex;
   flex-direction: column;
@@ -220,4 +226,32 @@ body {
   border-radius: 15px;
   height: 57px;
   width: 434px;
+}
+.wrap .logIn form .buttons {
+  width: 350px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+}
+.wrap .logIn form .buttons button {
+  width: 160px;
+  height: 74px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 600;
+  border: 1px #45474B solid;
+  color: #45474B;
+}
+.wrap .logIn form .buttons button:hover {
+  background-color: #1A4D2E;
+  color: #fff;
+}
+.wrap .logIn form .buttons .login_signinButton {
+  background-color: #fff;
+}
+.wrap .logIn form .buttons .login_loginButton {
+  background-color: #F5EFE6;
 }/*# sourceMappingURL=auth.css.map */

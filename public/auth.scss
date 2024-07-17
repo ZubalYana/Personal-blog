@@ -213,6 +213,10 @@ body{
             margin-bottom: 35px;
         }
         form{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             .formGroup{
                 display: flex;
                 flex-direction: column;
@@ -229,6 +233,34 @@ body{
                     border-radius: 15px;
                     height: 57px;
                     width: 434px;
+                }
+            }
+            .buttons{
+                width: 350px;
+                display: flex;
+                justify-content: space-between;
+                margin-top: 60px;
+                button{
+                    width: 160px;
+                    height: 74px;
+                    border-radius: 15px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 24px;
+                    font-weight: 600;
+                    border: 1px #45474B solid;
+                    color: #45474B;
+                }
+                button:hover{
+                    background-color: #1A4D2E;
+                    color: #fff;
+                }
+                .login_signinButton{
+                    background-color: #fff;
+                }
+                .login_loginButton{
+                    background-color: #F5EFE6;
                 }
             }
         }

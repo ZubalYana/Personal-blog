@@ -39,3 +39,7 @@ $('.loginButton').click(()=>{
     $('.registration').css('display', 'none') 
     $('.logIn').css('display', 'flex') 
 })
+$('.login_signinButton').click(()=>{
+    $('.registration').css('display', 'flex') 
+    $('.logIn').css('display', 'none') 
+})
