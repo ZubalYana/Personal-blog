@@ -254,4 +254,10 @@ body {
 }
 .wrap .logIn form .buttons .login_loginButton {
   background-color: #F5EFE6;
+}
+.wrap .logIn .placeCard {
+  width: 270px;
+  position: absolute;
+  box-shadow: 3px 3px 8px rgba(69, 71, 75, 0.8039215686);
+  cursor: pointer;
 }/*# sourceMappingURL=auth.css.map */

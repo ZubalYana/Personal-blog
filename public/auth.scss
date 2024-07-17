@@ -264,6 +264,13 @@ body{
                 }
             }
         }
+        .placeCard{
+            width: 270px;
+            position: absolute;
+            box-shadow: 3px 3px 8px #45474bcd;
+            cursor: pointer;
+        }
+
     }
 
 }
