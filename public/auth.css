@@ -144,6 +144,10 @@ body {
   border: 1px #45474B solid;
   color: #45474B;
 }
+.wrap .registration .registrationForm .buttons button:hover {
+  background-color: #1A4D2E;
+  color: #fff;
+}
 .wrap .registration .registrationForm .buttons .loginButton {
   background-color: #fff;
 }

@@ -24,6 +24,7 @@ body{
         cursor: pointer;
         transition: 0.5s ease-in-out;
     }
+
     .registration{
         width: 80%;
         height: 80vh;
@@ -150,6 +151,10 @@ body{
                     font-weight: 600;
                     border: 1px #45474B solid;
                     color: #45474B;
+                }
+                button:hover{
+                    background-color: #1A4D2E;
+                    color: #fff;
                 }
                 .loginButton{
                     background-color: #fff;
