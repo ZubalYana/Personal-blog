@@ -103,6 +103,12 @@ body{
                                     object-fit: cover;
                                 }
                             }
+                            #imgLabel{
+                                font-size: 14px;
+                                font-weight: 300;
+                                font-family: Urbanist;
+                                color: #45474B;
+                            }
                         
                             input[type="file"] {
                                 display: none;

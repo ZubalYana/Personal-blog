@@ -104,6 +104,12 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
 }
+.wrap .registration .registrationForm .forms .registrationFormLeft .profile-picture #imgLabel {
+  font-size: 14px;
+  font-weight: 300;
+  font-family: Urbanist;
+  color: #45474B;
+}
 .wrap .registration .registrationForm .forms .registrationFormLeft .profile-picture input[type=file] {
   display: none;
 }
