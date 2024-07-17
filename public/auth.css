@@ -82,6 +82,12 @@ body {
 .wrap .registration .registrationForm .forms .registrationFormLeft {
   width: 48%;
 }
+.wrap .registration .registrationForm .forms .registrationFormLeft #imgLabel {
+  font-size: 14px;
+  font-weight: 300;
+  font-family: Urbanist;
+  color: #45474B;
+}
 .wrap .registration .registrationForm .forms .registrationFormLeft .nameAndLastname {
   display: flex;
   justify-content: space-between;
@@ -103,12 +109,6 @@ body {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-}
-.wrap .registration .registrationForm .forms .registrationFormLeft .profile-picture #imgLabel {
-  font-size: 14px;
-  font-weight: 300;
-  font-family: Urbanist;
-  color: #45474B;
 }
 .wrap .registration .registrationForm .forms .registrationFormLeft .profile-picture input[type=file] {
   display: none;
