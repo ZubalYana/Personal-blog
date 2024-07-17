@@ -35,3 +35,7 @@ document.getElementById('profile-pic').addEventListener('change', function(event
         reader.readAsDataURL(input.files[0]);
     }
 });
+$('.loginButton').click(()=>{
+    $('.registration').css('display', 'none') 
+    $('.logIn').css('display', 'none') 
+})
