@@ -202,4 +202,22 @@ body {
   font-weight: 300;
   width: 646px;
   text-align: center;
+  margin-bottom: 35px;
+}
+.wrap .logIn form .formGroup {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.wrap .logIn form .formGroup label {
+  font-size: 14px;
+  font-weight: 300;
+  font-family: Urbanist;
+  color: #45474B;
+}
+.wrap .logIn form .formGroup input {
+  border: 1px #45474B solid;
+  border-radius: 15px;
+  height: 57px;
+  width: 434px;
 }/*# sourceMappingURL=auth.css.map */
