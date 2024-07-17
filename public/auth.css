@@ -162,7 +162,13 @@ body {
 }
 .wrap .registration #placeCard3 {
   transform: rotate(44deg);
-  left: -350px;
-  top: -40px;
+  left: -250px;
+  top: -120px;
+  z-index: 2;
+}
+.wrap .registration #placeCard4 {
+  transform: rotate(19deg);
+  left: -250px;
+  top: 450px;
   z-index: 2;
 }/*# sourceMappingURL=auth.css.map */
