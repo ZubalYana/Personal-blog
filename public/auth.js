@@ -37,5 +37,5 @@ document.getElementById('profile-pic').addEventListener('change', function(event
 });
 $('.loginButton').click(()=>{
     $('.registration').css('display', 'none') 
-    $('.logIn').css('display', 'none') 
+    $('.logIn').css('display', 'flex') 
 })
