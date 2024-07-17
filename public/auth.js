@@ -1,3 +1,4 @@
+//profile img work
 document.getElementById('profile-pic').addEventListener('change', function(event) {
     const input = event.target;
     if (input.files && input.files[0]) {
@@ -35,6 +36,8 @@ document.getElementById('profile-pic').addEventListener('change', function(event
         reader.readAsDataURL(input.files[0]);
     }
 });
+
+//sign in and log in pages changing
 $('.loginButton').click(()=>{
     $('.registration').css('display', 'none') 
     $('.logIn').css('display', 'flex') 
@@ -43,3 +46,20 @@ $('.login_signinButton').click(()=>{
     $('.registration').css('display', 'flex') 
     $('.logIn').css('display', 'none') 
 })
+
+//registration
+$('#registerBtn').click(async function () {
+    const firstname = $('#firstName').val();
+    const lastName = $('#lastName').val();
+    const email = $('#email').val();
+    const password = $('#password').val();
+    const profileDescription = $('#profileDescription').val();
+    const placesVisited = $('#placesVisited').val();
+    const placesToVisit = $('#placesToVisit').val();
+    try {
+        const response = await axios.post('/auth/register', { firstname, lastName, email, password, profileDescription, placesVisited, placesToVisit});
+        alert(response.data.message);
+    } catch (error) {
+        alert(error.response.data.message);
+    }
+});
