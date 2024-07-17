@@ -28,6 +28,7 @@
         flex-direction: column;
         align-items: center;
         color: #45474B;
+        position: relative;
         h2{
             font-size: 48px;
             font-weight: 700;
@@ -147,6 +148,9 @@
                     background-color: #F5EFE6;
                 }
             }
+        }
+        .placeCard{
+            width: 270px;
         }
 
 

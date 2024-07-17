@@ -29,6 +29,7 @@
   flex-direction: column;
   align-items: center;
   color: #45474B;
+  position: relative;
 }
 .wrap .registration h2 {
   font-size: 48px;
@@ -138,4 +139,7 @@
 }
 .wrap .registration .registrationForm .buttons .signinButton {
   background-color: #F5EFE6;
+}
+.wrap .registration .placeCard {
+  width: 270px;
 }/*# sourceMappingURL=auth.css.map */
