@@ -228,6 +228,7 @@ body {
   border-radius: 15px;
   height: 57px;
   width: 434px;
+  padding: 12px;
 }
 .wrap .logIn form .buttons {
   width: 350px;
