@@ -61,3 +61,8 @@ $('.iconWhite').hover(
                 $(this).css('color', '#fff');
             }
 );
+
+//user profile opening
+$('.profileIcon').click(() => {
+    window.location.href = '/user';
+});
