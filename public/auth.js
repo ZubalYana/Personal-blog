@@ -72,3 +72,24 @@ $('#registerBtn').click(async function () {
         alert(error.response.data.message);
     }
 });
+
+//log in
+$('#loginBtn').click(async function () {
+    const email = $('#LogInemail').val();
+    const password = $('#LogInpassword').val();
+    console.log(email, password);
+    try {
+        const response = await axios.post('/auth/login', { email, password });
+        if (response.status === 200) {
+            window.location.href = '/';
+            alert(response.data.message);
+            console.log('Logged in successfully');
+        }
+    } catch (error) {
+        if (error.response) {
+            alert(error.response.data.message);
+        } else {
+            alert('An error occurred. Please try again later.');
+        }
+    }
+});
