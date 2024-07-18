@@ -66,3 +66,8 @@ $('.iconWhite').hover(
 $('.profileIcon').click(() => {
     window.location.href = '/user';
 });
+
+//registration redirect
+$('#discover').click(() => {
+    window.location.href = '/auth';
+});

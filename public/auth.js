@@ -49,7 +49,7 @@ $('.login_signinButton').click(()=>{
 
 //registration
 $('#registerBtn').click(async function (event) {
-    event.preventDefault(); // Prevent the form from submitting and redirecting
+    event.preventDefault();
     
     const firstname = $('#firstName').val();
     const lastName = $('#lastName').val();
@@ -78,7 +78,7 @@ $('#registerBtn').click(async function (event) {
 
 //log in
 $('#loginBtn').click(async function (event) {
-    event.preventDefault(); // Prevent the form from submitting and redirecting
+    event.preventDefault();
     
     const email = $('#LogInemail').val();
     const password = $('#LogInpassword').val();
@@ -87,7 +87,7 @@ $('#loginBtn').click(async function (event) {
         if (response.status === 200) {
             alert(response.data.message);
             console.log('Logged in successfully');
-            window.location.href = '/user'; // Redirect after the alert
+            window.location.href = '/user';
         }
     } catch (error) {
         if (error.response) {
