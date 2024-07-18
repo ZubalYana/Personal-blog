@@ -11,6 +11,7 @@
   justify-content: center;
   align-items: center;
   padding: 40px;
+  position: relative;
 }
 .wrap h1, .wrap h2, .wrap h3, .wrap h4, .wrap h5, .wrap h6 {
   font-family: Josefin Sans;
@@ -21,4 +22,12 @@
 .wrap i, .wrap button {
   cursor: pointer;
   transition: 0.5s ease-in-out;
+}
+.wrap .backToMainArrow {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  color: #1A4D2E;
+  cursor: pointer;
+  font-size: 32px;
 }/*# sourceMappingURL=user.css.map */
