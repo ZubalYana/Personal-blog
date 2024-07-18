@@ -48,7 +48,9 @@ $('.login_signinButton').click(()=>{
 })
 
 //registration
-$('#registerBtn').click(async function () {
+$('#registerBtn').click(async function (event) {
+    event.preventDefault(); // Prevent the form from submitting and redirecting
+    
     const firstname = $('#firstName').val();
     const lastName = $('#lastName').val();
     const email = $('#email').val();
@@ -73,17 +75,19 @@ $('#registerBtn').click(async function () {
     }
 });
 
+
 //log in
-$('#loginBtn').click(async function () {
+$('#loginBtn').click(async function (event) {
+    event.preventDefault(); // Prevent the form from submitting and redirecting
+    
     const email = $('#LogInemail').val();
     const password = $('#LogInpassword').val();
-    console.log(email, password);
     try {
         const response = await axios.post('/auth/login', { email, password });
         if (response.status === 200) {
-            window.location.href = '/';
             alert(response.data.message);
             console.log('Logged in successfully');
+            window.location.href = '/user'; // Redirect after the alert
         }
     } catch (error) {
         if (error.response) {
