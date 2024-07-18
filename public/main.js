@@ -14,49 +14,50 @@ $('.help').click(() => {
     $('.blogPage').css('display', 'none');
     $('.helpPage').css('display', 'flex');
 });
-        $('.helpCompass').css('transform', 'rotate(0deg)');
 
-        $('.helpCompass').hover(
-            function() {
-                $(this).css('transform', 'rotate(-50deg)');
-            }, 
-            function() {
-                $(this).css('transform', 'rotate(0deg)');
-            }
-        );
-
-        $('.helpCompass').click(function() {
-            var $this = $(this);
-            $this.css('transition', 'transform 0.1s ease');
-            $this.css('transform', 'rotate(-300deg)');
+//compass animation
+$('.helpCompass').css('transform', 'rotate(0deg)');
+$('.helpCompass').hover(
+    function() {
+        $(this).css('transform', 'rotate(-50deg)');
+    }, 
+    function() {
+        $(this).css('transform', 'rotate(0deg)');
+    }
+);
+$('.helpCompass').click(function() {
+     var $this = $(this);
+    $this.css('transition', 'transform 0.1s ease');
+    $this.css('transform', 'rotate(-300deg)');
+    setTimeout(function() {
+        $this.css('transform', 'rotate(-200deg)');
+        setTimeout(function() {
+            $this.css('transform', 'rotate(-250deg)');
             setTimeout(function() {
-                $this.css('transform', 'rotate(-200deg)');
+                $this.css('transform', 'rotate(-220deg)');
                 setTimeout(function() {
-                    $this.css('transform', 'rotate(-250deg)');
-                    setTimeout(function() {
-                        $this.css('transform', 'rotate(-220deg)');
-                        setTimeout(function() {
-                            $this.css('transition', 'transform 0.3s ease');
-                            $this.css('transform', 'rotate(-50deg)');
-                        }, 100);
-                    }, 100);
+                    $this.css('transition', 'transform 0.3s ease');
+                    $this.css('transform', 'rotate(-50deg)');
                 }, 100);
             }, 100);
-        });
+        }, 100);
+    }, 100);
+});
 
-        $('.icon').hover(
+//icons hover effects
+$('.icon').hover(
             function() {
                 $(this).css('color', '#4F6F52');
             }, 
             function() {
                 $(this).css('color', '#45474B');
             }
-        );
-        $('.iconWhite').hover(
+);
+$('.iconWhite').hover(
             function() {
                 $(this).css('color', '#4F6F52');
             }, 
             function() {
                 $(this).css('color', '#fff');
             }
-        );
+);
