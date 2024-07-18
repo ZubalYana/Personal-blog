@@ -56,8 +56,17 @@ $('#registerBtn').click(async function () {
     const profileDescription = $('#profileDescription').val();
     const placesVisited = $('#placesVisited').val();
     const placesToVisit = $('#placesToVisit').val();
+
     try {
-        const response = await axios.post('/auth/register', { firstname, lastName, email, password, profileDescription, placesVisited, placesToVisit});
+        const response = await axios.post('/auth/register', { 
+            firstname, 
+            lastName, 
+            email, 
+            password, 
+            profileDescription, 
+            placesVisited, 
+            placesToVisit
+        });
         alert(response.data.message);
     } catch (error) {
         alert(error.response.data.message);
