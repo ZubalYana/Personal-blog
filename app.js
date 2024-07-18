@@ -72,10 +72,7 @@ app.post('/auth/login', async (req, res) => {
             return res.status(400).json({ message: 'Invalid credentials' });
         }
         const token = jwt.sign({ userId: user._id }, JWT_SECRET, { expiresIn: '1h' });
-        
-        // Use appropriate secure flag based on the environment
         const secureFlag = process.env.NODE_ENV === 'production';
-
         res.cookie('token', token, { httpOnly: true, secure: secureFlag });
         res.status(200).json({ message: 'Logged in successfully' });
     } catch (error) {
@@ -95,8 +92,8 @@ const authMiddleware = (req, res, next) => {
     const token = req.cookies.token;
     if (!token) {
         return res.status(401).json({ message: 'Unauthorized' });
+        // return res.sendFile(path.join(__dirname, 'public', 'auth.html'));
     }
-
     try {
         const decoded = jwt.verify(token, JWT_SECRET);
         req.userId = decoded.userId;
