@@ -72,12 +72,14 @@ body {
   border: 1px #45474B solid;
   border-radius: 15px;
   height: 57px;
+  padding: 12px;
 }
 .wrap .registration .registrationForm .forms .formGroup textarea {
   border: 1px #45474B solid;
   border-radius: 15px;
   height: 82px;
   resize: none;
+  padding: 12px;
 }
 .wrap .registration .registrationForm .forms .registrationFormLeft {
   width: 48%;
