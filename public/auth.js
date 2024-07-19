@@ -79,6 +79,16 @@ $('#registerBtn').click(async function (event) {
             specialCaseCondition = false;
         }
     }
+    function bigletter(password) {
+        let hasbigletter = /[A-Z]/.test(password);
+        if (hasbigletter) {
+            $('#bigLetter').css('color', '#1A4D2E');
+            bigLetterCondition = true;
+        } else {
+            $('#bigLetter').css('color', '#4d1a1a');
+            bigLetterCondition = false;
+        }
+    }
     const firstname = $('#firstName').val();
     const lastName = $('#lastName').val();
     const email = $('#email').val();
