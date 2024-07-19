@@ -118,5 +118,24 @@ setTimeout(() => {
         $(this).css('top', '360px');
         $(this).css('right', '-250px');
 }, 2000);
-
+});
+$('#placeCard3').click(function() {
+    $(this).css('transform', 'rotate(0deg)');
+    $(this).css('top', '70px');
+    $(this).css('left', '80px');
+setTimeout(() => {
+        $(this).css('transform', 'rotate(44deg)');
+        $(this).css('top', '-120px');
+        $(this).css('left', '-290px');
+}, 2000);
+});
+$('#placeCard4').click(function() {
+    $(this).css('transform', 'rotate(0deg)');
+    $(this).css('top', '200px');
+    $(this).css('left', '70px');
+setTimeout(() => {
+        $(this).css('transform', 'rotate(19deg)');
+        $(this).css('top', '480px');
+        $(this).css('left', '-250px');
+}, 2000);
 });
