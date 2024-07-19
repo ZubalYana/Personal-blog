@@ -39,7 +39,8 @@ document.getElementById('profile-pic').addEventListener('change', function(event
 
 //password conditions
 let countOfSymbolsCondition;
-let bigSmallLetterCondition;
+let bigLetterCondition;
+let SmallLetterCondition;
 let numberCondition;
 let specialCaseCondition;
 
@@ -66,6 +67,16 @@ $('#registerBtn').click(async function (event) {
         } else {
             $('#countOfSymbols').css('color', '#4d1a1a');
             countOfSymbolsCondition = false;
+        }
+    }
+    function checkSpecialCase(password) {
+        let hasSpecialSymbols = /[!@#$%^&*(){}+=]/.test(password);
+        if (hasSpecialSymbols) {
+            $('#specialSymbols').css('color', '#1A4D2E');
+            specialCaseCondition = true;
+        } else {
+            $('#specialSymbols').css('color', '#4d1a1a');
+            specialCaseCondition = false;
         }
     }
     const firstname = $('#firstName').val();
