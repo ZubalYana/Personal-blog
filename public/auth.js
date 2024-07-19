@@ -37,6 +37,22 @@ document.getElementById('profile-pic').addEventListener('change', function(event
     }
 });
 
+//password hiding and displaying
+$('.showPasswordSignIn').click(function() {
+    let passwordInput = $('#password');
+    let icon = $(this);
+
+    if (passwordInput.attr('type') === 'password') {
+        passwordInput.attr('type', 'text');
+        icon.removeClass('fa-eye').addClass('fa-eye-slash');
+
+    } else {
+        passwordInput.attr('type', 'password');
+        icon.removeClass('fa-eye-slash').addClass('fa-eye');
+
+    }
+});
+
 //password conditions
 let countOfSymbolsCondition;
 let bigLetterCondition;
@@ -46,7 +62,6 @@ let specialCaseCondition;
 
 // password checking
 let password = $('#password').val();
-
 function checkamountOfSymbols(password) {
     if (password.length >= 8 && password.length <= 12) {
         $('#countOfSymbols').css('color', '#4F6F52');
