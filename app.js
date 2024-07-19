@@ -8,53 +8,59 @@ const app = express();
 const PORT = 3000;
 const JWT_SECRET = 'your_jwt_secret';
 
-mongoose.connect('mongodb+srv://root:ykuBxov2UUP7OPjI@cluster0.5ebgrqy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', { useNewUrlParser: true, useUnifiedTopology: true })
-    .then(() => {
-        console.log('Mongo connect');
-    })
+mongoose.connect(`mongodb+srv://root:s7vVHHEAqtPNPIUB@root.c1gqwpt.mongodb.net/?retryWrites=true&w=majority&appName=root`)
+.then(()=>{
+    console.log(`Connected to mongo DB`)
+})
 
 const userSchema = new mongoose.Schema({
     firstname: { type: String, required: true },
     lastName: { type: String },
-    email: { type: String, required: true, unique: true},
+    email: { type: String, required: true, unique: true },
     password: { type: String, required: true },
     profileDescription: { type: String },
     placesVisited: { type: String },
     placesToVisit: { type: String },
 });
-    
+
 const User = mongoose.model('User', userSchema);
-    
+
 app.use(express.json());
 app.use(cookieParser());
 app.use(express.static('public'));
-app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static(path.join(__dirname, 'public')));
 
-//user registration
 app.post('/auth/register', async (req, res) => {
     const { firstname, lastName, email, password, profileDescription, placesVisited, placesToVisit } = req.body;
 
     console.log('Request body:', req.body); // Log the request body for debugging
 
-    const hashedPassword = await bcrypt.hash(password, 10);
-    const user = new User({
-        firstname,
-        lastName,
-        email,
-        profileDescription,
-        placesVisited,
-        placesToVisit,
-        password: hashedPassword
-    });
-
     try {
+        // Check if the email already exists
+        const existingUser = await User.findOne({ email });
+        if (existingUser) {
+            return res.status(400).json({ message: 'User with this email already exists' });
+        }
+
+        const hashedPassword = await bcrypt.hash(password, 10);
+        const user = new User({
+            firstname,
+            lastName,
+            email,
+            profileDescription,
+            placesVisited,
+            placesToVisit,
+            password: hashedPassword
+        });
+
         await user.save();
         res.status(201).json({ message: 'User created successfully' });
     } catch (error) {
-        console.error('Error saving user:', error); // Log the error
-        res.status(400).json({ message: 'User already exists or other error' });
+        console.error('Error saving user:', error); // Log the error with more detail
+        res.status(400).json({ message: error.message || 'User already exists or other error' });
     }
 });
+
 
 //user log in
 app.post('/auth/login', async (req, res) => {

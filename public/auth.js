@@ -157,7 +157,6 @@ $('.login_signinButton').click(()=>{
 //registration
 $('#registerBtn').click(async function (event) {
     event.preventDefault();
-    
 
     const firstname = $('#firstName').val();
     const lastName = $('#lastName').val();
@@ -168,20 +167,22 @@ $('#registerBtn').click(async function (event) {
     const placesToVisit = $('#placesToVisit').val();
 
     try {
-        const response = await axios.post('/auth/register', { 
-            firstname, 
-            lastName, 
-            email, 
-            password, 
-            profileDescription, 
-            placesVisited, 
+        const response = await axios.post('/auth/register', {
+            firstname,
+            lastName,
+            email,
+            password,
+            profileDescription,
+            placesVisited,
             placesToVisit
         });
         alert(response.data.message);
     } catch (error) {
-        console.log(error.response.data.message);
+        console.log('Registration error:', error.response.data.message); // Log the actual error message
+        alert(error.response.data.message); // Show the error message to the user
     }
 });
+
 
 //log in
 $('#loginBtn').click(async function (event) {
