@@ -71,3 +71,5 @@ $('.profileIcon').click(() => {
 $('#discover').click(() => {
     window.location.href = '/auth';
 });
+
+

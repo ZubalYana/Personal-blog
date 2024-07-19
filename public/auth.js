@@ -75,7 +75,6 @@ $('#registerBtn').click(async function (event) {
     }
 });
 
-
 //log in
 $('#loginBtn').click(async function (event) {
     event.preventDefault();
@@ -96,4 +95,17 @@ $('#loginBtn').click(async function (event) {
             alert('An error occurred. Please try again later.');
         }
     }
+});
+
+//cards animations
+$('#placeCard1').click(function() {
+        $(this).css('transform', 'rotate(0deg)');
+        $(this).css('top', '150px');
+        $(this).css('right', '130px');
+    setTimeout(() => {
+            $(this).css('transform', 'rotate(-47deg)');
+            $(this).css('top', '480px');
+            $(this).css('right', '-130px');
+    }, 2000);
+
 });

@@ -169,6 +169,7 @@ body{
             position: absolute;
             box-shadow: 3px 3px 8px #45474bcd;
             cursor: pointer;
+            transition: 1s ease-in-out;
         }
         #placeCard1{
             transform: rotate(-47deg);

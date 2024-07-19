@@ -161,6 +161,7 @@ body {
   position: absolute;
   box-shadow: 3px 3px 8px rgba(69, 71, 75, 0.8039215686);
   cursor: pointer;
+  transition: 1s ease-in-out;
 }
 .wrap .registration #placeCard1 {
   transform: rotate(-47deg);
