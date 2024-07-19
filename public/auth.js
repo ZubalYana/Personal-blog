@@ -57,6 +57,17 @@ $('.login_signinButton').click(()=>{
 $('#registerBtn').click(async function (event) {
     event.preventDefault();
     
+    //password checking
+    function checkamountOfSymbols() {
+        let password = $('#password').val();
+        if (password.length >= 8 && password.length <= 12) {
+            $('#countOfSymbols').css('color', '#1A4D2E');
+            countOfSymbolsCondition = true;
+        } else {
+            $('#countOfSymbols').css('color', '#4d1a1a');
+            countOfSymbolsCondition = false;
+        }
+    }
     const firstname = $('#firstName').val();
     const lastName = $('#lastName').val();
     const email = $('#email').val();
@@ -77,7 +88,7 @@ $('#registerBtn').click(async function (event) {
         });
         alert(response.data.message);
     } catch (error) {
-        alert(error.response.data.message);
+        console.log(error.response.data.message);
     }
 });
 
