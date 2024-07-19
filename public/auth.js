@@ -37,6 +37,12 @@ document.getElementById('profile-pic').addEventListener('change', function(event
     }
 });
 
+//password conditions
+let countOfSymbolsCondition;
+let bigSmallLetterCondition;
+let numberCondition;
+let specialCaseCondition;
+
 //sign in and log in pages changing
 $('.loginButton').click(()=>{
     $('.registration').css('display', 'none') 
