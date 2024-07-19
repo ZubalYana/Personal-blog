@@ -180,6 +180,13 @@ $('#registerBtn').click(async function (event) {
     } catch (error) {
         console.log('Registration error:', error.response.data.message);
     }
+    $('#firstName').val('')
+    $('#lastName').val('')
+    $('#email').val('')
+    $('#password').val('')
+    $('#profileDescription').val('')
+    $('#placesVisited').val('')
+    $('#placesToVisit').val('')
 });
 
 
