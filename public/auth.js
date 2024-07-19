@@ -50,8 +50,10 @@ let password = $('#password').val();
 function checkamountOfSymbols(password) {
     if (password.length >= 8 && password.length <= 12) {
         $('#countOfSymbols').css('color', '#4F6F52');
+        $('#countOfSymbols').css('font-weight', '500');
         countOfSymbolsCondition = true;
     } else {
+        $('#countOfSymbols').css('font-weight', '300');
         $('#countOfSymbols').css('color', '#4d1a1a');
         countOfSymbolsCondition = false;
     }
@@ -60,9 +62,11 @@ function checkSpecialCase(password) {
     let hasSpecialSymbols = /[!@#$%^&*(){}+=]/.test(password);
     if (hasSpecialSymbols) {
         $('#specialSymbols').css('color', '#4F6F52');
+        $('#specialSymbols').css('font-weight', '500');
         specialCaseCondition = true;
     } else {
         $('#specialSymbols').css('color', '#4d1a1a');
+        $('#specialSymbols').css('font-weight', '300');
         specialCaseCondition = false;
     }
 }
@@ -70,9 +74,11 @@ function bigletter(password) {
     let hasbigletter = /[A-Z]/.test(password);
     if (hasbigletter) {
         $('#bigLetter').css('color', '#4F6F52');
+        $('#bigLetter').css('font-weight', '500');
         bigLetterCondition = true;
     } else {
         $('#bigLetter').css('color', '#4d1a1a');
+        $('#bigLetter').css('font-weight', '300');
         bigLetterCondition = false;
     }
 }
@@ -80,9 +86,11 @@ function smallLetter(password) {
     let hassmallletter = /[a-z]/.test(password);
     if (hassmallletter) {
         $('#smallLetter').css('color', '#4F6F52');
+        $('#smallLetter').css('font-weight', '500');
         smallLetterCondition = true;
     } else {
         $('#smallLetter').css('color', '#4d1a1a');
+        $('#smallLetter').css('font-weight', '300');
         smallLetterCondition = false;
     }
 }
@@ -90,9 +98,11 @@ function number(password) {
     let hasnumber = /\d/.test(password);
     if (hasnumber) {
         $('#numbers').css('color', '#4F6F52');
+        $('#numbers').css('font-weight', '500');
         numberCondition = true;
     } else {
         $('#numbers').css('color', '#4d1a1a');
+        $('#numbers').css('font-weight', '300');
         numberCondition = false;
     }
 }

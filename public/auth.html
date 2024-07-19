@@ -45,7 +45,10 @@
                     </div>
                     <div class="formGroup">
                         <label for="password">Password*</label>
-                        <input type="password" id="password" name="password" required>
+                        <div class="passwordContainer">
+                            <input type="password" id="password" name="password" required>
+                            <i class="showPasswordSignIn fa-solid fa-eye"></i>
+                        </div>
                         <div class="passwordRules">
                             *<div class="passwordRule" id="countOfSymbols">8-12 characters</div>,
                             <div class="passwordRule" id="bigLetter">big letters</div>,
