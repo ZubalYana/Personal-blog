@@ -99,6 +99,16 @@ $('#registerBtn').click(async function (event) {
             smallLetterCondition = false;
         }
     }
+    function number(password) {
+        let hasnumber = /\d/.test(password);
+        if (hasnumber) {
+            $('#numbers').css('color', '#1A4D2E');
+            numberCondition = true;
+        } else {
+            $('#numbers').css('color', '#4d1a1a');
+            numberCondition = false;
+        }
+    }
     const firstname = $('#firstName').val();
     const lastName = $('#lastName').val();
     const email = $('#email').val();
