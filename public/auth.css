@@ -251,6 +251,23 @@ body {
   width: 434px;
   padding: 12px;
 }
+.wrap .logIn form .formGroup .passwordContainer {
+  position: relative;
+  display: flex;
+  height: 57px;
+  width: 434px;
+  height: 57px;
+}
+.wrap .logIn form .formGroup .passwordContainer input {
+  position: absolute;
+  width: 434px;
+}
+.wrap .logIn form .formGroup .passwordContainer .showPasswordLogIn {
+  position: absolute;
+  right: 20px;
+  top: 22px;
+  cursor: pointer;
+}
 .wrap .logIn form .buttons {
   width: 350px;
   display: flex;

@@ -92,6 +92,7 @@ body{
                                 cursor: pointer;
                             }
                         }
+
                         .passwordRules{
                             margin-top: 60px;
                         }
@@ -256,6 +257,23 @@ body{
                     width: 434px;
                     padding: 12px;
 
+                }
+                .passwordContainer{
+                    position: relative;
+                    display: flex;
+                    height: 57px;
+                    width: 434px;
+                    height: 57px;
+                    input{
+                        position: absolute;
+                        width: 434px;
+                    }
+                    .showPasswordLogIn{
+                        position: absolute;
+                        right: 20px;
+                        top: 22px;
+                        cursor: pointer;
+                    }
                 }
             }
             .buttons{
