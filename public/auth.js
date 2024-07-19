@@ -40,7 +40,7 @@ document.getElementById('profile-pic').addEventListener('change', function(event
 //password conditions
 let countOfSymbolsCondition;
 let bigLetterCondition;
-let SmallLetterCondition;
+let smallLetterCondition;
 let numberCondition;
 let specialCaseCondition;
 
@@ -87,6 +87,16 @@ $('#registerBtn').click(async function (event) {
         } else {
             $('#bigLetter').css('color', '#4d1a1a');
             bigLetterCondition = false;
+        }
+    }
+    function smallLetter(password) {
+        let hassmallletter = /[a-z]/.test(password);
+        if (hassmallletter) {
+            $('#smallLetter').css('color', '#1A4D2E');
+            smallLetterCondition = true;
+        } else {
+            $('#smallLetter').css('color', '#4d1a1a');
+            smallLetterCondition = false;
         }
     }
     const firstname = $('#firstName').val();
