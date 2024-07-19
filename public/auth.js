@@ -109,3 +109,14 @@ $('#placeCard1').click(function() {
     }, 2000);
 
 });
+$('#placeCard2').click(function() {
+    $(this).css('transform', 'rotate(0deg)');
+    $(this).css('top', '100px');
+    $(this).css('right', '-100px');
+setTimeout(() => {
+        $(this).css('transform', 'rotate(-24deg)');
+        $(this).css('top', '360px');
+        $(this).css('right', '-250px');
+}, 2000);
+
+});
