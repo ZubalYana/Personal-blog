@@ -169,3 +169,13 @@ setTimeout(() => {
         $(this).css('right', '-220px');
 }, 2000);
 });
+$('#placeCard8').click(function() {
+    $(this).css('transform', 'rotate(0deg)');
+    $(this).css('top', '-20px');
+    $(this).css('left', '-50px');
+setTimeout(() => {
+        $(this).css('transform', 'rotate(28deg)');
+        $(this).css('top', '320px');
+        $(this).css('left', '-220px');
+}, 2000);
+});
