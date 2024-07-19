@@ -187,6 +187,8 @@ $('#registerBtn').click(async function (event) {
     $('#profileDescription').val('')
     $('#placesVisited').val('')
     $('#placesToVisit').val('')
+    $('.registration').css('display', 'none') 
+    $('.logIn').css('display', 'flex') 
 });
 
 
