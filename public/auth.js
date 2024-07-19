@@ -44,6 +44,67 @@ let smallLetterCondition;
 let numberCondition;
 let specialCaseCondition;
 
+// password checking
+let password = $('#password').val();
+
+function checkamountOfSymbols(password) {
+    if (password.length >= 8 && password.length <= 12) {
+        $('#countOfSymbols').css('color', '#4F6F52');
+        countOfSymbolsCondition = true;
+    } else {
+        $('#countOfSymbols').css('color', '#4d1a1a');
+        countOfSymbolsCondition = false;
+    }
+}
+function checkSpecialCase(password) {
+    let hasSpecialSymbols = /[!@#$%^&*(){}+=]/.test(password);
+    if (hasSpecialSymbols) {
+        $('#specialSymbols').css('color', '#4F6F52');
+        specialCaseCondition = true;
+    } else {
+        $('#specialSymbols').css('color', '#4d1a1a');
+        specialCaseCondition = false;
+    }
+}
+function bigletter(password) {
+    let hasbigletter = /[A-Z]/.test(password);
+    if (hasbigletter) {
+        $('#bigLetter').css('color', '#4F6F52');
+        bigLetterCondition = true;
+    } else {
+        $('#bigLetter').css('color', '#4d1a1a');
+        bigLetterCondition = false;
+    }
+}
+function smallLetter(password) {
+    let hassmallletter = /[a-z]/.test(password);
+    if (hassmallletter) {
+        $('#smallLetter').css('color', '#4F6F52');
+        smallLetterCondition = true;
+    } else {
+        $('#smallLetter').css('color', '#4d1a1a');
+        smallLetterCondition = false;
+    }
+}
+function number(password) {
+    let hasnumber = /\d/.test(password);
+    if (hasnumber) {
+        $('#numbers').css('color', '#4F6F52');
+        numberCondition = true;
+    } else {
+        $('#numbers').css('color', '#4d1a1a');
+        numberCondition = false;
+    }
+}
+setInterval(() => {
+    let password = $('#password').val();
+    checkamountOfSymbols(password);
+    checkSpecialCase(password); 
+    bigletter(password);
+    smallLetter(password);
+    number(password);
+}, 500);
+
 //sign in and log in pages changing
 $('.loginButton').click(()=>{
     $('.registration').css('display', 'none') 
@@ -58,57 +119,7 @@ $('.login_signinButton').click(()=>{
 $('#registerBtn').click(async function (event) {
     event.preventDefault();
     
-    //password checking
-    function checkamountOfSymbols() {
-        let password = $('#password').val();
-        if (password.length >= 8 && password.length <= 12) {
-            $('#countOfSymbols').css('color', '#1A4D2E');
-            countOfSymbolsCondition = true;
-        } else {
-            $('#countOfSymbols').css('color', '#4d1a1a');
-            countOfSymbolsCondition = false;
-        }
-    }
-    function checkSpecialCase(password) {
-        let hasSpecialSymbols = /[!@#$%^&*(){}+=]/.test(password);
-        if (hasSpecialSymbols) {
-            $('#specialSymbols').css('color', '#1A4D2E');
-            specialCaseCondition = true;
-        } else {
-            $('#specialSymbols').css('color', '#4d1a1a');
-            specialCaseCondition = false;
-        }
-    }
-    function bigletter(password) {
-        let hasbigletter = /[A-Z]/.test(password);
-        if (hasbigletter) {
-            $('#bigLetter').css('color', '#1A4D2E');
-            bigLetterCondition = true;
-        } else {
-            $('#bigLetter').css('color', '#4d1a1a');
-            bigLetterCondition = false;
-        }
-    }
-    function smallLetter(password) {
-        let hassmallletter = /[a-z]/.test(password);
-        if (hassmallletter) {
-            $('#smallLetter').css('color', '#1A4D2E');
-            smallLetterCondition = true;
-        } else {
-            $('#smallLetter').css('color', '#4d1a1a');
-            smallLetterCondition = false;
-        }
-    }
-    function number(password) {
-        let hasnumber = /\d/.test(password);
-        if (hasnumber) {
-            $('#numbers').css('color', '#1A4D2E');
-            numberCondition = true;
-        } else {
-            $('#numbers').css('color', '#4d1a1a');
-            numberCondition = false;
-        }
-    }
+
     const firstname = $('#firstName').val();
     const lastName = $('#lastName').val();
     const email = $('#email').val();
