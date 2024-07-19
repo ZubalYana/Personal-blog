@@ -178,8 +178,7 @@ $('#registerBtn').click(async function (event) {
         });
         alert(response.data.message);
     } catch (error) {
-        console.log('Registration error:', error.response.data.message); // Log the actual error message
-        alert(error.response.data.message); // Show the error message to the user
+        console.log('Registration error:', error.response.data.message);
     }
 });
 

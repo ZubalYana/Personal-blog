@@ -33,10 +33,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.post('/auth/register', async (req, res) => {
     const { firstname, lastName, email, password, profileDescription, placesVisited, placesToVisit } = req.body;
 
-    console.log('Request body:', req.body); // Log the request body for debugging
+    console.log('Request body:', req.body);
 
     try {
-        // Check if the email already exists
         const existingUser = await User.findOne({ email });
         if (existingUser) {
             return res.status(400).json({ message: 'User with this email already exists' });
@@ -56,7 +55,7 @@ app.post('/auth/register', async (req, res) => {
         await user.save();
         res.status(201).json({ message: 'User created successfully' });
     } catch (error) {
-        console.error('Error saving user:', error); // Log the error with more detail
+        console.error('Error saving user:', error); 
         res.status(400).json({ message: error.message || 'User already exists or other error' });
     }
 });
