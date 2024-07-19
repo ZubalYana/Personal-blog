@@ -139,3 +139,33 @@ setTimeout(() => {
         $(this).css('left', '-250px');
 }, 2000);
 });
+$('#placeCard5').click(function() {
+    $(this).css('transform', 'rotate(0deg)');
+    $(this).css('top', '70px');
+    $(this).css('right', '100px');
+setTimeout(() => {
+        $(this).css('transform', 'rotate(-33deg)');
+        $(this).css('top', '380px');
+        $(this).css('right', '0');
+}, 2000);
+});
+$('#placeCard6').click(function() {
+    $(this).css('transform', 'rotate(0deg)');
+    $(this).css('top', '50px');
+    $(this).css('right', '50px');
+setTimeout(() => {
+        $(this).css('transform', 'rotate(-20deg)');
+        $(this).css('top', '310px');
+        $(this).css('right', '-100px');
+}, 2000);
+});
+$('#placeCard7').click(function() {
+    $(this).css('transform', 'rotate(0deg)');
+    $(this).css('top', '-20px');
+    $(this).css('right', '-50px');
+setTimeout(() => {
+        $(this).css('transform', 'rotate(-16deg)');
+        $(this).css('top', '310px');
+        $(this).css('right', '-220px');
+}, 2000);
+});
