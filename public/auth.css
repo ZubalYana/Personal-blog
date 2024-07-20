@@ -4,6 +4,16 @@
   box-sizing: border-box;
 }
 
+::-moz-selection {
+  background-color: #45474B;
+  color: #fff;
+}
+
+::selection {
+  background-color: #45474B;
+  color: #fff;
+}
+
 body {
   overflow: hidden;
 }
