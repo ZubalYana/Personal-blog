@@ -158,38 +158,38 @@ $('.login_signinButton').click(()=>{
 $('#registerBtn').click(async function (event) {
     event.preventDefault();
 
-    const firstname = $('#firstName').val();
-    const lastName = $('#lastName').val();
-    const email = $('#email').val();
-    const password = $('#password').val();
-    const profileDescription = $('#profileDescription').val();
-    const placesVisited = $('#placesVisited').val();
-    const placesToVisit = $('#placesToVisit').val();
+    const formData = new FormData();
+    formData.append('firstname', $('#firstName').val());
+    formData.append('lastName', $('#lastName').val());
+    formData.append('email', $('#email').val());
+    formData.append('password', $('#password').val());
+    formData.append('profileDescription', $('#profileDescription').val());
+    formData.append('placesVisited', $('#placesVisited').val());
+    formData.append('placesToVisit', $('#placesToVisit').val());
+    formData.append('profile-pic', $('#profile-pic')[0].files[0]); // Append the file
 
     try {
-        const response = await axios.post('/auth/register', {
-            firstname,
-            lastName,
-            email,
-            password,
-            profileDescription,
-            placesVisited,
-            placesToVisit
+        const response = await axios.post('/auth/register', formData, {
+            headers: {
+                'Content-Type': 'multipart/form-data'
+            }
         });
         alert(response.data.message);
     } catch (error) {
         console.log('Registration error:', error.response.data.message);
     }
-    $('#firstName').val('')
-    $('#lastName').val('')
-    $('#email').val('')
-    $('#password').val('')
-    $('#profileDescription').val('')
-    $('#placesVisited').val('')
-    $('#placesToVisit').val('')
-    $('.registration').css('display', 'none') 
-    $('.logIn').css('display', 'flex') 
+
+    $('#firstName').val('');
+    $('#lastName').val('');
+    $('#email').val('');
+    $('#password').val('');
+    $('#profileDescription').val('');
+    $('#placesVisited').val('');
+    $('#placesToVisit').val('');
+    $('.registration').css('display', 'none');
+    $('.logIn').css('display', 'flex');
 });
+
 
 
 //log in

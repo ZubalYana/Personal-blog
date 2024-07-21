@@ -34,19 +34,20 @@ const userSchema = new mongoose.Schema({
     profileDescription: { type: String },
     placesVisited: { type: String },
     placesToVisit: { type: String },
+    profilePicture: { type: String }
 });
 
 const User = mongoose.model('User', userSchema);
 
+app.use('/uploads', express.static('uploads'));
 app.use(express.json());
 app.use(cookieParser());
 app.use(express.static('public'));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.post('/auth/register', async (req, res) => {
+app.post('/auth/register', upload.single('profile-pic'), async (req, res) => {
     const { firstname, lastName, email, password, profileDescription, placesVisited, placesToVisit } = req.body;
-
-    console.log('Request body:', req.body);
+    const profilePicture = req.file ? req.file.path : null; // Get the file path
 
     try {
         const existingUser = await User.findOne({ email });
@@ -62,7 +63,8 @@ app.post('/auth/register', async (req, res) => {
             profileDescription,
             placesVisited,
             placesToVisit,
-            password: hashedPassword
+            password: hashedPassword,
+            profilePicture // Save the file path to the database
         });
 
         await user.save();
@@ -72,6 +74,7 @@ app.post('/auth/register', async (req, res) => {
         res.status(400).json({ message: error.message || 'User already exists or other error' });
     }
 });
+
 
 
 //user log in
