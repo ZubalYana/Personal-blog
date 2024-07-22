@@ -5,10 +5,10 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const path = require('path');
 const app = express();
+const env = require('dotenv').config()
 const PORT = process.env.PORT || 3000;
 const JWT_SECRET = 'your_jwt_secret';
 const multer = require('multer');
-const env = require('dotenv')
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
         cb(null, 'uploads/');
@@ -20,8 +20,7 @@ const storage = multer.diskStorage({
 });
 
 const upload = multer({ storage: storage });
-
-mongoose.connect(`mongodb+srv://zubalana0:L9A2FcCkATAIyHUD@cluster0.z7w5ka9.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`)
+mongoose.connect(`mongodb+srv://zubalana0:${process.env.password}@cluster0.z7w5ka9.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`)
 .then(()=>{
     console.log(`Connected to mongo DB`)
 })
