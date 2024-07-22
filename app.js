@@ -103,20 +103,6 @@ app.post('/auth/logout', (req, res) => {
     res.status(200).json({ message: 'Logged out successfully' });
 });
 
-//get the user info
-app.get('/auth/user', authMiddleware, async (req, res) => {
-    try {
-        const user = await User.findById(req.userId);
-        if (!user) {
-            return res.status(404).json({ message: 'User not found' });
-        }
-        res.status(200).json(user);
-    } catch (error) {
-        console.error('Error fetching user data:', error);
-        res.status(500).json({ message: 'An error occurred while fetching user data' });
-    }
-});
-
 const authMiddleware = (req, res, next) => {
     const token = req.cookies.token;
     if (!token) {
@@ -131,6 +117,20 @@ const authMiddleware = (req, res, next) => {
         res.status(401).json({ message: 'Unauthorized' });
     }
 };
+
+//get the user info
+app.get('/auth/user', authMiddleware, async (req, res) => {
+    try {
+        const user = await User.findById(req.userId);
+        if (!user) {
+            return res.status(404).json({ message: 'User not found' });
+        }
+        res.status(200).json(user);
+    } catch (error) {
+        console.error('Error fetching user data:', error);
+        res.status(500).json({ message: 'An error occurred while fetching user data' });
+    }
+});
 
 app.get('/auth', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'auth.html'));
