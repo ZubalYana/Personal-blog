@@ -26,7 +26,7 @@
 .wrap h1, .wrap h2, .wrap h3, .wrap h4, .wrap h5, .wrap h6 {
   font-family: Josefin Sans;
 }
-.wrap p, .wrap button {
+.wrap p, .wrap button, .wrap span {
   font-family: Urbanist;
 }
 .wrap i, .wrap button {
@@ -80,4 +80,28 @@
   width: 463px;
   font-size: 16px;
   font-weight: 400;
+}
+.wrap .user .userInfo .placesVisited {
+  font-size: 16px;
+  font-weight: 400;
+  display: flex;
+  margin-top: 9px;
+}
+.wrap .user .userInfo .placesVisited .visitedPlaces {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+  margin-left: 5px;
+}
+.wrap .user .userInfo .placesToVisit {
+  font-size: 16px;
+  font-weight: 400;
+  display: flex;
+  margin-top: 7px;
+}
+.wrap .user .userInfo .placesToVisit .toVisitPlaces {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+  margin-left: 5px;
 }/*# sourceMappingURL=user.css.map */

@@ -18,7 +18,7 @@
     h1,h2,h3,h4,h5,h6{
         font-family: Josefin Sans;
     }
-    p, button{
+    p, button, span{
         font-family: Urbanist;
     }
     i, button{
@@ -70,6 +70,30 @@
                 width: 463px;
                 font-size: 16px;
                 font-weight: 400;
+            }
+            .placesVisited{
+                font-size: 16px;
+                font-weight: 400;
+                display: flex;
+                margin-top: 9px;
+                .visitedPlaces{
+                    font-size: 16px;
+                    font-weight: 600;
+                    color: #000;
+                    margin-left: 5px;
+                }
+            }
+            .placesToVisit{
+                font-size: 16px;
+                font-weight: 400;
+                display: flex;
+                margin-top: 7px;
+                .toVisitPlaces{
+                    font-size: 16px;
+                    font-weight: 600;
+                    color: #000;
+                    margin-left: 5px;
+                }
             }
         }
     }
