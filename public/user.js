@@ -20,8 +20,11 @@ document.addEventListener('DOMContentLoaded', ()=>{
                 <span class="placesToVisit">Wants to visit: <p class='toVisitPlaces' >${res.data.placesToVisit}</p></span>
             </div>
             <div class="posts">
-                <div class="published"></div>
-                <div class="liked"></div>
+                <div class="postsChanging">
+                    <div class="publishedPosts">Published posts</div>
+                    <div class="likedPosts">Liked posts</div>
+                </div>
+                <div class="postsContainer"></div>
             </div>
         </div>
         `
