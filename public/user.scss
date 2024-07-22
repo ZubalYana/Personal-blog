@@ -47,12 +47,29 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
+            color: #45474B;
             .userPicture{
                 width: 121px;
                 height: 121px;
                 border-radius: 50%;
                 object-fit: cover;
                 background-color: #f0f0f0;
+            }
+            .FistLastName{
+                font-size: 32px;
+                font-weight: 600;
+                margin-top: 15px;
+                margin-bottom: 5px;
+            }
+            .email{
+                font-weight: 300;
+                font-size: 16px;
+                margin-bottom: 7px;
+            }
+            .description{
+                width: 463px;
+                font-size: 16px;
+                font-weight: 400;
             }
         }
     }
