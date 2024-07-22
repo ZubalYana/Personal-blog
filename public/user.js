@@ -13,11 +13,11 @@ document.addEventListener('DOMContentLoaded', ()=>{
                 <div class="user">
             <div class="userInfo">
                 <img class="userPicture" src="${res.data.profilePicture}" alt="profile picture">
-                <div class="FistLastName">${res.data.firstname} ${res.data.lastName}</div>
-                <div class="email">${res.data.email}</div>
-                <div class="description">${res.data.description}</div>
-                <div class="placesVisited">Visited: ${res.data.placesVisited}</div>
-                <div class="placesToVisit">Wants to visit: ${res.data.placesToVisit}</div>
+                <h2 class="FistLastName">${res.data.firstname} ${res.data.lastName}</h2>
+                <p class="email">${res.data.email}</p>
+                <p class="description">${res.data.description}</p>
+                <p class="placesVisited">Visited: ${res.data.placesVisited}</p>
+                <p class="placesToVisit">Wants to visit: ${res.data.placesToVisit}</p>
             </div>
             <div class="posts">
                 <div class="published"></div>
