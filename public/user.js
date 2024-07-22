@@ -16,8 +16,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
                 <h2 class="FistLastName">${res.data.firstname} ${res.data.lastName}</h2>
                 <p class="email">${res.data.email}</p>
                 <p class="description">${res.data.profileDescription}</p>
-                <p class="placesVisited">Visited: ${res.data.placesVisited}</p>
-                <p class="placesToVisit">Wants to visit: ${res.data.placesToVisit}</p>
+                <p class="placesVisited">Visited: <p class='visitedPlaces'>${res.data.placesVisited}</p></p>
+                <p class="placesToVisit">Wants to visit: <p class='toVisitPlaces' >${res.data.placesToVisit}</p></p>
             </div>
             <div class="posts">
                 <div class="published"></div>
