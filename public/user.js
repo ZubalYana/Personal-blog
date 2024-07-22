@@ -18,10 +18,10 @@ document.addEventListener('DOMContentLoaded', ()=>{
                 <div class="description">${res.data.description}</div>
                 <div class="placesVisited">Visited: ${res.data.placesVisited}</div>
                 <div class="placesToVisit">Wants to visit: ${res.data.placesToVisit}</div>
-                <div class="posts">
-                    <div class="published"></div>
-                    <div class="liked"></div>
-                </div>
+            </div>
+            <div class="posts">
+                <div class="published"></div>
+                <div class="liked"></div>
             </div>
         </div>
         `
