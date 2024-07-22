@@ -40,4 +40,20 @@
   color: #1A4D2E;
   cursor: pointer;
   font-size: 32px;
+}
+.wrap .user {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wrap .user .userInfo .userPicture {
+  width: 121px;
+  height: 121px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-color: #f0f0f0;
 }/*# sourceMappingURL=user.css.map */
