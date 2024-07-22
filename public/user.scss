@@ -33,9 +33,6 @@
         cursor: pointer;
         font-size: 32px;
     }
-
-    
-
     .user{
         width: 100%;
         height: 100vh;
@@ -97,6 +94,43 @@
                     color: #000;
                     margin-left: 5px;
                 }
+            }
+        }
+    }
+    .posts{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 40px;
+        .postsChanging{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: #1A4D2E 3px solid;
+            height: 62px;
+            .publishedPosts{
+                width: 50%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family: Josefin Sans;
+                font-size: 32px;
+                font-weight: 600;
+                background-color: #1A4D2E;
+                color: #fff;
+            }
+            .likedPosts{
+                width: 50%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family: Josefin Sans;
+                font-size: 32px;
+                font-weight: 600;
+                background-color: #fff;
+                color: #1A4D2E;
             }
         }
     }

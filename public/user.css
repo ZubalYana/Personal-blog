@@ -104,4 +104,41 @@
   font-weight: 600;
   color: #000;
   margin-left: 5px;
+}
+.wrap .posts {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+}
+.wrap .posts .postsChanging {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: #1A4D2E 1px solid;
+  height: 62px;
+}
+.wrap .posts .postsChanging .publishedPosts {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Josefin Sans;
+  font-size: 32px;
+  font-weight: 600;
+  background-color: #1A4D2E;
+  color: #fff;
+}
+.wrap .posts .postsChanging .likedPosts {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Josefin Sans;
+  font-size: 32px;
+  font-weight: 600;
+  background-color: #fff;
+  color: #1A4D2E;
 }/*# sourceMappingURL=user.css.map */
