@@ -46,14 +46,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.post('/auth/register', upload.single('profile-pic'), async (req, res) => {
     const { firstname, lastName, email, password, profileDescription, placesVisited, placesToVisit } = req.body;
-    const profilePicture = req.file ? req.file.path : null; // Get the file path
-
+    const profilePicture = req.file ? req.file.path : null; 
     try {
         const existingUser = await User.findOne({ email });
         if (existingUser) {
             return res.status(400).json({ message: 'User with this email already exists' });
         }
-
         const hashedPassword = await bcrypt.hash(password, 10);
         const user = new User({
             firstname,
@@ -63,9 +61,8 @@ app.post('/auth/register', upload.single('profile-pic'), async (req, res) => {
             placesVisited,
             placesToVisit,
             password: hashedPassword,
-            profilePicture // Save the file path to the database
+            profilePicture
         });
-
         await user.save();
         res.status(201).json({ message: 'User created successfully' });
     } catch (error) {
@@ -73,8 +70,6 @@ app.post('/auth/register', upload.single('profile-pic'), async (req, res) => {
         res.status(400).json({ message: error.message || 'User already exists or other error' });
     }
 });
-
-
 
 //user log in
 app.post('/auth/login', async (req, res) => {
