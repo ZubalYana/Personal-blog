@@ -44,6 +44,7 @@ app.use(cookieParser());
 app.use(express.static('public'));
 app.use(express.static(path.join(__dirname, 'public')));
 
+//user registraion
 app.post('/auth/register', upload.single('profile-pic'), async (req, res) => {
     const { firstname, lastName, email, password, profileDescription, placesVisited, placesToVisit } = req.body;
     const profilePicture = req.file ? req.file.path : null; 
@@ -96,11 +97,24 @@ app.post('/auth/login', async (req, res) => {
     }
 });
 
-
 //user logout
 app.post('/auth/logout', (req, res) => {
     res.clearCookie('token');
     res.status(200).json({ message: 'Logged out successfully' });
+});
+
+//get the user info
+app.get('/auth/user', authMiddleware, async (req, res) => {
+    try {
+        const user = await User.findById(req.userId);
+        if (!user) {
+            return res.status(404).json({ message: 'User not found' });
+        }
+        res.status(200).json(user);
+    } catch (error) {
+        console.error('Error fetching user data:', error);
+        res.status(500).json({ message: 'An error occurred while fetching user data' });
+    }
 });
 
 const authMiddleware = (req, res, next) => {
