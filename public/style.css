@@ -180,6 +180,8 @@
 }
 .wrap .mainPage .howToUse #usageArrow2 {
   width: 215px;
+  top: 400px;
+  left: 350px;
 }
 .wrap .mainPage .howToUse #usageArrow3 {
   width: 311px;
