@@ -49,7 +49,7 @@
   position: absolute;
   top: 35px;
   right: 35px;
-  transition: 0.8s ease;
+  transition: height 0.8s ease, background-color 0.8s ease;
 }
 .wrap .menuContainer .burger {
   width: 42px;
@@ -64,11 +64,12 @@
   height: 7px;
   background-color: #1A4D2E;
   border-radius: 6px;
+  transition: background-color 0.8s ease;
 }
 .wrap .menuContainer .sidebar {
   width: 100%;
   height: 0px;
-  transition: 0.8s ease;
+  transition: height 0.8s ease;
 }
 .wrap .menuContainer .sidebar .icons {
   display: flex;
@@ -79,6 +80,19 @@
   height: 100%;
   width: 100%;
   font-size: 0px;
+}
+.wrap .menuContainer:hover {
+  height: 200px;
+  background-color: #1A4D2E;
+}
+.wrap .menuContainer:hover .burger .line {
+  background-color: #fff;
+}
+.wrap .menuContainer:hover .sidebar {
+  height: 159px;
+}
+.wrap .menuContainer:hover .sidebar .icons {
+  font-size: 28px;
 }
 .wrap .user {
   width: 100%;

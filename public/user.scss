@@ -33,7 +33,7 @@
         cursor: pointer;
         font-size: 32px;
     }
-    .menuContainer{
+    .menuContainer {
         width: 52px;
         height: 46px;
         border-radius: 6px;
@@ -41,27 +41,31 @@
         position: absolute;
         top: 35px;
         right: 35px;
-        transition: 0.8s ease;
-
-        .burger{
+        transition: height 0.8s ease, background-color 0.8s ease;
+    
+        .burger {
             width: 42px;
             height: 36px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             cursor: pointer;
-            .line{
+    
+            .line {
                 width: 100%;
                 height: 7px;
                 background-color: #1A4D2E;
                 border-radius: 6px;
+                transition: background-color 0.8s ease;
             }
         }
-        .sidebar{
+    
+        .sidebar {
             width: 100%;
             height: 0px;
-            transition: 0.8s ease;
-            .icons{
+            transition: height 0.8s ease;
+    
+            .icons {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-around;
@@ -71,7 +75,23 @@
                 width: 100%;
                 font-size: 0px;
             }
-
+        }
+    
+        &:hover {
+            height: 200px;
+            background-color: #1A4D2E;
+    
+            .burger .line {
+                background-color: #fff;
+            }
+    
+            .sidebar {
+                height: 159px;
+    
+                .icons {
+                    font-size: 28px;
+                }
+            }
         }
     }
     .user{
