@@ -175,6 +175,8 @@
 }
 .wrap .mainPage .howToUse #usageArrow1 {
   width: 694px;
+  top: 70px;
+  left: 220px;
 }
 .wrap .mainPage .howToUse #usageArrow2 {
   width: 215px;
