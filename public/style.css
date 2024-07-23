@@ -225,6 +225,31 @@
   left: 195px;
   color: #45474B;
 }
+.wrap .mainPage .howToUse .cards .card .cardIconsCon .magnifyingGlassIcon {
+  font-size: 100px;
+  color: #E8DFCA;
+}
+.wrap .mainPage .howToUse .cards .card .cardIconsCon .planeIcon {
+  position: absolute;
+  font-size: 32px;
+  top: 0px;
+  left: 130px;
+  color: #4F6F52;
+}
+.wrap .mainPage .howToUse .cards .card .cardIconsCon .locationDotIcon {
+  position: absolute;
+  font-size: 42px;
+  top: 120px;
+  left: 200px;
+  color: #45474B;
+}
+.wrap .mainPage .howToUse .cards .card .cardIconsCon .earthIcon {
+  position: absolute;
+  font-size: 42px;
+  top: 110px;
+  left: 20px;
+  color: #1A4D2E;
+}
 .wrap .mainPage .howToUse .cards .card .cardTitle {
   font-size: 32px;
   font-weight: 600;
