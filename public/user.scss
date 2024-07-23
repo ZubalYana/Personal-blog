@@ -41,6 +41,8 @@
         position: absolute;
         top: 35px;
         right: 35px;
+        transition: 0.8s ease;
+
         .burger{
             width: 42px;
             height: 36px;
@@ -58,12 +60,13 @@
         .sidebar{
             width: 100%;
             height: 0px;
+            transition: 0.8s ease;
             .icons{
                 display: flex;
                 flex-direction: column;
                 justify-content: space-around;
                 align-items: center;
-                color: #1A4D2E;
+                color: #ffffff;
                 height: 100%;
                 width: 100%;
                 font-size: 0px;
