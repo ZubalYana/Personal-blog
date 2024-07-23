@@ -185,6 +185,8 @@
 }
 .wrap .mainPage .howToUse #usageArrow3 {
   width: 311px;
+  top: 410px;
+  left: 940px;
 }
 .wrap .mainPage .howToUse .title {
   font-size: 48px;
