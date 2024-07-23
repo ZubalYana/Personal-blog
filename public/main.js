@@ -72,4 +72,11 @@ $('#discover').click(() => {
     window.location.href = '/auth';
 });
 
-
+//about button scroll animation
+$(document).ready(function() {
+    $('#aboutBlog').click(function() {
+        $('html, body').animate({
+            scrollTop: $('.howToUse').offset().top
+        }, 1000);
+    });
+});
