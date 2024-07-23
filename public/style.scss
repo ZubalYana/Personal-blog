@@ -188,6 +188,35 @@
                     .cardIconsCon{
                         width: 100%;
                         height: 210px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        position: relative;
+                        .userIcon{
+                            font-size: 100px;
+                            color: #1A4D2E;
+                        }
+                        .penIcon{
+                            position: absolute;
+                            font-size: 42px;
+                            top: 60px;
+                            left: 20px;
+                            color: #4F6F52;
+                        }
+                        .checkIcon{
+                            position: absolute;
+                            font-size: 42px;
+                            top: 0px;
+                            left: 160px;
+                            color: #E8DFCA;
+                        }
+                        .asteriskIcon{
+                            position: absolute;
+                            font-size: 42px;
+                            top: 120px;
+                            left: 195px;
+                            color: #45474B;
+                        }
                     }
                     .cardTitle{
                         font-size: 32px;

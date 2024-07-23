@@ -195,6 +195,35 @@
 .wrap .mainPage .howToUse .cards .card .cardIconsCon {
   width: 100%;
   height: 210px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.wrap .mainPage .howToUse .cards .card .cardIconsCon .userIcon {
+  font-size: 100px;
+  color: #1A4D2E;
+}
+.wrap .mainPage .howToUse .cards .card .cardIconsCon .penIcon {
+  position: absolute;
+  font-size: 42px;
+  top: 60px;
+  left: 20px;
+  color: #4F6F52;
+}
+.wrap .mainPage .howToUse .cards .card .cardIconsCon .checkIcon {
+  position: absolute;
+  font-size: 42px;
+  top: 0px;
+  left: 160px;
+  color: #E8DFCA;
+}
+.wrap .mainPage .howToUse .cards .card .cardIconsCon .asteriskIcon {
+  position: absolute;
+  font-size: 42px;
+  top: 120px;
+  left: 195px;
+  color: #45474B;
 }
 .wrap .mainPage .howToUse .cards .card .cardTitle {
   font-size: 32px;
