@@ -162,6 +162,19 @@
   background-color: #fff;
   color: #45474B;
 }
+.wrap .mainPage .howToUse {
+  color: #45474B;
+  padding: 40px;
+}
+.wrap .mainPage .howToUse .title {
+  font-size: 48px;
+  font-weight: 700;
+}
+.wrap .mainPage .howToUse .subtitle {
+  font-size: 22px;
+  font-weight: 300;
+  width: 832px;
+}
 .wrap .blogPage {
   width: 100%;
   min-height: 100vh;
