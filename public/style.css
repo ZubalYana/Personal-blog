@@ -175,6 +175,30 @@
   font-weight: 300;
   width: 832px;
 }
+.wrap .mainPage .howToUse .cards {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.wrap .mainPage .howToUse .cards .card {
+  width: 304px;
+  height: 335px;
+  border: #45474B 1px solid;
+  border-radius: 15px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.wrap .mainPage .howToUse .cards .card .cardTitle {
+  font-size: 32px;
+  font-weight: 600;
+}
+.wrap .mainPage .howToUse .cards .card .cardSubtitle {
+  font-size: 20px;
+  font-weight: 300;
+}
 .wrap .blogPage {
   width: 100%;
   min-height: 100vh;
