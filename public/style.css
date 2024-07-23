@@ -179,6 +179,7 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
+  margin-top: 80px;
 }
 .wrap .mainPage .howToUse .cards .card {
   width: 304px;
