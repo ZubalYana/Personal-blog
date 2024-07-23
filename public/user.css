@@ -43,9 +43,8 @@
 }
 .wrap .menuContainer {
   width: 52px;
-  height: 200px;
+  height: 46px;
   border-radius: 6px;
-  background-color: #aea7a7;
   padding: 5px;
   position: absolute;
   top: 35px;
@@ -67,7 +66,7 @@
 }
 .wrap .menuContainer .sidebar {
   width: 100%;
-  height: 159px;
+  height: 0px;
 }
 .wrap .menuContainer .sidebar .icons {
   display: flex;
@@ -77,7 +76,7 @@
   color: #1A4D2E;
   height: 100%;
   width: 100%;
-  font-size: 28px;
+  font-size: 0px;
 }
 .wrap .user {
   width: 100%;
