@@ -161,6 +161,20 @@
         .howToUse{
             color: #45474B;
             padding: 40px;
+            position: relative;
+            .usageArrow{
+                position: absolute;
+                user-select: none;
+            }
+            #usageArrow1{
+                width: 694px;
+            }
+            #usageArrow2{
+                width: 215px;
+            }
+            #usageArrow3{
+                width: 311px;
+            }
             .title{
                 font-size: 48px;
                 font-weight: 700;

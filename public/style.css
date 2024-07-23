@@ -165,6 +165,22 @@
 .wrap .mainPage .howToUse {
   color: #45474B;
   padding: 40px;
+  position: relative;
+}
+.wrap .mainPage .howToUse .usageArrow {
+  position: absolute;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.wrap .mainPage .howToUse #usageArrow1 {
+  width: 694px;
+}
+.wrap .mainPage .howToUse #usageArrow2 {
+  width: 215px;
+}
+.wrap .mainPage .howToUse #usageArrow3 {
+  width: 311px;
 }
 .wrap .mainPage .howToUse .title {
   font-size: 48px;
