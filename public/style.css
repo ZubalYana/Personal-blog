@@ -250,6 +250,31 @@
   left: 20px;
   color: #1A4D2E;
 }
+.wrap .mainPage .howToUse .cards .card .cardIconsCon .shareIcon {
+  font-size: 100px;
+  color: #4F6F52;
+}
+.wrap .mainPage .howToUse .cards .card .cardIconsCon .arrowIcon {
+  position: absolute;
+  font-size: 32px;
+  top: 0px;
+  left: 105px;
+  color: #E8DFCA;
+}
+.wrap .mainPage .howToUse .cards .card .cardIconsCon .mapIcon {
+  position: absolute;
+  font-size: 42px;
+  top: 110px;
+  left: 200px;
+  color: #45474B;
+}
+.wrap .mainPage .howToUse .cards .card .cardIconsCon .handshakeIcon {
+  position: absolute;
+  font-size: 42px;
+  top: 115px;
+  left: 30px;
+  color: #1A4D2E;
+}
 .wrap .mainPage .howToUse .cards .card .cardTitle {
   font-size: 32px;
   font-weight: 600;
