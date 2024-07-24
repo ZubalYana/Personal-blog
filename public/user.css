@@ -341,13 +341,22 @@
   align-items: center;
   transition: 0.5s ease-in-out;
   font-family: Urbanist;
+  cursor: pointer;
 }
 .wrap .postCreation .buttons_con .buttons #cancel {
-  border: #1A4D2E 1px solid;
+  border: #1A4D2E 2px solid;
   color: #1A4D2E;
 }
+.wrap .postCreation .buttons_con .buttons #cancel:hover {
+  background-color: #1A4D2E;
+  color: #fff;
+}
 .wrap .postCreation .buttons_con .buttons #post {
-  border: #45474B 1px solid;
+  border: #45474B 2px solid;
   color: #45474B;
   background-color: #F5EFE6;
+}
+.wrap .postCreation .buttons_con .buttons #post:hover {
+  background-color: #45474B;
+  color: #F5EFE6;
 }/*# sourceMappingURL=user.css.map */
