@@ -323,6 +323,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  margin-top: 47px;
 }
 .wrap .postCreation .buttons_con .buttons {
   width: 500px;
