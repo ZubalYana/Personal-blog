@@ -133,6 +133,22 @@ app.get('/auth/user', authMiddleware, async (req, res) => {
     }
 });
 
+//post creation
+app.post('/api/posts', async (req, res) => {
+    try {
+        const { title, body, pic } = req.body
+        const newPost = new Post({
+            title,
+            body,
+            pic
+        })
+        await newPost.save()
+        res.status(201).json(newPost)
+    } catch {
+        res.status(500).json({ message: 'Post creation failed' })
+    }
+})
+
 app.get('/auth', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'auth.html'));
 });
