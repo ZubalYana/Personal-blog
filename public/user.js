@@ -51,23 +51,24 @@ document.getElementById('post-pic').addEventListener('change', function(event) {
         reader.onload = function(e) {
             const img = new Image();
             img.onload = function() {
-                const canvas = document.createElement('canvas');
-                const max_size = 100; 
+                const max_width = 545;
+                const max_height = 400;
                 let width = img.width;
                 let height = img.height;
 
                 if (width > height) {
-                    if (width > max_size) {
-                        height *= max_size / width;
-                        width = max_size;
+                    if (width > max_width) {
+                        height *= max_width / width;
+                        width = max_width;
                     }
                 } else {
-                    if (height > max_size) {
-                        width *= max_size / height;
-                        height = max_size;
+                    if (height > max_height) {
+                        width *= max_height / height;
+                        height = max_height;
                     }
                 }
 
+                const canvas = document.createElement('canvas');
                 canvas.width = width;
                 canvas.height = height;
                 const ctx = canvas.getContext('2d');
