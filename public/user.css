@@ -204,6 +204,15 @@
   left: 0;
   display: none;
   transition: 0.8s ease-in-out;
+  flex-direction: column;
+  padding: 40px;
+}
+.wrap .postCreation #postCreation_xmark {
+  font-size: 32px;
+  color: #1A4D2E;
+  position: absolute;
+  top: 40px;
+  right: 40px;
 }
 .wrap .postCreation .postPicture label {
   cursor: pointer;

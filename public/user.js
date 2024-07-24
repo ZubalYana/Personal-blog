@@ -36,3 +36,9 @@ document.addEventListener('DOMContentLoaded', ()=>{
 $('#plus').click(()=>{
     $('.postCreation').css('display', 'flex')
 })
+$('#postCreation_xmark').click(()=>{
+    $('.postCreation').css('display', 'none')
+})
+$('#cancel').click(()=>{
+    $('.postCreation').css('display', 'none')
+})
