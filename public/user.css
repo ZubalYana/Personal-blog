@@ -348,6 +348,7 @@
 .wrap .postCreation .buttons_con .buttons #cancel {
   border: #1A4D2E 2px solid;
   color: #1A4D2E;
+  background-color: #fff;
 }
 .wrap .postCreation .buttons_con .buttons #cancel:hover {
   background-color: #1A4D2E;
