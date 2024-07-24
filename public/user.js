@@ -85,19 +85,26 @@ document.getElementById('post-pic').addEventListener('change', function(event) {
 
 
 //posting
-$('#post').click(() => {
-    const data = {
-        title: $('#postTitle').val(),
-        body: $('#postText').val(),
-        hashtags: $('#postHashtags').val(),
-        hashtags: $('#post-pic').val(),
-    }
-    axios.post('http://localhost:3000/api/posts', data)
+$('#postForm').submit((event) => {
+    event.preventDefault();
+    
+    const formData = new FormData();
+    formData.append('title', $('#postTitle').val());
+    formData.append('body', $('#postText').val());
+    formData.append('hashtags', $('#postHashtags').val());
+    formData.append('post-pic', $('#post-pic')[0].files[0]);
+
+    axios.post('http://localhost:3000/api/posts', formData, {
+        headers: {
+            'Content-Type': 'multipart/form-data'
+        }
+    })
     .then((res) => {
-        console.log(res)
-        alert('Post created')
+        console.log(res);
+        alert('Post created');
     })
     .catch((err) => {
-        console.error(err)
-    })
-})
+        console.error(err);
+    });
+});
+
