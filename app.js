@@ -9,6 +9,7 @@ const env = require('dotenv').config()
 const PORT = process.env.PORT || 3000;
 const JWT_SECRET = 'your_jwt_secret';
 const multer = require('multer');
+const Post = require('./models/Post')
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
         cb(null, 'uploads/');
