@@ -304,32 +304,38 @@
             }
 
         }
-        .buttons{
-            width: 500px;
+        .buttons_con{
+            width: 100%;
             display: flex;
-            justify-content: space-between;
-            div{
-                width: 205px;
-                height: 97px;
-                border-radius: 15px;
-                font-size: 32px;
-                font-weight: 600;
+            justify-content: center;
+            .buttons{
+                width: 500px;
                 display: flex;
-                justify-content: center;
-                align-items: center;
-                transition: 0.5s ease-in-out;
-                font-family: Urbanist;
-            }
-            #cancel{
-                border: #1A4D2E 1px solid;
-                color: #1A4D2E;
-            }
-            #post{
-                border: #45474B 1px solid;
-                color: #45474B;
-                background-color: #F5EFE6;
+                justify-content: space-between;
+                div{
+                    width: 205px;
+                    height: 97px;
+                    border-radius: 15px;
+                    font-size: 32px;
+                    font-weight: 600;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    transition: 0.5s ease-in-out;
+                    font-family: Urbanist;
+                }
+                #cancel{
+                    border: #1A4D2E 1px solid;
+                    color: #1A4D2E;
+                }
+                #post{
+                    border: #45474B 1px solid;
+                    color: #45474B;
+                    background-color: #F5EFE6;
+                }
             }
         }
+        
 
     }
 }

@@ -319,12 +319,17 @@
 .wrap .postCreation .inputsAndPic .postPicture input[type=file] {
   display: none;
 }
-.wrap .postCreation .buttons {
+.wrap .postCreation .buttons_con {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.wrap .postCreation .buttons_con .buttons {
   width: 500px;
   display: flex;
   justify-content: space-between;
 }
-.wrap .postCreation .buttons div {
+.wrap .postCreation .buttons_con .buttons div {
   width: 205px;
   height: 97px;
   border-radius: 15px;
@@ -336,11 +341,11 @@
   transition: 0.5s ease-in-out;
   font-family: Urbanist;
 }
-.wrap .postCreation .buttons #cancel {
+.wrap .postCreation .buttons_con .buttons #cancel {
   border: #1A4D2E 1px solid;
   color: #1A4D2E;
 }
-.wrap .postCreation .buttons #post {
+.wrap .postCreation .buttons_con .buttons #post {
   border: #45474B 1px solid;
   color: #45474B;
   background-color: #F5EFE6;
