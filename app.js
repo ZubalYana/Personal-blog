@@ -134,21 +134,23 @@ app.get('/auth/user', authMiddleware, async (req, res) => {
 });
 
 //post creation
-app.post('/api/posts', async (req, res) => {
+app.post('/api/posts', upload.single('post-pic'), async (req, res) => {
     try {
-        const { title, body, pic, hashtags } = req.body
+        const { title, body, hashtags } = req.body;
+        const pic = req.file ? req.file.path : null;
+        
         const newPost = new Post({
             title,
             body,
             pic,
             hashtags
-        })
-        await newPost.save()
-        res.status(201).json(newPost)
-    } catch {
-        res.status(500).json({ message: 'Post creation failed' })
+        });
+        await newPost.save();
+        res.status(201).json(newPost);
+    } catch (err) {
+        res.status(500).json({ message: 'Post creation failed', error: err.message });
     }
-})
+});
 
 app.get('/auth', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'auth.html'));

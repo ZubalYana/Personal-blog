@@ -85,17 +85,19 @@ document.getElementById('post-pic').addEventListener('change', function(event) {
 
 
 //posting
-// $('#post').click(() => {
-//     const data = {
-//         title: $('#postTitle').val(),
-//         body: $('#postText').val()
-//     }
-//     axios.post('http://localhost:3000/api/posts', data)
-//     .then((res) => {
-//         console.log(res)
-//         alert('Post created')
-//     })
-//     .catch((err) => {
-//         console.error(err)
-//     })
-// })
+$('#post').click(() => {
+    const data = {
+        title: $('#postTitle').val(),
+        body: $('#postText').val(),
+        hashtags: $('#postHashtags').val(),
+        hashtags: $('#post-pic').val(),
+    }
+    axios.post('http://localhost:3000/api/posts', data)
+    .then((res) => {
+        console.log(res)
+        alert('Post created')
+    })
+    .catch((err) => {
+        console.error(err)
+    })
+})
