@@ -8,6 +8,10 @@ const postSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    pic:{
+        type: String,
+        required: true
+    },
     date:{
         type: Date,
         default: Date.now
