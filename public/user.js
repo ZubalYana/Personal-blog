@@ -32,20 +32,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
 })
 })
 
-//burger animation
-// $('.burger').hover(
-//     function() {
-//         $('.menuContainer').css('height', '200px');
-//         $('.sidebar').css('height', '159px');
-//         $('.icons').css('font-size', '28px');
-//         $('.menuContainer').css('background-color', '#1A4D2E');
-//         $('.line').css('background-color', '#fff');
-//     }, 
-//     function() {
-//         $('.menuContainer').css('height', '46px');
-//         $('.sidebar').css('height', '0px');
-//         $('.icons').css('font-size', '0px');
-//         $('.menuContainer').css('background-color', '#fff');
-//         $('.line').css('background-color', '#1A4D2E');
-//     }
-// );
+//post creation
+$('#plus').click(()=>{
+    $('.postCreation').css('display', 'flex')
+})
