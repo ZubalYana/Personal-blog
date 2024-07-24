@@ -194,4 +194,13 @@
   font-weight: 600;
   background-color: #fff;
   color: #1A4D2E;
+}
+.wrap .postCreation {
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
 }/*# sourceMappingURL=user.css.map */
