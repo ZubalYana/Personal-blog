@@ -213,6 +213,23 @@
             top: 40px;
             right: 40px;
         }
+        #postTitle{
+            border: none;
+            outline: none;
+            min-width: 215px;
+            max-width: 450px;
+            height: 48px;
+            font-size: 48px;
+            font-weight: 700;
+            font-family: Urbanist;
+            color: #45474B;
+            &::placeholder{
+                font-size: 48px;
+                font-weight: 700;
+                font-family: Urbanist;
+                color: #45474ba3;
+            }
+        }
         .postPicture{   
             label {
                 cursor: pointer;

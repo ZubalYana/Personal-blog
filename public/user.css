@@ -214,6 +214,29 @@
   top: 40px;
   right: 40px;
 }
+.wrap .postCreation #postTitle {
+  border: none;
+  outline: none;
+  min-width: 215px;
+  max-width: 450px;
+  height: 48px;
+  font-size: 48px;
+  font-weight: 700;
+  font-family: Urbanist;
+  color: #45474B;
+}
+.wrap .postCreation #postTitle::-moz-placeholder {
+  font-size: 48px;
+  font-weight: 700;
+  font-family: Urbanist;
+  color: rgba(69, 71, 75, 0.6392156863);
+}
+.wrap .postCreation #postTitle::placeholder {
+  font-size: 48px;
+  font-weight: 700;
+  font-family: Urbanist;
+  color: rgba(69, 71, 75, 0.6392156863);
+}
 .wrap .postCreation .postPicture label {
   cursor: pointer;
   display: block;
