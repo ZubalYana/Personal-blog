@@ -136,11 +136,12 @@ app.get('/auth/user', authMiddleware, async (req, res) => {
 //post creation
 app.post('/api/posts', async (req, res) => {
     try {
-        const { title, body, pic } = req.body
+        const { title, body, pic, hashtags } = req.body
         const newPost = new Post({
             title,
             body,
-            pic
+            pic,
+            hashtags
         })
         await newPost.save()
         res.status(201).json(newPost)

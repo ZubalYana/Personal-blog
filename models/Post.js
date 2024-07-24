@@ -12,6 +12,9 @@ const postSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    hashtags:{
+        type: String,
+    },
     date:{
         type: Date,
         default: Date.now

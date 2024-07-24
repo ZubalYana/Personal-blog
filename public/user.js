@@ -82,3 +82,20 @@ document.getElementById('post-pic').addEventListener('change', function(event) {
         reader.readAsDataURL(input.files[0]);
     }
 });
+
+
+//posting
+// $('#post').click(() => {
+//     const data = {
+//         title: $('#postTitle').val(),
+//         body: $('#postText').val()
+//     }
+//     axios.post('http://localhost:3000/api/posts', data)
+//     .then((res) => {
+//         console.log(res)
+//         alert('Post created')
+//     })
+//     .catch((err) => {
+//         console.error(err)
+//     })
+// })
