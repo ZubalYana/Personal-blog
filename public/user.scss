@@ -260,6 +260,28 @@
                         color: #45474ba3;
                     }
                 }
+                #postHashtags{
+                    width: 100%;
+                    height: 120px;
+                    background-color: #00000013;
+                    border-radius: 15px;
+                    padding: 20px;
+                    border: none;
+                    outline: none;
+                    display: flex;
+                    align-items: flex-start;
+                    resize: none;
+                    font-size: 20px;
+                    font-weight: 500;
+                    color: #45474B;
+                    margin-top: 30px;
+                    &::placeholder{
+                        font-size: 20px;
+                        font-weight: 500;
+                        font-family: Urbanist;
+                        color: #45474ba3;
+                    }
+                }
             }
             .postPicture{  
                 label {
@@ -279,6 +301,33 @@
                 input[type="file"] {
                     display: none;
                 }
+            }
+
+        }
+        .buttons{
+            width: 500px;
+            display: flex;
+            justify-content: space-between;
+            div{
+                width: 205px;
+                height: 97px;
+                border-radius: 15px;
+                font-size: 32px;
+                font-weight: 600;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: 0.5s ease-in-out;
+                font-family: Urbanist;
+            }
+            #cancel{
+                border: #1A4D2E 1px solid;
+                color: #1A4D2E;
+            }
+            #post{
+                border: #45474B 1px solid;
+                color: #45474B;
+                background-color: #F5EFE6;
             }
         }
 

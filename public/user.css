@@ -275,6 +275,34 @@
   font-family: Urbanist;
   color: rgba(69, 71, 75, 0.6392156863);
 }
+.wrap .postCreation .inputsAndPic .inputs #postHashtags {
+  width: 100%;
+  height: 120px;
+  background-color: rgba(0, 0, 0, 0.0745098039);
+  border-radius: 15px;
+  padding: 20px;
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: flex-start;
+  resize: none;
+  font-size: 20px;
+  font-weight: 500;
+  color: #45474B;
+  margin-top: 30px;
+}
+.wrap .postCreation .inputsAndPic .inputs #postHashtags::-moz-placeholder {
+  font-size: 20px;
+  font-weight: 500;
+  font-family: Urbanist;
+  color: rgba(69, 71, 75, 0.6392156863);
+}
+.wrap .postCreation .inputsAndPic .inputs #postHashtags::placeholder {
+  font-size: 20px;
+  font-weight: 500;
+  font-family: Urbanist;
+  color: rgba(69, 71, 75, 0.6392156863);
+}
 .wrap .postCreation .inputsAndPic .postPicture label {
   cursor: pointer;
   display: block;
@@ -290,4 +318,30 @@
 }
 .wrap .postCreation .inputsAndPic .postPicture input[type=file] {
   display: none;
+}
+.wrap .postCreation .buttons {
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+}
+.wrap .postCreation .buttons div {
+  width: 205px;
+  height: 97px;
+  border-radius: 15px;
+  font-size: 32px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s ease-in-out;
+  font-family: Urbanist;
+}
+.wrap .postCreation .buttons #cancel {
+  border: #1A4D2E 1px solid;
+  color: #1A4D2E;
+}
+.wrap .postCreation .buttons #post {
+  border: #45474B 1px solid;
+  color: #45474B;
+  background-color: #F5EFE6;
 }/*# sourceMappingURL=user.css.map */
