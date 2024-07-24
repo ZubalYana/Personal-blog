@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
 })
 })
 
-//post creation
+//post screen opening/closing
 $('#plus').click(()=>{
     $('.postCreation').css('display', 'flex')
 })
@@ -42,3 +42,42 @@ $('#postCreation_xmark').click(()=>{
 $('#cancel').click(()=>{
     $('.postCreation').css('display', 'none')
 })
+
+//post img displaying
+document.getElementById('post-pic').addEventListener('change', function(event) {
+    const input = event.target;
+    if (input.files && input.files[0]) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            const img = new Image();
+            img.onload = function() {
+                const canvas = document.createElement('canvas');
+                const max_size = 100; 
+                let width = img.width;
+                let height = img.height;
+
+                if (width > height) {
+                    if (width > max_size) {
+                        height *= max_size / width;
+                        width = max_size;
+                    }
+                } else {
+                    if (height > max_size) {
+                        width *= max_size / height;
+                        height = max_size;
+                    }
+                }
+
+                canvas.width = width;
+                canvas.height = height;
+                const ctx = canvas.getContext('2d');
+                ctx.drawImage(img, 0, 0, width, height);
+
+                const resizedDataUrl = canvas.toDataURL('image/jpeg');
+                document.getElementById('post-pic-preview').src = resizedDataUrl;
+            };
+            img.src = e.target.result;
+        };
+        reader.readAsDataURL(input.files[0]);
+    }
+});
