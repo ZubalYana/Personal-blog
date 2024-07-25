@@ -153,6 +153,17 @@ app.post('/api/posts', upload.single('post-pic'), async (req, res) => {
     }
 });
 
+//get all posts
+app.get('/api/getPosts', async (req, res) => {
+    try {
+        const posts = await Post.find()
+        res.json(posts)
+        res.status(201).json({ message: 'Posts were got successfully' })
+    } catch (err) {
+        res.status(500).json({ message: 'Error when getting posts' })
+    }
+})
+
 //auth
 app.get('/auth', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'auth.html'));
