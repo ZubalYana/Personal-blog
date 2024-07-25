@@ -96,9 +96,9 @@ axios.get('/api/getPosts')
                                 <img class="author_pic" src="${post.author.profilePicture}" alt="">
                                 <p class="authro_name">${post.author.firstname} ${post.author.lastName}</p>
                                 <div class="dot"></div>
-                                <h6 class="follow">follow</h6>
+                                <p class="follow">follow</p>
                             </div>
-                            <div class="time">${post.date}</div>
+                            <p class="time">${post.date}</p>
                         </div>
                         <img class="postImg" src="${post.pic}" alt="">
                         <h3 class="postTitle">${post.title}</h3>
