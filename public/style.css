@@ -407,14 +407,17 @@
   height: 240px;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 10px;
+  margin: 15px 0;
 }
 .wrap .blogPage .postsContainer .post .postTitle {
   font-size: 28px;
   font-weight: 700;
 }
 .wrap .blogPage .postsContainer .post .postText {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 400;
+  margin: 7px 0;
 }
 .wrap .blogPage .postsContainer .post .postHashtags {
   font-size: 20px;
@@ -422,15 +425,18 @@
   color: #1A4D2E;
 }
 .wrap .blogPage .postsContainer .post .actions {
-  width: 96px;
+  width: 90px;
   display: flex;
   justify-content: space-between;
-  font-size: 24px;
+  font-size: 32px;
   color: #45474B;
+  margin-top: 20px;
+}
+.wrap .blogPage .postsContainer .post i {
   transition: 0.5s ease;
 }
-.wrap .blogPage .postsContainer .post .actions:hover {
-  color: #1A4D2E;
+.wrap .blogPage .postsContainer .post i:hover {
+  color: #4F6F52;
 }
 .wrap .helpPage {
   width: 100%;
