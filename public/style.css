@@ -51,6 +51,7 @@
 }
 .wrap .mainPage {
   width: 100%;
+  flex-direction: column;
 }
 .wrap .mainPage .greeting .greetingBottom {
   width: 100%;

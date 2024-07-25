@@ -43,6 +43,7 @@
     }
     .mainPage{
         width: 100%;
+        flex-direction: column;
         .greeting{
             .greetingBottom{
                 width: 100%;

@@ -3,6 +3,7 @@ $('.home').click(() => {
     $('.mainPage').css('display', 'flex');
     $('.blogPage').css('display', 'none');
     $('.helpPage').css('display', 'none');
+    
 });
 $('.blog').click(() => {
     $('.mainPage').css('display', 'none');
