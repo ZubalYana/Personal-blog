@@ -87,4 +87,24 @@ $(document).ready(function() {
 axios.get('/api/getPosts')
 .then((res)=>{
     console.log(res.data)
+    $('.postsContainer').append(
+        `
+        <div class="post">
+                    <div class="top">
+                        <div class="author">
+                            <img class="author_pic" src="" alt="">
+                            <p class="authro_name"></p>
+                        </div>
+                        <div class="time"></div>
+                    </div>
+                    <img class="postImg" src="" alt="">
+                    <p class="postText"></p>
+                    <p class="postHashtags"></p>
+                    <div class="actions">
+                        <i class="fa-regular fa-thumbs-up"></i>
+                        <i class="fa-solid fa-share-nodes"></i>
+                    </div>
+                </div>
+        `
+    )
 })
