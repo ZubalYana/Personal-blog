@@ -135,7 +135,7 @@ app.get('/auth/user', authMiddleware, async (req, res) => {
 });
 
 //post creation
-app.post('/api/posts', upload.single('post-pic'), async (req, res) => {
+app.post('/api/posts', authMiddleware, upload.single('post-pic'), async (req, res) => {
     try {
         const { title, body, hashtags } = req.body;
         const pic = req.file ? req.file.path : null;
@@ -144,7 +144,8 @@ app.post('/api/posts', upload.single('post-pic'), async (req, res) => {
             title,
             body,
             pic,
-            hashtags
+            hashtags,
+            author: req.userId // Set the author as the logged-in user
         });
         await newPost.save();
         res.status(201).json(newPost);
@@ -156,13 +157,13 @@ app.post('/api/posts', upload.single('post-pic'), async (req, res) => {
 //get all posts
 app.get('/api/getPosts', async (req, res) => {
     try {
-        const posts = await Post.find()
-        res.json(posts)
-        res.status(201).json({ message: 'Posts were got successfully' })
+        const posts = await Post.find().populate('author', 'firstname lastName profilePicture');
+        res.status(200).json(posts);
     } catch (err) {
-        res.status(500).json({ message: 'Error when getting posts' })
+        res.status(500).json({ message: 'Error when getting posts', error: err.message });
     }
-})
+});
+
 
 //auth
 app.get('/auth', (req, res) => {
