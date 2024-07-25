@@ -87,24 +87,28 @@ $(document).ready(function() {
 axios.get('/api/getPosts')
 .then((res)=>{
     console.log(res.data)
-    $('.postsContainer').append(
-        `
-        <div class="post">
-                    <div class="top">
-                        <div class="author">
-                            <img class="author_pic" src="" alt="">
-                            <p class="authro_name"></p>
+    for( let post of res.data ){
+        $('.postsContainer').append(
+            `
+            <div class="post">
+                        <div class="top">
+                            <div class="author">
+                                <img class="author_pic" src="${post.author.profilePicture}" alt="">
+                                <p class="authro_name">${post.author.firstname} ${post.author.lastName}</p>
+                            </div>
+                            <div class="time">${post.date}</div>
                         </div>
-                        <div class="time"></div>
+                        <img class="postImg" src="${post.pic}" alt="">
+                        <h3 class="postText">${post.title}</h3>
+                        <p class="postText">${post.body}</p>
+                        <p class="postHashtags">${post.hashtags}</p>
+                        <div class="actions">
+                            <i class="fa-regular fa-thumbs-up"></i>
+                            <i class="fa-solid fa-share-nodes"></i>
+                        </div>
                     </div>
-                    <img class="postImg" src="" alt="">
-                    <p class="postText"></p>
-                    <p class="postHashtags"></p>
-                    <div class="actions">
-                        <i class="fa-regular fa-thumbs-up"></i>
-                        <i class="fa-solid fa-share-nodes"></i>
-                    </div>
-                </div>
-        `
-    )
+            `
+        )
+    }
+
 })
