@@ -361,6 +361,67 @@
   border-radius: 15px;
   border: #1A4D2E 2px solid;
   padding: 20px;
+  color: #45474B;
+}
+.wrap .blogPage .postsContainer .post .top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrap .blogPage .postsContainer .post .top .author .author_pic {
+  width: 45px;
+  height: 45px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.wrap .blogPage .postsContainer .post .top .author .authro_name {
+  font-size: 24px;
+  font-weight: 600;
+}
+.wrap .blogPage .postsContainer .post .top .author .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #45474B;
+}
+.wrap .blogPage .postsContainer .post .top .author .follow {
+  font-size: 20px;
+  font-weight: 400;
+}
+.wrap .blogPage .postsContainer .post .top .time {
+  font-size: 16px;
+  font-weight: 300;
+}
+.wrap .blogPage .postsContainer .post .postImg {
+  width: 100%;
+  height: 240px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.wrap .blogPage .postsContainer .post .postTitle {
+  font-size: 28px;
+  font-weight: 700;
+}
+.wrap .blogPage .postsContainer .post .postText {
+  font-size: 20px;
+  font-weight: 400;
+}
+.wrap .blogPage .postsContainer .post .postHashtags {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1A4D2E;
+}
+.wrap .blogPage .postsContainer .post .actions {
+  width: 96px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
+  color: #45474B;
+  transition: 0.5s ease;
+}
+.wrap .blogPage .postsContainer .post .actions:hover {
+  color: #1A4D2E;
 }
 .wrap .helpPage {
   width: 100%;
