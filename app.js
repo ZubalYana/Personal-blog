@@ -104,6 +104,7 @@ app.post('/auth/logout', (req, res) => {
     res.status(200).json({ message: 'Logged out successfully' });
 });
 
+//middleware
 const authMiddleware = (req, res, next) => {
     const token = req.cookies.token;
     if (!token) {
@@ -152,14 +153,17 @@ app.post('/api/posts', upload.single('post-pic'), async (req, res) => {
     }
 });
 
+//auth
 app.get('/auth', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'auth.html'));
 });
 
+//main
 app.get('/', (req, res)=>{
     res.sendFile(__dirname, 'public', 'index.html')
 })
 
+//user
 app.get('/user', authMiddleware, (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'user.html'));
 });
