@@ -109,7 +109,6 @@ const authMiddleware = (req, res, next) => {
     const token = req.cookies.token;
     if (!token) {
         return res.status(401).json({ message: 'Unauthorized' });
-        // return res.sendFile(path.join(__dirname, 'public', 'auth.html'));
     }
     try {
         const decoded = jwt.verify(token, JWT_SECRET);
@@ -119,6 +118,7 @@ const authMiddleware = (req, res, next) => {
         res.status(401).json({ message: 'Unauthorized' });
     }
 };
+
 
 //get the user info
 app.get('/auth/user', authMiddleware, async (req, res) => {
