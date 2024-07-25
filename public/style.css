@@ -354,6 +354,7 @@
   min-height: 521px;
   display: flex;
   justify-content: space-between;
+  margin-top: 30px;
 }
 .wrap .blogPage .postsContainer .post {
   width: 551px;
