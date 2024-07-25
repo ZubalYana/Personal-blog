@@ -345,6 +345,20 @@
             }
 
         }
+        .postsContainer{
+            width: 100%;
+            min-height: 521px;
+            display: flex;
+            justify-content: space-between;
+            .post{
+                width: 551px;
+                height: 521px;
+                border-radius: 15px;
+                border: #1A4D2E 2px solid;
+                padding: 20px;
+            }
+
+        }
     }
     .helpPage{
         width: 100%;
