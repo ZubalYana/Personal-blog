@@ -308,6 +308,7 @@
         min-height: 100vh;
         display: none;
         padding: 40px;
+        flex-direction: column;
         .header{
             width: 100%;
             display: flex;

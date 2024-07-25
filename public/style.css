@@ -312,6 +312,7 @@
   min-height: 100vh;
   display: none;
   padding: 40px;
+  flex-direction: column;
 }
 .wrap .blogPage .header {
   width: 100%;
