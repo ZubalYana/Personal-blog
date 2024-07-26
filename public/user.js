@@ -113,7 +113,7 @@ $.ajax({
     method: 'GET',
     success: function(posts) {
         posts.forEach(post => {
-            const formattedDate = moment(post.createdAt).format('LL'); // Format the date using moment.js
+            const formattedDate = moment(post.date).fromNow();
             $('.postsContainer').prepend(
                 `
                 <div class="post">
@@ -121,8 +121,6 @@ $.ajax({
                         <div class="author">
                             <img class="author_pic" src="${post.author.profilePicture}" alt="">
                             <p class="authro_name">${post.author.firstname} ${post.author.lastName}</p>
-                            <div class="dot"></div>
-                            <p class="follow">follow</p>
                         </div>
                         <p class="time">${formattedDate}</p>
                     </div>
