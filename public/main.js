@@ -80,6 +80,7 @@ $('.profileIcon').click(() => {
         }
     });
 });
+
 //registration redirect
 $('#discover').click(() => {
     window.location.href = '/auth';
@@ -93,7 +94,6 @@ $(document).ready(function() {
         }, 1000);
     });
 });
-
 
 //get and display all the posts
 axios.get('/api/getPosts')
