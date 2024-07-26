@@ -89,7 +89,7 @@ axios.get('/api/getPosts')
     console.log(res.data);
     for (let post of res.data) {
         const formattedDate = moment(post.date).fromNow();
-        $('.postsContainer').append(
+        $('.postsContainer').prepend(
             `
             <div class="post">
                 <div class="top">
