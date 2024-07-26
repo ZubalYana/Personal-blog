@@ -355,6 +355,7 @@
   display: flex;
   justify-content: space-between;
   margin-top: 30px;
+  flex-wrap: wrap;
 }
 .wrap .blogPage .postsContainer .post {
   width: 450px;
@@ -363,6 +364,7 @@
   border: #1A4D2E 2px solid;
   padding: 20px;
   color: #45474B;
+  margin-bottom: 40px;
 }
 .wrap .blogPage .postsContainer .post .top {
   width: 100%;
