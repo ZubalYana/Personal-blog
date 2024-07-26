@@ -65,9 +65,21 @@ $('.iconWhite').hover(
 
 //user profile opening
 $('.profileIcon').click(() => {
-    window.location.href = '/user';
+    $.ajax({
+        url: '/auth/user',
+        type: 'GET',
+        success: function(response) {
+            window.location.href = '/user';
+        },
+        error: function(xhr) {
+            if (xhr.status === 401) {
+                window.location.href = '/auth';
+            } else {
+                console.error('An error occurred:', xhr.responseText);
+            }
+        }
+    });
 });
-
 //registration redirect
 $('#discover').click(() => {
     window.location.href = '/auth';
