@@ -158,20 +158,20 @@
   color: #000;
   margin-left: 5px;
 }
-.wrap .posts {
+.wrap .user .posts {
   width: 100%;
   display: flex;
   flex-direction: column;
   margin-top: 40px;
 }
-.wrap .posts .postsChanging {
+.wrap .user .posts .postsChanging {
   width: 100%;
   display: flex;
   justify-content: space-between;
   border-bottom: #1A4D2E 3px solid;
   height: 62px;
 }
-.wrap .posts .postsChanging .publishedPosts {
+.wrap .user .posts .postsChanging .publishedPosts {
   width: 50%;
   height: 100%;
   display: flex;
@@ -183,7 +183,7 @@
   background-color: #1A4D2E;
   color: #fff;
 }
-.wrap .posts .postsChanging .likedPosts {
+.wrap .user .posts .postsChanging .likedPosts {
   width: 50%;
   height: 100%;
   display: flex;
@@ -194,6 +194,96 @@
   font-weight: 600;
   background-color: #fff;
   color: #1A4D2E;
+}
+.wrap .user .posts .postsContainer {
+  width: 100%;
+  min-height: 521px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.wrap .user .posts .postsContainer .post {
+  width: 450px;
+  height: 521px;
+  border-radius: 15px;
+  border: #1A4D2E 2px solid;
+  padding: 20px;
+  color: #45474B;
+}
+.wrap .user .posts .postsContainer .post .top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 45px;
+}
+.wrap .user .posts .postsContainer .post .top .author {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+.wrap .user .posts .postsContainer .post .top .author .author_pic {
+  width: 45px;
+  height: 45px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.wrap .user .posts .postsContainer .post .top .author .authro_name {
+  font-size: 24px;
+  font-weight: 600;
+}
+.wrap .user .posts .postsContainer .post .top .author .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #45474B;
+  margin: 0 12px;
+}
+.wrap .user .posts .postsContainer .post .top .author .follow {
+  font-size: 20px;
+  font-weight: 400;
+}
+.wrap .user .posts .postsContainer .post .top .time {
+  font-size: 16px;
+  font-weight: 300;
+}
+.wrap .user .posts .postsContainer .post .postImg {
+  width: 100%;
+  height: 240px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+  margin: 15px 0;
+}
+.wrap .user .posts .postsContainer .post .postTitle {
+  font-size: 28px;
+  font-weight: 700;
+}
+.wrap .user .posts .postsContainer .post .postText {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 7px 0;
+}
+.wrap .user .posts .postsContainer .post .postHashtags {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1A4D2E;
+}
+.wrap .user .posts .postsContainer .post .actions {
+  width: 90px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 32px;
+  color: #45474B;
+  margin-top: 20px;
+}
+.wrap .user .posts .postsContainer .post i {
+  transition: 0.5s ease;
+}
+.wrap .user .posts .postsContainer .post i:hover {
+  color: #4F6F52;
 }
 .wrap .postCreation {
   width: 100%;
