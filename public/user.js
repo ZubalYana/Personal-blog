@@ -113,7 +113,7 @@ $.ajax({
     method: 'GET',
     success: function(posts) {
         posts.forEach(post => {
-            const formattedDate = new Date(post.createdAt).toLocaleDateString();
+            const formattedDate = moment(post.createdAt).format('LL'); // Format the date using moment.js
             $('.postsContainer').prepend(
                 `
                 <div class="post">
