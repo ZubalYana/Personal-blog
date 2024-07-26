@@ -108,33 +108,33 @@ $('#postForm').submit((event) => {
 });
 
 //get and display all the user's posts
-axios.get('/api/getPosts')
-.then((res)=>{
-    console.log(res.data);
-    for (let post of res.data) {
-        const formattedDate = moment(post.date).fromNow();
-        $('.postsContainer').prepend(
-            `
-            <div class="post">
-                <div class="top">
-                    <div class="author">
-                        <img class="author_pic" src="${post.author.profilePicture}" alt="">
-                        <p class="authro_name">${post.author.firstname} ${post.author.lastName}</p>
-                        <div class="dot"></div>
-                        <p class="follow">follow</p>
-                    </div>
-                    <p class="time">${formattedDate}</p>
-                </div>
-                <img class="postImg" src="${post.pic}" alt="">
-                <h3 class="postTitle">${post.title}</h3>
-                <p class="postText">${post.body}</p>
-                <p class="postHashtags">${post.hashtags}</p>
-                <div class="actions">
-                    <i class="fa-regular fa-thumbs-up"></i>
-                    <i class="fa-solid fa-share-nodes"></i>
-                </div>
-            </div>
-            `
-        );
-    }
-});
+// axios.get('/api/getPosts')
+// .then((res)=>{
+//     console.log(res.data);
+//     for (let post of res.data) {
+//         const formattedDate = moment(post.date).fromNow();
+//         $('.postsContainer').prepend(
+//             `
+//             <div class="post">
+//                 <div class="top">
+//                     <div class="author">
+//                         <img class="author_pic" src="${post.author.profilePicture}" alt="">
+//                         <p class="authro_name">${post.author.firstname} ${post.author.lastName}</p>
+//                         <div class="dot"></div>
+//                         <p class="follow">follow</p>
+//                     </div>
+//                     <p class="time">${formattedDate}</p>
+//                 </div>
+//                 <img class="postImg" src="${post.pic}" alt="">
+//                 <h3 class="postTitle">${post.title}</h3>
+//                 <p class="postText">${post.body}</p>
+//                 <p class="postHashtags">${post.hashtags}</p>
+//                 <div class="actions">
+//                     <i class="fa-regular fa-thumbs-up"></i>
+//                     <i class="fa-solid fa-share-nodes"></i>
+//                 </div>
+//             </div>
+//             `
+//         );
+//     }
+// });
