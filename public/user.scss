@@ -213,6 +213,7 @@
                 display: flex;
                 justify-content: space-between;
                 margin-top: 30px;
+                flex-wrap: wrap;
                 .post{
                     width: 430px;
                     height: 521px;
@@ -220,6 +221,7 @@
                     border: #1A4D2E 2px solid;
                     padding: 20px;
                     color: #45474B;
+                    margin-bottom: 40px;
                     .top{
                         width: 100%;
                         display: flex;
