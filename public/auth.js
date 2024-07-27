@@ -199,7 +199,7 @@ $('#loginBtn').click(async function (event) {
     try {
         const response = await axios.post('/auth/login', { email, password });
         if (response.status === 200) {
-            alert(response.data.message);
+            console.log(response.data.message);
             console.log('Logged in successfully');
             window.location.href = '/user';
         }
