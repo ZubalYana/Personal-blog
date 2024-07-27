@@ -166,7 +166,7 @@ $('#registerBtn').click(async function (event) {
     formData.append('profileDescription', $('#profileDescription').val());
     formData.append('placesVisited', $('#placesVisited').val());
     formData.append('placesToVisit', $('#placesToVisit').val());
-    formData.append('profile-pic', $('#profile-pic')[0].files[0]); // Append the file
+    formData.append('profile-pic', $('#profile-pic')[0].files[0]);
 
     try {
         const response = await axios.post('/auth/register', formData, {
@@ -190,8 +190,6 @@ $('#registerBtn').click(async function (event) {
     $('.logIn').css('display', 'flex');
 });
 
-
-
 //log in
 $('#loginBtn').click(async function (event) {
     event.preventDefault();
@@ -207,7 +205,7 @@ $('#loginBtn').click(async function (event) {
         }
     } catch (error) {
         if (error.response) {
-            alert(error.response.data.message);
+            console.log(error.response.data.message);
         } else {
             alert('An error occurred. Please try again later.');
         }
