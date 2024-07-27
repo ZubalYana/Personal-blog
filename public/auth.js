@@ -174,7 +174,7 @@ $('#registerBtn').click(async function (event) {
                 'Content-Type': 'multipart/form-data'
             }
         });
-        alert(response.data.message);
+        console.log(response.data.message);
     } catch (error) {
         console.log('Registration error:', error.response.data.message);
     }
