@@ -100,7 +100,8 @@ $('#postForm').submit((event) => {
     })
     .then((res) => {
         console.log(res);
-        alert('Post created');
+        console.log('Post created');
+        $('.postCreation').css('display', 'none')
     })
     .catch((err) => {
         console.error(err);
