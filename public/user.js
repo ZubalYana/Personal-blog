@@ -102,6 +102,7 @@ $('#postForm').submit((event) => {
         console.log(res);
         console.log('Post created');
         $('.postCreation').css('display', 'none')
+        location.reload()
     })
     .catch((err) => {
         console.error(err);
