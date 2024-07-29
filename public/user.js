@@ -149,6 +149,9 @@ $.ajax({
 //logout
 $('#logoutIcon').click(() => {
     $('.messageCon').css('display', 'flex')
+    $('#cancelLogout').click(()=>{
+        $('.messageCon').css('display', 'none')
+    })
     $('#logout').click(() => {
         axios.post('/auth/logout')
             .then(response => {
