@@ -166,3 +166,10 @@ $('#logoutIcon').click(() => {
     });
 })
 
+//edit profile
+$('#pencil').click(()=>{
+    $('.profileEditingCon').css('display', 'flex')
+    $('#cancelEditing').click(()=>{
+        $('.profileEditingCon').css('display', 'none')
+    })
+})
