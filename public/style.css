@@ -459,6 +459,10 @@
   right: 10px;
   border-radius: 50px;
   font-family: Urbanist;
+  transition: 0.5s ease-in-out;
+}
+.wrap .mainPage .futer .futerContent .basic .newslatter .inputCon .inputBtn:hover {
+  background-color: #1A4D2E;
 }
 .wrap .mainPage .futer .futerContent .basic .navigation {
   width: 278px;
@@ -482,6 +486,11 @@
   font-family: Urbanist;
   margin-bottom: 7px;
   cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+.wrap .mainPage .futer .futerContent .basic .navigation .nav_column .nav_option:hover {
+  color: #4F6F52;
+  font-weight: 500;
 }
 .wrap .mainPage .futer .futerContent .mediaCon {
   width: 100%;
@@ -497,11 +506,24 @@
 }
 .wrap .mainPage .futer .futerContent .mediaCon .media i {
   font-size: 38px;
+  transition: 0.5s ease-in-out;
+}
+.wrap .mainPage .futer .futerContent .mediaCon .media i:hover {
+  color: #4F6F52;
 }
 .wrap .mainPage .futer .futerContent .mediaCon p {
   font-size: 12px;
   font-weight: 300;
   margin-top: 20px;
+}
+.wrap .mainPage .futer .futerContent .mediaCon p span {
+  font-weight: 600;
+  color: #E8DFCA;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.wrap .mainPage .futer .futerContent .mediaCon p span:hover {
+  color: #4F6F52;
 }
 .wrap .blogPage {
   width: 100%;

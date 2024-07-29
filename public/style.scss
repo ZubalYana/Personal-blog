@@ -448,6 +448,10 @@
                                 right: 10px;
                                 border-radius: 50px;
                                 font-family: Urbanist;
+                                transition: 0.5s ease-in-out;
+                            }
+                            .inputBtn:hover{
+                                background-color: #1A4D2E;
                             }
                         }
                     }
@@ -471,6 +475,11 @@
                                 font-family: Urbanist;
                                 margin-bottom: 7px;
                                 cursor: pointer;
+                                transition: 0.5s ease-in-out;
+                            }
+                            .nav_option:hover{
+                                color: #4F6F52;
+                                font-weight: 500;
                             }
                         }
                     }
@@ -487,12 +496,25 @@
                         justify-content: space-between;
                         i{
                             font-size: 38px;
+                            transition: 0.5s ease-in-out;
+                        }
+                        i:hover{
+                            color: #4F6F52;
                         }
                     }
                     p{
                         font-size: 12px;
                         font-weight: 300;
                         margin-top: 20px;
+                        span{
+                            font-weight: 600;
+                            color: #E8DFCA;
+                            cursor: pointer;
+                            transition: 0.3s ease-in-out;
+                        }
+                        span:hover{
+                            color: #4F6F52;
+                        }
                     }
                 }
 
