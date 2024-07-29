@@ -145,3 +145,17 @@ $.ajax({
         console.error('Error fetching user posts:', error);
     }
 });
+
+//logout
+$('#logout').click(() => {
+    axios.post('/auth/logout')
+        .then(response => {
+            console.log('Logout response:', response.data);
+            if (response.status === 200) {
+                window.location.href = '/';
+            }
+        })
+        .catch(error => {
+            console.error('Logout error:', error);
+        });
+});
