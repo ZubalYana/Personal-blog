@@ -392,7 +392,9 @@
                 color: #fff;
                 z-index: 9999;
                 position: relative;
-                padding: 120px 40px 40px 40px;
+                padding: 150px 40px 40px 40px;
+                display: flex;
+                justify-content: space-between;
                 .newslatter{
                     width: 434px;
                     height: 146px;
@@ -444,6 +446,29 @@
                             right: 10px;
                             border-radius: 50px;
                             font-family: Urbanist;
+                        }
+                    }
+                }
+                .navigation{
+                    width: 278px;
+                    display: flex;
+                    justify-content: space-between;
+                    .nav_column{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-end;
+                        .nav_title{
+                            font-size: 32px;
+                            font-weight: 500;
+                            font-family: Josefin Sans;
+                            margin-bottom: 10px;
+                        }
+                        .nav_option{
+                            font-size: 14px;
+                            font-weight: 300;
+                            font-family: Urbanist;
+                            margin-bottom: 7px;
+                            cursor: pointer;
                         }
                     }
                 }
