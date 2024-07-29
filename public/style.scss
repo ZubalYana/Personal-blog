@@ -475,6 +475,20 @@
                         }
                     }
                 }
+                .mediaCon{
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    margin-top: 50px;
+                    .media{
+                        width: 505px;
+                        display: flex;
+                        justify-content: space-between;
+                        i{
+                            font-size: 38px;
+                        }
+                    }
+                }
 
             }
             

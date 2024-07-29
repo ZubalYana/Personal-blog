@@ -483,6 +483,20 @@
   margin-bottom: 7px;
   cursor: pointer;
 }
+.wrap .mainPage .futer .futerContent .mediaCon {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+.wrap .mainPage .futer .futerContent .mediaCon .media {
+  width: 505px;
+  display: flex;
+  justify-content: space-between;
+}
+.wrap .mainPage .futer .futerContent .mediaCon .media i {
+  font-size: 38px;
+}
 .wrap .blogPage {
   width: 100%;
   min-height: 100vh;
