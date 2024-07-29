@@ -478,8 +478,9 @@
                 .mediaCon{
                     width: 100%;
                     display: flex;
-                    justify-content: center;
-                    margin-top: 50px;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-top: 35px;
                     .media{
                         width: 505px;
                         display: flex;
@@ -487,6 +488,11 @@
                         i{
                             font-size: 38px;
                         }
+                    }
+                    p{
+                        font-size: 12px;
+                        font-weight: 300;
+                        margin-top: 20px;
                     }
                 }
 

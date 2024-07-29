@@ -486,8 +486,9 @@
 .wrap .mainPage .futer .futerContent .mediaCon {
   width: 100%;
   display: flex;
-  justify-content: center;
-  margin-top: 50px;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 35px;
 }
 .wrap .mainPage .futer .futerContent .mediaCon .media {
   width: 505px;
@@ -496,6 +497,11 @@
 }
 .wrap .mainPage .futer .futerContent .mediaCon .media i {
   font-size: 38px;
+}
+.wrap .mainPage .futer .futerContent .mediaCon p {
+  font-size: 12px;
+  font-weight: 300;
+  margin-top: 20px;
 }
 .wrap .blogPage {
   width: 100%;
