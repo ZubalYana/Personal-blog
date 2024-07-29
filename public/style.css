@@ -375,6 +375,14 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
+.wrap .mainPage .futer .videoCovering {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5254901961);
+}
 .wrap .blogPage {
   width: 100%;
   min-height: 100vh;
