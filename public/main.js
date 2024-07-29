@@ -126,3 +126,17 @@ axios.get('/api/getPosts')
         );
     }
 });
+
+
+//camera screen cards animations
+$('#cameraPhoto1').click(function() {
+    $(this).css('transform', 'rotate(0deg)');
+    $(this).css('top', '-150px');
+    $(this).css('left', '130px');
+setTimeout(() => {
+        $(this).css('transform', 'rotate(-40deg)');
+        $(this).css('top', '20px');
+        $(this).css('left', '300px');
+}, 2000);
+
+});

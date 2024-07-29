@@ -340,6 +340,8 @@
 .wrap .mainPage .camera .cameraCon .cameraPhoto {
   width: 294px;
   position: absolute;
+  transition: 1s ease-in-out;
+  cursor: pointer;
 }
 .wrap .mainPage .camera .cameraCon #cameraPhoto1 {
   transform: rotate(-40deg);

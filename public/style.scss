@@ -333,6 +333,8 @@
                 .cameraPhoto{
                     width: 294px;
                     position: absolute;
+                    transition: 1s ease-in-out;
+                    cursor: pointer;
                 }
                 #cameraPhoto1{
                     transform: rotate(-40deg);
