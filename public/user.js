@@ -147,15 +147,19 @@ $.ajax({
 });
 
 //logout
-$('#logout').click(() => {
-    axios.post('/auth/logout')
-        .then(response => {
-            console.log('Logout response:', response.data);
-            if (response.status === 200) {
-                window.location.href = '/';
-            }
-        })
-        .catch(error => {
-            console.error('Logout error:', error);
-        });
-});
+$('#logoutIcon').click(() => {
+    $('.messageCon').css('display', 'flex')
+    $('#logout').click(() => {
+        axios.post('/auth/logout')
+            .then(response => {
+                console.log('Logout response:', response.data);
+                if (response.status === 200) {
+                    window.location.href = '/';
+                }
+            })
+            .catch(error => {
+                console.error('Logout error:', error);
+            });
+    });
+})
+
