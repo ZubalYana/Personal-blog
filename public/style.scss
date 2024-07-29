@@ -393,85 +393,89 @@
                 z-index: 9999;
                 position: relative;
                 padding: 150px 40px 40px 40px;
-                display: flex;
-                justify-content: space-between;
-                .newslatter{
-                    width: 434px;
-                    height: 146px;
-                    z-index: 9999;
-                    h3{
-                        font-size: 32px;
-                        font-weight: 500;
-                    }
-                    p{
-                        width: 14px;
-                        font-weight: 300;
-                        width: 100%;
-                        margin: 5px 0 15px 0;
-                    }
-                    .inputCon{
+                .basic{
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    .newslatter{
                         width: 434px;
-                        height: 72px;
-                        position: relative;
-                        display: flex;
-                        align-items: center;
-                        input{
-                            width: 100%;
-                            height: 100%;
-                            background-color: #fff;
-                            padding: 15px;
-                            color: #45474B;
-                            font-size: 20px;
+                        height: 146px;
+                        z-index: 9999;
+                        h3{
+                            font-size: 32px;
                             font-weight: 500;
-                            border-radius: 140px;
-                            outline: none;
-                            &placeholder{
+                        }
+                        p{
+                            width: 14px;
+                            font-weight: 300;
+                            width: 100%;
+                            margin: 5px 0 15px 0;
+                        }
+                        .inputCon{
+                            width: 434px;
+                            height: 72px;
+                            position: relative;
+                            display: flex;
+                            align-items: center;
+                            input{
+                                width: 100%;
+                                height: 100%;
+                                background-color: #fff;
+                                padding: 15px;
                                 color: #45474B;
                                 font-size: 20px;
                                 font-weight: 500;
+                                border-radius: 140px;
+                                outline: none;
+                                &placeholder{
+                                    color: #45474B;
+                                    font-size: 20px;
+                                    font-weight: 500;
+                                }
+                            }
+                            .inputBtn{
+                                position: absolute;
+                                width: 150px;
+                                height: 54px;
+                                background-color: #2C2E32;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                color: #fff;
+                                font-size: 20px;
+                                font-weight: 700;
+                                cursor: pointer;
+                                right: 10px;
+                                border-radius: 50px;
+                                font-family: Urbanist;
                             }
                         }
-                        .inputBtn{
-                            position: absolute;
-                            width: 150px;
-                            height: 54px;
-                            background-color: #2C2E32;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            color: #fff;
-                            font-size: 20px;
-                            font-weight: 700;
-                            cursor: pointer;
-                            right: 10px;
-                            border-radius: 50px;
-                            font-family: Urbanist;
-                        }
                     }
-                }
-                .navigation{
-                    width: 278px;
-                    display: flex;
-                    justify-content: space-between;
-                    .nav_column{
+                    .navigation{
+                        width: 278px;
                         display: flex;
-                        flex-direction: column;
-                        align-items: flex-end;
-                        .nav_title{
-                            font-size: 32px;
-                            font-weight: 500;
-                            font-family: Josefin Sans;
-                            margin-bottom: 10px;
-                        }
-                        .nav_option{
-                            font-size: 14px;
-                            font-weight: 300;
-                            font-family: Urbanist;
-                            margin-bottom: 7px;
-                            cursor: pointer;
+                        justify-content: space-between;
+                        .nav_column{
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-end;
+                            .nav_title{
+                                font-size: 32px;
+                                font-weight: 500;
+                                font-family: Josefin Sans;
+                                margin-bottom: 10px;
+                            }
+                            .nav_option{
+                                font-size: 14px;
+                                font-weight: 300;
+                                font-family: Urbanist;
+                                margin-bottom: 7px;
+                                cursor: pointer;
+                            }
                         }
                     }
                 }
+
             }
             
         }

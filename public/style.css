@@ -400,32 +400,35 @@
   z-index: 9999;
   position: relative;
   padding: 150px 40px 40px 40px;
+}
+.wrap .mainPage .futer .futerContent .basic {
+  width: 100%;
   display: flex;
   justify-content: space-between;
 }
-.wrap .mainPage .futer .futerContent .newslatter {
+.wrap .mainPage .futer .futerContent .basic .newslatter {
   width: 434px;
   height: 146px;
   z-index: 9999;
 }
-.wrap .mainPage .futer .futerContent .newslatter h3 {
+.wrap .mainPage .futer .futerContent .basic .newslatter h3 {
   font-size: 32px;
   font-weight: 500;
 }
-.wrap .mainPage .futer .futerContent .newslatter p {
+.wrap .mainPage .futer .futerContent .basic .newslatter p {
   width: 14px;
   font-weight: 300;
   width: 100%;
   margin: 5px 0 15px 0;
 }
-.wrap .mainPage .futer .futerContent .newslatter .inputCon {
+.wrap .mainPage .futer .futerContent .basic .newslatter .inputCon {
   width: 434px;
   height: 72px;
   position: relative;
   display: flex;
   align-items: center;
 }
-.wrap .mainPage .futer .futerContent .newslatter .inputCon input {
+.wrap .mainPage .futer .futerContent .basic .newslatter .inputCon input {
   width: 100%;
   height: 100%;
   background-color: #fff;
@@ -436,12 +439,12 @@
   border-radius: 140px;
   outline: none;
 }
-.wrap .mainPage .futer .futerContent .newslatter .inputCon inputplaceholder {
+.wrap .mainPage .futer .futerContent .basic .newslatter .inputCon inputplaceholder {
   color: #45474B;
   font-size: 20px;
   font-weight: 500;
 }
-.wrap .mainPage .futer .futerContent .newslatter .inputCon .inputBtn {
+.wrap .mainPage .futer .futerContent .basic .newslatter .inputCon .inputBtn {
   position: absolute;
   width: 150px;
   height: 54px;
@@ -457,23 +460,23 @@
   border-radius: 50px;
   font-family: Urbanist;
 }
-.wrap .mainPage .futer .futerContent .navigation {
+.wrap .mainPage .futer .futerContent .basic .navigation {
   width: 278px;
   display: flex;
   justify-content: space-between;
 }
-.wrap .mainPage .futer .futerContent .navigation .nav_column {
+.wrap .mainPage .futer .futerContent .basic .navigation .nav_column {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 }
-.wrap .mainPage .futer .futerContent .navigation .nav_column .nav_title {
+.wrap .mainPage .futer .futerContent .basic .navigation .nav_column .nav_title {
   font-size: 32px;
   font-weight: 500;
   font-family: Josefin Sans;
   margin-bottom: 10px;
 }
-.wrap .mainPage .futer .futerContent .navigation .nav_column .nav_option {
+.wrap .mainPage .futer .futerContent .basic .navigation .nav_column .nav_option {
   font-size: 14px;
   font-weight: 300;
   font-family: Urbanist;
