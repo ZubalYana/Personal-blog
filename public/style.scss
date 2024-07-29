@@ -321,13 +321,35 @@
                 width: 100%;
                 height: 525px;
                 position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 50px;
                 .camera{
                     width: 519px;
-                    position: absolute;
+                    z-index: 3;
                 }
                 .cameraPhoto{
                     width: 294px;
                     position: absolute;
+                }
+                #cameraPhoto1{
+                    transform: rotate(-40deg);
+                    left: 300px;
+                    top: 20px;
+                    z-index: 2;
+                }
+                #cameraPhoto2{
+                    transform: rotate(-67deg);
+                    left: 290px;
+                    top: 70px;
+                    z-index: 1;
+                }
+                #cameraPhoto3{
+                    transform: rotate(40deg);
+                    left: 830px;
+                    top: 40px;
+                    z-index: 1;
                 }
             }
         }
