@@ -565,4 +565,42 @@
             }
         }
     }
+    .settingsCon{
+        width: 100%;
+        height: 100vh;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        background-color: #00000041;
+        position: fixed;
+        top: 0;
+        left: 0;
+        .settings{
+            width: 580px;
+            height: 400px;
+            padding: 40px;
+            border-radius: 16px;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            #settingsXMark{
+                position: absolute;
+                top: 40px;
+                right: 40px;
+                font-size: 32px;
+                color: #45474B;
+                transition: 0.5s ease-in-out;
+            }
+            #settingsXMark:hover{
+                color: #1A4D2E;
+            }
+            h3{
+                color: #45474B;
+                font-size: 32px;
+                font-weight: 600;
+            }
+        }
+    }
 }
