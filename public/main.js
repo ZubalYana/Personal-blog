@@ -140,3 +140,25 @@ setTimeout(() => {
 }, 2000);
 
 });
+$('#cameraPhoto2').click(function() {
+    $(this).css('transform', 'rotate(0deg)');
+    $(this).css('top', '-100px');
+    $(this).css('left', '60px');
+setTimeout(() => {
+        $(this).css('transform', 'rotate(-67deg)');
+        $(this).css('top', '70px');
+        $(this).css('left', '290px');
+}, 2000);
+
+});
+$('#cameraPhoto3').click(function() {
+    $(this).css('transform', 'rotate(0deg)');
+    $(this).css('top', '-100px');
+    $(this).css('left', '60px');
+setTimeout(() => {
+        $(this).css('transform', 'rotate(40deg)');
+        $(this).css('top', '40px');
+        $(this).css('left', '810px');
+}, 2000);
+
+});
