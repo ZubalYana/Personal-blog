@@ -166,7 +166,6 @@
 .wrap .mainPage .howToUse {
   color: #45474B;
   padding: 40px;
-  position: relative;
 }
 .wrap .mainPage .howToUse .usageArrow {
   position: absolute;
@@ -306,6 +305,36 @@
 .wrap .mainPage .howToUse .cards .card .cardSubtitle {
   font-size: 20px;
   font-weight: 300;
+}
+.wrap .mainPage .camera {
+  color: #45474B;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wrap .mainPage .camera .title {
+  font-size: 48px;
+  font-weight: 700;
+}
+.wrap .mainPage .camera .subtitle {
+  font-size: 22px;
+  font-weight: 300;
+  width: 831px;
+  text-align: center;
+}
+.wrap .mainPage .camera .cameraCon {
+  width: 100%;
+  height: 525px;
+  position: relative;
+}
+.wrap .mainPage .camera .cameraCon .camera {
+  width: 519px;
+  position: absolute;
+}
+.wrap .mainPage .camera .cameraCon .cameraPhoto {
+  width: 294px;
+  position: absolute;
 }
 .wrap .blogPage {
   width: 100%;
