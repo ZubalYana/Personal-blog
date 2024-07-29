@@ -127,7 +127,6 @@ axios.get('/api/getPosts')
     }
 });
 
-
 //camera screen cards animations
 $('#cameraPhoto1').click(function() {
     $(this).css('transform', 'rotate(0deg)');
