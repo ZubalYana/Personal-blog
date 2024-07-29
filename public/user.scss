@@ -544,12 +544,22 @@
                     font-family: Josefin Sans;
                     border-radius: 14px;
                     cursor: pointer;
+                    transition: 0.5s ease-in-out;
+
                 }
                 #cancelEditing{
                     border: #1A4D2E 2px solid;
                 }
+                #cancelEditing:hover{
+                    background-color: #45474B;
+                    color: #fff;
+                }
                 #edit{
                     background-color: #1A4D2E;
+                    color: #fff;
+                }
+                #edit:hover{
+                    background-color: #45474B;
                     color: #fff;
                 }
             }

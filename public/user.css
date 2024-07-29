@@ -562,11 +562,20 @@
   font-family: Josefin Sans;
   border-radius: 14px;
   cursor: pointer;
+  transition: 0.5s ease-in-out;
 }
 .wrap .profileEditingCon .prodileEditingPopup .buttons #cancelEditing {
   border: #1A4D2E 2px solid;
 }
+.wrap .profileEditingCon .prodileEditingPopup .buttons #cancelEditing:hover {
+  background-color: #45474B;
+  color: #fff;
+}
 .wrap .profileEditingCon .prodileEditingPopup .buttons #edit {
   background-color: #1A4D2E;
+  color: #fff;
+}
+.wrap .profileEditingCon .prodileEditingPopup .buttons #edit:hover {
+  background-color: #45474B;
   color: #fff;
 }/*# sourceMappingURL=user.css.map */
