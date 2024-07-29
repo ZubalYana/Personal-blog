@@ -153,12 +153,12 @@ setTimeout(() => {
 });
 $('#cameraPhoto3').click(function() {
     $(this).css('transform', 'rotate(0deg)');
-    $(this).css('top', '-100px');
-    $(this).css('left', '60px');
+    $(this).css('top', '-170px');
+    $(this).css('left', '910px');
 setTimeout(() => {
         $(this).css('transform', 'rotate(40deg)');
         $(this).css('top', '40px');
-        $(this).css('left', '810px');
+        $(this).css('left', '830px');
 }, 2000);
 
 });
