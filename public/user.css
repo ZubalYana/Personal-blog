@@ -98,14 +98,14 @@
   font-size: 0px;
 }
 .wrap .menuContainer:hover {
-  height: 200px;
+  height: 250px;
   background-color: #1A4D2E;
 }
 .wrap .menuContainer:hover .burger .line {
   background-color: #fff;
 }
 .wrap .menuContainer:hover .sidebar {
-  height: 159px;
+  height: 210px;
 }
 .wrap .menuContainer:hover .sidebar .icons {
   font-size: 28px;
