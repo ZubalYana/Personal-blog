@@ -173,3 +173,11 @@ $('#pencil').click(()=>{
         $('.profileEditingCon').css('display', 'none')
     })
 })
+
+//settings
+$('#gear').click(()=>{
+    $('.settingsCon').css('display', 'flex')
+    $('#settingsXMark').click(()=>{
+        $('.settingsCon').css('display', 'none')
+    })
+})
