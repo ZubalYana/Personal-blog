@@ -173,7 +173,6 @@ app.get('/api/getPosts', async (req, res) => {
     }
 });
 
-
 //auth
 app.get('/auth', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'auth.html'));
@@ -188,6 +187,13 @@ app.get('/', (req, res)=>{
 app.get('/user', authMiddleware, (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'user.html'));
 });
+
+//logout
+app.post('/auth/logout', (req, res) => {
+    res.clearCookie('token');
+    res.status(200).json({ message: 'Logged out successfully' });
+});
+
 
 app.listen(PORT, ()=>{
     console.log(`Server works on PORT: ${PORT}`)
