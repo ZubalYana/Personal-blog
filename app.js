@@ -186,7 +186,7 @@ app.post('/auth/user/update', authMiddleware, upload.single('profilePicture'), a
         };
 
         if (req.file) {
-            updates.profilePicture = req.file.filename;
+            updates.profilePicture = `uploads/${req.file.filename}`;
         }
 
         const user = await User.findByIdAndUpdate(req.userId, updates, { new: true });
@@ -199,6 +199,8 @@ app.post('/auth/user/update', authMiddleware, upload.single('profilePicture'), a
         res.status(500).json({ message: 'An error occurred while updating user data' });
     }
 });
+
+
 
 //auth
 app.get('/auth', (req, res) => {
