@@ -179,11 +179,13 @@ $('#pencil').click(() => {
             $('#editDescription').val(user.profileDescription);
             $('#editPlacesVisited').val(user.placesVisited);
             $('#editPlacesToVisit').val(user.placesToVisit);
-            if (user.profilePicture) {
-                $('#currentProfilePicture').attr('src', `/uploads/${user.profilePicture}`);
-            } else {
-                $('#currentProfilePicture').attr('src', 'default-profile-picture.png'); 
-            }
+            $('#currentProfilePicture').attr('src', `/uploads/${user.profilePicture}`);
+
+            // if (user.profilePicture) {
+            //     $('#currentProfilePicture').attr('src', `/uploads/${user.profilePicture}`);
+            // } else {
+            //     $('#currentProfilePicture').attr('src', 'default-profile-picture.png'); 
+            // }
         },
         error: (error) => {
             console.error('Error fetching user data:', error);
