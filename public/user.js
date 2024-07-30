@@ -180,7 +180,9 @@ $('#pencil').click(() => {
             $('#editPlacesVisited').val(user.placesVisited);
             $('#editPlacesToVisit').val(user.placesToVisit);
             if (user.profilePicture) {
-                $('#editPicture').attr('src', `/uploads/${user.profilePicture}`);
+                $('#currentProfilePicture').attr('src', `/uploads/${user.profilePicture}`);
+            } else {
+                $('#currentProfilePicture').attr('src', 'default-profile-picture.png'); 
             }
         },
         error: (error) => {
@@ -192,6 +194,7 @@ $('#pencil').click(() => {
         $('.profileEditingCon').css('display', 'none');
     });
 });
+
 $('#edit').click(() => {
     const formData = new FormData();
     formData.append('profilePicture', $('#editPicture')[0].files[0]);

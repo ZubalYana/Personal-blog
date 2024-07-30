@@ -544,6 +544,14 @@
   font-size: 32px;
   font-weight: 600;
 }
+.wrap .profileEditingCon .prodileEditingPopup .editing #currentProfilePicture {
+  width: 121px;
+  height: 121px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-color: #f0f0f0;
+}
 .wrap .profileEditingCon .prodileEditingPopup .buttons {
   width: 350px;
   display: flex;

@@ -440,8 +440,6 @@
                 }
             }
         }
-        
-
     }
     .messageCon{
         width: 100%;
@@ -527,6 +525,16 @@
                 font-size: 32px;
                 font-weight: 600;
             }
+            .editing{
+                #currentProfilePicture{
+                    width: 121px;
+                    height: 121px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    background-color: #f0f0f0;
+                }
+            }
+
             .buttons{
                 width: 350px;
                 display: flex;
