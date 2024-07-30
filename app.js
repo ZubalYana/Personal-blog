@@ -173,6 +173,33 @@ app.get('/api/getPosts', async (req, res) => {
     }
 });
 
+//edit user
+app.post('/auth/user/update', authMiddleware, upload.single('profilePicture'), async (req, res) => {
+    try {
+        const updates = {
+            firstname: req.body.firstname,
+            lastName: req.body.lastName,
+            email: req.body.email,
+            profileDescription: req.body.profileDescription,
+            placesVisited: req.body.placesVisited,
+            placesToVisit: req.body.placesToVisit
+        };
+
+        if (req.file) {
+            updates.profilePicture = req.file.filename;
+        }
+
+        const user = await User.findByIdAndUpdate(req.userId, updates, { new: true });
+        if (!user) {
+            return res.status(404).json({ message: 'User not found' });
+        }
+        res.status(200).json(user);
+    } catch (error) {
+        console.error('Error updating user data:', error);
+        res.status(500).json({ message: 'An error occurred while updating user data' });
+    }
+});
+
 //auth
 app.get('/auth', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'auth.html'));
