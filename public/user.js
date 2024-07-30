@@ -201,21 +201,11 @@ $('#edit').click(() => {
     formData.append('profileDescription', $('#editDescription').val());
     formData.append('placesVisited', $('#editPlacesVisited').val());
     formData.append('placesToVisit', $('#editPlacesToVisit').val());
-
-    $.ajax({
-        url: '/auth/user/update',
-        method: 'POST',
-        data: formData,
-        processData: false,
-        contentType: false,
-        success: (response) => {
-            console.log('Profile updated successfully');
-            $('.profileEditingCon').css('display', 'none');
-        },
-        error: (error) => {
-            console.error('Error updating profile:', error);
-        }
-    });
+    axios.post('/auth/user/update', (formData))
+    .then(()=>{
+        console.log('Profile updated successfully');
+        $('.profileEditingCon').css('display', 'none');
+    })
 });
 
 
