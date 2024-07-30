@@ -543,6 +543,7 @@
   color: #45474B;
   font-size: 32px;
   font-weight: 600;
+  margin-bottom: 12px;
 }
 .wrap .profileEditingCon .prodileEditingPopup .editing input, .wrap .profileEditingCon .prodileEditingPopup .editing textarea {
   border: none;
@@ -579,11 +580,22 @@
 .wrap .profileEditingCon .prodileEditingPopup .editing .photoNameCon .nameEmail {
   display: flex;
   flex-direction: column;
+  margin-left: 15px;
 }
 .wrap .profileEditingCon .prodileEditingPopup .editing .photoNameCon .nameEmail .nameCon {
   display: flex;
+  margin-bottom: 5px;
+}
+.wrap .profileEditingCon .prodileEditingPopup .editing .photoNameCon .nameEmail .nameCon input {
   font-size: 24px;
   font-weight: 700;
+  width: 60px;
+  resize: horizontal;
+  margin-right: 15px;
+}
+.wrap .profileEditingCon .prodileEditingPopup .editing .photoNameCon input {
+  font-size: 16px;
+  font-weight: 400;
 }
 .wrap .profileEditingCon .prodileEditingPopup .buttons {
   width: 350px;

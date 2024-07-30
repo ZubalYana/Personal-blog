@@ -524,6 +524,7 @@
                 color: #45474B;
                 font-size: 32px;
                 font-weight: 600;
+                margin-bottom: 12px;
             }
             .editing{
                 input, textarea{
@@ -559,11 +560,22 @@
                     .nameEmail{
                         display: flex;
                         flex-direction: column;
+                        margin-left: 15px;
                         .nameCon{
                             display: flex;
-                            font-size: 24px;
-                            font-weight: 700;
+                            margin-bottom: 5px;
+                            input{
+                                font-size: 24px;
+                                font-weight: 700;
+                                width: 60px;
+                                resize: horizontal;
+                                margin-right: 15px;
+                            }
                         }
+                    }
+                    input{
+                        font-size: 16px;
+                        font-weight: 400;
                     }
                 }
 
