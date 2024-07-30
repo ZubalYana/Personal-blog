@@ -167,12 +167,31 @@ $('#logoutIcon').click(() => {
 })
 
 //edit profile
-$('#pencil').click(()=>{
-    $('.profileEditingCon').css('display', 'flex')
-    $('#cancelEditing').click(()=>{
-        $('.profileEditingCon').css('display', 'none')
-    })
-})
+$('#pencil').click(() => {
+    $('.profileEditingCon').css('display', 'flex');
+    $.ajax({
+        url: '/auth/user',
+        method: 'GET',
+        success: (user) => {
+            $('#editName').val(user.firstname);
+            $('#editLastName').val(user.lastName);
+            $('#editEmail').val(user.email);
+            $('#editDescription').val(user.profileDescription);
+            $('#editPlacesVisited').val(user.placesVisited);
+            $('#editPlacesToVisit').val(user.placesToVisit);
+            if (user.profilePicture) {
+                $('#editPicture').attr('src', `/uploads/${user.profilePicture}`);
+            }
+        },
+        error: (error) => {
+            console.error('Error fetching user data:', error);
+        }
+    });
+
+    $('#cancelEditing').click(() => {
+        $('.profileEditingCon').css('display', 'none');
+    });
+});
 
 //settings
 $('#gear').click(()=>{
