@@ -544,11 +544,22 @@
   font-size: 32px;
   font-weight: 600;
 }
-.wrap .profileEditingCon .prodileEditingPopup .editing .profile-picture-container {
+.wrap .profileEditingCon .prodileEditingPopup .editing input, .wrap .profileEditingCon .prodileEditingPopup .editing textarea {
+  border: none;
+  outline: none;
+  color: #45474B;
+}
+.wrap .profileEditingCon .prodileEditingPopup .editing textarea {
+  resize: none;
+}
+.wrap .profileEditingCon .prodileEditingPopup .editing .photoNameCon {
+  display: flex;
+}
+.wrap .profileEditingCon .prodileEditingPopup .editing .photoNameCon .profile-picture-container {
   position: relative;
   display: inline-block;
 }
-.wrap .profileEditingCon .prodileEditingPopup .editing #currentProfilePicture {
+.wrap .profileEditingCon .prodileEditingPopup .editing .photoNameCon .profile-picture-container #currentProfilePicture {
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -556,7 +567,7 @@
      object-fit: cover;
   cursor: pointer;
 }
-.wrap .profileEditingCon .prodileEditingPopup .editing #editPicture {
+.wrap .profileEditingCon .prodileEditingPopup .editing .photoNameCon .profile-picture-container #editPicture {
   position: absolute;
   top: 0;
   left: 0;
@@ -564,6 +575,15 @@
   height: 100%;
   opacity: 0;
   cursor: pointer;
+}
+.wrap .profileEditingCon .prodileEditingPopup .editing .photoNameCon .nameEmail {
+  display: flex;
+  flex-direction: column;
+}
+.wrap .profileEditingCon .prodileEditingPopup .editing .photoNameCon .nameEmail .nameCon {
+  display: flex;
+  font-size: 24px;
+  font-weight: 700;
 }
 .wrap .profileEditingCon .prodileEditingPopup .buttons {
   width: 350px;
