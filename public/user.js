@@ -192,6 +192,32 @@ $('#pencil').click(() => {
         $('.profileEditingCon').css('display', 'none');
     });
 });
+$('#edit').click(() => {
+    const formData = new FormData();
+    formData.append('profilePicture', $('#editPicture')[0].files[0]);
+    formData.append('firstname', $('#editName').val());
+    formData.append('lastName', $('#editLastName').val());
+    formData.append('email', $('#editEmail').val());
+    formData.append('profileDescription', $('#editDescription').val());
+    formData.append('placesVisited', $('#editPlacesVisited').val());
+    formData.append('placesToVisit', $('#editPlacesToVisit').val());
+
+    $.ajax({
+        url: '/auth/user/update',
+        method: 'POST',
+        data: formData,
+        processData: false,
+        contentType: false,
+        success: (response) => {
+            console.log('Profile updated successfully');
+            $('.profileEditingCon').css('display', 'none');
+        },
+        error: (error) => {
+            console.error('Error updating profile:', error);
+        }
+    });
+});
+
 
 //settings
 $('#gear').click(()=>{
