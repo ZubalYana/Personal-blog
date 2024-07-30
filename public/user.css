@@ -451,9 +451,8 @@
   color: #fff;
 }
 .wrap .postCreation .buttons_con .buttons #post {
-  border: #45474B 2px solid;
-  color: #45474B;
-  background-color: #F5EFE6;
+  color: #fff;
+  background-color: #1A4D2E;
 }
 .wrap .postCreation .buttons_con .buttons #post:hover {
   background-color: #45474B;
