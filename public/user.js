@@ -194,7 +194,16 @@ $('#pencil').click(() => {
         $('.profileEditingCon').css('display', 'none');
     });
 });
-
+$('#editPicture').change(function(event) {
+    const file = event.target.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            $('#currentProfilePicture').attr('src', e.target.result);
+        }
+        reader.readAsDataURL(file);
+    }
+});
 $('#edit').click(() => {
     const formData = new FormData();
     formData.append('profilePicture', $('#editPicture')[0].files[0]);
