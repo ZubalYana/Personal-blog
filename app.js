@@ -200,8 +200,6 @@ app.post('/auth/user/update', authMiddleware, upload.single('profilePicture'), a
     }
 });
 
-
-
 //auth
 app.get('/auth', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'auth.html'));
@@ -222,7 +220,6 @@ app.post('/auth/logout', (req, res) => {
     res.clearCookie('token');
     res.status(200).json({ message: 'Logged out successfully' });
 });
-
 
 app.listen(PORT, ()=>{
     console.log(`Server works on PORT: ${PORT}`)

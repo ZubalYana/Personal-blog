@@ -217,7 +217,6 @@ $('#edit').click(() => {
     axios.post('/auth/user/update', formData)
         .then((res) => {
             console.log('Profile updated successfully');
-            // Update the profile picture and other details on the frontend
             const user = res.data;
             $('.userPicture').attr('src', `/uploads/${user.profilePicture}`);
             $('.FistLastName').text(`${user.firstname} ${user.lastName}`);
@@ -225,26 +224,17 @@ $('#edit').click(() => {
             $('.description').text(user.profileDescription);
             $('.visitedPlaces').text(user.placesVisited);
             $('.toVisitPlaces').text(user.placesToVisit);
-            
-            // Close the profile editing popup
             $('.profileEditingCon').css('display', 'none');
-
-            // Optionally, reload the page to ensure all changes are reflected
             location.reload();
-            // Example: Update all posts when profile is updated
             function updatePostsAuthorPicture(newProfilePicture) {
               $('.author_pic').attr('src', newProfilePicture);
             }
-
             updatePostsAuthorPicture(`/uploads/${user.profilePicture}`);
-
-            
         })
         .catch((err) => {
             console.error('Error updating profile:', err);
         });
 });
-
 
 //settings
 $('#gear').click(()=>{
