@@ -512,8 +512,8 @@
         top: 0;
         left: 0;
         .prodileEditingPopup{
-            width: 580px;
-            height: 400px;
+            width: 600px;
+            height: 450px;
             padding: 40px;
             border-radius: 16px;
             background-color: #fff;
@@ -527,6 +527,10 @@
                 margin-bottom: 12px;
             }
             .editing{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                font-family: Urbanist;
                 input, textarea{
                     border: none;
                     outline: none;
@@ -537,6 +541,7 @@
                 }
                 .photoNameCon{
                     display: flex;
+                    align-items: center;
                     .profile-picture-container {
                         position: relative;
                         display: inline-block;
@@ -560,7 +565,7 @@
                     .nameEmail{
                         display: flex;
                         flex-direction: column;
-                        margin-left: 15px;
+                        margin-left: 12px;
                         .nameCon{
                             display: flex;
                             margin-bottom: 5px;
@@ -577,6 +582,12 @@
                         font-size: 16px;
                         font-weight: 400;
                     }
+                }
+                #editDescription{
+                    margin-top: 15px;
+                    font-size: 16px;
+                    font-weight: 500;
+                    height: 70px;
                 }
 
             
