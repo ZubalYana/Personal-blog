@@ -674,24 +674,34 @@
                 color: #45474B;
                 font-size: 32px;
                 font-weight: 600;
+                margin-bottom: 3px;
             }
             .settingsOption{
                 display: flex;
+                margin-top: 7px;
+                width: 100%;
                 span{
                     font-size: 24px;
                     font-weight: 300;
+                    margin-right: 10px;
                 }
                 select{
+                    font-family: Urbanist;
+                    font-size: 24px;
+                    font-weight: 700; 
+                    border: none;
+                    outline: none;
+                    cursor: pointer;
                     option{
-                        font-family: Josefin Sans;
-                        font-size: 24px;
-                        font-weight: 700; 
+                        width: 40px;
+                        cursor: pointer;
                     }
                 }
                 .themeChanger{
-                    font-family: Josefin Sans;
+                    font-family: Urbanist;
                     font-size: 24px;
                     font-weight: 700;
+                    cursor: pointer;
                 }
             }
         }
