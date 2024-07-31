@@ -676,6 +676,7 @@
   flex-direction: column;
   align-items: center;
   position: relative;
+  color: #45474B;
 }
 .wrap .settingsCon .settings #settingsXMark {
   position: absolute;
@@ -711,10 +712,12 @@
   border: none;
   outline: none;
   cursor: pointer;
-}
-.wrap .settingsCon .settings .settingsOption select option {
-  width: 40px;
-  cursor: pointer;
+  color: #45474B;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: url("data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjNDU0NzRDIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTcsMTBsNSw1IDUsLTVaIi8+PC9zdmc+") no-repeat right 10px center; /* Custom arrow */
+  padding-right: 10px;
 }
 .wrap .settingsCon .settings .settingsOption .themeChanger {
   font-family: Urbanist;
