@@ -510,11 +510,11 @@
   background-color: #45474B;
   color: #fff;
 }
-.wrap .messageCon .message .buttons #logout {
+.wrap .messageCon .message .buttons #confirm {
   background-color: #1A4D2E;
   color: #fff;
 }
-.wrap .messageCon .message .buttons #logout:hover {
+.wrap .messageCon .message .buttons #confirm:hover {
   background-color: #45474B;
   color: #fff;
 }

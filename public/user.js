@@ -150,11 +150,12 @@ $.ajax({
 //logout
 $('#logoutIcon').click(() => {
     $('#messageText').text('Are you sure you want to logout?')
+    $('#confirm').text('Logout')
     $('.messageCon').css('display', 'flex')
     $('#cancel').click(()=>{
         $('.messageCon').css('display', 'none')
     })
-    $('#logout').click(() => {
+    $('#confirm').click(() => {
         axios.post('/auth/logout')
             .then(response => {
                 console.log('Logout response:', response.data);
