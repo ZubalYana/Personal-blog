@@ -152,6 +152,7 @@ $('#logoutIcon').click(() => {
     $('#messageText').text('Are you sure you want to logout?')
     $('#confirm').text('Logout')
     $('.messageCon').css('display', 'flex')
+    $('.message').css('height', '200px')
     $('#cancel').click(()=>{
         $('.messageCon').css('display', 'none')
     })
