@@ -245,14 +245,23 @@ $('#gear').click(()=>{
 
 //post deleting
 $(document).on('click', '.fa-trash-can', function () {
-    const postId = $(this).closest('.post').data('id');
+    $('#messageText').text('Are you sure you want to delete the post?')
+    $('#confirm').text('Delete')
+    $('.messageCon').css('display', 'flex')
+    $('#cancel').click(()=>{
+        $('.messageCon').css('display', 'none')
+    })
+    $('#confirm').click(()=>{
+        const postId = $(this).closest('.post').data('id');
 
-    axios.delete(`/api/deletePost/${postId}`)
-        .then(response => {
-            console.log('Post deleted:', response.data);
-            location.reload();
-        })
-        .catch(error => {
-            console.error('Error deleting post:', error);
-        });
+        axios.delete(`/api/deletePost/${postId}`)
+            .then(response => {
+                console.log('Post deleted:', response.data);
+                location.reload();
+            })
+            .catch(error => {
+                console.error('Error deleting post:', error);
+            });
+    })
+
 });
