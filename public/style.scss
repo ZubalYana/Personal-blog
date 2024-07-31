@@ -765,6 +765,102 @@
             }
         }
     }
+    .settingsCon {
+        width: 100%;
+        height: 100vh;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        background-color: #00000041;
+        position: fixed;
+        top: 0;
+        left: 0;
+      
+        .settings {
+          width: 400px;
+          height: 230px;
+          padding: 40px;
+          border-radius: 16px;
+          background-color: #fff;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          position: relative;
+          color: #45474B;
+      
+          #settingsXMark {
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            font-size: 32px;
+            color: #45474B;
+            transition: 0.5s ease-in-out;
+          }
+      
+          #settingsXMark:hover {
+            color: #1A4D2E;
+          }
+      
+          h3 {
+            color: #45474B;
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 10px;
+          }
+      
+          .settingsOption {
+            display: flex;
+            margin-top: 7px;
+            width: 100%;
+      
+            span {
+              font-size: 24px;
+              font-weight: 300;
+              margin-right: 10px;
+            }
+      
+            select {
+              font-family: Urbanist;
+              font-size: 24px;
+              font-weight: 700;
+              border: none;
+              outline: none;
+              cursor: pointer;
+              color: #45474B;
+              appearance: none; 
+              -webkit-appearance: none;
+              -moz-appearance: none; 
+              background: url('data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjNDU0NzRDIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTcsMTBsNSw1IDUsLTVaIi8+PC9zdmc+') no-repeat right 10px center; 
+              padding-right: 10px; 
+            }
+      
+            .themeChanger {
+              font-family: Urbanist;
+              font-size: 24px;
+              font-weight: 700;
+              cursor: pointer;
+              transition: 0.5s ease-in-out;
+            }
+          }
+          .reportOption{
+            display: flex;
+            margin-top: 20px;
+            width: 100%;
+            align-items: center;
+            transition: 0.5s ease-in-out;
+            cursor: pointer;
+            span{
+                margin-left: 7px;
+            }
+
+        }
+        .reportOption:hover{
+            color: #1A4D2E;
+            font-weight: 500;
+            font-size: 17px;
+        }
+        }
+    }
 }
 
 
