@@ -720,9 +720,17 @@
             margin-top: 20px;
             width: 100%;
             align-items: center;
+            transition: 0.5s ease-in-out;
+            cursor: pointer;
             span{
                 margin-left: 7px;
             }
+
+        }
+        .reportOption:hover{
+            color: #1A4D2E;
+            font-weight: 500;
+            font-size: 17px;
         }
         }
       }
