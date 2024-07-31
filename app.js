@@ -42,7 +42,6 @@ const User = mongoose.model('User', userSchema);
 app.use('/uploads', express.static('uploads'));
 app.use(express.json());
 app.use(cookieParser());
-app.use(express.static('public'));
 app.use(express.static(path.join(__dirname, 'public')));
 
 //user registraion
@@ -225,8 +224,6 @@ app.post('/auth/logout', (req, res) => {
 app.get('/admin', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'admin.html'));
 });
-
-
 
 app.listen(PORT, ()=>{
     console.log(`Server works on PORT: ${PORT}`)
