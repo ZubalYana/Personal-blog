@@ -668,7 +668,7 @@
 }
 .wrap .settingsCon .settings {
   width: 400px;
-  height: 250px;
+  height: 230px;
   padding: 40px;
   border-radius: 16px;
   background-color: #fff;
@@ -693,7 +693,7 @@
   color: #45474B;
   font-size: 32px;
   font-weight: 600;
-  margin-bottom: 3px;
+  margin-bottom: 10px;
 }
 .wrap .settingsCon .settings .settingsOption {
   display: flex;
@@ -727,7 +727,7 @@
 }
 .wrap .settingsCon .settings .reportOption {
   display: flex;
-  margin-top: 15px;
+  margin-top: 20px;
   width: 100%;
   align-items: center;
 }
