@@ -134,7 +134,7 @@ $.ajax({
                         <i class="fa-regular fa-thumbs-up"></i>
                         <i class="fa-solid fa-share-nodes"></i>
                         <i class="fa-solid fa-pencil"></i>
-                        <i class="fa-solid fa-trash-can"></i>
+                        <i class="fa-solid fa-trash-can" id="deletePost"></i>
                     </div>
                 </div>
                 `
@@ -238,4 +238,9 @@ $('#gear').click(()=>{
     $('#settingsXMark').click(()=>{
         $('.settingsCon').css('display', 'none')
     })
+})
+
+//post deleting
+$('#deletePost').click(()=>{
+    
 })
