@@ -161,3 +161,11 @@ setTimeout(() => {
 }, 2000);
 
 });
+
+//settings
+$('#gear').click(()=>{
+    $('.settingsCon').css('display', 'flex')
+    $('#settingsXMark').click(()=>{
+        $('.settingsCon').css('display', 'none')
+    })
+})
