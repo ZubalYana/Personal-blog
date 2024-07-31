@@ -151,7 +151,7 @@ $.ajax({
 $('#logoutIcon').click(() => {
     $('#messageText').text('Are you sure you want to logout?')
     $('.messageCon').css('display', 'flex')
-    $('#cancelLogout').click(()=>{
+    $('#cancel').click(()=>{
         $('.messageCon').css('display', 'none')
     })
     $('#logout').click(() => {

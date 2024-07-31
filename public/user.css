@@ -503,10 +503,10 @@
   cursor: pointer;
   transition: 0.5s ease-in-out;
 }
-.wrap .messageCon .message .buttons #cancelLogout {
+.wrap .messageCon .message .buttons #cancel {
   border: #1A4D2E 2px solid;
 }
-.wrap .messageCon .message .buttons #cancelLogout:hover {
+.wrap .messageCon .message .buttons #cancel:hover {
   background-color: #45474B;
   color: #fff;
 }
