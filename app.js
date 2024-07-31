@@ -221,6 +221,13 @@ app.post('/auth/logout', (req, res) => {
     res.status(200).json({ message: 'Logged out successfully' });
 });
 
+//admin
+app.get('/admin', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'admin.html'));
+});
+
+
+
 app.listen(PORT, ()=>{
     console.log(`Server works on PORT: ${PORT}`)
 })
