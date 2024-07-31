@@ -589,6 +589,17 @@
                     font-weight: 500;
                     height: 70px;
                 }
+                .textInputCon{
+                    width: 100%;
+                    font-size: 16px;
+                    input{
+                        width: 400px;
+                        font-weight: 300;
+                    }
+                    span{
+                        font-weight: 600;
+                    }
+                }
 
             
             }

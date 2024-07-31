@@ -610,6 +610,17 @@
   font-weight: 500;
   height: 70px;
 }
+.wrap .profileEditingCon .prodileEditingPopup .editing .textInputCon {
+  width: 100%;
+  font-size: 16px;
+}
+.wrap .profileEditingCon .prodileEditingPopup .editing .textInputCon input {
+  width: 400px;
+  font-weight: 300;
+}
+.wrap .profileEditingCon .prodileEditingPopup .editing .textInputCon span {
+  font-weight: 600;
+}
 .wrap .profileEditingCon .prodileEditingPopup .buttons {
   width: 350px;
   display: flex;
