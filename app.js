@@ -48,7 +48,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 //user registraion
 app.post('/auth/register', upload.single('profile-pic'), async (req, res) => {
     const { firstname, lastName, email, password, profileDescription, placesVisited, placesToVisit } = req.body;
-    const profilePicture = req.file ? req.file.path : null; 
+    const profilePicture = req.file ? `uploads/${req.file.filename}` : null; // Ensure the path is correctly set
     try {
         const existingUser = await User.findOne({ email });
         if (existingUser) {
