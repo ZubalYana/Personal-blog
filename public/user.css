@@ -692,4 +692,21 @@
   color: #45474B;
   font-size: 32px;
   font-weight: 600;
+}
+.wrap .settingsCon .settings .settingsOption {
+  display: flex;
+}
+.wrap .settingsCon .settings .settingsOption span {
+  font-size: 24px;
+  font-weight: 300;
+}
+.wrap .settingsCon .settings .settingsOption select option {
+  font-family: Josefin Sans;
+  font-size: 24px;
+  font-weight: 700;
+}
+.wrap .settingsCon .settings .settingsOption .themeChanger {
+  font-family: Josefin Sans;
+  font-size: 24px;
+  font-weight: 700;
 }/*# sourceMappingURL=user.css.map */

@@ -675,6 +675,25 @@
                 font-size: 32px;
                 font-weight: 600;
             }
+            .settingsOption{
+                display: flex;
+                span{
+                    font-size: 24px;
+                    font-weight: 300;
+                }
+                select{
+                    option{
+                        font-family: Josefin Sans;
+                        font-size: 24px;
+                        font-weight: 700; 
+                    }
+                }
+                .themeChanger{
+                    font-family: Josefin Sans;
+                    font-size: 24px;
+                    font-weight: 700;
+                }
+            }
         }
     }
 }
