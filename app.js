@@ -88,7 +88,7 @@ app.post('/auth/login', async (req, res) => {
         if (!isPasswordValid) {
             return res.status(400).json({ message: 'Invalid credentials' });
         }
-        const token = jwt.sign({ userId: user._id }, JWT_SECRET, { expiresIn: '24h' });
+        const token = jwt.sign({ userId: user._id }, JWT_SECRET, { expiresIn: '72h' });
         const secureFlag = process.env.NODE_ENV === 'production';
         res.cookie('token', token, { httpOnly: true, secure: secureFlag });
         res.status(200).json({ message: 'Logged in successfully' });
