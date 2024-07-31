@@ -118,7 +118,7 @@ $.ajax({
             const formattedDate = moment(post.date).fromNow();
             $('.postsContainer').prepend(
                 `
-                <div class="post">
+                <div class="post" data-id="${post._id}">
                     <div class="top">
                         <div class="author">
                             <img class="author_pic" src="${post.author.profilePicture}" alt="">
@@ -134,11 +134,12 @@ $.ajax({
                         <i class="fa-regular fa-thumbs-up"></i>
                         <i class="fa-solid fa-share-nodes"></i>
                         <i class="fa-solid fa-pencil"></i>
-                        <i class="fa-solid fa-trash-can" id="deletePost"></i>
+                        <i class="fa-solid fa-trash-can"></i>
                     </div>
                 </div>
                 `
             );
+            
         });
     },
     error: function(error) {
@@ -242,5 +243,5 @@ $('#gear').click(()=>{
 
 //post deleting
 $('#deletePost').click(()=>{
-    
+
 })
