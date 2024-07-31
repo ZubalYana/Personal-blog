@@ -242,6 +242,15 @@ $('#gear').click(()=>{
 })
 
 //post deleting
-$('#deletePost').click(()=>{
+$(document).on('click', '.fa-trash-can', function () {
+    const postId = $(this).closest('.post').data('id');
 
-})
+    axios.delete(`/api/deletePost/${postId}`)
+        .then(response => {
+            console.log('Post deleted:', response.data);
+            location.reload();
+        })
+        .catch(error => {
+            console.error('Error deleting post:', error);
+        });
+});
