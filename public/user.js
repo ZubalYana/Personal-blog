@@ -248,6 +248,7 @@ $(document).on('click', '.fa-trash-can', function () {
     $('#messageText').text('Are you sure you want to delete the post?')
     $('#confirm').text('Delete')
     $('.messageCon').css('display', 'flex')
+    $('.message').css('height', '230px')
     $('#cancel').click(()=>{
         $('.messageCon').css('display', 'none')
     })
