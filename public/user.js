@@ -93,7 +93,7 @@ $('#postForm').submit((event) => {
     formData.append('hashtags', $('#postHashtags').val());
     formData.append('post-pic', $('#post-pic')[0].files[0]);
 
-    axios.post('http://localhost:3000/api/posts', formData, {
+    axios.post('/api/posts', formData, {
         headers: {
             'Content-Type': 'multipart/form-data'
         }
