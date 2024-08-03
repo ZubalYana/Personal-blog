@@ -596,7 +596,7 @@
 .wrap .profileEditingCon .prodileEditingPopup .editing .photoNameCon .nameEmail .nameCon input {
   font-size: 24px;
   font-weight: 700;
-  width: 60px;
+  width: 80px;
   resize: horizontal;
   margin-right: 15px;
 }
