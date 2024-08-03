@@ -48,4 +48,38 @@
 .wrap i, .wrap button {
   cursor: pointer;
   transition: 0.5s ease-in-out;
+}
+.wrap .header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 5vh;
+}
+.wrap .header .logo {
+  width: 195px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 32px;
+  font-weight: 600;
+}
+.wrap .header .nav {
+  width: 317px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
+  font-weight: 300;
+}
+.wrap .header .nav .navEl {
+  cursor: pointer;
+  font-family: Urbanist;
+}
+.wrap .header .nav .active {
+  font-weight: 500;
+}
+.wrap .header .iconsCon {
+  width: 112px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 32px;
 }/*# sourceMappingURL=admin.css.map */
