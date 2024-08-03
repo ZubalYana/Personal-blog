@@ -178,6 +178,7 @@ app.get('/api/getUser', async (req, res) => {
         const users = await User.find();
         res.status(200).json(users);
     } catch (err) {
+        console.error('Error when getting users:', err);
         res.status(500).json({ message: 'Error when getting users', error: err.message });
     }
 });
