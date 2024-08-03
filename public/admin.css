@@ -34,15 +34,15 @@
   width: 100%;
   height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
+  flex-direction: column;
   padding: 40px;
   position: relative;
 }
 .wrap h1, .wrap h2, .wrap h3, .wrap h4, .wrap h5, .wrap h6 {
   font-family: Josefin Sans;
 }
-.wrap p, .wrap button, .wrap span {
+.wrap p, .wrap button, .wrap span, .wrap div {
   font-family: Urbanist;
 }
 .wrap i, .wrap button {
@@ -57,14 +57,15 @@
   height: 5vh;
 }
 .wrap .header .logo {
-  width: 195px;
+  width: 320px;
   display: flex;
   justify-content: space-between;
   font-size: 32px;
   font-weight: 600;
+  color: #1A4D2E;
 }
 .wrap .header .nav {
-  width: 317px;
+  width: 350px;
   display: flex;
   justify-content: space-between;
   font-size: 24px;
@@ -82,4 +83,25 @@
   display: flex;
   justify-content: space-between;
   font-size: 32px;
+}
+.wrap .userStatisticsCon {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.wrap .userStatisticsCon p {
+  font-size: 24px;
+  font-weight: 600;
+  color: #45474B;
+}
+.wrap .userStatisticsCon .userCount {
+  width: 130px;
+  height: 37px;
+  border-radius: 6px;
+  background-color: #45474B;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }/*# sourceMappingURL=admin.css.map */

@@ -45,7 +45,7 @@
     h1,h2,h3,h4,h5,h6{
         font-family: Josefin Sans;
     }
-    p, button, span{
+    p, button, span, div{
         font-family: Urbanist;
     }
     i, button{
@@ -87,7 +87,28 @@
           font-size: 32px;
       }
 
-  }
+    }
+    .userStatisticsCon{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+        p{
+            font-size: 24px;
+            font-weight: 600;
+            color: #45474B;
+        }
+        .userCount{
+            width: 130px;
+            height: 37px;
+            border-radius: 6px;
+            background-color: #45474B;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
 }
     </style>
 </head>
@@ -106,6 +127,10 @@
                 <i class="fa-regular fa-circle-user iconWhite profileIcon"></i>
                 <i class="fa-solid fa-gear iconWhite" id="gear"></i>
             </div>
+        </div>
+        <div class="userStatisticsCon">
+            <p>All users:</p>
+            <div class="userCount"></div>
         </div>
     </div>
     <script src="./admin.js"></script>
