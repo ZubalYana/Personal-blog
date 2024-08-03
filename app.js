@@ -162,13 +162,23 @@ app.post('/api/posts', authMiddleware, upload.single('post-pic'), async (req, re
     }
 });
 
-//get all posts
+//get all the posts
 app.get('/api/getPosts', async (req, res) => {
     try {
         const posts = await Post.find().populate('author', 'firstname lastName profilePicture');
         res.status(200).json(posts);
     } catch (err) {
         res.status(500).json({ message: 'Error when getting posts', error: err.message });
+    }
+});
+
+//get all the user
+app.get('/api/getUser', async (req, res) => {
+    try {
+        const users = await User.find();
+        res.status(200).json(users);
+    } catch (err) {
+        res.status(500).json({ message: 'Error when getting users', error: err.message });
     }
 });
 
