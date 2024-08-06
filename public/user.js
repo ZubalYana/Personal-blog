@@ -133,7 +133,7 @@ $.ajax({
                     <div class="actions">
                         <i class="fa-regular fa-thumbs-up"></i>
                         <i class="fa-solid fa-share-nodes"></i>
-                        <i class="fa-solid fa-pencil"></i>
+                        <i class="fa-solid fa-pencil editPost"></i>
                         <i class="fa-solid fa-trash-can"></i>
                     </div>
                 </div>
@@ -145,6 +145,29 @@ $.ajax({
     error: function(error) {
         console.error('Error fetching user posts:', error);
     }
+});
+
+//edit post
+$(document).on('click', '.editPost', function() {
+    const postId = $(this).closest('.post').data('id');
+    $('.postEditingCon').css('display', 'flex');
+    $.ajax({
+        url: `/api/userPosts/${postId}`,
+        method: 'GET',
+        success: (post) => {
+            $('#editTitle').val(post.title);
+            $('#editBody').val(post.body);
+            $('#editHashtags').val(post.hashtags);
+            $('#currentPostPicture').attr('src', `/${post.pic}`);
+        },
+        error: (error) => {
+            console.error('Error fetching user data:', error);
+        }
+    });
+
+    $('#cancelPostEditing').click(() => {
+        $('.postEditingCon').css('display', 'none');
+    });
 });
 
 //logout
@@ -235,6 +258,8 @@ $('#edit').click(() => {
             console.error('Error updating profile:', err);
         });
 });
+
+
 
 //settings
 $('#gear').click(()=>{
