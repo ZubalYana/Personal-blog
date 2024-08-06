@@ -650,7 +650,7 @@
         top: 0;
         left: 0;
         .postEditingPopup{
-            width: 600px;
+            width: 700px;
             height: 450px;
             padding: 40px;
             border-radius: 16px;
@@ -658,14 +658,16 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            z-index: 9999;
-            position: relative;
             h3{
                 color: #45474B;
                 font-size: 32px;
                 font-weight: 600;
                 margin-bottom: 12px;
             }
+            .editing{
+                width: 100%;
+                display: flex;
+                margin-top: 10px;
                 input, textarea{
                     border: none;
                     outline: none;
@@ -678,11 +680,13 @@
                     .post-picture-container {
                         position: relative;
                         display: inline-block;
+                        margin-right: 15px;
                         #currentPostPicture {
                             width: 300px; 
-                            height: 250px; 
+                            height: 200px; 
                             object-fit: cover;
                             cursor: pointer; 
+                            border-radius: 10px;
                         }
                         #editPostPicture {
                             position: absolute;
@@ -694,16 +698,24 @@
                             cursor: pointer; 
                         }
                     }
-                    input{
+                    .inputs{
+                        color: #45474B;
+
+                        #editTitle{
+                            font-size: 24px;
+                            font-weight: 700;
+                            font-family: Josefin Sans;
+                        }
+                    #editBody{
+                        margin-top: 15px;
                         font-size: 16px;
-                        font-weight: 400;
+                        font-weight: 500;
+                        height: 70px;
                     }
-                #editBody{
-                    margin-top: 15px;
-                    font-size: 16px;
-                    font-weight: 500;
-                    height: 70px;
-                }
+                    }
+
+            }
+                
             .buttons{
                 width: 350px;
                 display: flex;

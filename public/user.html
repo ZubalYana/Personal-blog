@@ -60,13 +60,19 @@
         <div class="postEditingCon">
             <div class="postEditingPopup">
                 <h3>Edit your post</h3>
-                <div class="post-picture-container">
-                    <img id="currentPostPicture" src="" alt="Post Picture" />
-                    <input type="file" id="editPostPicture" />
+                <div class="editing">
+                    <div class="post-picture-container">
+                        <img id="currentPostPicture" src="" alt="Post Picture" />
+                        <input type="file" id="editPostPicture" />
+                    </div>
+                    <div class="inputs">
+                        <input type="text" id="editTitle">
+                        <textarea type="text" id="editBody"></textarea>
+                        <textarea type="text" id="editHashtags"></textarea>
+                    </div>
+
                 </div>
-                <input type="text" id="editTitle">
-                <textarea type="text" id="editBody"></textarea>
-                <textarea type="text" id="editHashtags"></textarea>
+
                 <div class="buttons">
                     <div id="cancelPostEditing">Cancel</div>
                     <div id="editPost">Save</div>

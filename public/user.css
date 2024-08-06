@@ -667,7 +667,7 @@
   left: 0;
 }
 .wrap .postEditingCon .postEditingPopup {
-  width: 600px;
+  width: 700px;
   height: 450px;
   padding: 40px;
   border-radius: 16px;
@@ -675,8 +675,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  z-index: 9999;
-  position: relative;
 }
 .wrap .postEditingCon .postEditingPopup h3 {
   color: #45474B;
@@ -684,26 +682,33 @@
   font-weight: 600;
   margin-bottom: 12px;
 }
-.wrap .postEditingCon .postEditingPopup input, .wrap .postEditingCon .postEditingPopup textarea {
+.wrap .postEditingCon .postEditingPopup .editing {
+  width: 100%;
+  display: flex;
+  margin-top: 10px;
+}
+.wrap .postEditingCon .postEditingPopup .editing input, .wrap .postEditingCon .postEditingPopup .editing textarea {
   border: none;
   outline: none;
   color: #45474B;
 }
-.wrap .postEditingCon .postEditingPopup textarea {
+.wrap .postEditingCon .postEditingPopup .editing textarea {
   resize: none;
 }
-.wrap .postEditingCon .postEditingPopup .post-picture-container {
+.wrap .postEditingCon .postEditingPopup .editing .post-picture-container {
   position: relative;
   display: inline-block;
+  margin-right: 15px;
 }
-.wrap .postEditingCon .postEditingPopup .post-picture-container #currentPostPicture {
+.wrap .postEditingCon .postEditingPopup .editing .post-picture-container #currentPostPicture {
   width: 300px;
-  height: 250px;
+  height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
   cursor: pointer;
+  border-radius: 10px;
 }
-.wrap .postEditingCon .postEditingPopup .post-picture-container #editPostPicture {
+.wrap .postEditingCon .postEditingPopup .editing .post-picture-container #editPostPicture {
   position: absolute;
   top: 0;
   left: 0;
@@ -712,11 +717,15 @@
   opacity: 0;
   cursor: pointer;
 }
-.wrap .postEditingCon .postEditingPopup input {
-  font-size: 16px;
-  font-weight: 400;
+.wrap .postEditingCon .postEditingPopup .editing .inputs {
+  color: #45474B;
 }
-.wrap .postEditingCon .postEditingPopup #editBody {
+.wrap .postEditingCon .postEditingPopup .editing .inputs #editTitle {
+  font-size: 24px;
+  font-weight: 700;
+  font-family: Josefin Sans;
+}
+.wrap .postEditingCon .postEditingPopup .editing .inputs #editBody {
   margin-top: 15px;
   font-size: 16px;
   font-weight: 500;
