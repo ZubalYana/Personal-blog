@@ -639,6 +639,106 @@
             }
         }
     }
+    .postEditingCon{
+        width: 100%;
+        height: 100vh;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        background-color: #00000041;
+        position: fixed;
+        top: 0;
+        left: 0;
+        .postEditingPopup{
+            width: 600px;
+            height: 450px;
+            padding: 40px;
+            border-radius: 16px;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h3{
+                color: #45474B;
+                font-size: 32px;
+                font-weight: 600;
+                margin-bottom: 12px;
+            }
+                input, textarea{
+                    border: none;
+                    outline: none;
+                    color: #45474B;
+                }
+                textarea{
+                    resize: none;
+                }
+
+                    .post-picture-container {
+                        position: relative;
+                        display: inline-block;
+                        #currentPostPicture {
+                            width: 300px; 
+                            height: 250px; 
+                            object-fit: cover;
+                            cursor: pointer; 
+                        }
+                        #editPostPicture {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            opacity: 0; 
+                            cursor: pointer; 
+                        }
+                    }
+                    input{
+                        font-size: 16px;
+                        font-weight: 400;
+                    }
+                #editBody{
+                    margin-top: 15px;
+                    font-size: 16px;
+                    font-weight: 500;
+                    height: 70px;
+                }
+            .buttons{
+                width: 350px;
+                display: flex;
+                justify-content: space-between;
+                margin-top: 30px;
+                div{
+                    width: 150px;
+                    height: 60px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 24px;
+                    font-weight: 600;
+                    font-family: Josefin Sans;
+                    border-radius: 14px;
+                    cursor: pointer;
+                    transition: 0.5s ease-in-out;
+
+                }
+                #cancelPostEditing{
+                    border: #1A4D2E 2px solid;
+                }
+                #cancelPostEditing:hover{
+                    background-color: #45474B;
+                    color: #fff;
+                }
+                #editPost{
+                    background-color: #1A4D2E;
+                    color: #fff;
+                }
+                #editPost:hover{
+                    background-color: #45474B;
+                    color: #fff;
+                }
+            }
+        }
+    }
     .settingsCon {
         width: 100%;
         height: 100vh;

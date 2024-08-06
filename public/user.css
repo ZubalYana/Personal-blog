@@ -655,6 +655,105 @@
   background-color: #45474B;
   color: #fff;
 }
+.wrap .postEditingCon {
+  width: 100%;
+  height: 100vh;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.2549019608);
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.wrap .postEditingCon .postEditingPopup {
+  width: 600px;
+  height: 450px;
+  padding: 40px;
+  border-radius: 16px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wrap .postEditingCon .postEditingPopup h3 {
+  color: #45474B;
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.wrap .postEditingCon .postEditingPopup input, .wrap .postEditingCon .postEditingPopup textarea {
+  border: none;
+  outline: none;
+  color: #45474B;
+}
+.wrap .postEditingCon .postEditingPopup textarea {
+  resize: none;
+}
+.wrap .postEditingCon .postEditingPopup .post-picture-container {
+  position: relative;
+  display: inline-block;
+}
+.wrap .postEditingCon .postEditingPopup .post-picture-container #currentPostPicture {
+  width: 300px;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  cursor: pointer;
+}
+.wrap .postEditingCon .postEditingPopup .post-picture-container #editPostPicture {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+.wrap .postEditingCon .postEditingPopup input {
+  font-size: 16px;
+  font-weight: 400;
+}
+.wrap .postEditingCon .postEditingPopup #editBody {
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: 500;
+  height: 70px;
+}
+.wrap .postEditingCon .postEditingPopup .buttons {
+  width: 350px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.wrap .postEditingCon .postEditingPopup .buttons div {
+  width: 150px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 600;
+  font-family: Josefin Sans;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+.wrap .postEditingCon .postEditingPopup .buttons #cancelPostEditing {
+  border: #1A4D2E 2px solid;
+}
+.wrap .postEditingCon .postEditingPopup .buttons #cancelPostEditing:hover {
+  background-color: #45474B;
+  color: #fff;
+}
+.wrap .postEditingCon .postEditingPopup .buttons #editPost {
+  background-color: #1A4D2E;
+  color: #fff;
+}
+.wrap .postEditingCon .postEditingPopup .buttons #editPost:hover {
+  background-color: #45474B;
+  color: #fff;
+}
 .wrap .settingsCon {
   width: 100%;
   height: 100vh;
