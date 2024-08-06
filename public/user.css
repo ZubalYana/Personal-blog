@@ -668,7 +668,7 @@
 }
 .wrap .postEditingCon .postEditingPopup {
   width: 700px;
-  height: 450px;
+  height: 430px;
   padding: 40px;
   border-radius: 16px;
   background-color: #fff;
@@ -685,7 +685,7 @@
 .wrap .postEditingCon .postEditingPopup .editing {
   width: 100%;
   display: flex;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 .wrap .postEditingCon .postEditingPopup .editing input, .wrap .postEditingCon .postEditingPopup .editing textarea {
   border: none;
@@ -728,8 +728,14 @@
 .wrap .postEditingCon .postEditingPopup .editing .inputs #editBody {
   margin-top: 15px;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 400;
   height: 70px;
+  font-family: Urbanist;
+}
+.wrap .postEditingCon .postEditingPopup .editing .inputs #editHashtags {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1A4D2E;
 }
 .wrap .postEditingCon .postEditingPopup .buttons {
   width: 350px;

@@ -651,7 +651,7 @@
         left: 0;
         .postEditingPopup{
             width: 700px;
-            height: 450px;
+            height: 430px;
             padding: 40px;
             border-radius: 16px;
             background-color: #fff;
@@ -667,7 +667,7 @@
             .editing{
                 width: 100%;
                 display: flex;
-                margin-top: 10px;
+                margin-top: 15px;
                 input, textarea{
                     border: none;
                     outline: none;
@@ -709,8 +709,14 @@
                     #editBody{
                         margin-top: 15px;
                         font-size: 16px;
-                        font-weight: 500;
+                        font-weight: 400;
                         height: 70px;
+                        font-family: Urbanist;
+                    }
+                    #editHashtags{
+                        font-size: 20px;
+                        font-weight: 700;
+                        color: #1A4D2E;
                     }
                     }
 
