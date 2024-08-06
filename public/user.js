@@ -161,7 +161,7 @@ $(document).on('click', '.editPost', function() {
             $('#currentPostPicture').attr('src', `/${post.pic}`);
         },
         error: (error) => {
-            console.error('Error fetching user data:', error);
+            console.error('Error fetching post data:', error);
         }
     });
 
@@ -169,6 +169,7 @@ $(document).on('click', '.editPost', function() {
         $('.postEditingCon').css('display', 'none');
     });
 });
+
 
 //logout
 $('#logoutIcon').click(() => {
