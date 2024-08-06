@@ -210,33 +210,6 @@ app.post('/auth/user/update', authMiddleware, upload.single('profilePicture'), a
     }
 });
 
-// //edit post
-// app.post('/api/userPosts/:id', authMiddleware, upload.single('postPicture'), async (req, res) => {
-//     try {
-//         const updates = {
-//             firstname: req.body.firstname,
-//             lastName: req.body.lastName,
-//             email: req.body.email,
-//             profileDescription: req.body.profileDescription,
-//             placesVisited: req.body.placesVisited,
-//             placesToVisit: req.body.placesToVisit
-//         };
-
-//         if (req.file) {
-//             updates.profilePicture = `uploads/${req.file.filename}`;
-//         }
-
-//         const user = await User.findByIdAndUpdate(req.userId, updates, { new: true });
-//         if (!user) {
-//             return res.status(404).json({ message: 'User not found' });
-//         }
-//         res.status(200).json(user);
-//     } catch (error) {
-//         console.error('Error updating user data:', error);
-//         res.status(500).json({ message: 'An error occurred while updating user data' });
-//     }
-// });
-
 //get a specific post by ID
 app.get('/api/userPosts/:id', authMiddleware, async (req, res) => {
     const postId = req.params.id;
@@ -249,6 +222,31 @@ app.get('/api/userPosts/:id', authMiddleware, async (req, res) => {
     } catch (error) {
         console.error('Error fetching post data:', error);
         res.status(500).json({ message: 'An error occurred while fetching post data' });
+    }
+});
+
+//edit post
+app.post('/api/userPosts/:id', authMiddleware, upload.single('postPicture'), async (req, res) => {
+    const postId = req.params.id;
+    const updates = {
+        title: req.body.title,
+        body: req.body.body,
+        hashtags: req.body.hashtags
+    };
+
+    if (req.file) {
+        updates.pic = `uploads/${req.file.filename}`;
+    }
+
+    try {
+        const post = await Post.findByIdAndUpdate(postId, updates, { new: true });
+        if (!post) {
+            return res.status(404).json({ message: 'Post not found' });
+        }
+        res.status(200).json(post);
+    } catch (error) {
+        console.error('Error updating post data:', error);
+        res.status(500).json({ message: 'An error occurred while updating post data' });
     }
 });
 
