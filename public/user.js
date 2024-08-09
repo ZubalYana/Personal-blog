@@ -169,7 +169,27 @@ $(document).on('click', '.editPost', function() {
         $('.postEditingCon').css('display', 'none');
     });
 });
-
+$('#editPost').click(() => {
+    const formData = new FormData();
+    formData.append('postPicture', $('#editPostPicture')[0].files[0]);
+    formData.append('title', $('#editTitle').val());
+    formData.append('body', $('#editBody').val());
+    formData.append('hashtags', $('#editHashtags').val());
+    axios.post(`/api/userPosts/${postId}`, formData)
+    .then((res) => {
+            console.log('Post updated successfully');
+            const post = res.data;
+            $(`.post[data-id="${postId}"] .postImg`).attr('src', `/uploads/${post.pic}`);
+            $('.postTitle').text(`${post.title}`);
+            $('.postText').text(post.body);
+            $('.postHashtags').text(post.hashtags);
+            $('.postEditingCon').css('display', 'none');
+            location.reload();
+        })
+        .catch((err) => {
+            console.error('Error updating post:', err);
+        });
+});
 
 //logout
 $('#logoutIcon').click(() => {
@@ -259,8 +279,6 @@ $('#edit').click(() => {
             console.error('Error updating profile:', err);
         });
 });
-
-
 
 //settings
 $('#gear').click(()=>{

@@ -233,11 +233,9 @@ app.post('/api/userPosts/:id', authMiddleware, upload.single('postPicture'), asy
         body: req.body.body,
         hashtags: req.body.hashtags
     };
-
     if (req.file) {
         updates.pic = `uploads/${req.file.filename}`;
     }
-
     try {
         const post = await Post.findByIdAndUpdate(postId, updates, { new: true });
         if (!post) {
