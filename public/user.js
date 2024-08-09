@@ -186,12 +186,23 @@ $('#editPost').click(() => {
             $(`.post[data-id="${postId}"] .postText`).text(post.body);
             $(`.post[data-id="${postId}"] .postHashtags`).text(post.hashtags);
             $('.postEditingCon').css('display', 'none');
-            location.reload();
         })
         .catch((err) => {
             console.error('Error updating post:', err);
         });
 });
+
+$('#editPostPicture').change(function(event) {
+    const file = event.target.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            $('#currentPostPicture').attr('src', e.target.result);
+        }
+        reader.readAsDataURL(file);
+    }
+});
+
 
 //logout
 $('#logoutIcon').click(() => {
