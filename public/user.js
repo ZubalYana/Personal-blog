@@ -148,8 +148,9 @@ $.ajax({
 });
 
 //edit post
+let postId;
 $(document).on('click', '.editPost', function() {
-    const postId = $(this).closest('.post').data('id');
+    postId = $(this).closest('.post').data('id');
     $('.postEditingCon').css('display', 'flex');
     $.ajax({
         url: `/api/userPosts/${postId}`,
@@ -175,14 +176,15 @@ $('#editPost').click(() => {
     formData.append('title', $('#editTitle').val());
     formData.append('body', $('#editBody').val());
     formData.append('hashtags', $('#editHashtags').val());
+
     axios.post(`/api/userPosts/${postId}`, formData)
-    .then((res) => {
+        .then((res) => {
             console.log('Post updated successfully');
             const post = res.data;
             $(`.post[data-id="${postId}"] .postImg`).attr('src', `/uploads/${post.pic}`);
-            $('.postTitle').text(`${post.title}`);
-            $('.postText').text(post.body);
-            $('.postHashtags').text(post.hashtags);
+            $(`.post[data-id="${postId}"] .postTitle`).text(`${post.title}`);
+            $(`.post[data-id="${postId}"] .postText`).text(post.body);
+            $(`.post[data-id="${postId}"] .postHashtags`).text(post.hashtags);
             $('.postEditingCon').css('display', 'none');
             location.reload();
         })
