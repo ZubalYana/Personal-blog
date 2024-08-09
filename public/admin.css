@@ -104,6 +104,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: Josefin Sans;
+  font-size: 14px;
+  font-weight: 600;
+}
+.wrap .userStatisticsCon .userCount span {
+  margin-right: 5px;
 }
 .wrap .usersContainer {
   width: 100%;
@@ -130,6 +136,12 @@
   right: 15px;
   color: #1A4D2E;
   font-size: 24px;
+}
+.wrap .usersContainer .user .icons i {
+  transition: 0.3s ease;
+}
+.wrap .usersContainer .user .icons i:hover {
+  color: #45474B;
 }
 .wrap .usersContainer .user .topInfo {
   width: 200px;

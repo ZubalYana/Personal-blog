@@ -2,6 +2,7 @@
 axios.get('/api/getUser')
 .then((res) => {
     console.log(res.data);
+    $('.userCount').html(`<span>${res.data.length}</span> users in total`)
     for(let user of res.data){
 
         if(!user.profilePicture){

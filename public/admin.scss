@@ -92,6 +92,12 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            font-family: Josefin Sans;
+            font-size: 14px;
+            font-weight: 600;
+            span{
+                margin-right: 5px;
+            }
         }
     }
     .usersContainer{
@@ -117,6 +123,12 @@
                 right: 15px;
                 color: #1A4D2E;
                 font-size: 24px;
+                i{
+                    transition: 0.3s ease;
+                }
+                i:hover{
+                    color: #45474B;
+                }
             }
             .topInfo{
                 width: 200px;
@@ -162,8 +174,6 @@
                     font-weight: 600;
                 }
             }
-            
-
         }
     }
 }
