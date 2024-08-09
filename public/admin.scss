@@ -37,6 +37,66 @@
         cursor: pointer;
         transition: 0.5s ease-in-out;
     }
+    .messageCon{
+        width: 100%;
+        height: 100vh;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        background-color: #00000041;
+        position: fixed;
+        top: 0;
+        left: 0;
+        .message{
+            width: 580px;
+            height: 200px;
+            padding: 40px;
+            border-radius: 16px;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h3{
+                color: #45474B;
+                font-size: 32px;
+                font-weight: 600;
+            }
+            .buttons{
+                width: 350px;
+                display: flex;
+                justify-content: space-between;
+                margin-top: 30px;
+                div{
+                    width: 150px;
+                    height: 60px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 24px;
+                    font-weight: 600;
+                    font-family: Josefin Sans;
+                    border-radius: 14px;
+                    cursor: pointer;
+                    transition: 0.5s ease-in-out;
+                }
+                #cancel{
+                    border: #1A4D2E 2px solid;
+                }
+                #cancel:hover{
+                    background-color: #45474B;
+                    color: #fff;
+                }
+                #confirm{
+                    background-color: #1A4D2E;
+                    color: #fff;
+                }
+                #confirm:hover{
+                    background-color: #45474B;
+                    color: #fff;
+                }
+            }
+        }
+    }
     .header{
       width: 100%;
       display: flex;
