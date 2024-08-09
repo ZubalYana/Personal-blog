@@ -248,7 +248,6 @@ app.post('/api/userPosts/:id', authMiddleware, upload.single('postPicture'), asy
     }
 });
 
-
 //auth
 app.get('/auth', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'auth.html'));
@@ -285,6 +284,18 @@ app.delete('/api/deletePost/:id', authMiddleware, async (req, res) => {
         res.status(200).json({ message: 'Post deleted successfully' });
     } catch (error) {
         res.status(500).json({ message: 'An error occurred while deleting the post', error: error.message });
+    }
+});
+
+//user deleting
+app.delete('/api/deleteUser/:id', authMiddleware, async (req, res) => {
+    const userId = req.params.id;
+    try {
+        const user = await User.findById(userId);
+        await User.findByIdAndDelete(userId);
+        res.status(200).json({ message: 'User deleted successfully' });
+    } catch (error) {
+        res.status(500).json({ message: 'An error occurred while deleting the user', error: error.message });
     }
 });
 
