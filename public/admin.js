@@ -6,14 +6,17 @@ axios.get('/api/getUser')
         $('.usersContainer').prepend(
             `
                         <div class="user">
-                <i class="fa-regular fa-flag"></i>
-                <i class="fa-solid fa-trash-can"></i>
+                        <div class="icons">
+                            <i class="fa-regular fa-flag"></i>
+                            <i class="fa-solid fa-trash-can"></i>
+                        </div>
+
                 <div class="topInfo">
                     <img src="${user.profilePicture}" alt="#" class="userPic">
                     <div class="basicCon">
                         <div class="nameCon">
-                            <div class="name">${user.firstname}</div>
-                            <div class="lastName">${user.lastName}</div>
+                            <span class="name">${user.firstname}</span>
+                            <span class="lastName">${user.lastName}</span>
                         </div>
                         <div class="email">${user.email}</div>
                     </div>

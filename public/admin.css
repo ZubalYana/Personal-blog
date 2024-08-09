@@ -104,4 +104,43 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.wrap .usersContainer .user {
+  width: 374px;
+  height: 271px;
+  border-radius: 15px;
+  border: #1A4D2E 1px solid;
+  padding: 15px;
+  position: relative;
+}
+.wrap .usersContainer .user .icons {
+  width: 60px;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: #1A4D2E;
+  font-size: 24px;
+}
+.wrap .usersContainer .user .topInfo {
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+}
+.wrap .usersContainer .user .topInfo .userPic {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.wrap .usersContainer .user .topInfo .basicCon .nameCon {
+  font-size: 24px;
+  font-weight: 500;
+  color: #45474B;
+}
+.wrap .usersContainer .user .topInfo .basicCon .email {
+  font-size: 14px;
+  font-weight: 300;
 }/*# sourceMappingURL=admin.css.map */
