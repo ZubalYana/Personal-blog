@@ -8,10 +8,10 @@ axios.get('/api/getUser')
         if(!user.profilePicture){
             $('.usersContainer').prepend(
                 `
-                            <div class="user">
+                            <div class="user" id='${user._id}'>
                             <div class="icons">
                                 <i class="fa-regular fa-flag"></i>
-                                <i class="fa-solid fa-trash-can"></i>
+                                <i class="fa-solid fa-trash-can" id='delete${user._id}'></i>
                             </div>
     
                     <div class="topInfo">
@@ -36,10 +36,10 @@ axios.get('/api/getUser')
         }else{
             $('.usersContainer').prepend(
                 `
-                            <div class="user">
+                            <div class="user"  id='${user._id}'>
                             <div class="icons">
                                 <i class="fa-regular fa-flag"></i>
-                                <i class="fa-solid fa-trash-can"></i>
+                                <i class="fa-solid fa-trash-can" id='delete${user._id}'></i>
                             </div>
     
                     <div class="topInfo">
