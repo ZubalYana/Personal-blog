@@ -64,6 +64,29 @@ axios.get('/api/getUser')
     }
 
     //users deleting
+    $(document).on('click', '.fa-trash-can', function () {
+        $('#messageText').text('Are you sure you want to delete the user?')
+        $('#confirm').text('Delete')
+        $('.messageCon').css('display', 'flex')
+        $('.message').css('height', '230px')
+        $('#cancel').click(()=>{
+            $('.messageCon').css('display', 'none')
+        })
+        $('#confirm').click(()=>{
+            const userId = $(this).closest('.user').data('id');
+    
+            axios.delete(`/api/deleteUser/${userId}`)
+                .then(response => {
+                    console.log('User deleted:', response.data);
+                    location.reload();
+                })
+                .catch(error => {
+                    console.error('Error deleting user:', error);
+                });
+        })
+    
+    });
+    
 
 })
 .catch((err) => {
