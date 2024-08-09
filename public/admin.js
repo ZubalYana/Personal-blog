@@ -21,7 +21,7 @@ axios.get('/api/getUser')
                         <div class="email">${user.email}</div>
                     </div>
                 </div>
-                <div class="description"></div>
+                <div class="description">${user.profileDescription}</div>
                 <div class="visited">Visited: <span>${user.placesVisited}</span></div>
                 <div class="toVisit">Wants to visit: <span>${user.placesToVisit}</span></div>
             </div>

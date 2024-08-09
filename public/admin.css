@@ -143,4 +143,16 @@
 .wrap .usersContainer .user .topInfo .basicCon .email {
   font-size: 14px;
   font-weight: 300;
+}
+.wrap .usersContainer .user .description {
+  font-size: 14px;
+  font-weight: 400;
+}
+.wrap .usersContainer .user .visited, .wrap .usersContainer .user .toVisit {
+  font-size: 16px;
+  font-weight: 400;
+  color: #45474B;
+}
+.wrap .usersContainer .user .visited span, .wrap .usersContainer .user .toVisit span {
+  font-weight: 600;
 }/*# sourceMappingURL=admin.css.map */

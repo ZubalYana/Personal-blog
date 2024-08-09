@@ -134,6 +134,19 @@
                     }
                 }
             }
+            .description{
+                font-size: 14px;
+                font-weight: 400;
+            }
+            .visited, .toVisit{
+                font-size: 16px;
+                font-weight: 400;
+                color: #45474B;
+                span{
+                    font-weight: 600;
+                }
+            }
+            
 
         }
     }
