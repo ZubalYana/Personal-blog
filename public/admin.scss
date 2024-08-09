@@ -99,6 +99,7 @@
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+        margin-top: 15px;
         .user{
             width: 374px;
             height: 250px;
@@ -123,18 +124,22 @@
                 justify-content: space-between;
                 height: 65px;
                 align-items: center;
-                .userPic{
-                    width: 65px;
-                    height: 65px;
-                    border-radius: 50%;
-                    object-fit: cover;
+                .userPicCon{
+                    .userPic{
+                        width: 65px;
+                        height: 65px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
                 }
+
                 .basicCon{
                     margin-left: 10px;
                     .nameCon{
                         font-size: 24px;
                         font-weight: 500;
                         color: #45474B;
+                        width: 150px;
                     }
                     .email{
                         font-size: 14px;

@@ -110,6 +110,7 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin-top: 15px;
 }
 .wrap .usersContainer .user {
   width: 374px;
@@ -137,7 +138,7 @@
   height: 65px;
   align-items: center;
 }
-.wrap .usersContainer .user .topInfo .userPic {
+.wrap .usersContainer .user .topInfo .userPicCon .userPic {
   width: 65px;
   height: 65px;
   border-radius: 50%;
@@ -151,6 +152,7 @@
   font-size: 24px;
   font-weight: 500;
   color: #45474B;
+  width: 150px;
 }
 .wrap .usersContainer .user .topInfo .basicCon .email {
   font-size: 14px;
