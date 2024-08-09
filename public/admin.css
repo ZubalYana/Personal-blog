@@ -105,6 +105,12 @@
   justify-content: center;
   align-items: center;
 }
+.wrap .usersContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
 .wrap .usersContainer .user {
   width: 374px;
   height: 250px;
@@ -112,6 +118,7 @@
   border: #1A4D2E 1px solid;
   padding: 18px;
   position: relative;
+  margin-bottom: 30px;
 }
 .wrap .usersContainer .user .icons {
   width: 60px;
