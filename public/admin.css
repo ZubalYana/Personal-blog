@@ -107,10 +107,10 @@
 }
 .wrap .usersContainer .user {
   width: 374px;
-  height: 271px;
+  height: 250px;
   border-radius: 15px;
   border: #1A4D2E 1px solid;
-  padding: 15px;
+  padding: 18px;
   position: relative;
 }
 .wrap .usersContainer .user .icons {
@@ -127,6 +127,8 @@
   width: 200px;
   display: flex;
   justify-content: space-between;
+  height: 65px;
+  align-items: center;
 }
 .wrap .usersContainer .user .topInfo .userPic {
   width: 65px;
@@ -134,6 +136,9 @@
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.wrap .usersContainer .user .topInfo .basicCon {
+  margin-left: 10px;
 }
 .wrap .usersContainer .user .topInfo .basicCon .nameCon {
   font-size: 24px;
@@ -143,15 +148,18 @@
 .wrap .usersContainer .user .topInfo .basicCon .email {
   font-size: 14px;
   font-weight: 300;
+  margin-top: 5px;
 }
 .wrap .usersContainer .user .description {
   font-size: 14px;
   font-weight: 400;
+  margin-top: 12px;
 }
 .wrap .usersContainer .user .visited, .wrap .usersContainer .user .toVisit {
   font-size: 16px;
   font-weight: 400;
   color: #45474B;
+  margin-top: 7px;
 }
 .wrap .usersContainer .user .visited span, .wrap .usersContainer .user .toVisit span {
   font-weight: 600;

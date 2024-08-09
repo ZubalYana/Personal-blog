@@ -97,10 +97,10 @@
     .usersContainer{
         .user{
             width: 374px;
-            height: 271px;
+            height: 250px;
             border-radius: 15px;
             border: #1A4D2E 1px solid;
-            padding: 15px;
+            padding: 18px;
             position: relative;
             .icons{
                 width: 60px;
@@ -116,6 +116,8 @@
                 width: 200px;
                 display: flex;
                 justify-content: space-between;
+                height: 65px;
+                align-items: center;
                 .userPic{
                     width: 65px;
                     height: 65px;
@@ -123,6 +125,7 @@
                     object-fit: cover;
                 }
                 .basicCon{
+                    margin-left: 10px;
                     .nameCon{
                         font-size: 24px;
                         font-weight: 500;
@@ -131,17 +134,20 @@
                     .email{
                         font-size: 14px;
                         font-weight: 300;
+                        margin-top: 5px;
                     }
                 }
             }
             .description{
                 font-size: 14px;
                 font-weight: 400;
+                margin-top: 12px;
             }
             .visited, .toVisit{
                 font-size: 16px;
                 font-weight: 400;
                 color: #45474B;
+                margin-top: 7px;
                 span{
                     font-weight: 600;
                 }
