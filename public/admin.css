@@ -59,6 +59,7 @@
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 9999;
 }
 .wrap .messageCon .message {
   width: 580px;
