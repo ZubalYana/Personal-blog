@@ -97,23 +97,27 @@ $(document).ready(function() {
 
 //get and display all the posts
 axios.get('/api/getPosts')
-.then((res)=>{
+.then((res) => {
     console.log(res.data);
     for (let post of res.data) {
         const formattedDate = moment(post.date).fromNow();
+
+        const profilePic = post.author.profilePicture ? post.author.profilePicture : './materials/profile pic default.png';
+        const postPic = post.pic ? post.pic : './materials/post pic default.png';
+
         $('.postsContainer').prepend(
             `
             <div class="post">
                 <div class="top">
                     <div class="author">
-                        <img class="author_pic" src="${post.author.profilePicture}" alt="">
+                        <img class="author_pic" src="${profilePic}" alt="">
                         <p class="authro_name">${post.author.firstname} ${post.author.lastName}</p>
                         <div class="dot"></div>
                         <p class="follow">follow</p>
                     </div>
                     <p class="time">${formattedDate}</p>
                 </div>
-                <img class="postImg" src="${post.pic}" alt="">
+                <img class="postImg" src="${postPic}" alt="">
                 <h3 class="postTitle">${post.title}</h3>
                 <p class="postText">${post.body}</p>
                 <p class="postHashtags">${post.hashtags}</p>
