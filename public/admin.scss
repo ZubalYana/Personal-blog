@@ -285,6 +285,7 @@
                 padding: 20px;
                 color: #45474B;
                 margin-bottom: 40px;
+                position: relative;
                 .top{
                     width: 100%;
                     display: flex;
@@ -346,20 +347,22 @@
                     color: #1A4D2E;
                 }
                 .actions{
-                    width: 90px;
+                    width: 60px;
                     display: flex;
                     justify-content: space-between;
-                    font-size: 32px;
-                    color: #45474B;
-                    margin-top: 20px;
+                    color: #1A4D2E;
+                    font-size: 24px;
+                    position: absolute;
+                    left: 20px;
+                    bottom: 20px;
+                    i{
+                        transition: 0.3s ease;
+                    }
+                    i:hover{
+                        color: #45474B;
+                    }
                 }
-                i{
-                    transition: 0.5s ease;
 
-                }
-                i:hover{
-                    color: #4F6F52;
-                }
             }
 
         }

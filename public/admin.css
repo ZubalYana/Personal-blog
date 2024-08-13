@@ -296,6 +296,7 @@
   padding: 20px;
   color: #45474B;
   margin-bottom: 40px;
+  position: relative;
 }
 .wrap .postsContent .postsContainer .post .top {
   width: 100%;
@@ -359,16 +360,18 @@
   color: #1A4D2E;
 }
 .wrap .postsContent .postsContainer .post .actions {
-  width: 90px;
+  width: 60px;
   display: flex;
   justify-content: space-between;
-  font-size: 32px;
+  color: #1A4D2E;
+  font-size: 24px;
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+}
+.wrap .postsContent .postsContainer .post .actions i {
+  transition: 0.3s ease;
+}
+.wrap .postsContent .postsContainer .post .actions i:hover {
   color: #45474B;
-  margin-top: 20px;
-}
-.wrap .postsContent .postsContainer .post i {
-  transition: 0.5s ease;
-}
-.wrap .postsContent .postsContainer .post i:hover {
-  color: #4F6F52;
 }/*# sourceMappingURL=admin.css.map */

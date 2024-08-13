@@ -146,10 +146,10 @@ axios.get('/api/getPosts')
                 <h3 class="postTitle">${post.title}</h3>
                 <p class="postText">${post.body}</p>
                 <p class="postHashtags">${post.hashtags}</p>
-                <div class="actions">
-                    <i class="fa-regular fa-thumbs-up"></i>
-                    <i class="fa-solid fa-share-nodes"></i>
-                </div>
+                            <div class="actions">
+                                <i class="fa-regular fa-flag"></i>
+                                <i class="fa-solid fa-trash-can" id='delete${post._id}'></i>
+                            </div>
             </div>
             `
         );
