@@ -118,3 +118,69 @@ axios.get('/api/getUser')
 .catch((err) => {
     console.error('Error fetching users:', err);
 });
+
+//display all the posts
+axios.get('/api/getPosts')
+.then((res) => {
+    console.log(res.data);
+    $('.postCount').html(`<span>${res.data.length}</span> posts in total`)
+    for (let post of res.data) {
+        const formattedDate = moment(post.date).fromNow();
+
+        const profilePic = post.author.profilePicture ? post.author.profilePicture : './materials/profile pic default.png';
+        const postPic = post.pic ? post.pic : './materials/post pic default.png';
+
+        $('.postsContainer').prepend(
+            `
+            <div class="post">
+                <div class="top">
+                    <div class="author">
+                        <img class="author_pic" src="${profilePic}" alt="">
+                        <p class="authro_name">${post.author.firstname} ${post.author.lastName}</p>
+                        <div class="dot"></div>
+                        <p class="follow">follow</p>
+                    </div>
+                    <p class="time">${formattedDate}</p>
+                </div>
+                <img class="postImg" src="${postPic}" alt="">
+                <h3 class="postTitle">${post.title}</h3>
+                <p class="postText">${post.body}</p>
+                <p class="postHashtags">${post.hashtags}</p>
+                <div class="actions">
+                    <i class="fa-regular fa-thumbs-up"></i>
+                    <i class="fa-solid fa-share-nodes"></i>
+                </div>
+            </div>
+            `
+        );
+    }
+
+    //users deleting
+    $(document).on('click', '.fa-trash-can', function () {
+        $('#messageText').text('Are you sure you want to delete the user?')
+        $('#confirm').text('Delete')
+        $('.messageCon').css('display', 'flex')
+        $('.message').css('height', '230px')
+        $('#cancel').click(()=>{
+            $('.messageCon').css('display', 'none')
+        })
+        $('#confirm').click(()=>{
+            const userId = $(this).closest('.user').data('id');
+    
+            axios.delete(`/api/deleteUser/${userId}`)
+                .then(response => {
+                    console.log('User deleted:', response.data);
+                    location.reload();
+                })
+                .catch(error => {
+                    console.error('Error deleting user:', error);
+                });
+        })
+    
+    });
+    
+
+})
+.catch((err) => {
+    console.error('Error fetching posts:', err);
+});
