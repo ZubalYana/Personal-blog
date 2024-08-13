@@ -288,11 +288,11 @@ app.delete('/api/deletePost/:id', authMiddleware, async (req, res) => {
 });
 
 //user deleting
-app.delete('/api/deleteUser/:id', authMiddleware, async (req, res) => {
+app.delete('/api/deleteUser/:id', async (req, res) => {
     const userId = req.params.id;
     try {
         const user = await User.findById(userId);
-        await User.findByIdAndDelete(userId);
+        await User.findByIdAndDelete(user);
         res.status(200).json({ message: 'User deleted successfully' });
     } catch (error) {
         res.status(500).json({ message: 'An error occurred while deleting the user', error: error.message });
