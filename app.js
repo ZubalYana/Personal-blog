@@ -299,6 +299,23 @@ app.delete('/api/deleteUser/:id', async (req, res) => {
     }
 });
 
+//post deleting (admin)
+app.delete('/api/deletePostAdmin/:id', async (req, res) => {
+    const postId = req.params.id;
+    try {
+        const post = await Post.findById(postId);
+        if (!post) {
+            return res.status(404).json({ message: 'Post not found' });
+        }
+        if (post.author.toString() !== req.userId) {
+            return res.status(403).json({ message: 'Unauthorized to delete this post' });
+        }
+        await Post.findByIdAndDelete(postId);
+        res.status(200).json({ message: 'Post deleted successfully' });
+    } catch (error) {
+        res.status(500).json({ message: 'An error occurred while deleting the post', error: error.message });
+    }
+});
 //admin
 app.get('/admin', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'admin.html'));
