@@ -92,13 +92,13 @@ axios.get('/api/getUser')
     //users deleting
     $(document).on('click', '.fa-trash-can', function () {
         $('#messageText').text('Are you sure you want to delete the user?')
-        $('#confirm').text('Delete')
+        $('.confirm').text('Delete')
         $('.messageCon').css('display', 'flex')
         $('.message').css('height', '230px')
-        $('#cancel').click(()=>{
+        $('.cancel').click(()=>{
             $('.messageCon').css('display', 'none')
         })
-        $('#confirm').click(()=>{
+        $('.confirm').click(()=>{
             const userId = $(this).closest('.user').data('id');
     
             axios.delete(`/api/deleteUser/${userId}`)
@@ -155,19 +155,19 @@ axios.get('/api/getPosts')
         );
     }
 
-    //users deleting
+    //posts deleting
     $(document).on('click', '.fa-trash-can', function () {
-        $('#messageText').text('Are you sure you want to delete the user?')
-        $('#confirm').text('Delete')
+        $('#messageText').text('Are you sure you want to delete the post?')
+        $('.confirm').text('Delete')
         $('.messageCon').css('display', 'flex')
         $('.message').css('height', '230px')
-        $('#cancel').click(()=>{
+        $('.cancel').click(()=>{
             $('.messageCon').css('display', 'none')
         })
-        $('#confirm').click(()=>{
-            const userId = $(this).closest('.user').data('id');
+        $('.confirm').click(()=>{
+            const postId = $(this).closest('.post').data('id');
     
-            axios.delete(`/api/deleteUser/${userId}`)
+            axios.delete(`/api/deletePostAdmin/${postId}`)
                 .then(response => {
                     console.log('User deleted:', response.data);
                     location.reload();
