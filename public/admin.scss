@@ -80,18 +80,18 @@
                     cursor: pointer;
                     transition: 0.5s ease-in-out;
                 }
-                #cancel{
+                .cancel{
                     border: #1A4D2E 2px solid;
                 }
-                #cancel:hover{
+                .cancel:hover{
                     background-color: #45474B;
                     color: #fff;
                 }
-                #confirm{
+                .confirm{
                     background-color: #1A4D2E;
                     color: #fff;
                 }
-                #confirm:hover{
+                .confirm:hover{
                     background-color: #45474B;
                     color: #fff;
                 }
