@@ -1,3 +1,19 @@
+//pages navigation
+$('.users').click(()=>{
+    $('.userContent').css('display', 'flex')
+    $('.postsContent').css('display', 'none')
+    $('.newsletterContent').css('display', 'none')
+})
+$('.posts').click(()=>{
+    $('.userContent').css('display', 'none')
+    $('.postsContent').css('display', 'flex')
+    $('.newsletterContent').css('display', 'none')
+})
+$('.newsletter').click(()=>{
+    $('.userContent').css('display', 'none')
+    $('.postsContent').css('display', 'none')
+    $('.newsletterContent').css('display', 'flex')
+})
 //display all the users
 axios.get('/api/getUser')
 .then((res) => {
