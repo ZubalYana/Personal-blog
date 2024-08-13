@@ -3,17 +3,27 @@ $('.users').click(()=>{
     $('.userContent').css('display', 'flex')
     $('.postsContent').css('display', 'none')
     $('.newsletterContent').css('display', 'none')
+    $('.users').css('font-weight', '600')
+    $('.posts').css('font-weight', '300')
+    $('.newsletter').css('font-weight', '300')
 })
 $('.posts').click(()=>{
     $('.userContent').css('display', 'none')
     $('.postsContent').css('display', 'flex')
     $('.newsletterContent').css('display', 'none')
+    $('.users').css('font-weight', '300')
+    $('.posts').css('font-weight', '600')
+    $('.newsletter').css('font-weight', '300')
 })
 $('.newsletter').click(()=>{
     $('.userContent').css('display', 'none')
     $('.postsContent').css('display', 'none')
     $('.newsletterContent').css('display', 'flex')
+    $('.users').css('font-weight', '300')
+    $('.posts').css('font-weight', '300')
+    $('.newsletter').css('font-weight', '600')
 })
+
 //display all the users
 axios.get('/api/getUser')
 .then((res) => {

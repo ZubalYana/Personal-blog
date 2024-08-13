@@ -134,107 +134,111 @@
       }
 
     }
-    .userStatisticsCon{
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        margin-top: 30px;
-        p{
-            font-size: 24px;
-            font-weight: 600;
-            color: #45474B;
-        }
-        .userCount{
-            width: 130px;
-            height: 37px;
-            border-radius: 6px;
-            background-color: #45474B;
-            color: #fff;
+    .userContent{
+        flex-direction: column;
+        .userStatisticsCon{
+            width: 100%;
             display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: Josefin Sans;
-            font-size: 14px;
-            font-weight: 600;
-            span{
-                margin-right: 5px;
-            }
-        }
-    }
-    .usersContainer{
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        margin-top: 15px;
-        .user{
-            width: 420px;
-            height: 250px;
-            border-radius: 15px;
-            border: #1A4D2E 1px solid;
-            padding: 18px;
-            position: relative;
-            margin-bottom: 30px;
-            .icons{
-                width: 60px;
-                display: flex;
-                justify-content: space-between;
-                position: absolute;
-                top: 15px;
-                right: 15px;
-                color: #1A4D2E;
+            justify-content: space-between;
+            margin-top: 30px;
+            p{
                 font-size: 24px;
-                i{
-                    transition: 0.3s ease;
-                }
-                i:hover{
-                    color: #45474B;
-                }
-            }
-            .topInfo{
-                width: 200px;
-                display: flex;
-                justify-content: space-between;
-                height: 65px;
-                align-items: center;
-                .userPicCon{
-                    .userPic{
-                        width: 65px;
-                        height: 65px;
-                        border-radius: 50%;
-                        object-fit: cover;
-                    }
-                }
-
-                .basicCon{
-                    margin-left: 10px;
-                    .nameCon{
-                        font-size: 24px;
-                        font-weight: 500;
-                        color: #45474B;
-                        width: 150px;
-                    }
-                    .email{
-                        font-size: 14px;
-                        font-weight: 300;
-                        margin-top: 5px;
-                    }
-                }
-            }
-            .description{
-                font-size: 14px;
-                font-weight: 400;
-                margin-top: 12px;
-            }
-            .visited, .toVisit{
-                font-size: 16px;
-                font-weight: 400;
+                font-weight: 600;
                 color: #45474B;
-                margin-top: 7px;
+            }
+            .userCount{
+                width: 130px;
+                height: 37px;
+                border-radius: 6px;
+                background-color: #45474B;
+                color: #fff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family: Josefin Sans;
+                font-size: 14px;
+                font-weight: 600;
                 span{
-                    font-weight: 600;
+                    margin-right: 5px;
+                }
+            }
+        }
+        .usersContainer{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 15px;
+            .user{
+                width: 420px;
+                height: 250px;
+                border-radius: 15px;
+                border: #1A4D2E 1px solid;
+                padding: 18px;
+                position: relative;
+                margin-bottom: 30px;
+                .icons{
+                    width: 60px;
+                    display: flex;
+                    justify-content: space-between;
+                    position: absolute;
+                    top: 15px;
+                    right: 15px;
+                    color: #1A4D2E;
+                    font-size: 24px;
+                    i{
+                        transition: 0.3s ease;
+                    }
+                    i:hover{
+                        color: #45474B;
+                    }
+                }
+                .topInfo{
+                    width: 200px;
+                    display: flex;
+                    justify-content: space-between;
+                    height: 65px;
+                    align-items: center;
+                    .userPicCon{
+                        .userPic{
+                            width: 65px;
+                            height: 65px;
+                            border-radius: 50%;
+                            object-fit: cover;
+                        }
+                    }
+    
+                    .basicCon{
+                        margin-left: 10px;
+                        .nameCon{
+                            font-size: 24px;
+                            font-weight: 500;
+                            color: #45474B;
+                            width: 150px;
+                        }
+                        .email{
+                            font-size: 14px;
+                            font-weight: 300;
+                            margin-top: 5px;
+                        }
+                    }
+                }
+                .description{
+                    font-size: 14px;
+                    font-weight: 400;
+                    margin-top: 12px;
+                }
+                .visited, .toVisit{
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: #45474B;
+                    margin-top: 7px;
+                    span{
+                        font-weight: 600;
+                    }
                 }
             }
         }
     }
+
 }

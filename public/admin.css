@@ -145,18 +145,21 @@
   justify-content: space-between;
   font-size: 32px;
 }
-.wrap .userStatisticsCon {
+.wrap .userContent {
+  flex-direction: column;
+}
+.wrap .userContent .userStatisticsCon {
   width: 100%;
   display: flex;
   justify-content: space-between;
   margin-top: 30px;
 }
-.wrap .userStatisticsCon p {
+.wrap .userContent .userStatisticsCon p {
   font-size: 24px;
   font-weight: 600;
   color: #45474B;
 }
-.wrap .userStatisticsCon .userCount {
+.wrap .userContent .userStatisticsCon .userCount {
   width: 130px;
   height: 37px;
   border-radius: 6px;
@@ -169,17 +172,17 @@
   font-size: 14px;
   font-weight: 600;
 }
-.wrap .userStatisticsCon .userCount span {
+.wrap .userContent .userStatisticsCon .userCount span {
   margin-right: 5px;
 }
-.wrap .usersContainer {
+.wrap .userContent .usersContainer {
   width: 100%;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   margin-top: 15px;
 }
-.wrap .usersContainer .user {
+.wrap .userContent .usersContainer .user {
   width: 420px;
   height: 250px;
   border-radius: 15px;
@@ -188,7 +191,7 @@
   position: relative;
   margin-bottom: 30px;
 }
-.wrap .usersContainer .user .icons {
+.wrap .userContent .usersContainer .user .icons {
   width: 60px;
   display: flex;
   justify-content: space-between;
@@ -198,51 +201,51 @@
   color: #1A4D2E;
   font-size: 24px;
 }
-.wrap .usersContainer .user .icons i {
+.wrap .userContent .usersContainer .user .icons i {
   transition: 0.3s ease;
 }
-.wrap .usersContainer .user .icons i:hover {
+.wrap .userContent .usersContainer .user .icons i:hover {
   color: #45474B;
 }
-.wrap .usersContainer .user .topInfo {
+.wrap .userContent .usersContainer .user .topInfo {
   width: 200px;
   display: flex;
   justify-content: space-between;
   height: 65px;
   align-items: center;
 }
-.wrap .usersContainer .user .topInfo .userPicCon .userPic {
+.wrap .userContent .usersContainer .user .topInfo .userPicCon .userPic {
   width: 65px;
   height: 65px;
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.wrap .usersContainer .user .topInfo .basicCon {
+.wrap .userContent .usersContainer .user .topInfo .basicCon {
   margin-left: 10px;
 }
-.wrap .usersContainer .user .topInfo .basicCon .nameCon {
+.wrap .userContent .usersContainer .user .topInfo .basicCon .nameCon {
   font-size: 24px;
   font-weight: 500;
   color: #45474B;
   width: 150px;
 }
-.wrap .usersContainer .user .topInfo .basicCon .email {
+.wrap .userContent .usersContainer .user .topInfo .basicCon .email {
   font-size: 14px;
   font-weight: 300;
   margin-top: 5px;
 }
-.wrap .usersContainer .user .description {
+.wrap .userContent .usersContainer .user .description {
   font-size: 14px;
   font-weight: 400;
   margin-top: 12px;
 }
-.wrap .usersContainer .user .visited, .wrap .usersContainer .user .toVisit {
+.wrap .userContent .usersContainer .user .visited, .wrap .userContent .usersContainer .user .toVisit {
   font-size: 16px;
   font-weight: 400;
   color: #45474B;
   margin-top: 7px;
 }
-.wrap .usersContainer .user .visited span, .wrap .usersContainer .user .toVisit span {
+.wrap .userContent .usersContainer .user .visited span, .wrap .userContent .usersContainer .user .toVisit span {
   font-weight: 600;
 }/*# sourceMappingURL=admin.css.map */
