@@ -248,4 +248,42 @@
 }
 .wrap .userContent .usersContainer .user .visited span, .wrap .userContent .usersContainer .user .toVisit span {
   font-weight: 600;
+}
+.wrap .postsContent {
+  width: 100%;
+  flex-direction: column;
+}
+.wrap .postsContent .postStatisticsCon {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.wrap .postsContent .postStatisticsCon p {
+  font-size: 24px;
+  font-weight: 600;
+  color: #45474B;
+}
+.wrap .postsContent .postStatisticsCon .postCount {
+  width: 130px;
+  height: 37px;
+  border-radius: 6px;
+  background-color: #45474B;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Josefin Sans;
+  font-size: 14px;
+  font-weight: 600;
+}
+.wrap .postsContent .postStatisticsCon .postCount span {
+  margin-right: 5px;
+}
+.wrap .postsContent .postsContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 15px;
 }/*# sourceMappingURL=admin.css.map */

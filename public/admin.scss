@@ -240,5 +240,43 @@
             }
         }
     }
+    .postsContent{
+        width: 100%;
+        flex-direction: column;
+        .postStatisticsCon{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            p{
+                font-size: 24px;
+                font-weight: 600;
+                color: #45474B;
+            }
+            .postCount{
+                width: 130px;
+                height: 37px;
+                border-radius: 6px;
+                background-color: #45474B;
+                color: #fff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family: Josefin Sans;
+                font-size: 14px;
+                font-weight: 600;
+                span{
+                    margin-right: 5px;
+                }
+            }
+        }
+        .postsContainer{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+    }
 
 }
