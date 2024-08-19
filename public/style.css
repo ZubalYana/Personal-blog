@@ -604,7 +604,7 @@
   border-radius: 50%;
   margin-right: 10px;
 }
-.wrap .blogPage .postsContainer .post .top .author .authro_name {
+.wrap .blogPage .postsContainer .post .top .author .author_name {
   font-size: 24px;
   font-weight: 600;
 }
@@ -618,6 +618,7 @@
 .wrap .blogPage .postsContainer .post .top .author .follow {
   font-size: 20px;
   font-weight: 400;
+  cursor: pointer;
 }
 .wrap .blogPage .postsContainer .post .top .time {
   font-size: 16px;
