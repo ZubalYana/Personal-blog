@@ -97,38 +97,46 @@ $(document).ready(function() {
 
 //get and display all the posts
 axios.get('/api/getPosts')
-.then((res) => {
-    console.log(res.data);
-    for (let post of res.data) {
-        const formattedDate = moment(post.date).fromNow();
-        const profilePic = (post.author && post.author.profilePicture) ? post.author.profilePicture : './materials/profile pic default.png';
-        const authorName = post.author ? `${post.author.firstname} ${post.author.lastName}` : 'Unknown Author';
-        const postPic = post.pic && post.pic !== '' ? post.pic : './materials/post pic default.png';
-        $('.postsContainer').prepend(
-            `
-            <div class="post">
-                <div class="top">
-                    <div class="author">
-                        <img class="author_pic" src="${profilePic}" alt="Profile Picture">
-                        <p class="author_name">${authorName}</p>
-                        <div class="dot"></div>
-                        <p class="follow">follow</p>
+    .then((res) => {
+        console.log(res.data);
+        for (let post of res.data) {
+            const formattedDate = moment(post.date).fromNow();
+            const profilePic = (post.author && post.author.profilePicture) ? post.author.profilePicture : './materials/profile pic default.png';
+            const authorName = post.author ? `${post.author.firstname} ${post.author.lastName}` : 'Unknown Author';
+            const postPic = post.pic && post.pic !== '' ? post.pic : './materials/post pic default.png';            
+            $('.postsContainer').prepend(
+                `
+                <div class="post" data-post='${JSON.stringify(post)}'>
+                    <div class="top">
+                        <div class="author">
+                            <img class="author_pic" src="${profilePic}" alt="Profile Picture">
+                            <p class="author_name">${authorName}</p>
+                            <div class="dot"></div>
+                            <p class="follow">follow</p>
+                        </div>
+                        <p class="time">${formattedDate}</p>
                     </div>
-                    <p class="time">${formattedDate}</p>
+                    <img class="postImg" src="${postPic}" alt="Post Image" onerror="this.onerror=null; this.src='./materials/post pic default.png';">
+                    <h3 class="postTitle">${post.title}</h3>
+                    <p class="postText">${post.body}</p>
+                    <p class="postHashtags">${post.hashtags}</p>
+                    <div class="actions">
+                        <i class="fa-regular fa-thumbs-up"></i>
+                        <i class="fa-solid fa-share-nodes"></i>
+                    </div>
                 </div>
-                <img class="postImg" src="${postPic}" alt="Post Image" onerror="this.onerror=null; this.src='./materials/post pic default.png';">
-                <h3 class="postTitle">${post.title}</h3>
-                <p class="postText">${post.body}</p>
-                <p class="postHashtags">${post.hashtags}</p>
-                <div class="actions">
-                    <i class="fa-regular fa-thumbs-up"></i>
-                    <i class="fa-solid fa-share-nodes"></i>
-                </div>
-            </div>
-            `
-        );
-    }
-});
+                `
+            );
+        }
+        $('.follow').click(function(){
+            const postData = $(this).closest('.post').data('post');
+            console.log(postData);
+        });
+    })
+    .catch((err) => {
+        console.error('Error fetching posts:', err);
+    });
+
 
 //camera screen cards animations
 $('#cameraPhoto1').click(function() {
@@ -172,3 +180,4 @@ $('#gear').click(()=>{
         $('.settingsCon').css('display', 'none')
     })
 })
+
