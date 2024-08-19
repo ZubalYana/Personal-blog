@@ -128,6 +128,7 @@ axios.get('/api/getPosts')
                 `
             );
         }
+        //following logic
         $('.follow').click(function(){
             axios.get('/auth/user')
             .then(res => {
