@@ -34,7 +34,9 @@ const userSchema = new mongoose.Schema({
     profileDescription: { type: String },
     placesVisited: { type: String },
     placesToVisit: { type: String },
-    profilePicture: { type: String }
+    profilePicture: { type: String },
+    followers: { type: Array },
+    followings: { type: Array }
 });
 
 const User = mongoose.model('User', userSchema);
