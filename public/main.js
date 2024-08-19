@@ -103,8 +103,7 @@ axios.get('/api/getPosts')
         const formattedDate = moment(post.date).fromNow();
         const profilePic = (post.author && post.author.profilePicture) ? post.author.profilePicture : './materials/profile pic default.png';
         const authorName = post.author ? `${post.author.firstname} ${post.author.lastName}` : 'Unknown Author';
-        const postPic = post.pic && post.pic !== '' ? post.pic : './materials/post pic default.png'; // Ensure there's a valid post picture
-
+        const postPic = post.pic && post.pic !== '' ? post.pic : './materials/post pic default.png';
         $('.postsContainer').prepend(
             `
             <div class="post">
@@ -130,8 +129,6 @@ axios.get('/api/getPosts')
         );
     }
 });
-
-
 
 //camera screen cards animations
 $('#cameraPhoto1').click(function() {
