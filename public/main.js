@@ -129,8 +129,14 @@ axios.get('/api/getPosts')
             );
         }
         $('.follow').click(function(){
-            const postData = $(this).closest('.post').data('post');
-            console.log(postData);
+            axios.get('/auth/user')
+            .then(res => {
+                const postData = $(this).closest('.post').data('post');
+                const userToFollow = postData.author
+                const userWhoFollows = res.data
+                console.log(userToFollow);
+                console.log(userWhoFollows);
+            })
         });
     })
     .catch((err) => {
