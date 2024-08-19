@@ -102,7 +102,9 @@ axios.get('/api/getPosts')
     for (let post of res.data) {
         const formattedDate = moment(post.date).fromNow();
 
-        const profilePic = post.author.profilePicture ? post.author.profilePicture : './materials/profile pic default.png';
+        // Check if `post.author` exists, and if `profilePicture` is either `null` or not set
+        const profilePic = (post.author && post.author.profilePicture) ? post.author.profilePicture : './materials/profile pic default.png';
+        const authorName = post.author ? `${post.author.firstname} ${post.author.lastName}` : 'Unknown Author';
         const postPic = post.pic ? post.pic : './materials/post pic default.png';
 
         $('.postsContainer').prepend(
@@ -110,14 +112,14 @@ axios.get('/api/getPosts')
             <div class="post">
                 <div class="top">
                     <div class="author">
-                        <img class="author_pic" src="${profilePic}" alt="">
-                        <p class="authro_name">${post.author.firstname} ${post.author.lastName}</p>
+                        <img class="author_pic" src="${profilePic}" alt="Profile Picture">
+                        <p class="author_name">${authorName}</p>
                         <div class="dot"></div>
                         <p class="follow">follow</p>
                     </div>
                     <p class="time">${formattedDate}</p>
                 </div>
-                <img class="postImg" src="${postPic}" alt="">
+                <img class="postImg" src="${postPic}" alt="Post Image">
                 <h3 class="postTitle">${post.title}</h3>
                 <p class="postText">${post.body}</p>
                 <p class="postHashtags">${post.hashtags}</p>
@@ -130,6 +132,7 @@ axios.get('/api/getPosts')
         );
     }
 });
+
 
 //camera screen cards animations
 $('#cameraPhoto1').click(function() {
