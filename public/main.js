@@ -101,11 +101,9 @@ axios.get('/api/getPosts')
     console.log(res.data);
     for (let post of res.data) {
         const formattedDate = moment(post.date).fromNow();
-
-        // Check if `post.author` exists, and if `profilePicture` is either `null` or not set
         const profilePic = (post.author && post.author.profilePicture) ? post.author.profilePicture : './materials/profile pic default.png';
         const authorName = post.author ? `${post.author.firstname} ${post.author.lastName}` : 'Unknown Author';
-        const postPic = post.pic ? post.pic : './materials/post pic default.png';
+        const postPic = post.pic && post.pic !== '' ? post.pic : './materials/post pic default.png'; // Ensure there's a valid post picture
 
         $('.postsContainer').prepend(
             `
@@ -119,7 +117,7 @@ axios.get('/api/getPosts')
                     </div>
                     <p class="time">${formattedDate}</p>
                 </div>
-                <img class="postImg" src="${postPic}" alt="Post Image">
+                <img class="postImg" src="${postPic}" alt="Post Image" onerror="this.onerror=null; this.src='./materials/post pic default.png';">
                 <h3 class="postTitle">${post.title}</h3>
                 <p class="postText">${post.body}</p>
                 <p class="postHashtags">${post.hashtags}</p>
@@ -132,6 +130,7 @@ axios.get('/api/getPosts')
         );
     }
 });
+
 
 
 //camera screen cards animations
