@@ -644,6 +644,12 @@
 .wrap .blogPage .postsContainer .post .postText .postFullText {
   display: none;
 }
+.wrap .blogPage .postsContainer .post .readMore {
+  text-decoration: none;
+  color: #2C2E32;
+  font-weight: 600;
+  font-family: Urbanist;
+}
 .wrap .blogPage .postsContainer .post .postHashtags {
   font-size: 20px;
   font-weight: 700;
