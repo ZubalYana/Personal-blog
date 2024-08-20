@@ -105,6 +105,22 @@ app.post('/auth/logout', (req, res) => {
     res.status(200).json({ message: 'Logged out successfully' });
 });
 
+
+//middleware
+const authMiddleware = (req, res, next) => {
+    const token = req.cookies.token;
+    if (!token) {
+        return res.status(401).json({ message: 'Unauthorized' });
+    }
+    try {
+        const decoded = jwt.verify(token, JWT_SECRET);
+        req.userId = decoded.userId;
+        next();
+    } catch (error) {
+        res.status(401).json({ message: 'Unauthorized' });
+    }
+};
+
 //follow a user
 app.post('/api/follow/:id', authMiddleware, async (req, res) => {
     const userIdToFollow = req.params.id;
@@ -153,20 +169,6 @@ app.post('/api/unfollow/:id', authMiddleware, async (req, res) => {
     }
 });
 
-//middleware
-const authMiddleware = (req, res, next) => {
-    const token = req.cookies.token;
-    if (!token) {
-        return res.status(401).json({ message: 'Unauthorized' });
-    }
-    try {
-        const decoded = jwt.verify(token, JWT_SECRET);
-        req.userId = decoded.userId;
-        next();
-    } catch (error) {
-        res.status(401).json({ message: 'Unauthorized' });
-    }
-};
 
 //get the user info
 app.get('/auth/user', authMiddleware, async (req, res) => {

@@ -129,18 +129,33 @@ axios.get('/api/getPosts')
             );
         }
         //following logic
-        $('.follow').click(function(){
+        $('.follow').click(function() {
             axios.get('/auth/user')
-            .then(res => {
-                const postData = $(this).closest('.post').data('post');
-                const userToFollow = postData.author
-                const userWhoFollows = res.data
-                console.log(userToFollow);
-                console.log(userToFollow.followers);
-                console.log(userWhoFollows);
-                console.log(userWhoFollows.followings);
-            })
+                .then(res => {
+                    const postData = $(this).closest('.post').data('post');
+                    const userToFollowId = postData.author._id;
+                    const currentUserId = res.data._id;
+                    if (!currentUserId || !userToFollowId) {
+                        return console.error('User IDs missing');
+                    }
+                    const isFollowing = res.data.followings.includes(userToFollowId);
+                    if (isFollowing) {
+                        axios.post(`/api/unfollow/${userToFollowId}`)
+                            .then(() => {
+                                $(this).text('follow');
+                            })
+                            .catch(err => console.error('Error unfollowing the user:', err));
+                    } else {
+                        axios.post(`/api/follow/${userToFollowId}`)
+                            .then(() => {
+                                $(this).text('unfollow');
+                            })
+                            .catch(err => console.error('Error following the user:', err));
+                    }
+                })
+                .catch(err => console.error('Error fetching current user:', err));
         });
+        
     })
     .catch((err) => {
         console.error('Error fetching posts:', err);
