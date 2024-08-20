@@ -169,6 +169,19 @@ app.post('/api/unfollow/:id', authMiddleware, async (req, res) => {
     }
 });
 
+//check following
+app.get('/api/checkFollow/:userId', authMiddleware, async (req, res) => {
+    const { userId } = req.params;
+    try {
+        const currentUser = await User.findById(req.userId);
+        const isFollowing = currentUser.followings.includes(userId);
+        res.status(200).json({ isFollowing });
+    } catch (error) {
+        console.error('Error checking follow status:', error);
+        res.status(500).json({ message: 'Error checking follow status' });
+    }
+});
+
 
 //get the user info
 app.get('/auth/user', authMiddleware, async (req, res) => {
