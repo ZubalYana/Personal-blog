@@ -145,13 +145,24 @@ $.ajax({
             );
             
         });
-        //reading more
+
+        //reading more/less
         $(document).on('click', '.readMore', function(e) {
             e.preventDefault();
             var $this = $(this);
-            $this.siblings('.postFullText').slideToggle(); 
-            $this.siblings('.postExcerpt').toggle(); 
-            $this.text($this.text() === 'Read More' ? 'Read Less' : 'Read More');
+            var $post = $this.closest('.post'); 
+            var $fullText = $this.siblings('.postFullText');
+            var $excerpt = $this.siblings('.postExcerpt');
+        
+            $fullText.slideToggle(); 
+            $excerpt.toggle(); 
+            $this.text($this.text() === 'Read More' ? 'Read Less' : 'Read More'); 
+        
+            if ($this.text() === 'Read Less') {
+                $post.css('height', 'auto'); 
+            } else {
+                $post.css('height', '521px'); 
+            }
         });
     },
     error: function(error) {
