@@ -103,7 +103,8 @@ axios.get('/api/getPosts')
             const formattedDate = moment(post.date).fromNow();
             const profilePic = (post.author && post.author.profilePicture) ? post.author.profilePicture : './materials/profile pic default.png';
             const authorName = post.author ? `${post.author.firstname} ${post.author.lastName}` : 'Unknown Author';
-            const postPic = post.pic && post.pic !== '' ? post.pic : './materials/post pic default.png';            
+            const postPic = post.pic && post.pic !== '' ? post.pic : './materials/post pic default.png';
+            
             $('.postsContainer').prepend(
                 `
                 <div class="post" data-post='${JSON.stringify(post)}'>
@@ -112,13 +113,17 @@ axios.get('/api/getPosts')
                             <img class="author_pic" src="${profilePic}" alt="Profile Picture">
                             <p class="author_name">${authorName}</p>
                             <div class="dot"></div>
-                            <p class="follow">follow</p>
+                            <p class="follow" data-user-id="${post.author._id}">follow</p>
                         </div>
                         <p class="time">${formattedDate}</p>
                     </div>
                     <img class="postImg" src="${postPic}" alt="Post Image" onerror="this.onerror=null; this.src='./materials/post pic default.png';">
                     <h3 class="postTitle">${post.title}</h3>
-                    <p class="postText">${post.body}</p>
+                    <div class="postText">
+                        <span class="postExcerpt">${post.body.substring(0, 80)}...</span>
+                        <span class="postFullText" style="display: none;">${post.body.substring(100)}</span>
+                        <a href="#" class="readMore">Read More</a>
+                    </div>
                     <p class="postHashtags">${post.hashtags}</p>
                     <div class="actions">
                         <i class="fa-regular fa-thumbs-up"></i>
@@ -127,41 +132,67 @@ axios.get('/api/getPosts')
                 </div>
                 `
             );
+            
         }
-        //following logic
+
+        //following checking
+        $('.follow').each(function() {
+            const userId = $(this).data('user-id');
+            axios.get(`/api/checkFollow/${userId}`)
+                .then((response) => {
+                    if (response.data.isFollowing) {
+                        $(this).text('Following');
+                    }
+                })
+                .catch((error) => {
+                    console.error('Error checking follow status:', error);
+                });
+        });
+
+        // Following logic
         $('.follow').click(function() {
             axios.get('/auth/user')
                 .then(res => {
                     const postData = $(this).closest('.post').data('post');
-                    const userToFollowId = postData.author._id;
-                    const currentUserId = res.data._id;
-                    if (!currentUserId || !userToFollowId) {
-                        return console.error('User IDs missing');
-                    }
-                    const isFollowing = res.data.followings.includes(userToFollowId);
-                    if (isFollowing) {
-                        axios.post(`/api/unfollow/${userToFollowId}`)
+                    const userToFollow = postData.author._id;
+                    const userWhoFollows = res.data._id;
+
+                    if ($(this).text() === 'Follow') {
+                        // Follow the user
+                        axios.post('/api/follow', { userToFollow })
                             .then(() => {
-                                $(this).text('follow');
-                                alert('You don\'t follow the user anymore.')
+                                $(this).text('Following');
                             })
-                            .catch(err => console.error('Error unfollowing the user:', err));
+                            .catch((err) => {
+                                console.error('Error following user:', err);
+                            });
                     } else {
-                        axios.post(`/api/follow/${userToFollowId}`)
+                        // Unfollow the user
+                        axios.post('/api/unfollow', { userToFollow })
                             .then(() => {
-                                $(this).text('unfollow');
-                                alert('You now follow the user!')
+                                $(this).text('Follow');
                             })
-                            .catch(err => console.error('Error following the user:', err));
+                            .catch((err) => {
+                                console.error('Error unfollowing user:', err);
+                            });
                     }
-                })
-                .catch(err => console.error('Error fetching current user:', err));
+                });
+        });
+
+        //reading more
+        $(document).on('click', '.readMore', function(e) {
+            e.preventDefault();
+            var $this = $(this);
+            $this.siblings('.postFullText').slideToggle(); 
+            $this.siblings('.postExcerpt').toggle(); 
+            $this.text($this.text() === 'Read More' ? 'Read Less' : 'Read More');
         });
         
     })
     .catch((err) => {
         console.error('Error fetching posts:', err);
     });
+
 
 
 //camera screen cards animations

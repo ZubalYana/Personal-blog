@@ -29,7 +29,7 @@
     h1,h2,h3,h4,h5,h6{
         font-family: Josefin Sans;
     }
-    p, button{
+    p, button, span{
         font-family: Urbanist;
     }
     .screen {
@@ -635,6 +635,10 @@
                     font-weight: 400;
                     margin: 7px 0;
                 }
+                .postText .postFullText {
+                    display: none;
+                }
+                
                 .postHashtags{
                     font-size: 20px;
                     font-weight: 700;

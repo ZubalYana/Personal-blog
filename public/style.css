@@ -37,7 +37,7 @@
 .wrap h1, .wrap h2, .wrap h3, .wrap h4, .wrap h5, .wrap h6 {
   font-family: Josefin Sans;
 }
-.wrap p, .wrap button {
+.wrap p, .wrap button, .wrap span {
   font-family: Urbanist;
 }
 .wrap .screen {
@@ -640,6 +640,9 @@
   font-size: 16px;
   font-weight: 400;
   margin: 7px 0;
+}
+.wrap .blogPage .postsContainer .post .postText .postFullText {
+  display: none;
 }
 .wrap .blogPage .postsContainer .post .postHashtags {
   font-size: 20px;
