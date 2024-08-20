@@ -128,7 +128,11 @@ $.ajax({
                     </div>
                     <img class="postImg" src="${post.pic}" alt="">
                     <h3 class="postTitle">${post.title}</h3>
-                    <p class="postText">${post.body}</p>
+                    <div class="postText">
+                        <span class="postExcerpt">${post.body.substring(0, 80)}...</span>
+                        <span class="postFullText" style="display: none;">${post.body.substring(100)}</span>
+                        <a href="#" class="readMore">Read More</a>
+                    </div>
                     <p class="postHashtags">${post.hashtags}</p>
                     <div class="actions">
                         <i class="fa-regular fa-thumbs-up"></i>
@@ -140,6 +144,14 @@ $.ajax({
                 `
             );
             
+        });
+        //reading more
+        $(document).on('click', '.readMore', function(e) {
+            e.preventDefault();
+            var $this = $(this);
+            $this.siblings('.postFullText').slideToggle(); 
+            $this.siblings('.postExcerpt').toggle(); 
+            $this.text($this.text() === 'Read More' ? 'Read Less' : 'Read More');
         });
     },
     error: function(error) {

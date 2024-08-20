@@ -272,6 +272,15 @@
   font-weight: 400;
   margin: 7px 0;
 }
+.wrap .user .posts .postsContainer .post .postText .postFullText {
+  display: none;
+}
+.wrap .user .posts .postsContainer .post .readMore {
+  text-decoration: none;
+  color: #2C2E32;
+  font-weight: 600;
+  font-family: Urbanist;
+}
 .wrap .user .posts .postsContainer .post .postHashtags {
   font-size: 20px;
   font-weight: 700;
