@@ -143,12 +143,14 @@ axios.get('/api/getPosts')
                         axios.post(`/api/unfollow/${userToFollowId}`)
                             .then(() => {
                                 $(this).text('follow');
+                                alert('You don\'t follow the user anymore.')
                             })
                             .catch(err => console.error('Error unfollowing the user:', err));
                     } else {
                         axios.post(`/api/follow/${userToFollowId}`)
                             .then(() => {
                                 $(this).text('unfollow');
+                                alert('You now follow the user!')
                             })
                             .catch(err => console.error('Error following the user:', err));
                     }
