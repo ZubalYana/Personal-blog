@@ -105,6 +105,54 @@ app.post('/auth/logout', (req, res) => {
     res.status(200).json({ message: 'Logged out successfully' });
 });
 
+//follow a user
+app.post('/api/follow/:id', authMiddleware, async (req, res) => {
+    const userIdToFollow = req.params.id;
+    const userId = req.userId;
+    try {
+        const userToFollow = await User.findById(userIdToFollow);
+        const currentUser = await User.findById(userId);
+        if (!userToFollow || !currentUser) {
+            return res.status(404).json({ message: 'User not found' });
+        }
+        if (userToFollow.followers.includes(userId)) {
+            return res.status(400).json({ message: 'You already follow this user' });
+        }
+        userToFollow.followers.push(userId);
+        currentUser.followings.push(userIdToFollow);
+        await userToFollow.save();
+        await currentUser.save();
+        res.status(200).json({ message: 'Successfully followed the user' });
+    } catch (error) {
+        res.status(500).json({ message: 'An error occurred while following the user', error: error.message });
+    }
+});
+
+//unfollow a user
+app.post('/api/unfollow/:id', authMiddleware, async (req, res) => {
+    const userIdToUnfollow = req.params.id;
+    const userId = req.userId;
+    try {
+        const userToUnfollow = await User.findById(userIdToUnfollow);
+        const currentUser = await User.findById(userId);
+        if (!userToUnfollow || !currentUser) {
+            return res.status(404).json({ message: 'User not found' });
+        }
+        if (!userToUnfollow.followers.includes(userId)) {
+            return res.status(400).json({ message: 'You do not follow this user' });
+        }
+        userToUnfollow.followers.pull(userId);
+        currentUser.followings.pull(userIdToUnfollow);
+
+        await userToUnfollow.save();
+        await currentUser.save();
+
+        res.status(200).json({ message: 'Successfully unfollowed the user' });
+    } catch (error) {
+        res.status(500).json({ message: 'An error occurred while unfollowing the user', error: error.message });
+    }
+});
+
 //middleware
 const authMiddleware = (req, res, next) => {
     const token = req.cookies.token;

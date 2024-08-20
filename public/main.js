@@ -136,7 +136,9 @@ axios.get('/api/getPosts')
                 const userToFollow = postData.author
                 const userWhoFollows = res.data
                 console.log(userToFollow);
+                console.log(userToFollow.followers);
                 console.log(userWhoFollows);
+                console.log(userWhoFollows.followings);
             })
         });
     })
