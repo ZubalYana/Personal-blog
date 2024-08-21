@@ -173,6 +173,29 @@
   color: #000;
   margin-left: 5px;
 }
+.wrap .user .userInfo .followings {
+  width: 240px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+.wrap .user .userInfo .followings .following {
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+.wrap .user .userInfo .followings .following .amount {
+  font-size: 32px;
+  font-weight: 700;
+  color: #2C2E32;
+}
+.wrap .user .userInfo .followings .following .following_text {
+  color: rgba(69, 71, 75, 0.6392156863);
+  font-size: 20px;
+  font-weight: 300;
+}
 .wrap .user .posts {
   width: 100%;
   display: flex;

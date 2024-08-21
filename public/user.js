@@ -19,13 +19,13 @@ document.addEventListener('DOMContentLoaded', () => {
                         <span class="placesVisited">Visited: <p class='visitedPlaces'>${res.data.placesVisited}</p></span>
                         <span class="placesToVisit">Wants to visit: <p class='toVisitPlaces' >${res.data.placesToVisit}</p></span>
                         <div class="followings">
-                            <div class="followers">
-                                <span class="followersAmount">${res.data.followers.length}</span>
-                                    <span>followers</span>
+                            <div class="following">
+                                <span class="amount">${res.data.followers.length}</span>
+                                <span class="following_text">followers</span>
                             </div>
-                            <div class="followings">
-                                <span class="followingsAmount">${res.data.followings.length}</span>
-                                    <span>followings</span>
+                            <div class="following">
+                                <span class="amount">${res.data.followings.length}</span>
+                                <span class="following_text">followings</span>
                             </div>
                         </div>
                     </div>

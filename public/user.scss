@@ -167,6 +167,29 @@
                     margin-left: 5px;
                 }
             }
+            .followings{
+                width: 240px;
+                display: flex;
+                justify-content: space-between;
+                margin-top: 25px;
+                .following{
+                    width: 100px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    cursor: pointer;
+                    .amount{
+                        font-size: 32px;
+                        font-weight: 700;
+                        color: #2C2E32;
+                    }
+                    .following_text{
+                        color: #45474ba3;
+                        font-size: 20px;
+                        font-weight: 300;
+                    }
+                }
+            }
         }
         .posts{
             width: 100%;
