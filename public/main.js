@@ -154,6 +154,7 @@ axios.get('/api/getPosts')
             axios.get('/auth/user')
                 .then(res => {
                     const postData = $(this).closest('.post').data('post');
+                    console.log(postData)
                     const userToFollow = postData.author._id;
                     const userWhoFollows = res.data._id;
 
