@@ -154,29 +154,28 @@ axios.get('/api/getPosts')
             axios.get('/auth/user')
                 .then(res => {
                     const postData = $(this).closest('.post').data('post');
-                    console.log(postData)
                     const userToFollow = postData.author._id;
+                    console.log(userToFollow)
                     const userWhoFollows = res.data._id;
-
-                    if ($(this).text() === 'Follow') {
-                        // Follow the user
-                        axios.post('/api/follow', { userToFollow })
+                    console.log(userWhoFollows)
+                    if ($(this).text() === 'follow') {
+                        axios.post(`/api/follow/${userToFollow}`)
                             .then(() => {
-                                $(this).text('Following');
+                                $(this).text('following');
                             })
                             .catch((err) => {
                                 console.error('Error following user:', err);
                             });
                     } else {
-                        // Unfollow the user
-                        axios.post('/api/unfollow', { userToFollow })
+                        axios.post(`/api/unfollow/${userToFollow}`)
                             .then(() => {
-                                $(this).text('Follow');
+                                $(this).text('follow');
                             })
                             .catch((err) => {
                                 console.error('Error unfollowing user:', err);
                             });
                     }
+                    
                 });
         });
 
