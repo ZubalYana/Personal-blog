@@ -141,7 +141,7 @@ axios.get('/api/getPosts')
             axios.get(`/api/checkFollow/${userId}`)
                 .then((response) => {
                     if (response.data.isFollowing) {
-                        $(this).text('Following');
+                        $(this).text('following');
                     }
                 })
                 .catch((error) => {
