@@ -142,6 +142,7 @@ axios.get('/api/getPosts')
                 .then((response) => {
                     if (response.data.isFollowing) {
                         $(this).text('following');
+                        $(this).css('color', '#1A4D2E')
                     }
                 })
                 .catch((error) => {
@@ -162,6 +163,7 @@ axios.get('/api/getPosts')
                         axios.post(`/api/follow/${userToFollow}`)
                             .then(() => {
                                 $(this).text('following');
+                                $(this).css('color', '#1A4D2E')
                             })
                             .catch((err) => {
                                 console.error('Error following user:', err);
@@ -170,6 +172,7 @@ axios.get('/api/getPosts')
                         axios.post(`/api/unfollow/${userToFollow}`)
                             .then(() => {
                                 $(this).text('follow');
+                                $(this).css('color', '#45474B')
                             })
                             .catch((err) => {
                                 console.error('Error unfollowing user:', err);
