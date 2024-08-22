@@ -39,6 +39,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
                 `
             );
+            for(let follower of res.data.followers){
+                console.log(follower)
+            }
+            $('.followersCon').prepend(
+                `
+                <div class="follower">
+                    <img class="followerPic" src="" alt="">
+                    <div class="followerName"></div>
+                </div>                
+                `
+            )
         });
 
         //followers and followings views
