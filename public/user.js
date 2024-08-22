@@ -43,7 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         //followers and followings views
         $(document).on('click', '#followersCon', function() {
-            alert('frsgrd');
             $('.followingsPopupContainer').css('display', 'flex');
             $('.followers').css('display', 'flex');
             $('.followingsCon').css('display', 'none');
