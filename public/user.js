@@ -46,15 +46,11 @@ document.addEventListener('DOMContentLoaded', () => {
             alert('frsgrd');
             $('.followingsPopupContainer').css('display', 'flex');
             $('.followers').css('display', 'flex');
-            $('.followings').css('display', 'none');
+            $('.followingsCon').css('display', 'none');
         });
         $('#followingXmark').click(() => {
             $('.followingsPopupContainer').css('display', 'none');
         });
-
-
-
-
 });
 
 //post screen opening/closing
