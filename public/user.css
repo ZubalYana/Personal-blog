@@ -922,4 +922,14 @@
   font-size: 32px;
   color: #45474B;
   transition: 0.5s ease-in-out;
+}
+.wrap .followingsPopupContainer .followingsPopup .followers {
+  width: 100%;
+  height: 100%;
+}
+.wrap .followingsPopupContainer .followingsPopup .followers h3 {
+  color: #45474B;
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 12px;
 }/*# sourceMappingURL=user.css.map */
