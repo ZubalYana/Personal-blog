@@ -889,5 +889,36 @@
         }
         }
     }
+    .followingsPopupContainer{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #00000041;
+        position: fixed;
+        top: 0;
+        left: 0;
+        .followingsPopup {
+          width: 700px;
+          height: 430px;
+          padding: 40px;
+          border-radius: 16px;
+          background-color: #fff;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          position: relative;
+          color: #45474B;
+          #followingXmark{
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            font-size: 32px;
+            color: #45474B;
+            transition: 0.5s ease-in-out;
+          }
+        }
+    }
       
 }
