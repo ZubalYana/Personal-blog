@@ -19,11 +19,11 @@ document.addEventListener('DOMContentLoaded', () => {
                         <span class="placesVisited">Visited: <p class='visitedPlaces'>${res.data.placesVisited}</p></span>
                         <span class="placesToVisit">Wants to visit: <p class='toVisitPlaces' >${res.data.placesToVisit}</p></span>
                         <div class="followings">
-                            <div class="following">
+                            <div class="following" id="followersCon">
                                 <span class="amount">${res.data.followers.length}</span>
                                 <span class="following_text">followers</span>
                             </div>
-                            <div class="following">
+                            <div class="following" id="followingsCon">
                                 <span class="amount">${res.data.followings.length}</span>
                                 <span class="following_text">followings</span>
                             </div>
@@ -40,6 +40,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 `
             );
         });
+
+        //followers and followings views
+        $(document).on('click', '#followersCon', function() {
+            alert('frsgrd');
+            $('.followingsPopupContainer').css('display', 'flex');
+            $('.followers').css('display', 'flex');
+            $('.followings').css('display', 'none');
+        });
+        $('#followingXmark').click(() => {
+            $('.followingsPopupContainer').css('display', 'none');
+        });
+
+
+
+
 });
 
 //post screen opening/closing
@@ -356,3 +371,4 @@ $(document).on('click', '.fa-trash-can', function () {
     })
 
 });
+
