@@ -120,8 +120,8 @@ axios.get('/api/getPosts')
                     <img class="postImg" src="${postPic}" alt="Post Image" onerror="this.onerror=null; this.src='./materials/post pic default.png';">
                     <h3 class="postTitle">${post.title}</h3>
                     <div class="postText">
-                        <span class="postExcerpt">${post.body.substring(0, 100)}...</span>
-                        <span class="postFullText" style="display: none;">${post.body.substring(100)}</span>
+                        <span class="postExcerpt">${post.body.substring(0, 80)}</span>
+                        <span class="postFullText" style="display: none;">${post.body.substring(80, 500)}</span>
                         <a href="#" class="readMore">Read More</a>
                     </div>
                     <p class="postHashtags">${post.hashtags}</p>
