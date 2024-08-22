@@ -165,7 +165,7 @@ $.ajax({
             var $excerpt = $this.siblings('.postExcerpt');
         
             $fullText.slideToggle(); 
-            $excerpt.toggle(); 
+            $excerpt.show(); 
             $this.text($this.text() === 'Read More' ? 'Read Less' : 'Read More'); 
         
             if ($this.text() === 'Read Less') {
