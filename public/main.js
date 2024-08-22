@@ -160,6 +160,10 @@ axios.get('/api/getPosts')
                     console.log(userToFollow)
                     const userWhoFollows = res.data._id;
                     console.log(userWhoFollows)
+                    if (userToFollow === userWhoFollows) {
+                        alert('You can\'t follow yourself, dude!');
+                    }
+        
                     if ($(this).text() === 'follow') {
                         axios.post(`/api/follow/${userToFollow}`)
                             .then(() => {
