@@ -926,10 +926,29 @@
 .wrap .followingsPopupContainer .followingsPopup .followers {
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 .wrap .followingsPopupContainer .followingsPopup .followers h3 {
   color: #45474B;
   font-size: 32px;
   font-weight: 600;
   margin-bottom: 12px;
+  margin-bottom: 15px;
+}
+.wrap .followingsPopupContainer .followingsPopup .followers .follower {
+  width: 100%;
+  height: 80px;
+  border: #2C2E32 1px solid;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  border-radius: 16px;
+}
+.wrap .followingsPopupContainer .followingsPopup .followers .follower .followerPic {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=user.css.map */
