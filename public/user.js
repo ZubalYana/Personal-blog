@@ -39,18 +39,34 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
                 `
             );
-            for(let follower of res.data.followers){
-                console.log(follower)
-                $('.followersCon').prepend(
-                    `
-                    <div class="follower">
-                        <img class="followerPic" src="" alt="">
-                        <div class="followerName"></div>
-                    </div>                
-                    `
-                )
+            async function loadFollowers(followers) {
+                try {
+                    const response = await fetch('/api/getUsersByIds', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ ids: followers })
+                    });
+            
+                    const followersData = await response.json();
+            
+                    for (let follower of followersData) {
+                        $('.followersCon').prepend(
+                            `
+                            <div class="follower">
+                                <img class="followerPic" src="${follower.profilePicture}" alt="${follower.firstname} ${follower.lastName}">
+                                <div class="followerName">${follower.firstname} ${follower.lastName}</div>
+                            </div>                
+                            `
+                        );
+                    }
+                } catch (error) {
+                    console.error('Error loading followers:', error);
+                }
             }
-
+            loadFollowers(res.data.followers);
+            
         });
 
         //followers and followings views

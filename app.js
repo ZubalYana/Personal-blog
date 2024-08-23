@@ -260,7 +260,6 @@ app.post('/api/getUsersByIds', authMiddleware, async (req, res) => {
     }
 });
 
-
 //edit user
 app.post('/auth/user/update', authMiddleware, upload.single('profilePicture'), async (req, res) => {
     try {
