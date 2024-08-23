@@ -57,6 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             <div class="follower">
                                 <img class="followerPic" src="${follower.profilePicture}" alt="${follower.firstname} ${follower.lastName}">
                                 <div class="followerName">${follower.firstname} ${follower.lastName}</div>
+                                <i class="fa-solid fa-trash-can deleteFollower"></i>
                             </div>                
                             `
                         );

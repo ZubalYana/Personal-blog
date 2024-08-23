@@ -945,6 +945,7 @@
   align-items: center;
   border-radius: 16px;
   margin-bottom: 15px;
+  position: relative;
 }
 .wrap .followingsPopupContainer .followingsPopup .followers .follower .followerPic {
   width: 60px;
@@ -958,4 +959,11 @@
   font-weight: 600;
   color: #2C2E32;
   margin-left: 10px;
+}
+.wrap .followingsPopupContainer .followingsPopup .followers .follower .deleteFollower {
+  position: absolute;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #2C2E32;
 }/*# sourceMappingURL=user.css.map */
