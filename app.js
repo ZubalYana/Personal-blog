@@ -248,6 +248,19 @@ app.get('/api/getUser', async (req, res) => {
     }
 });
 
+// Fetch multiple users by their IDs
+app.post('/api/getUsersByIds', authMiddleware, async (req, res) => {
+    const { ids } = req.body;
+    try {
+        const users = await User.find({ _id: { $in: ids } }, 'firstname lastName profilePicture');
+        res.status(200).json(users);
+    } catch (error) {
+        console.error('Error fetching users:', error);
+        res.status(500).json({ message: 'An error occurred while fetching users' });
+    }
+});
+
+
 //edit user
 app.post('/auth/user/update', authMiddleware, upload.single('profilePicture'), async (req, res) => {
     try {
