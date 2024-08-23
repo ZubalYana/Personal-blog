@@ -75,6 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
             $('.followingsPopupContainer').css('display', 'flex');
             $('.followers').css('display', 'flex');
             $('.followingsCon').css('display', 'none');
+            $('#followingstitle').text('Your followers:')
         });
         $('#followingXmark').click(() => {
             $('.followingsPopupContainer').css('display', 'none');
