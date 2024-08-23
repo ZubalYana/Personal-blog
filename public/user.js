@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             `
                             <div class="following">
                                 <img class="followingPic" src="${following.profilePicture}" alt="${following.firstname} ${following.lastName}">
-                                <div class="followNingame">${following.firstname} ${following.lastName}</div>
+                                <div class="followingName">${following.firstname} ${following.lastName}</div>
                                 <div class="followingsPopup_unfollow">unfollow</div>
                             </div>                
                             `
