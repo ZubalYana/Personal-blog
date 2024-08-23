@@ -66,7 +66,35 @@ document.addEventListener('DOMContentLoaded', () => {
                     console.error('Error loading followers:', error);
                 }
             }
+            async function loadFollowings(followings) {
+                try {
+                    const response = await fetch('/api/getUsersByIds', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ ids: followings })
+                    });
+            
+                    const followinhssData = await response.json();
+            
+                    for (let following of followinhssData) {
+                        $('.followersCon').append(
+                            `
+                            <div class="following">
+                                <img class="followingPic" src="${following.profilePicture}" alt="${following.firstname} ${following.lastName}">
+                                <div class="followNingame">${following.firstname} ${following.lastName}</div>
+                                <div class="followingsPopup_unfollow">unfollow</div>
+                            </div>                
+                            `
+                        );
+                    }
+                } catch (error) {
+                    console.error('Error loading followers:', error);
+                }
+            }
             loadFollowers(res.data.followers);
+            loadFollowings(res.data.followings);
             
         });
 
