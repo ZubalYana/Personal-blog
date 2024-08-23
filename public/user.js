@@ -74,8 +74,12 @@ document.addEventListener('DOMContentLoaded', () => {
         $(document).on('click', '#followersCon', function() {
             $('.followingsPopupContainer').css('display', 'flex');
             $('.followers').css('display', 'flex');
-            $('.followingsCon').css('display', 'none');
-            $('#followingstitle').text('Your followers:')
+            $('.followingsPopupStage').css('display', 'none');
+        });
+        $(document).on('click', '#followingsCon', function() {
+            $('.followingsPopupContainer').css('display', 'flex');
+            $('.followers').css('display', 'none');
+            $('.followingsPopupStage').css('display', 'flex');
         });
         $('#followingXmark').click(() => {
             $('.followingsPopupContainer').css('display', 'none');
