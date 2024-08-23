@@ -944,6 +944,7 @@
   display: flex;
   align-items: center;
   border-radius: 16px;
+  margin-bottom: 15px;
 }
 .wrap .followingsPopupContainer .followingsPopup .followers .follower .followerPic {
   width: 60px;

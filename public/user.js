@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     const followersData = await response.json();
             
                     for (let follower of followersData) {
-                        $('.followersCon').prepend(
+                        $('.followersCon').append(
                             `
                             <div class="follower">
                                 <img class="followerPic" src="${follower.profilePicture}" alt="${follower.firstname} ${follower.lastName}">
