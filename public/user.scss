@@ -33,7 +33,7 @@
     h1,h2,h3,h4,h5,h6{
         font-family: Josefin Sans;
     }
-    p, button, span{
+    p, button, span, div{
         font-family: Urbanist;
     }
     i, button{
@@ -944,6 +944,12 @@
                     height: 60px;
                     border-radius: 50%;
                     object-fit: cover;
+                }
+                .followerName{
+                    font-size: 24px;
+                    font-weight: 600;
+                    color: #2C2E32;
+                    margin-left: 10px;
                 }
             }
           }
