@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     const followinhssData = await response.json();
             
                     for (let following of followinhssData) {
-                        $('.showFollowingsCon').append(
+                        $('.showFollowingsCon').prepend(
                             `
                             <div class="following">
                                 <img class="followingPic" src="${following.profilePicture}" alt="${following.firstname} ${following.lastName}">
