@@ -35,11 +35,17 @@ document.addEventListener('DOMContentLoaded', () => {
                             <div class="likedPosts">Liked posts</div>
                         </div>
                         <div class="postsContainer"></div>
-                        <div class="likedPostsContainer"></div>
+                        <div class="likedPostsContainer" style="display: none;"></div>
                     </div>
                 </div>
                 `
             );
+
+            //user's posts/liked posts changing
+            $('.likedPosts').click(()=>{
+                $('.likedPostsContainer').css('display', 'flex')
+                $('.postsContainer').css('display', 'none')
+            })
             async function loadFollowers(followers) {
                 try {
                     const response = await fetch('/api/getUsersByIds', {
