@@ -45,10 +45,19 @@ document.addEventListener('DOMContentLoaded', () => {
             $('.likedPosts').click(()=>{
                 $('.likedPostsContainer').css('display', 'flex')
                 $('.postsContainer').css('display', 'none')
+                $('.likedPosts').css('background-color', '#1A4D2E')
+                $('.likedPosts').css('color', '#fff')
+                $('.publishedPosts').css('background-color', '#fff')
+                $('.publishedPosts').css('color', '#1A4D2E')
             })
             $('.publishedPosts').click(()=>{
                 $('.likedPostsContainer').css('display', 'none')
                 $('.postsContainer').css('display', 'flex')
+                $('.likedPosts').css('background-color', '#fff')
+                $('.likedPosts').css('color', '#1A4D2E')
+                $('.publishedPosts').css('background-color', '#1A4D2E')
+                $('.publishedPosts').css('color', '#fff')
+
             })
             async function loadFollowers(followers) {
                 try {

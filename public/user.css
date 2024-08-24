@@ -208,6 +208,7 @@
   justify-content: space-between;
   border-bottom: #1A4D2E 3px solid;
   height: 62px;
+  cursor: pointer;
 }
 .wrap .user .posts .postsChanging .publishedPosts {
   width: 50%;
