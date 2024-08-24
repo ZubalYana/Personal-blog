@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             <div class="likedPosts">Liked posts</div>
                         </div>
                         <div class="postsContainer"></div>
+                        <div class="likedPostsContainer"></div>
                     </div>
                 </div>
                 `
