@@ -46,6 +46,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 $('.likedPostsContainer').css('display', 'flex')
                 $('.postsContainer').css('display', 'none')
             })
+            $('.publishedPosts').click(()=>{
+                $('.likedPostsContainer').css('display', 'none')
+                $('.postsContainer').css('display', 'flex')
+            })
             async function loadFollowers(followers) {
                 try {
                     const response = await fetch('/api/getUsersByIds', {
