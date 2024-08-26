@@ -182,7 +182,6 @@ app.get('/api/checkFollow/:userId', authMiddleware, async (req, res) => {
     }
 });
 
-
 //get the user info
 app.get('/auth/user', authMiddleware, async (req, res) => {
     try {
@@ -248,7 +247,7 @@ app.get('/api/getUser', async (req, res) => {
     }
 });
 
-// Fetch multiple users by their IDs
+//fetch multiple users by their IDs
 app.post('/api/getUsersByIds', authMiddleware, async (req, res) => {
     const { ids } = req.body;
     try {

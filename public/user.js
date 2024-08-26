@@ -59,6 +59,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 $('.publishedPosts').css('color', '#fff')
 
             })
+
+            //display followers and followings
             async function loadFollowers(followers) {
                 try {
                     const response = await fetch('/api/getUsersByIds', {
@@ -115,6 +117,32 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             loadFollowers(res.data.followers);
             loadFollowings(res.data.followings);
+
+            //removing followers and unfollowing followings
+            $(document).on('click', '.deleteFollower', function() {
+                const followerId = $(this).closest('.follower').data('id');
+                axios.delete(`/api/removeFollower/${followerId}`)
+                    .then(response => {
+                        console.log(response.data.message);
+                        $(this).closest('.follower').remove();
+                    })
+                    .catch(error => {
+                        console.error('Error removing follower:', error.response.data.message);
+                    });
+            });
+            $(document).on('click', '.followingsPopup_unfollow', function() {
+                const followingId = $(this).closest('.following').data('id');
+            
+                axios.post(`/api/unfollow/${followingId}`)
+                    .then(response => {
+                        console.log(response.data.message);
+                        $(this).closest('.following').remove();
+                    })
+                    .catch(error => {
+                        console.error('Error unfollowing user:', error.response.data.message);
+                    });
+            });
+            
             
         });
 
