@@ -70,17 +70,15 @@ document.addEventListener('DOMContentLoaded', () => {
                         },
                         body: JSON.stringify({ ids: followers })
                     });
-            
                     const followersData = await response.json();
-            
                     for (let follower of followersData) {
                         $('.followersCon').append(
                             `
-                            <div class="follower">
-                                <img class="followerPic" src="${follower.profilePicture}" alt="${follower.firstname} ${follower.lastName}">
-                                <div class="followerName">${follower.firstname} ${follower.lastName}</div>
-                                <i class="fa-solid fa-trash-can deleteFollower"></i>
-                            </div>                
+                            <div class="follower" data-id="${follower._id}">
+                               <img class="followerPic" src="${follower.profilePicture}" alt="${follower.firstname} ${follower.lastName}">
+                               <div class="followerName">${follower.firstname} ${follower.lastName}</div>
+                               <i class="fa-solid fa-trash-can deleteFollower"></i>
+                            </div>      
                             `
                         );
                     }
@@ -103,11 +101,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     for (let following of followinhssData) {
                         $('.showFollowingsCon').prepend(
                             `
-                            <div class="following">
-                                <img class="followingPic" src="${following.profilePicture}" alt="${following.firstname} ${following.lastName}">
-                                <div class="followingName">${following.firstname} ${following.lastName}</div>
-                                <div class="followingsPopup_unfollow">unfollow</div>
-                            </div>                
+                            <div class="following" data-id="${following._id}">
+                               <img class="followingPic" src="${following.profilePicture}" alt="${following.firstname} ${following.lastName}">
+                               <div class="followingName">${following.firstname} ${following.lastName}</div>
+                               <div class="followingsPopup_unfollow">unfollow</div>
+                            </div>              
                             `
                         );
                     }
