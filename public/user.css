@@ -937,8 +937,11 @@
   margin-bottom: 12px;
   margin-bottom: 15px;
 }
-.wrap .followingsPopupContainer .followingsPopup .followers .follower {
-  width: 100%;
+.wrap .followingsPopupContainer .followingsPopup .followers .followersCon {
+  overflow-y: auto;
+}
+.wrap .followingsPopupContainer .followingsPopup .followers .followersCon .follower {
+  width: 97%;
   height: 80px;
   border: #2C2E32 1px solid;
   padding: 15px;
@@ -948,20 +951,20 @@
   margin-bottom: 15px;
   position: relative;
 }
-.wrap .followingsPopupContainer .followingsPopup .followers .follower .followerPic {
+.wrap .followingsPopupContainer .followingsPopup .followers .followersCon .follower .followerPic {
   width: 60px;
   height: 60px;
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.wrap .followingsPopupContainer .followingsPopup .followers .follower .followerName {
+.wrap .followingsPopupContainer .followingsPopup .followers .followersCon .follower .followerName {
   font-size: 24px;
   font-weight: 600;
   color: #2C2E32;
   margin-left: 10px;
 }
-.wrap .followingsPopupContainer .followingsPopup .followers .follower .deleteFollower {
+.wrap .followingsPopupContainer .followingsPopup .followers .followersCon .follower .deleteFollower {
   position: absolute;
   right: 20px;
   font-size: 24px;
@@ -981,8 +984,11 @@
   margin-bottom: 12px;
   margin-bottom: 15px;
 }
-.wrap .followingsPopupContainer .followingsPopup .followingsPopupStage .following {
-  width: 100%;
+.wrap .followingsPopupContainer .followingsPopup .followingsPopupStage .showFollowingsCon {
+  overflow-y: auto;
+}
+.wrap .followingsPopupContainer .followingsPopup .followingsPopupStage .showFollowingsCon .following {
+  width: 97%;
   height: 80px;
   border: #2C2E32 1px solid;
   padding: 15px;
@@ -992,20 +998,20 @@
   margin-bottom: 15px;
   position: relative;
 }
-.wrap .followingsPopupContainer .followingsPopup .followingsPopupStage .following .followingPic {
+.wrap .followingsPopupContainer .followingsPopup .followingsPopupStage .showFollowingsCon .following .followingPic {
   width: 60px;
   height: 60px;
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.wrap .followingsPopupContainer .followingsPopup .followingsPopupStage .following .followingName {
+.wrap .followingsPopupContainer .followingsPopup .followingsPopupStage .showFollowingsCon .following .followingName {
   font-size: 24px;
   font-weight: 600;
   color: #2C2E32;
   margin-left: 10px;
 }
-.wrap .followingsPopupContainer .followingsPopup .followingsPopupStage .following .followingsPopup_unfollow {
+.wrap .followingsPopupContainer .followingsPopup .followingsPopupStage .showFollowingsCon .following .followingsPopup_unfollow {
   position: absolute;
   right: 20px;
   font-size: 20px;

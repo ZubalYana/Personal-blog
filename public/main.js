@@ -217,8 +217,6 @@ axios.get('/api/getPosts')
         console.error('Error fetching posts:', err);
     });
 
-
-
 //camera screen cards animations
 $('#cameraPhoto1').click(function() {
     $(this).css('transform', 'rotate(0deg)');
