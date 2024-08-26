@@ -119,14 +119,21 @@ document.addEventListener('DOMContentLoaded', () => {
             //removing followers and unfollowing followings
             $(document).on('click', '.deleteFollower', function() {
                 const followerId = $(this).closest('.follower').data('id');
-                axios.delete(`/api/removeFollower/${followerId}`)
+                $('.followingsPopupContainer').css('display', 'none')
+                $('#messageText').text('Delete this person from followers?')
+                $('#confirm').text('Delete')
+                $('#confirm').click(()=>{
+                    axios.delete(`/api/removeFollower/${followerId}`)
                     .then(response => {
                         console.log(response.data.message);
                         $(this).closest('.follower').remove();
+                        $('.messageCon').css('display', 'none')
                     })
                     .catch(error => {
                         console.error('Error removing follower:', error.response.data.message);
                     });
+                })
+
             });
             $(document).on('click', '.followingsPopup_unfollow', function() {
                 const followingId = $(this).closest('.following').data('id');
