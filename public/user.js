@@ -128,6 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         console.log(response.data.message);
                         $(this).closest('.follower').remove();
                         $('.messageCon').css('display', 'none')
+                        location.reload()
                     })
                     .catch(error => {
                         console.error('Error removing follower:', error.response.data.message);
@@ -137,15 +138,28 @@ document.addEventListener('DOMContentLoaded', () => {
             });
             $(document).on('click', '.followingsPopup_unfollow', function() {
                 const followingId = $(this).closest('.following').data('id');
-            
-                axios.post(`/api/unfollow/${followingId}`)
+                $('.followingsPopupContainer').css('display', 'none')
+                $('.message').css('height', '240px')
+                $('.messageCon').css('display', 'flex')
+                $('#messageText').text('Unfollow this person? You can follow again any time')
+                $('#confirm').text('Unfollow')
+                $('#cancel').click(()=>{
+                    $('.messageCon').css('display', 'none')
+
+                })
+                $('#confirm').click(()=>{
+                    axios.post(`/api/unfollow/${followingId}`)
                     .then(response => {
                         console.log(response.data.message);
                         $(this).closest('.following').remove();
+                        $('.messageCon').css('display', 'none')
+                        location.reload()
                     })
                     .catch(error => {
                         console.error('Error unfollowing user:', error.response.data.message);
                     });
+                })
+
             });
             
             
