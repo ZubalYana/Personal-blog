@@ -859,4 +859,13 @@
   color: #1A4D2E;
   font-weight: 500;
   font-size: 17px;
+}
+.wrap .userProfilePopup {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  display: none;
 }/*# sourceMappingURL=style.css.map */
