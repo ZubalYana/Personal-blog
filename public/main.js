@@ -110,8 +110,10 @@ axios.get('/api/getPosts')
                 <div class="post" data-post='${JSON.stringify(post)}'>
                     <div class="top">
                         <div class="author">
+                        <div class="authorHendler" style="display: flex; align-items: center;">
                             <img class="author_pic" src="${profilePic}" alt="Profile Picture">
                             <p class="author_name">${authorName}</p>
+                        </div>
                             <div class="dot"></div>
                             <p class="follow" data-user-id="${post.author._id}">follow</p>
                         </div>
@@ -210,7 +212,7 @@ axios.get('/api/getPosts')
         });
         
         //displaying the post's author profile
-        $(document).on('click', '.author', function(e){
+        $(document).on('click', '.authorHendler', function(e){
             e.preventDefault();
             e.stopPropagation();
             console.log('Author element clicked:', this);
