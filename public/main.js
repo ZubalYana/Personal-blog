@@ -193,10 +193,10 @@ axios.get('/api/getPosts')
         //reading more/less
         $(document).on('click', '.readMore', function(e) {
             e.preventDefault();
-            var $this = $(this);
-            var $post = $this.closest('.post'); 
-            var $fullText = $this.siblings('.postFullText');
-            var $excerpt = $this.siblings('.postExcerpt');
+            let $this = $(this);
+            let $post = $this.closest('.post'); 
+            let $fullText = $this.siblings('.postFullText');
+            let $excerpt = $this.siblings('.postExcerpt');
         
             $fullText.slideToggle(); 
             $excerpt.show(); 
@@ -209,9 +209,15 @@ axios.get('/api/getPosts')
             }
         });
         
-        
-        
-        
+        //displaying the post's author profile
+        $(document).on('click', '.author', function(e){
+            e.preventDefault();
+            e.stopPropagation();
+            console.log('Author element clicked:', this);
+            const postData = $(this).closest('.post').data('post');
+            console.log(postData.author);
+        });
+          
     })
     .catch((err) => {
         console.error('Error fetching posts:', err);
