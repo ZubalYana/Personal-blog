@@ -880,6 +880,221 @@
         left: 0;
         background-color: #fff;
         display: none;
+        .user{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px;
+    
+            .userInfo{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                color: #45474B;
+                .userPicture{
+                    width: 121px;
+                    height: 121px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    background-color: #f0f0f0;
+                }
+                .FistLastName{
+                    font-size: 32px;
+                    font-weight: 600;
+                    margin-top: 15px;
+                    margin-bottom: 5px;
+                }
+                .email{
+                    font-weight: 300;
+                    font-size: 16px;
+                    margin-bottom: 7px;
+                }
+                .description{
+                    width: 463px;
+                    font-size: 16px;
+                    font-weight: 400;
+                }
+                .placesVisited{
+                    font-size: 16px;
+                    font-weight: 400;
+                    display: flex;
+                    margin-top: 9px;
+                    .visitedPlaces{
+                        font-size: 16px;
+                        font-weight: 600;
+                        color: #000;
+                        margin-left: 5px;
+                    }
+                }
+                .placesToVisit{
+                    font-size: 16px;
+                    font-weight: 400;
+                    display: flex;
+                    margin-top: 7px;
+                    .toVisitPlaces{
+                        font-size: 16px;
+                        font-weight: 600;
+                        color: #000;
+                        margin-left: 5px;
+                    }
+                }
+                .followings{
+                    width: 240px;
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 25px;
+                    .following{
+                        width: 100px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        cursor: pointer;
+                        .amount{
+                            font-size: 32px;
+                            font-weight: 700;
+                            color: #2C2E32;
+                        }
+                        .following_text{
+                            color: #45474ba3;
+                            font-size: 20px;
+                            font-weight: 300;
+                        }
+                    }
+                }
+            }
+            .posts{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                margin-top: 40px;
+                .postsChanging{
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    border-bottom: #1A4D2E 3px solid;
+                    height: 62px;
+                    cursor: pointer;
+                    .publishedPosts{
+                        width: 50%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-family: Josefin Sans;
+                        font-size: 32px;
+                        font-weight: 600;
+                        background-color: #1A4D2E;
+                        color: #fff;
+                    }
+                    .likedPosts{
+                        width: 50%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-family: Josefin Sans;
+                        font-size: 32px;
+                        font-weight: 600;
+                        background-color: #fff;
+                        color: #1A4D2E;
+                    }
+                }
+                .postsContainer{
+                    width: 100%;
+                    min-height: 521px;
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 30px;
+                    flex-wrap: wrap;
+                    .post{
+                        width: 430px;
+                        height: 521px;
+                        border-radius: 15px;
+                        border: #1A4D2E 2px solid;
+                        padding: 20px;
+                        color: #45474B;
+                        margin-bottom: 40px;
+                        .top{
+                            width: 100%;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            height: 45px;
+                            .author{
+                                display: flex;
+                                height: 100%;
+                                align-items: center;
+                                .author_pic{
+                                    width: 45px;
+                                    height: 45px;
+                                    object-fit: cover;
+                                    border-radius: 50%;
+                                    margin-right: 10px;
+        
+                                }
+                                .authro_name{
+                                    font-size: 24px;
+                                    font-weight: 600;
+                                }
+                            }
+                            .time{
+                                font-size: 16px;
+                                font-weight: 300;
+                            }
+                        }
+                        .postImg{
+                            width: 100%;
+                            height: 240px;
+                            object-fit: cover;
+                            border-radius: 10px;
+                            margin: 15px 0;
+                        }
+                        .postTitle{
+                            font-size: 28px;
+                            font-weight: 700;
+                        }
+                        .postText{
+                            font-size: 16px;
+                            font-weight: 400;
+                            margin: 7px 0;
+                        }
+                        .postText .postFullText {
+                            display: none;
+                        }
+                        .readMore{
+                            text-decoration: none;
+                            color: #2C2E32;
+                            font-weight: 600;
+                            font-family: Urbanist;
+                        }
+                        .postHashtags{
+                            font-size: 20px;
+                            font-weight: 700;
+                            color: #1A4D2E;
+                        }
+                        .actions{
+                            width: 180px;
+                            display: flex;
+                            justify-content: space-between;
+                            font-size: 28px;
+                            color: #45474B;
+                            margin-top: 20px;
+                        }
+                        i{
+                            transition: 0.5s ease;
+        
+                        }
+                        i:hover{
+                            color: #4F6F52;
+                        }
+                    }
+        
+                }
+            }
+        }
     }
 }
 
