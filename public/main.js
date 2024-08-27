@@ -212,12 +212,58 @@ axios.get('/api/getPosts')
         });
         
         //displaying the post's author profile
-        $(document).on('click', '.authorHendler', function(e){
+        $(document).on('click', '.authorHendler', function(e) {
             e.preventDefault();
             e.stopPropagation();
-            console.log('Author element clicked:', this);
+        
             const postData = $(this).closest('.post').data('post');
-            console.log(postData.author);
+            const targetUserId = postData.author._id;
+        
+            console.log('Author element clicked:', targetUserId);
+        
+            // Fetch the full user profile from the server
+            $.ajax({
+                url: `/auth/user/${targetUserId}`, // Updated URL to include user ID
+                type: 'GET',
+                success: function(targetUser) {
+                    $('.userProfilePopup').css('display', 'flex');
+                    $('.userProfilePopup').html( // Use .html() to replace existing content
+                        `
+                        <div class="user">
+                            <div class="userInfo">
+                                <img class="userPicture" src="/${targetUser.profilePicture}" alt="profile picture">
+                                <h2 class="FistLastName">${targetUser.firstname} ${targetUser.lastName}</h2>
+                                <p class="email">${targetUser.email}</p>
+                                <p class="description">${targetUser.profileDescription}</p>
+                                <span class="placesVisited">Visited: <p class='visitedPlaces'>${targetUser.placesVisited}</p></span>
+                                <span class="placesToVisit">Wants to visit: <p class='toVisitPlaces' >${targetUser.placesToVisit}</p></span>
+                                <div class="followings">
+                                    <div class="following" id="followersCon">
+                                        <span class="amount">${targetUser.followers.length}</span>
+                                        <span class="following_text">followers</span>
+                                    </div>
+                                    <div class="following" id="followingsCon">
+                                        <span class="amount">${targetUser.followings.length}</span>
+                                        <span class="following_text">followings</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="posts">
+                                <div class="postsChanging">
+                                    <div class="publishedPosts">Published posts</div>
+                                    <div class="likedPosts">Liked posts</div>
+                                </div>
+                                <div class="postsContainer"></div>
+                                <div class="likedPostsContainer" style="display: none;"></div>
+                            </div>
+                        </div>
+                        `
+                    );
+                },
+                error: function(xhr) {
+                    console.error('Error fetching user data:', xhr.responseText);
+                }
+            });
         });
           
     })

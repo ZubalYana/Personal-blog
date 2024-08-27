@@ -182,7 +182,7 @@ app.get('/api/checkFollow/:userId', authMiddleware, async (req, res) => {
     }
 });
 
-//get the user info
+//get the user's info
 app.get('/auth/user', authMiddleware, async (req, res) => {
     try {
         const user = await User.findById(req.userId);
@@ -339,6 +339,21 @@ app.get('/user', authMiddleware, (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'user.html'));
 });
 
+//get user info by ID
+app.get('/auth/user/:id', authMiddleware, async (req, res) => {
+    try {
+        const userId = req.params.id;
+        const user = await User.findById(userId);
+        if (!user) {
+            return res.status(404).json({ message: 'User not found' });
+        }
+        res.status(200).json(user);
+    } catch (error) {
+        console.error('Error fetching user data:', error);
+        res.status(500).json({ message: 'An error occurred while fetching user data' });
+    }
+});
+
 //logout
 app.post('/auth/logout', (req, res) => {
     res.clearCookie('token');
@@ -417,6 +432,9 @@ app.delete('/api/removeFollower/:id', authMiddleware, async (req, res) => {
         res.status(500).json({ message: 'An error occurred while removing follower', error: error.message });
     }
 });
+
+
+
 
 //admin
 app.get('/admin', (req, res) => {
