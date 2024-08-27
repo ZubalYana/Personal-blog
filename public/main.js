@@ -110,7 +110,7 @@ axios.get('/api/getPosts')
                 <div class="post" data-post='${JSON.stringify(post)}'>
                     <div class="top">
                         <div class="author">
-                        <div class="authorHendler" style="display: flex; align-items: center;">
+                        <div class="authorHendler" style="display: flex; align-items: center; cursor: pointer;">
                             <img class="author_pic" src="${profilePic}" alt="Profile Picture">
                             <p class="author_name">${authorName}</p>
                         </div>
