@@ -221,15 +221,15 @@ axios.get('/api/getPosts')
         
             console.log('Author element clicked:', targetUserId);
         
-            // Fetch the full user profile from the server
             $.ajax({
-                url: `/auth/user/${targetUserId}`, // Updated URL to include user ID
+                url: `/auth/user/${targetUserId}`,
                 type: 'GET',
                 success: function(targetUser) {
                     $('.userProfilePopup').css('display', 'flex');
-                    $('.userProfilePopup').html( // Use .html() to replace existing content
+                    $('.userProfilePopup').html(
                         `
                         <div class="user">
+                            <!-- User Info -->
                             <div class="userInfo">
                                 <img class="userPicture" src="/${targetUser.profilePicture}" alt="profile picture">
                                 <h2 class="FistLastName">${targetUser.firstname} ${targetUser.lastName}</h2>
@@ -248,6 +248,7 @@ axios.get('/api/getPosts')
                                     </div>
                                 </div>
                             </div>
+                            <!-- User Posts -->
                             <div class="posts">
                                 <div class="postsChanging">
                                     <div class="publishedPosts">Published posts</div>
@@ -259,6 +260,94 @@ axios.get('/api/getPosts')
                         </div>
                         `
                     );
+        
+                    // User's posts/liked posts toggling
+                    $('.likedPosts').click(() => {
+                        $('.likedPostsContainer').css('display', 'flex');
+                        $('.postsContainer').css('display', 'none');
+                        $('.likedPosts').css('background-color', '#1A4D2E').css('color', '#fff');
+                        $('.publishedPosts').css('background-color', '#fff').css('color', '#1A4D2E');
+                    });
+        
+                    $('.publishedPosts').click(() => {
+                        $('.likedPostsContainer').css('display', 'none');
+                        $('.postsContainer').css('display', 'flex');
+                        $('.likedPosts').css('background-color', '#fff').css('color', '#1A4D2E');
+                        $('.publishedPosts').css('background-color', '#1A4D2E').css('color', '#fff');
+                    });
+        
+                    // Load followers and followings
+                    async function loadFollowers(followers) {
+                        try {
+                            const response = await fetch('/api/getUsersByIds', {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json'
+                                },
+                                body: JSON.stringify({ ids: followers })
+                            });
+                            const followersData = await response.json();
+                            for (let follower of followersData) {
+                                $('.followersCon').append(
+                                    `
+                                    <div class="follower" data-id="${follower._id}">
+                                        <img class="followerPic" src="${follower.profilePicture}" alt="${follower.firstname} ${follower.lastName}">
+                                        <div class="followerName">${follower.firstname} ${follower.lastName}</div>
+                                    </div>
+                                    `
+                                );
+                            }
+                        } catch (error) {
+                            console.error('Error loading followers:', error);
+                        }
+                    }
+        
+                    async function loadFollowings(followings) {
+                        try {
+                            const response = await fetch('/api/getUsersByIds', {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json'
+                                },
+                                body: JSON.stringify({ ids: followings })
+                            });
+        
+                            const followingsData = await response.json();
+        
+                            for (let following of followingsData) {
+                                $('.showFollowingsCon').prepend(
+                                    `
+                                    <div class="following" data-id="${following._id}">
+                                        <img class="followingPic" src="${following.profilePicture}" alt="${following.firstname} ${following.lastName}">
+                                        <div class="followingName">${following.firstname} ${following.lastName}</div>
+                                    </div>
+                                    `
+                                );
+                            }
+                        } catch (error) {
+                            console.error('Error loading followings:', error);
+                        }
+                    }
+        
+                    loadFollowers(targetUser.followers);
+                    loadFollowings(targetUser.followings);
+        
+                    // Followers and followings views
+                    $(document).on('click', '#followersCon', function() {
+                        $('.followingsPopupContainer').css('display', 'flex');
+                        $('.followers').css('display', 'flex');
+                        $('.followingsPopupStage').css('display', 'none');
+                    });
+        
+                    $(document).on('click', '#followingsCon', function() {
+                        $('.followingsPopupContainer').css('display', 'flex');
+                        $('.followers').css('display', 'none');
+                        $('.followingsPopupStage').css('display', 'flex');
+                    });
+        
+                    $('#followingXmark').click(() => {
+                        $('.followingsPopupContainer').css('display', 'none');
+                    });
                 },
                 error: function(xhr) {
                     console.error('Error fetching user data:', xhr.responseText);

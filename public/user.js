@@ -162,23 +162,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
             });
             
-            
+            //followers and followings views
+            $(document).on('click', '#followersCon', function() {
+                $('.followingsPopupContainer').css('display', 'flex');
+                $('.followers').css('display', 'flex');
+                $('.followingsPopupStage').css('display', 'none');
+            });
+            $(document).on('click', '#followingsCon', function() {
+                $('.followingsPopupContainer').css('display', 'flex');
+                $('.followers').css('display', 'none');
+                $('.followingsPopupStage').css('display', 'flex');
+            });
+            $('#followingXmark').click(() => {
+                $('.followingsPopupContainer').css('display', 'none');
+            });
         });
 
-        //followers and followings views
-        $(document).on('click', '#followersCon', function() {
-            $('.followingsPopupContainer').css('display', 'flex');
-            $('.followers').css('display', 'flex');
-            $('.followingsPopupStage').css('display', 'none');
-        });
-        $(document).on('click', '#followingsCon', function() {
-            $('.followingsPopupContainer').css('display', 'flex');
-            $('.followers').css('display', 'none');
-            $('.followingsPopupStage').css('display', 'flex');
-        });
-        $('#followingXmark').click(() => {
-            $('.followingsPopupContainer').css('display', 'none');
-        });
+
 });
 
 //post screen opening/closing
