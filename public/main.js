@@ -225,6 +225,7 @@ axios.get('/api/getPosts')
                 url: `/auth/user/${targetUserId}`,
                 type: 'GET',
                 success: function(targetUser) {
+                    console.log(targetUser)
                     $('.userProfilePopup').css('display', 'flex');
                     $('.userProfilePopup').html(
                         `
@@ -258,6 +259,22 @@ axios.get('/api/getPosts')
                                 <div class="likedPostsContainer" style="display: none;"></div>
                             </div>
                         </div>
+
+                                <div class="followingsPopupContainer">
+            <div class="followingsPopup">
+                <i class="fa-solid fa-xmark" id="followingXmark"></i>
+                <div class="followers">
+                    <h3>Your followers:</h3>
+                    <div class="followersCon">
+                    </div>
+                </div>
+                <div class="followingsPopupStage">
+                    <h3>Your followings:</h3>
+                    <div class="showFollowingsCon">
+                    </div>
+                </div>
+            </div>
+        </div>  
                         `
                     );
         
@@ -268,7 +285,6 @@ axios.get('/api/getPosts')
                         $('.likedPosts').css('background-color', '#1A4D2E').css('color', '#fff');
                         $('.publishedPosts').css('background-color', '#fff').css('color', '#1A4D2E');
                     });
-        
                     $('.publishedPosts').click(() => {
                         $('.likedPostsContainer').css('display', 'none');
                         $('.postsContainer').css('display', 'flex');
