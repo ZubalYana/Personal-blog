@@ -259,7 +259,6 @@ axios.get('/api/getPosts')
                                 <div class="likedPostsContainer" style="display: none;"></div>
                             </div>
                         </div>
-
                                 <div class="followingsPopupContainer">
             <div class="followingsPopup">
                 <i class="fa-solid fa-xmark" id="followingXmark"></i>
@@ -277,7 +276,7 @@ axios.get('/api/getPosts')
         </div>  
                         `
                     );
-        
+
                     // User's posts/liked posts toggling
                     $('.likedPosts').click(() => {
                         $('.likedPostsContainer').css('display', 'flex');
@@ -285,6 +284,7 @@ axios.get('/api/getPosts')
                         $('.likedPosts').css('background-color', '#1A4D2E').css('color', '#fff');
                         $('.publishedPosts').css('background-color', '#fff').css('color', '#1A4D2E');
                     });
+
                     $('.publishedPosts').click(() => {
                         $('.likedPostsContainer').css('display', 'none');
                         $('.postsContainer').css('display', 'flex');
@@ -367,6 +367,65 @@ axios.get('/api/getPosts')
                 },
                 error: function(xhr) {
                     console.error('Error fetching user data:', xhr.responseText);
+                }
+            });
+            $.ajax({
+                url: '/api/userPosts',
+                method: 'GET',
+                success: function(posts) {
+                    posts.forEach(post => {
+                        const formattedDate = moment(post.date).fromNow();
+                        $('.postsContainer').prepend(
+                            `
+                            <div class="post" data-id="${post._id}">
+                                <div class="top">
+                                    <div class="author">
+                                        <img class="author_pic" src="${post.author.profilePicture}" alt="">
+                                        <p class="authro_name">${post.author.firstname} ${post.author.lastName}</p>
+                                    </div>
+                                    <p class="time">${formattedDate}</p>
+                                </div>
+                                <img class="postImg" src="${post.pic}" alt="">
+                                <h3 class="postTitle">${post.title}</h3>
+                                <div class="postText">
+                                    <span class="postExcerpt">${post.body.substring(0, 80)}</span>
+                                    <span class="postFullText" style="display: none;">${post.body.substring(80, 500)}</span>
+                                    <a href="#" class="readMore">Read More</a>
+                                </div>
+                                <p class="postHashtags">${post.hashtags}</p>
+                                <div class="actions">
+                                    <i class="fa-regular fa-thumbs-up"></i>
+                                    <i class="fa-solid fa-share-nodes"></i>
+                                    <i class="fa-solid fa-pencil editPost"></i>
+                                    <i class="fa-solid fa-trash-can"></i>
+                                </div>
+                            </div>
+                            `
+                        );
+                        
+                    });
+            
+                    //reading more/less
+                    $(document).on('click', '.readMore', function(e) {
+                        e.preventDefault();
+                        var $this = $(this);
+                        var $post = $this.closest('.post'); 
+                        var $fullText = $this.siblings('.postFullText');
+                        var $excerpt = $this.siblings('.postExcerpt');
+                    
+                        $fullText.slideToggle(); 
+                        $excerpt.show(); 
+                        $this.text($this.text() === 'Read More' ? 'Read Less' : 'Read More'); 
+                    
+                        if ($this.text() === 'Read Less') {
+                            $post.css('height', 'auto'); 
+                        } else {
+                            $post.css('height', '521px'); 
+                        }
+                    });
+                },
+                error: function(error) {
+                    console.error('Error fetching user posts:', error);
                 }
             });
         });
