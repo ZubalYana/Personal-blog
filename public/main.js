@@ -230,6 +230,7 @@ axios.get('/api/getPosts')
                     $('.userProfilePopup').html(
                         `
                         <div class="user">
+                            <i class="fa-solid fa-chevron-left backToMainArrow"></i>
                             <!-- User Info -->
                             <div class="userInfo">
                                 <img class="userPicture" src="/${targetUser.profilePicture}" alt="profile picture">

@@ -887,7 +887,15 @@
             flex-direction: column;
             align-items: center;
             padding: 40px;
-    
+            position: relative;
+            .backToMainArrow{
+                position: absolute;
+                top: 40px;
+                left: 40px;
+                color: #1A4D2E;
+                cursor: pointer;
+                font-size: 32px;
+            }
             .userInfo{
                 display: flex;
                 flex-direction: column;

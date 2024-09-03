@@ -876,6 +876,15 @@
   flex-direction: column;
   align-items: center;
   padding: 40px;
+  position: relative;
+}
+.wrap .userProfilePopup .user .backToMainArrow {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  color: #1A4D2E;
+  cursor: pointer;
+  font-size: 32px;
 }
 .wrap .userProfilePopup .user .userInfo {
   display: flex;
