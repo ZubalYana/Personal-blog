@@ -278,6 +278,11 @@ axios.get('/api/getPosts')
                         `
                     );
 
+                    //main page opening and closing the popup
+                    $('.backToMainArrow').click(()=>{
+                        $('.userProfilePopup').css('display', 'none');
+                    })
+
                     // User's posts/liked posts toggling
                     $('.likedPosts').click(() => {
                         $('.likedPostsContainer').css('display', 'flex');
@@ -318,7 +323,6 @@ axios.get('/api/getPosts')
                             console.error('Error loading followers:', error);
                         }
                     }
-        
                     async function loadFollowings(followings) {
                         try {
                             const response = await fetch('/api/getUsersByIds', {
@@ -345,7 +349,6 @@ axios.get('/api/getPosts')
                             console.error('Error loading followings:', error);
                         }
                     }
-        
                     loadFollowers(targetUser.followers);
                     loadFollowings(targetUser.followings);
         
@@ -355,13 +358,11 @@ axios.get('/api/getPosts')
                         $('.followers').css('display', 'flex');
                         $('.followingsPopupStage').css('display', 'none');
                     });
-        
                     $(document).on('click', '#followingsCon', function() {
                         $('.followingsPopupContainer').css('display', 'flex');
                         $('.followers').css('display', 'none');
                         $('.followingsPopupStage').css('display', 'flex');
                     });
-        
                     $('#followingXmark').click(() => {
                         $('.followingsPopupContainer').css('display', 'none');
                     });
