@@ -1,8 +1,3 @@
-//main page opening
-$('.backToMainArrow').click(() => {
-    window.location.href = '/';
-});
-
 //getting and displaying user's info
 document.addEventListener('DOMContentLoaded', () => {
     axios.get('/auth/user')
@@ -11,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
             $('.wrap').append(
                 `
                 <div class="user">
+                <i class="fa-solid fa-chevron-left backToMainArrow"></i>
                     <div class="userInfo">
                         <img class="userPicture" src="/${res.data.profilePicture}" alt="profile picture">
                         <h2 class="FistLastName">${res.data.firstname} ${res.data.lastName}</h2>
@@ -40,6 +36,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
                 `
             );
+
+            //main page opening
+            $('.backToMainArrow').click(()=>{
+                window.location.href = '/';
+            })
 
             //user's posts/liked posts changing
             $('.likedPosts').click(()=>{
