@@ -432,9 +432,6 @@ app.delete('/api/removeFollower/:id', authMiddleware, async (req, res) => {
     }
 });
 
-
-
-
 //admin
 app.get('/admin', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'admin.html'));
