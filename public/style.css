@@ -1006,7 +1006,7 @@
   background-color: #fff;
   color: #1A4D2E;
 }
-.wrap .userProfilePopup .user .posts .postsContainer {
+.wrap .userProfilePopup .user .posts .userPostsContainer {
   width: 100%;
   min-height: 521px;
   display: flex;
@@ -1014,7 +1014,7 @@
   margin-top: 30px;
   flex-wrap: wrap;
 }
-.wrap .userProfilePopup .user .posts .postsContainer .post {
+.wrap .userProfilePopup .user .posts .userPostsContainer .post {
   width: 430px;
   height: 521px;
   border-radius: 15px;
@@ -1023,19 +1023,19 @@
   color: #45474B;
   margin-bottom: 40px;
 }
-.wrap .userProfilePopup .user .posts .postsContainer .post .top {
+.wrap .userProfilePopup .user .posts .userPostsContainer .post .top {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 45px;
 }
-.wrap .userProfilePopup .user .posts .postsContainer .post .top .author {
+.wrap .userProfilePopup .user .posts .userPostsContainer .post .top .author {
   display: flex;
   height: 100%;
   align-items: center;
 }
-.wrap .userProfilePopup .user .posts .postsContainer .post .top .author .author_pic {
+.wrap .userProfilePopup .user .posts .userPostsContainer .post .top .author .author_pic {
   width: 45px;
   height: 45px;
   -o-object-fit: cover;
@@ -1043,15 +1043,15 @@
   border-radius: 50%;
   margin-right: 10px;
 }
-.wrap .userProfilePopup .user .posts .postsContainer .post .top .author .authro_name {
+.wrap .userProfilePopup .user .posts .userPostsContainer .post .top .author .authro_name {
   font-size: 24px;
   font-weight: 600;
 }
-.wrap .userProfilePopup .user .posts .postsContainer .post .top .time {
+.wrap .userProfilePopup .user .posts .userPostsContainer .post .top .time {
   font-size: 16px;
   font-weight: 300;
 }
-.wrap .userProfilePopup .user .posts .postsContainer .post .postImg {
+.wrap .userProfilePopup .user .posts .userPostsContainer .post .postImg {
   width: 100%;
   height: 240px;
   -o-object-fit: cover;
@@ -1059,30 +1059,30 @@
   border-radius: 10px;
   margin: 15px 0;
 }
-.wrap .userProfilePopup .user .posts .postsContainer .post .postTitle {
+.wrap .userProfilePopup .user .posts .userPostsContainer .post .postTitle {
   font-size: 28px;
   font-weight: 700;
 }
-.wrap .userProfilePopup .user .posts .postsContainer .post .postText {
+.wrap .userProfilePopup .user .posts .userPostsContainer .post .postText {
   font-size: 16px;
   font-weight: 400;
   margin: 7px 0;
 }
-.wrap .userProfilePopup .user .posts .postsContainer .post .postText .postFullText {
+.wrap .userProfilePopup .user .posts .userPostsContainer .post .postText .postFullText {
   display: none;
 }
-.wrap .userProfilePopup .user .posts .postsContainer .post .readMore {
+.wrap .userProfilePopup .user .posts .userPostsContainer .post .readMore {
   text-decoration: none;
   color: #2C2E32;
   font-weight: 600;
   font-family: Urbanist;
 }
-.wrap .userProfilePopup .user .posts .postsContainer .post .postHashtags {
+.wrap .userProfilePopup .user .posts .userPostsContainer .post .postHashtags {
   font-size: 20px;
   font-weight: 700;
   color: #1A4D2E;
 }
-.wrap .userProfilePopup .user .posts .postsContainer .post .actions {
+.wrap .userProfilePopup .user .posts .userPostsContainer .post .actions {
   width: 180px;
   display: flex;
   justify-content: space-between;
@@ -1090,10 +1090,10 @@
   color: #45474B;
   margin-top: 20px;
 }
-.wrap .userProfilePopup .user .posts .postsContainer .post i {
+.wrap .userProfilePopup .user .posts .userPostsContainer .post i {
   transition: 0.5s ease;
 }
-.wrap .userProfilePopup .user .posts .postsContainer .post i:hover {
+.wrap .userProfilePopup .user .posts .userPostsContainer .post i:hover {
   color: #4F6F52;
 }
 .wrap .userProfilePopup .followingsPopupContainer {
