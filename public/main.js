@@ -225,6 +225,7 @@ axios.get('/api/getPosts')
                 url: `/auth/user/${targetUserId}`,
                 type: 'GET',
                 success: function(targetUser) {
+                    $('body').addClass('no-scroll');
                     console.log(targetUser)
                     $('.userProfilePopup').css('display', 'flex');
                     $('.userProfilePopup').html(
@@ -281,6 +282,7 @@ axios.get('/api/getPosts')
                     //main page opening and closing the popup
                     $('.backToMainArrow').click(()=>{
                         $('.userProfilePopup').css('display', 'none');
+                        $('body').removeClass('no-scroll');
                     })
 
                     // User's posts/liked posts toggling
