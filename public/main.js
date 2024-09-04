@@ -374,9 +374,10 @@ axios.get('/api/getPosts')
                 }
             });
             $.ajax({
-                url: '/api/userPosts',
+                url: `/api/userPosts?userId=${targetUserId}`,
                 method: 'GET',
                 success: function(posts) {
+                    $('.postsContainer').empty();
                     posts.forEach(post => {
                         const formattedDate = moment(post.date).fromNow();
                         $('.postsContainer').prepend(
@@ -385,7 +386,7 @@ axios.get('/api/getPosts')
                                 <div class="top">
                                     <div class="author">
                                         <img class="author_pic" src="${post.author.profilePicture}" alt="">
-                                        <p class="authro_name">${post.author.firstname} ${post.author.lastName}</p>
+                                        <p class="author_name">${post.author.firstname} ${post.author.lastName}</p>
                                     </div>
                                     <p class="time">${formattedDate}</p>
                                 </div>
@@ -406,10 +407,9 @@ axios.get('/api/getPosts')
                             </div>
                             `
                         );
-                        
                     });
             
-                    //reading more/less
+                    // Handle read more/less functionality
                     $(document).on('click', '.readMore', function(e) {
                         e.preventDefault();
                         var $this = $(this);
@@ -432,6 +432,7 @@ axios.get('/api/getPosts')
                     console.error('Error fetching user posts:', error);
                 }
             });
+            
         });
           
     })

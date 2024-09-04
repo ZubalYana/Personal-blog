@@ -206,7 +206,6 @@ app.get('/api/userPosts', authMiddleware, async (req, res) => {
     }
 });
 
-
 //post creation
 app.post('/api/posts', authMiddleware, upload.single('post-pic'), async (req, res) => {
     try {
