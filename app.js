@@ -236,7 +236,7 @@ app.get('/api/getPosts', async (req, res) => {
     }
 });
 
-//get all the user
+//get all the users
 app.get('/api/getUser', async (req, res) => {
     try {
         const users = await User.find();

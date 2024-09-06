@@ -104,7 +104,7 @@ axios.get('/api/getPosts')
             const profilePic = (post.author && post.author.profilePicture) ? post.author.profilePicture : './materials/profile pic default.png';
             const authorName = post.author ? `${post.author.firstname} ${post.author.lastName}` : 'Unknown Author';
             const postPic = post.pic && post.pic !== '' ? post.pic : './materials/post pic default.png';
-            
+            console.log(post.author._id)
             $('.postsContainer').prepend(
                 `
                 <div class="post" data-post='${JSON.stringify(post)}'>
@@ -211,7 +211,7 @@ axios.get('/api/getPosts')
             }
         });
         
-        //displaying the post's author profile
+        // //displaying the post's author profile
         $(document).on('click', '.authorHendler', function(e) {
             e.preventDefault();
             e.stopPropagation();
