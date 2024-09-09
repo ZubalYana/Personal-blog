@@ -198,13 +198,14 @@ app.get('/auth/user', authMiddleware, async (req, res) => {
 //get all the user's posts
 app.get('/api/userPosts', authMiddleware, async (req, res) => {
     try {
-        const targetUserId = req.userId;
+        const targetUserId = req.query.userId;
         const userPosts = await Post.find({ author: targetUserId }).populate('author', 'firstname lastName profilePicture');
         res.status(200).json(userPosts);
     } catch (err) {
         res.status(500).json({ message: 'Error when getting user posts', error: err.message });
     }
 });
+
 
 //post creation
 app.post('/api/posts', authMiddleware, upload.single('post-pic'), async (req, res) => {
@@ -287,7 +288,7 @@ app.post('/auth/user/update', authMiddleware, upload.single('profilePicture'), a
 });
 
 //get a specific post by ID
-app.get('/api/getUserPosts/:id', authMiddleware, async (req, res) => {
+app.get('/api/userPosts/:id', authMiddleware, async (req, res) => {
     const postId = req.params.id;
     try {
         const post = await Post.findById(postId).populate('author', 'firstname lastName profilePicture');

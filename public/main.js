@@ -373,7 +373,7 @@ axios.get('/api/getPosts')
                 }
             });
             $.ajax({
-                url: `/api/getUserPosts?userId=${targetUserId}`,
+                url: `/api/userPosts?userId=${targetUserId}`,
                 method: 'GET',
                 success: function(posts) {
                     $('.userPostsContainer').empty();
