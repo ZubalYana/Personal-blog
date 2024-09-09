@@ -211,9 +211,6 @@ app.get('/api/authUserPosts', authMiddleware, async (req, res) => {
     try {
         const targetUserId = req.userId; 
         const userPosts = await Post.find({ author: targetUserId }).populate('author', 'firstname lastName profilePicture');
-        console.log(targetUserId);
-        console.log(userPosts);
-
         res.status(200).json(userPosts);
     } catch (err) {
         res.status(500).json({ message: 'Error when getting user posts', error: err.message });
