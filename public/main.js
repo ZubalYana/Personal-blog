@@ -104,7 +104,7 @@ axios.get('/api/getPosts')
             const profilePic = (post.author && post.author.profilePicture) ? post.author.profilePicture : './materials/profile pic default.png';
             const authorName = post.author ? `${post.author.firstname} ${post.author.lastName}` : 'Unknown Author';
             const postPic = post.pic && post.pic !== '' ? post.pic : './materials/post pic default.png';
-            console.log(post.author._id)
+            console.log(post.author)
             $('.postsContainer').prepend(
                 `
                 <div class="post" data-post='${JSON.stringify(post)}'>
