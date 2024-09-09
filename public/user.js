@@ -261,7 +261,7 @@ $('#postForm').submit((event) => {
 
 //get and display all the user's posts
 $.ajax({
-    url: '/api/userPosts',
+    url: '/api/authUserPosts',
     method: 'GET',
     success: function(posts) {
         posts.forEach(post => {
