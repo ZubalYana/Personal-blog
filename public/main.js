@@ -154,7 +154,7 @@ axios.get('/api/getPosts')
                 });
         });
 
-        // Following logic
+        //following logic
         $('.follow').click(function() {
             axios.get('/auth/user')
                 .then(res => {
@@ -211,7 +211,7 @@ axios.get('/api/getPosts')
             }
         });
         
-        // //displaying the post's author profile
+        //displaying the post's author profile
         $(document).on('click', '.authorHendler', function(e) {
             e.preventDefault();
             e.stopPropagation();
