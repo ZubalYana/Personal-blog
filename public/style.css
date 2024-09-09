@@ -1052,6 +1052,10 @@
   font-size: 16px;
   font-weight: 300;
 }
+.wrap .userProfilePopup .user .posts .userPostsContainer .post .author_name {
+  font-size: 24px;
+  font-weight: 600;
+}
 .wrap .userProfilePopup .user .posts .userPostsContainer .post .postImg {
   width: 100%;
   height: 240px;
