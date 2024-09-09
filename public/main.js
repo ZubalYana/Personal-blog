@@ -428,44 +428,6 @@ axios.get('/api/getPosts')
                             $post.css('height', '521px'); 
                         }
                     });
-                    // for (let post of res.data) {
-                    //     const formattedDate = moment(post.date).fromNow();
-                    //     const profilePic = (post.author && post.author.profilePicture) ? post.author.profilePicture : './materials/profile pic default.png';
-                    //     const authorName = post.author ? `${post.author.firstname} ${post.author.lastName}` : 'Unknown Author';
-                    //     const postPic = post.pic && post.pic !== '' ? post.pic : './materials/post pic default.png';
-                        
-                    //     $('.postsContainer').prepend(
-                    //         `
-                    //         <div class="post" data-post='${JSON.stringify(post)}'>
-                    //             <div class="top">
-                    //                 <div class="author">
-                    //                 <div class="authorHendler" style="display: flex; align-items: center; cursor: pointer;">
-                    //                     <img class="author_pic" src="${profilePic}" alt="Profile Picture">
-                    //                     <p class="author_name">${authorName}</p>
-                    //                 </div>
-                    //                     <div class="dot"></div>
-                    //                     <p class="follow" data-user-id="${post.author._id}">follow</p>
-                    //                 </div>
-                    //                 <p class="time">${formattedDate}</p>
-                    //             </div>
-                    //             <img class="postImg" src="${postPic}" alt="Post Image" onerror="this.onerror=null; this.src='./materials/post pic default.png';">
-                    //             <h3 class="postTitle">${post.title}</h3>
-                    //             <div class="postText">
-                    //                 <span class="postExcerpt">${post.body.substring(0, 80)}</span>
-                    //                 <span class="postFullText" style="display: none;">${post.body.substring(80, 500)}</span>
-                    //                 <a href="#" class="readMore">Read More</a>
-                    //             </div>
-                    //             <p class="postHashtags">${post.hashtags}</p>
-                    //             <div class="actions">
-                    //                 <i class="fa-regular fa-thumbs-up"></i>
-                    //                 <i class="fa-solid fa-share-nodes"></i>
-                    //             </div>
-                    //         </div>
-                    //         `
-                    //     );
-                        
-                        
-                    // }
                 },
                 error: function(error) {
                     console.error('Error fetching user posts:', error);
