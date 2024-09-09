@@ -287,7 +287,7 @@ app.post('/auth/user/update', authMiddleware, upload.single('profilePicture'), a
 });
 
 //get a specific post by ID
-app.get('/api/userPosts/:id', authMiddleware, async (req, res) => {
+app.get('/api/getUserPosts/:id', authMiddleware, async (req, res) => {
     const postId = req.params.id;
     try {
         const post = await Post.findById(postId).populate('author', 'firstname lastName profilePicture');

@@ -219,7 +219,6 @@ axios.get('/api/getPosts')
             const postData = $(this).closest('.post').data('post');
             const targetUserId = postData.author._id;
         
-            console.log('Author element clicked:', targetUserId);
         
             $.ajax({
                 url: `/auth/user/${targetUserId}`,
@@ -374,10 +373,12 @@ axios.get('/api/getPosts')
                 }
             });
             $.ajax({
-                url: `/api/userPosts?userId=${targetUserId}`,
+                url: `/api/getUserPosts?userId=${targetUserId}`,
                 method: 'GET',
                 success: function(posts) {
                     $('.userPostsContainer').empty();
+                    console.log('Author element clicked:', targetUserId);
+
                     posts.forEach(post => {
                         const formattedDate = moment(post.date).fromNow();
                         $('.userPostsContainer').prepend(
