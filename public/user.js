@@ -497,12 +497,240 @@ $(document).on('click', '.fa-trash-can', function () {
 
 });
 
-//opening followers and followings profiles
+//followers profiles opening
 $(document).on('click', '.followerPic', function(e) {
     e.preventDefault();
     e.stopPropagation();
 
     const targetUserId = $(this).closest('.follower').data('id');
+    console.log(targetUserId);
+
+
+    $.ajax({
+        url: `/auth/user/${targetUserId}`,
+        type: 'GET',
+        success: function(targetUser) {
+            $('.wrap').addClass('no-scroll');
+            $('.backToMainArrow').css('display', 'none');
+            console.log(targetUser)
+            $('.userProfilePopup').css('display', 'flex');
+            $('.userProfilePopup').html(
+                `
+                <div class="user">
+                    <i class="fa-solid fa-chevron-left followerBackToMainArrow"></i>
+
+                    <!-- User Info -->
+                    <div class="userInfo">
+                        <img class="userPicture" src="/${targetUser.profilePicture}" alt="profile picture">
+                        <h2 class="FistLastName">${targetUser.firstname} ${targetUser.lastName}</h2>
+                        <p class="email">${targetUser.email}</p>
+                        <p class="description">${targetUser.profileDescription}</p>
+                        <span class="placesVisited">Visited: <p class='visitedPlaces'>${targetUser.placesVisited}</p></span>
+                        <span class="placesToVisit">Wants to visit: <p class='toVisitPlaces' >${targetUser.placesToVisit}</p></span>
+                        <div class="followings">
+                            <div class="following" id="followersCon">
+                                <span class="amount">${targetUser.followers.length}</span>
+                                <span class="following_text">followers</span>
+                            </div>
+                            <div class="following" id="followingsCon">
+                                <span class="amount">${targetUser.followings.length}</span>
+                                <span class="following_text">followings</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- User Posts -->
+                    <div class="posts">
+                        <div class="postsChanging">
+                            <div class="publishedPosts">Published posts</div>
+                            <div class="likedPosts">Liked posts</div>
+                        </div>
+                        <div class="userPostsContainer"></div>
+                        <div class="likedPostsContainer" style="display: none;"></div>
+                    </div>
+                </div>
+                        <div class="followingsPopupContainer">
+    <div class="followingsPopup">
+        <i class="fa-solid fa-xmark" id="followingXmark"></i>
+        <div class="followers">
+            <h3>Your followers:</h3>
+            <div class="followersCon">
+            </div>
+        </div>
+        <div class="followingsPopupStage">
+            <h3>Your followings:</h3>
+            <div class="showFollowingsCon">
+            </div>
+        </div>
+    </div>
+</div>  
+                `
+            );
+
+            //main page opening and closing the popup
+            $('.followerBackToMainArrow').click(()=>{
+                $('.userProfilePopup').css('display', 'none');
+                $('.wrap').removeClass('no-scroll');
+                $('.backToMainArrow').css('display', 'none');
+            })
+
+            // User's posts/liked posts toggling
+            $('.likedPosts').click(() => {
+                $('.likedPostsContainer').css('display', 'flex');
+                $('.postsContainer').css('display', 'none');
+                $('.likedPosts').css('background-color', '#1A4D2E').css('color', '#fff');
+                $('.publishedPosts').css('background-color', '#fff').css('color', '#1A4D2E');
+            });
+
+            $('.publishedPosts').click(() => {
+                $('.likedPostsContainer').css('display', 'none');
+                $('.postsContainer').css('display', 'flex');
+                $('.likedPosts').css('background-color', '#fff').css('color', '#1A4D2E');
+                $('.publishedPosts').css('background-color', '#1A4D2E').css('color', '#fff');
+            });
+
+            // Load followers and followings
+            async function loadFollowers(followers) {
+                try {
+                    const response = await fetch('/api/getUsersByIds', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ ids: followers })
+                    });
+                    const followersData = await response.json();
+                    for (let follower of followersData) {
+                        $('.followersCon').append(
+                            `
+                            <div class="follower" data-id="${follower._id}">
+                                <img class="followerPic" src="${follower.profilePicture}" alt="${follower.firstname} ${follower.lastName}">
+                                <div class="followerName">${follower.firstname} ${follower.lastName}</div>
+                            </div>
+                            `
+                        );
+                    }
+                } catch (error) {
+                    console.error('Error loading followers:', error);
+                }
+            }
+            async function loadFollowings(followings) {
+                try {
+                    const response = await fetch('/api/getUsersByIds', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ ids: followings })
+                    });
+
+                    const followingsData = await response.json();
+
+                    for (let following of followingsData) {
+                        $('.showFollowingsCon').prepend(
+                            `
+                            <div class="following" data-id="${following._id}">
+                                <img class="followingPic" src="${following.profilePicture}" alt="${following.firstname} ${following.lastName}">
+                                <div class="followingName">${following.firstname} ${following.lastName}</div>
+                            </div>
+                            `
+                        );
+                    }
+                } catch (error) {
+                    console.error('Error loading followings:', error);
+                }
+            }
+            loadFollowers(targetUser.followers);
+            loadFollowings(targetUser.followings);
+
+            // Followers and followings views
+            $(document).on('click', '#followersCon', function() {
+                $('.followingsPopupContainer').css('display', 'flex');
+                $('.followers').css('display', 'flex');
+                $('.followingsPopupStage').css('display', 'none');
+            });
+            $(document).on('click', '#followingsCon', function() {
+                $('.followingsPopupContainer').css('display', 'flex');
+                $('.followers').css('display', 'none');
+                $('.followingsPopupStage').css('display', 'flex');
+            });
+            $('#followingXmark').click(() => {
+                $('.followingsPopupContainer').css('display', 'none');
+            });
+        },
+        error: function(xhr) {
+            console.error('Error fetching user data:', xhr.responseText);
+        }
+    });
+    $.ajax({
+        url: `/api/userPosts?userId=${targetUserId}`,
+        method: 'GET',
+        success: function(posts) {
+            $('.userPostsContainer').empty();
+            console.log('Author element clicked:', targetUserId);
+        
+            posts.forEach(post => {
+                const formattedDate = moment(post.date).fromNow();
+                $('.userPostsContainer').prepend(
+                    `
+                    <div class="post" data-id="${post._id}">
+                        <div class="top">
+                            <div class="author">
+                                <img class="author_pic" src="${post.author.profilePicture}" alt="">
+                                <p class="author_name">${post.author.firstname} ${post.author.lastName}</p>
+                            </div>
+                            <p class="time">${formattedDate}</p>
+                        </div>
+                        <img class="postImg" src="${post.pic}" alt="">
+                        <h3 class="postTitle">${post.title}</h3>
+                        <div class="postText">
+                            <span class="postExcerpt">${post.body.substring(0, 80)}</span>
+                            <span class="postFullText" style="display: none;">${post.body.substring(80, 500)}</span>
+                            <a href="#" class="readMore">Read More</a>
+                        </div>
+                        <p class="postHashtags">${post.hashtags}</p>
+                        <div class="actions">
+                            <i class="fa-regular fa-thumbs-up"></i>
+                            <i class="fa-solid fa-share-nodes"></i>
+                            <i class="fa-solid fa-pencil editPost"></i>
+                            <i class="fa-solid fa-trash-can"></i>
+                        </div>
+                    </div>
+                    `
+                );
+            });
+    
+            // Handle read more/less functionality
+            $(document).on('click', '.readMore', function(e) {
+                e.preventDefault();
+                var $this = $(this);
+                var $post = $this.closest('.post'); 
+                var $fullText = $this.siblings('.postFullText');
+                var $excerpt = $this.siblings('.postExcerpt');
+            
+                $fullText.slideToggle(); 
+                $excerpt.show(); 
+                $this.text($this.text() === 'Read More' ? 'Read Less' : 'Read More'); 
+            
+                if ($this.text() === 'Read Less') {
+                    $post.css('height', 'auto'); 
+                } else {
+                    $post.css('height', '521px'); 
+                }
+            });
+        },
+        error: function(error) {
+            console.error('Error fetching user posts:', error);
+        }
+    });
+    
+});
+
+//followings profiles opening
+$(document).on('click', '.followingPic', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    const targetUserId = $(this).closest('.following').data('id');
     console.log(targetUserId);
 
 
