@@ -1018,4 +1018,369 @@
   font-weight: 600;
   cursor: pointer;
   color: #2C2E32;
+}
+.wrap .userProfilePopup {
+  width: 100%;
+  min-height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  display: none;
+  overflow-y: auto;
+}
+.wrap .userProfilePopup .user {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  position: relative;
+}
+.wrap .userProfilePopup .user .backToMainArrow {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  color: #1A4D2E;
+  cursor: pointer;
+  font-size: 32px;
+}
+.wrap .userProfilePopup .user .userInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #45474B;
+}
+.wrap .userProfilePopup .user .userInfo .userPicture {
+  width: 121px;
+  height: 121px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-color: #f0f0f0;
+}
+.wrap .userProfilePopup .user .userInfo .FistLastName {
+  font-size: 32px;
+  font-weight: 600;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+.wrap .userProfilePopup .user .userInfo .email {
+  font-weight: 300;
+  font-size: 16px;
+  margin-bottom: 7px;
+}
+.wrap .userProfilePopup .user .userInfo .description {
+  width: 463px;
+  font-size: 16px;
+  font-weight: 400;
+}
+.wrap .userProfilePopup .user .userInfo .placesVisited {
+  font-size: 16px;
+  font-weight: 400;
+  display: flex;
+  margin-top: 9px;
+}
+.wrap .userProfilePopup .user .userInfo .placesVisited .visitedPlaces {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+  margin-left: 5px;
+}
+.wrap .userProfilePopup .user .userInfo .placesToVisit {
+  font-size: 16px;
+  font-weight: 400;
+  display: flex;
+  margin-top: 7px;
+}
+.wrap .userProfilePopup .user .userInfo .placesToVisit .toVisitPlaces {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+  margin-left: 5px;
+}
+.wrap .userProfilePopup .user .userInfo .followings {
+  width: 240px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+.wrap .userProfilePopup .user .userInfo .followings .following {
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+.wrap .userProfilePopup .user .userInfo .followings .following .amount {
+  font-size: 32px;
+  font-weight: 700;
+  color: #2C2E32;
+}
+.wrap .userProfilePopup .user .userInfo .followings .following .following_text {
+  color: rgba(69, 71, 75, 0.6392156863);
+  font-size: 20px;
+  font-weight: 300;
+}
+.wrap .userProfilePopup .user .posts {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+}
+.wrap .userProfilePopup .user .posts .postsChanging {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: #1A4D2E 3px solid;
+  height: 62px;
+  cursor: pointer;
+}
+.wrap .userProfilePopup .user .posts .postsChanging .publishedPosts {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Josefin Sans;
+  font-size: 32px;
+  font-weight: 600;
+  background-color: #1A4D2E;
+  color: #fff;
+}
+.wrap .userProfilePopup .user .posts .postsChanging .likedPosts {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Josefin Sans;
+  font-size: 32px;
+  font-weight: 600;
+  background-color: #fff;
+  color: #1A4D2E;
+}
+.wrap .userProfilePopup .user .posts .userPostsContainer {
+  width: 100%;
+  min-height: 521px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+.wrap .userProfilePopup .user .posts .userPostsContainer .post {
+  width: 430px;
+  height: 521px;
+  border-radius: 15px;
+  border: #1A4D2E 2px solid;
+  padding: 20px;
+  color: #45474B;
+  margin-bottom: 40px;
+}
+.wrap .userProfilePopup .user .posts .userPostsContainer .post .top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 45px;
+}
+.wrap .userProfilePopup .user .posts .userPostsContainer .post .top .author {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+.wrap .userProfilePopup .user .posts .userPostsContainer .post .top .author .author_pic {
+  width: 45px;
+  height: 45px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.wrap .userProfilePopup .user .posts .userPostsContainer .post .top .author .authro_name {
+  font-size: 24px;
+  font-weight: 600;
+}
+.wrap .userProfilePopup .user .posts .userPostsContainer .post .top .time {
+  font-size: 16px;
+  font-weight: 300;
+}
+.wrap .userProfilePopup .user .posts .userPostsContainer .post .author_name {
+  font-size: 24px;
+  font-weight: 600;
+}
+.wrap .userProfilePopup .user .posts .userPostsContainer .post .postImg {
+  width: 100%;
+  height: 240px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+  margin: 15px 0;
+}
+.wrap .userProfilePopup .user .posts .userPostsContainer .post .postTitle {
+  font-size: 28px;
+  font-weight: 700;
+}
+.wrap .userProfilePopup .user .posts .userPostsContainer .post .postText {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 7px 0;
+}
+.wrap .userProfilePopup .user .posts .userPostsContainer .post .postText .postFullText {
+  display: none;
+}
+.wrap .userProfilePopup .user .posts .userPostsContainer .post .readMore {
+  text-decoration: none;
+  color: #2C2E32;
+  font-weight: 600;
+  font-family: Urbanist;
+}
+.wrap .userProfilePopup .user .posts .userPostsContainer .post .postHashtags {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1A4D2E;
+}
+.wrap .userProfilePopup .user .posts .userPostsContainer .post .actions {
+  width: 180px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 28px;
+  color: #45474B;
+  margin-top: 20px;
+}
+.wrap .userProfilePopup .user .posts .userPostsContainer .post i {
+  transition: 0.5s ease;
+}
+.wrap .userProfilePopup .user .posts .userPostsContainer .post i:hover {
+  color: #4F6F52;
+}
+.wrap .userProfilePopup .followingsPopupContainer {
+  width: 100%;
+  height: 100vh;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.2549019608);
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.wrap .userProfilePopup .followingsPopupContainer .followingsPopup {
+  width: 700px;
+  height: 430px;
+  padding: 40px;
+  border-radius: 16px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  color: #45474B;
+}
+.wrap .userProfilePopup .followingsPopupContainer .followingsPopup #followingXmark {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  font-size: 32px;
+  color: #45474B;
+  transition: 0.5s ease-in-out;
+}
+.wrap .userProfilePopup .followingsPopupContainer .followingsPopup .followers {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.wrap .userProfilePopup .followingsPopupContainer .followingsPopup .followers h3 {
+  color: #45474B;
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  margin-bottom: 15px;
+}
+.wrap .userProfilePopup .followingsPopupContainer .followingsPopup .followers .followersCon {
+  overflow-y: auto;
+}
+.wrap .userProfilePopup .followingsPopupContainer .followingsPopup .followers .followersCon .follower {
+  width: 97%;
+  height: 80px;
+  border: #2C2E32 1px solid;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  border-radius: 16px;
+  margin-bottom: 15px;
+  position: relative;
+}
+.wrap .userProfilePopup .followingsPopupContainer .followingsPopup .followers .followersCon .follower .followerPic {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.wrap .userProfilePopup .followingsPopupContainer .followingsPopup .followers .followersCon .follower .followerName {
+  font-size: 24px;
+  font-weight: 600;
+  color: #2C2E32;
+  margin-left: 10px;
+  font-family: Urbanist;
+}
+.wrap .userProfilePopup .followingsPopupContainer .followingsPopup .followers .followersCon .follower .deleteFollower {
+  position: absolute;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #2C2E32;
+}
+.wrap .userProfilePopup .followingsPopupContainer .followingsPopup .followingsPopupStage {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.wrap .userProfilePopup .followingsPopupContainer .followingsPopup .followingsPopupStage h3 {
+  color: #45474B;
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  margin-bottom: 15px;
+}
+.wrap .userProfilePopup .followingsPopupContainer .followingsPopup .followingsPopupStage .showFollowingsCon {
+  overflow-y: auto;
+}
+.wrap .userProfilePopup .followingsPopupContainer .followingsPopup .followingsPopupStage .showFollowingsCon .following {
+  width: 97%;
+  height: 80px;
+  border: #2C2E32 1px solid;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  border-radius: 16px;
+  margin-bottom: 15px;
+  position: relative;
+}
+.wrap .userProfilePopup .followingsPopupContainer .followingsPopup .followingsPopupStage .showFollowingsCon .following .followingPic {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.wrap .userProfilePopup .followingsPopupContainer .followingsPopup .followingsPopupStage .showFollowingsCon .following .followingName {
+  font-size: 24px;
+  font-weight: 600;
+  color: #2C2E32;
+  margin-left: 10px;
+  font-family: Urbanist;
+}
+.wrap .userProfilePopup .followingsPopupContainer .followingsPopup .followingsPopupStage .showFollowingsCon .following .followingsPopup_unfollow {
+  position: absolute;
+  right: 20px;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #2C2E32;
 }/*# sourceMappingURL=user.css.map */
