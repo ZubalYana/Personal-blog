@@ -739,6 +739,7 @@ $(document).on('click', '.followingPic', function(e) {
         success: function(targetUser) {
             $('.wrap').addClass('no-scroll');
             $('.backToMainArrow').css('display', 'none');
+
             console.log(targetUser)
             $('.userProfilePopup').css('display', 'flex');
             $('.userProfilePopup').html(
@@ -797,7 +798,8 @@ $(document).on('click', '.followingPic', function(e) {
             $('.followerBackToMainArrow').click(()=>{
                 $('.userProfilePopup').css('display', 'none');
                 $('.wrap').removeClass('no-scroll');
-                $('.backToMainArrow').css('display', 'none');
+                $('.backToMainArrow').css('display', 'flex');
+
             })
 
             // User's posts/liked posts toggling
