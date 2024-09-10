@@ -499,12 +499,12 @@ $(document).on('click', '.fa-trash-can', function () {
 
 //opening followers and followings profiles
 $(document).on('click', '.followerPic', function(e) {
-    console.log('test')
-//     e.preventDefault();
-//     e.stopPropagation();
+    console.log('test');
+    e.preventDefault();
+    e.stopPropagation();
 
-//     const postData = $(this).closest('.post').data('post');
-//     const targetUserId = postData.author._id;
+    const targetUserId = $(this).closest('.follower').data('id');
+    console.log(targetUserId);
 
 
 //     $.ajax({
