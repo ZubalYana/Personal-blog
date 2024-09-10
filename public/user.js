@@ -570,7 +570,7 @@ $(document).on('click', '.followerPic', function(e) {
             $('.followerBackToMainArrow').click(()=>{
                 $('.userProfilePopup').css('display', 'none');
                 $('.wrap').removeClass('no-scroll');
-                $('.backToMainArrow').css('display', 'none');
+                $('.backToMainArrow').css('display', 'flex');
             })
 
             // User's posts/liked posts toggling
@@ -732,7 +732,6 @@ $(document).on('click', '.followingPic', function(e) {
 
     const targetUserId = $(this).closest('.following').data('id');
     console.log(targetUserId);
-
 
     $.ajax({
         url: `/auth/user/${targetUserId}`,
