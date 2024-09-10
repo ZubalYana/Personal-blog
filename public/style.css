@@ -349,19 +349,19 @@
 }
 .wrap .mainPage .camera .cameraCon #cameraPhoto1 {
   transform: rotate(-40deg);
-  left: 300px;
+  left: 400px;
   top: 20px;
   z-index: 2;
 }
 .wrap .mainPage .camera .cameraCon #cameraPhoto2 {
   transform: rotate(-67deg);
-  left: 290px;
+  left: 390px;
   top: 70px;
   z-index: 1;
 }
 .wrap .mainPage .camera .cameraCon #cameraPhoto3 {
   transform: rotate(40deg);
-  left: 830px;
+  left: 930px;
   top: 40px;
   z-index: 1;
 }
