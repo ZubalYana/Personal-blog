@@ -499,7 +499,6 @@ $(document).on('click', '.fa-trash-can', function () {
 
 //opening followers and followings profiles
 $(document).on('click', '.followerPic', function(e) {
-    console.log('test');
     e.preventDefault();
     e.stopPropagation();
 
@@ -512,12 +511,14 @@ $(document).on('click', '.followerPic', function(e) {
         type: 'GET',
         success: function(targetUser) {
             $('.wrap').addClass('no-scroll');
+            $('.backToMainArrow').css('display', 'none');
             console.log(targetUser)
             $('.userProfilePopup').css('display', 'flex');
             $('.userProfilePopup').html(
                 `
                 <div class="user">
                     <i class="fa-solid fa-chevron-left followerBackToMainArrow"></i>
+
                     <!-- User Info -->
                     <div class="userInfo">
                         <img class="userPicture" src="/${targetUser.profilePicture}" alt="profile picture">
@@ -569,6 +570,7 @@ $(document).on('click', '.followerPic', function(e) {
             $('.followerBackToMainArrow').click(()=>{
                 $('.userProfilePopup').css('display', 'none');
                 $('.wrap').removeClass('no-scroll');
+                $('.backToMainArrow').css('display', 'none');
             })
 
             // User's posts/liked posts toggling
