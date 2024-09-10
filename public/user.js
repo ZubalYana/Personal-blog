@@ -517,7 +517,7 @@ $(document).on('click', '.followerPic', function(e) {
             $('.userProfilePopup').html(
                 `
                 <div class="user">
-                    <i class="fa-solid fa-chevron-left backToMainArrow"></i>
+                    <i class="fa-solid fa-chevron-left followerBackToMainArrow"></i>
                     <!-- User Info -->
                     <div class="userInfo">
                         <img class="userPicture" src="/${targetUser.profilePicture}" alt="profile picture">
@@ -566,7 +566,7 @@ $(document).on('click', '.followerPic', function(e) {
             );
 
             //main page opening and closing the popup
-            $('.backToMainArrow').click(()=>{
+            $('.followerBackToMainArrow').click(()=>{
                 $('.userProfilePopup').css('display', 'none');
                 $('.wrap').removeClass('no-scroll');
             })
