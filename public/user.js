@@ -185,12 +185,15 @@ document.addEventListener('DOMContentLoaded', () => {
 //post screen opening/closing
 $('#plus').click(()=>{
     $('.postCreation').css('display', 'flex')
+    $('.backToMainArrow').css('display', 'none')
 })
 $('#postCreation_xmark').click(()=>{
     $('.postCreation').css('display', 'none')
+    $('.backToMainArrow').css('display', 'flex')
 })
 $('#cancel').click(()=>{
     $('.postCreation').css('display', 'none')
+    $('.backToMainArrow').css('display', 'flex')
 })
 
 //post img displaying
