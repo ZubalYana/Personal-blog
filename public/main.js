@@ -128,7 +128,7 @@ axios.get('/api/getPosts')
                     </div>
                     <p class="postHashtags">${post.hashtags}</p>
                     <div class="actions">
-                        <i class="fa-regular fa-thumbs-up"></i>
+                        <i class="fa-regular fa-thumbs-up likePost"></i>
                         <i class="fa-solid fa-share-nodes"></i>
                     </div>
                 </div>
@@ -451,9 +451,8 @@ axios.get('/api/getPosts')
                     console.error('Error liking post:', error);
                 });
         });
-        
-        
-          
+
+                  
     })
     .catch((err) => {
         console.error('Error fetching posts:', err);
