@@ -400,7 +400,7 @@ axios.get('/api/getPosts')
                                 </div>
                                 <p class="postHashtags">${post.hashtags}</p>
                                 <div class="actions">
-                                    <i class="fa-regular fa-thumbs-up"></i>
+                                    <i class="fa-regular fa-thumbs-up likePost"></i>
                                     <i class="fa-solid fa-share-nodes"></i>
                                 </div>
                             </div>
@@ -411,10 +411,10 @@ axios.get('/api/getPosts')
                     // Handle read more/less functionality
                     $(document).on('click', '.readMore', function(e) {
                         e.preventDefault();
-                        var $this = $(this);
-                        var $post = $this.closest('.post'); 
-                        var $fullText = $this.siblings('.postFullText');
-                        var $excerpt = $this.siblings('.postExcerpt');
+                        let $this = $(this);
+                        let $post = $this.closest('.post'); 
+                        let $fullText = $this.siblings('.postFullText');
+                        let $excerpt = $this.siblings('.postExcerpt');
                     
                         $fullText.slideToggle(); 
                         $excerpt.show(); 
@@ -433,6 +433,26 @@ axios.get('/api/getPosts')
             });
             
         });
+
+        //posts liking
+        $(document).on('click', '.likePost', function(e) {
+            e.preventDefault();
+            console.log('Thumb icon clicked');
+            let $this = $(this);
+            let $post = $this.closest('.post'); 
+            let postData = $post.data('post');
+            console.log(postData);
+            axios.post(`/api/likePost/${postData._id}`)
+                .then((response) => {
+                    console.log('Post liked successfully:', response.data);
+                    // $this.toggleClass('liked');
+                })
+                .catch((error) => {
+                    console.error('Error liking post:', error);
+                });
+        });
+        
+        
           
     })
     .catch((err) => {
@@ -482,4 +502,3 @@ $('#gear').click(()=>{
     })
 })
 
-//posts liking
