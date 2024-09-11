@@ -484,3 +484,4 @@ $('#gear').click(()=>{
     })
 })
 
+//posts liking
