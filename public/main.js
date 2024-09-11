@@ -402,8 +402,6 @@ axios.get('/api/getPosts')
                                 <div class="actions">
                                     <i class="fa-regular fa-thumbs-up"></i>
                                     <i class="fa-solid fa-share-nodes"></i>
-                                    <i class="fa-solid fa-pencil editPost"></i>
-                                    <i class="fa-solid fa-trash-can"></i>
                                 </div>
                             </div>
                             `

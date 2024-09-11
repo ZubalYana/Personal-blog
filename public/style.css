@@ -1088,10 +1088,10 @@
   color: #1A4D2E;
 }
 .wrap .userProfilePopup .user .posts .userPostsContainer .post .actions {
-  width: 180px;
+  width: 90px;
   display: flex;
   justify-content: space-between;
-  font-size: 28px;
+  font-size: 32px;
   color: #45474B;
   margin-top: 20px;
 }
