@@ -264,12 +264,12 @@ axios.get('/api/getPosts')
             <div class="followingsPopup">
                 <i class="fa-solid fa-xmark" id="followingXmark"></i>
                 <div class="followers">
-                    <h3>Your followers:</h3>
+                    <h3>${targetUser.firstname}'s followers:</h3>
                     <div class="followersCon">
                     </div>
                 </div>
                 <div class="followingsPopupStage">
-                    <h3>Your followings:</h3>
+                    <h3>${targetUser.firstname}'s followings:</h3>
                     <div class="showFollowingsCon">
                     </div>
                 </div>
