@@ -336,6 +336,26 @@ app.post('/api/userPosts/:id', authMiddleware, upload.single('postPicture'), asy
     }
 });
 
+//like post
+app.post('/api/likePost/:id', authMiddleware, async (req, res) => {
+    const postId = req.params.id;
+    try {
+        const post = await Post.findById(postId);
+        if (!post) {
+            return res.status(404).json({ message: 'Post not found' });
+        }
+        if (post.likes.includes(req.userId)) {
+            return res.status(400).json({ message: 'You already liked this post' });
+        }
+        post.likes.push(req.userId);
+        await post.save();
+        res.status(200).json(post);
+    } catch (error) {   
+        console.error('Error liking post:', error);
+        res.status(500).json({ message: 'An error occurred while liking post' });
+    }
+});
+
 //auth
 app.get('/auth', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'auth.html'));
