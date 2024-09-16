@@ -41,7 +41,7 @@
 .wrap h1, .wrap h2, .wrap h3, .wrap h4, .wrap h5, .wrap h6 {
   font-family: Josefin Sans;
 }
-.wrap p, .wrap button, .wrap span {
+.wrap p, .wrap button, .wrap span, .wrap div {
   font-family: Urbanist;
 }
 .wrap .screen {
@@ -660,12 +660,19 @@
   color: #1A4D2E;
 }
 .wrap .blogPage .postsContainer .post .actions {
-  width: 90px;
+  width: 100px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   font-size: 32px;
   color: #45474B;
   margin-top: 20px;
+}
+.wrap .blogPage .postsContainer .post .actions .likesAmount {
+  font-size: 22px;
+  font-weight: 700;
+  margin-right: -13px;
+  margin-bottom: -3px;
 }
 .wrap .blogPage .postsContainer .post i {
   transition: 0.5s ease;

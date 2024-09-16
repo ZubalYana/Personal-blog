@@ -31,7 +31,7 @@
     h1,h2,h3,h4,h5,h6{
         font-family: Josefin Sans;
     }
-    p, button, span{
+    p, button, span, div{
         font-family: Urbanist;
     }
     .screen {
@@ -646,19 +646,25 @@
                     font-weight: 600;
                     font-family: Urbanist;
                 }
-                
                 .postHashtags{
                     font-size: 20px;
                     font-weight: 700;
                     color: #1A4D2E;
                 }
                 .actions{
-                    width: 90px;
+                    width: 100px;
                     display: flex;
                     justify-content: space-between;
+                    align-items: center;
                     font-size: 32px;
                     color: #45474B;
                     margin-top: 20px;
+                    .likesAmount{
+                        font-size: 22px;
+                        font-weight: 700;
+                        margin-right: -13px;
+                        margin-bottom: -3px;
+                    }
                 }
                 i{
                     transition: 0.5s ease;
