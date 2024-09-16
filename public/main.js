@@ -448,7 +448,13 @@ axios.get('/api/getPosts')
             axios.post(`/api/likePost/${postData._id}`)
                 .then((response) => {
                     console.log('Post liked/unliked successfully:', response.data);
-                    // $this.fill('#45474B');
+                    if (response.data.liked) {
+                        $this.find('path').attr('fill', '#ff0000'); 
+                        $this.attr('data-liked', 'true');
+                    } else {
+                        $this.find('path').attr('fill', '#45474B'); 
+                        $this.attr('data-liked', 'false');
+                    }
                 })
                 .catch((error) => {
                     console.error('Error liking/unliking post:', error);
