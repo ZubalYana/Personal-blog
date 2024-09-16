@@ -441,18 +441,19 @@ axios.get('/api/getPosts')
             e.preventDefault();
             console.log('Thumb icon clicked');
             let $this = $(this);
-            let $post = $this.closest('.post'); 
+            let $post = $this.closest('.post');
             let postData = $post.data('post');
             console.log(postData);
             axios.post(`/api/likePost/${postData._id}`)
                 .then((response) => {
-                    console.log('Post liked successfully:', response.data);
-                    // $this.toggleClass('liked');
+                    console.log('Post liked/unliked successfully:', response.data);
+                    $this.toggleClass('liked');
                 })
                 .catch((error) => {
-                    console.error('Error liking post:', error);
+                    console.error('Error liking/unliking post:', error);
                 });
         });
+        
 
                   
     })

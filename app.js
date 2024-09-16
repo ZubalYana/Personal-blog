@@ -344,15 +344,17 @@ app.post('/api/likePost/:id', authMiddleware, async (req, res) => {
         if (!post) {
             return res.status(404).json({ message: 'Post not found' });
         }
-        if (post.likes.includes(req.userId)) {
-            return res.status(400).json({ message: 'You already liked this post' });
+        const likeIndex = post.likes.indexOf(req.userId);
+        if (likeIndex !== -1) {
+            post.likes.splice(likeIndex, 1);
+        } else {
+            post.likes.push(req.userId);
         }
-        post.likes.push(req.userId);
         await post.save();
         res.status(200).json(post);
-    } catch (error) {   
-        console.error('Error liking post:', error);
-        res.status(500).json({ message: 'An error occurred while liking post' });
+    } catch (error) {
+        console.error('Error liking/unliking post:', error);
+        res.status(500).json({ message: 'An error occurred while liking/unliking post' });
     }
 });
 
