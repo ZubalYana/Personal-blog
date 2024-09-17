@@ -337,26 +337,25 @@ app.post('/api/userPosts/:id', authMiddleware, upload.single('postPicture'), asy
 });
 
 //like post
-app.post('/api/likePost/:id', authMiddleware, async (req, res) => {
-    const postId = req.params.id;
-    try {
-        const post = await Post.findById(postId);
-        if (!post) {
-            return res.status(404).json({ message: 'Post not found' });
-        }
-        const likeIndex = post.likes.indexOf(req.userId);
-        if (likeIndex !== -1) {
-            post.likes.splice(likeIndex, 1);
-        } else {
-            post.likes.push(req.userId);
-        }
-        await post.save();
-        res.status(200).json(post);
-    } catch (error) {
-        console.error('Error liking/unliking post:', error);
-        res.status(500).json({ message: 'An error occurred while liking/unliking post' });
-    }
+app.post('/api/likePost', authMiddleware, (req, res) => {
+    const { postId } = req.body;
+    Post.findByIdAndUpdate(postId, { $addToSet: { likes: req.userId } }, { new: true })
+        .then(post => {
+            res.json({ likesCount: post.likes.length });
+        })
+        .catch(err => res.status(500).send('Error liking the post.'));
 });
+
+//unlike post
+app.post('/api/unlikePost', authMiddleware, (req, res) => {
+    const { postId } = req.body;
+    Post.findByIdAndUpdate(postId, { $pull: { likes: req.userId } }, { new: true })
+        .then(post => {
+            res.json({ likesCount: post.likes.length });
+        })
+        .catch(err => res.status(500).send('Error unliking the post.'));
+});
+
 
 //auth
 app.get('/auth', (req, res) => {
