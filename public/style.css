@@ -674,6 +674,9 @@
   margin-right: -13px;
   margin-bottom: -3px;
 }
+.wrap .blogPage .postsContainer .post .actions .not-liked svg {
+  fill: #1A4D2E;
+}
 .wrap .blogPage .postsContainer .post i {
   transition: 0.5s ease;
 }

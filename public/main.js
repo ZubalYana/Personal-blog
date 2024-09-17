@@ -453,9 +453,11 @@ axios.get('/api/getPosts')
                     if (isLiked) {
                         $likeIcon.css('fill', 'none');
                         $likeIcon.data('liked', 'false');
+                        $likeAmount.addClass('not-liked');
                     } else {
                         $likeIcon.css('fill', '#1A4D2E');
                         $likeIcon.data('liked', 'true');
+                        $likeAmount.removeClass('not-liked');
                     }
                 })
                 .catch((error) => {
