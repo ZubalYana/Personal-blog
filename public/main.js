@@ -439,22 +439,23 @@ axios.get('/api/getPosts')
         });
 
         //posts liking
-        $(document).on('click', '.likePost', function(e) {
-            e.preventDefault();
-            console.log('Thumb icon clicked');
-            let $this = $(this);
-            let $post = $this.closest('.post');
-            let postData = $post.data('post');
-            console.log(postData);
-            axios.post(`/api/likePost/${postData._id}`)
+        $(document).on('click', '.likePost', function () {
+            const postData = $(this).closest('.post').data('post');
+            const postId = postData._id;
+            const $likeIcon = $(this);
+            const $likeAmount = $likeIcon.siblings('.likesAmount');
+            const isLiked = $likeIcon.data('liked') === 'true';
+            const endpoint = isLiked ? '/api/unlikePost' : '/api/likePost';
+            axios.post(endpoint, { postId })
                 .then((response) => {
-                    console.log('Post liked/unliked successfully:', response.data);
-                    if (response.data.liked) {
-                        $this.find('path').attr('fill', '#ff0000'); 
-                        $this.attr('data-liked', 'true');
+                    const updatedLikes = response.data.likesCount;
+                    $likeAmount.text(updatedLikes);
+                    if (isLiked) {
+                        $likeIcon.css('fill', 'none');
+                        $likeIcon.data('liked', 'false');
                     } else {
-                        $this.find('path').attr('fill', '#45474B'); 
-                        $this.attr('data-liked', 'false');
+                        $likeIcon.css('fill', '#1A4D2E');
+                        $likeIcon.data('liked', 'true');
                     }
                 })
                 .catch((error) => {
