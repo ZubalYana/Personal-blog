@@ -95,12 +95,23 @@ $(document).ready(function() {
     });
 });
 
+let userId;
+//get user ID for liked posts
+axios.get('/auth/user')
+    .then((res) => {
+        userId = res.data._id;
+    })
+    .catch((err) => {
+        console.error('Error fetching user ID:', err);
+    });
+
+
 //get and display all the posts
 axios.get('/api/getPosts')
     .then((res) => {
         console.log(res.data);
         for (let post of res.data) {
-            const isLiked = post.userLiked
+            const isLiked = post.likes.includes(userId); 
             const likeClass = isLiked ? 'fa-solid fa-thumbs-up liked' : 'fa-regular fa-thumbs-up';
             const formattedDate = moment(post.date).fromNow();
             const profilePic = (post.author && post.author.profilePicture) ? post.author.profilePicture : './materials/profile pic default.png';
@@ -434,6 +445,7 @@ axios.get('/api/getPosts')
             const isLiked = $(this).data('liked');
             const likeApiUrl = isLiked ? '/api/unlikePost' : '/api/likePost';
             const likePostElement = $(this);
+        
             axios.post(likeApiUrl, { postId })
                 .then(response => {
                     const newLikeClass = isLiked ? 'fa-regular fa-thumbs-up' : 'fa-solid fa-thumbs-up liked';
@@ -445,6 +457,7 @@ axios.get('/api/getPosts')
                     console.error('Error while liking/unliking the post:', error);
                 });
         });
+        
                   
     })
     .catch((err) => {
