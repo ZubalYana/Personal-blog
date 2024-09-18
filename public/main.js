@@ -448,12 +448,10 @@ axios.get('/api/getPosts')
                     const updatedLikes = response.data.likesCount;
                     $likeAmount.text(updatedLikes);
                     if (isLiked) {
-                        $likeIcon.css('fill', 'none');
                         $likeIcon.data('liked', 'false');
                         $likeIcon.removeClass('fa-solid');
                         $likeIcon.addClass('fa-regular');
                     } else {
-                        $likeIcon.css('fill', '#1A4D2E');
                         $likeIcon.data('liked', 'true');
                         $likeIcon.removeClass('fa-regular');
                         $likeIcon.addClass('fa-solid');
@@ -462,10 +460,7 @@ axios.get('/api/getPosts')
                 .catch((error) => {
                     console.error('Error liking/unliking post:', error);
                 });
-        });
-        
-
-                  
+        });            
     })
     .catch((err) => {
         console.error('Error fetching posts:', err);
