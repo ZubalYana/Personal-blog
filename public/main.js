@@ -450,14 +450,13 @@ axios.get('/api/getPosts')
                     if (isLiked) {
                         $likeIcon.css('fill', 'none');
                         $likeIcon.data('liked', 'false');
-                        $('.fa-thumbs-up').removeClass('fa-solid');
-                        $('.fa-thumbs-up').addClass('fa-regular');
+                        $likeIcon.removeClass('fa-solid');
+                        $likeIcon.addClass('fa-regular');
                     } else {
                         $likeIcon.css('fill', '#1A4D2E');
                         $likeIcon.data('liked', 'true');
-
-                        $('.fa-thumbs-up').removeClass('fa-regular');
-                        $('.fa-thumbs-up').addClass('fa-solid');
+                        $likeIcon.removeClass('fa-regular');
+                        $likeIcon.addClass('fa-solid');
                     }
                 })
                 .catch((error) => {
