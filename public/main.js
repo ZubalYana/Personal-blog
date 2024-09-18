@@ -100,43 +100,35 @@ axios.get('/api/getPosts')
     .then((res) => {
         console.log(res.data);
         for (let post of res.data) {
+            const isLiked = post.userLiked
+            const likeClass = isLiked ? 'fa-solid fa-thumbs-up liked' : 'fa-regular fa-thumbs-up';
             const formattedDate = moment(post.date).fromNow();
             const profilePic = (post.author && post.author.profilePicture) ? post.author.profilePicture : './materials/profile pic default.png';
             const authorName = post.author ? `${post.author.firstname} ${post.author.lastName}` : 'Unknown Author';
             const postPic = post.pic && post.pic !== '' ? post.pic : './materials/post pic default.png';
-            console.log(post.author)
+
             $('.postsContainer').prepend(
                 `
                 <div class="post" data-post='${JSON.stringify(post)}'>
                     <div class="top">
                         <div class="author">
-                        <div class="authorHendler" style="display: flex; align-items: center; cursor: pointer;">
                             <img class="author_pic" src="${profilePic}" alt="Profile Picture">
                             <p class="author_name">${authorName}</p>
                         </div>
-                            <div class="dot"></div>
-                            <p class="follow" data-user-id="${post.author._id}">follow</p>
-                        </div>
                         <p class="time">${formattedDate}</p>
                     </div>
-                    <img class="postImg" src="${postPic}" alt="Post Image" onerror="this.onerror=null; this.src='./materials/post pic default.png';">
+                    <img class="postImg" src="${postPic}" alt="Post Image">
                     <h3 class="postTitle">${post.title}</h3>
-                    <div class="postText">
-                        <span class="postExcerpt">${post.body.substring(0, 80)}</span>
-                        <span class="postFullText" style="display: none;">${post.body.substring(80, 500)}</span>
-                        <a href="#" class="readMore">Read More</a>
-                    </div>
+                    <div class="postText">${post.body.substring(0, 80)}</div>
                     <p class="postHashtags">${post.hashtags}</p>
                     <div class="actions">
                         <div class="likesAmount">${post.likes.length}</div>
-                        <i class="likePost fa-regular fa-thumbs-up"></i>
+                        <i class="likePost ${likeClass}" data-liked="${isLiked}"></i>
                         <i class="fa-solid fa-share-nodes"></i>
                     </div>
                 </div>
                 `
             );
-            
-            
         }
 
         //following checking
@@ -439,28 +431,21 @@ axios.get('/api/getPosts')
         $(document).on('click', '.likePost', function () {
             const postData = $(this).closest('.post').data('post');
             const postId = postData._id;
-            const $likeIcon = $(this);
-            const $likeAmount = $likeIcon.siblings('.likesAmount');
-            const isLiked = $likeIcon.data('liked') === 'true';
-            const endpoint = isLiked ? '/api/unlikePost' : '/api/likePost';
-            axios.post(endpoint, { postId })
-                .then((response) => {
-                    const updatedLikes = response.data.likesCount;
-                    $likeAmount.text(updatedLikes);
-                    if (isLiked) {
-                        $likeIcon.data('liked', 'false');
-                        $likeIcon.removeClass('fa-solid');
-                        $likeIcon.addClass('fa-regular');
-                    } else {
-                        $likeIcon.data('liked', 'true');
-                        $likeIcon.removeClass('fa-regular');
-                        $likeIcon.addClass('fa-solid');
-                    }
+            const isLiked = $(this).data('liked');
+            const likeApiUrl = isLiked ? '/api/unlikePost' : '/api/likePost';
+            const likePostElement = $(this);
+            axios.post(likeApiUrl, { postId })
+                .then(response => {
+                    const newLikeClass = isLiked ? 'fa-regular fa-thumbs-up' : 'fa-solid fa-thumbs-up liked';
+                    likePostElement.attr('class', `likePost ${newLikeClass}`);
+                    likePostElement.data('liked', !isLiked);
+                    likePostElement.siblings('.likesAmount').text(response.data.likesCount);
                 })
-                .catch((error) => {
-                    console.error('Error liking/unliking post:', error);
+                .catch(error => {
+                    console.error('Error while liking/unliking the post:', error);
                 });
-        });            
+        });
+                  
     })
     .catch((err) => {
         console.error('Error fetching posts:', err);
