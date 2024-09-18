@@ -262,6 +262,16 @@ $('#postForm').submit((event) => {
     });
 });
 
+let userId;
+//get user ID for liked posts
+axios.get('/auth/user')
+    .then((res) => {
+        userId = res.data._id;
+    })
+    .catch((err) => {
+        console.error('Error fetching user ID:', err);
+    });
+
 //get and display all the user's posts
 $.ajax({
     url: '/api/authUserPosts',
