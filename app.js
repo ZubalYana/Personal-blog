@@ -341,7 +341,7 @@ app.post('/api/likePost', authMiddleware, (req, res) => {
     const { postId } = req.body;
     Post.findByIdAndUpdate(postId, { $addToSet: { likes: req.userId } }, { new: true })
         .then(post => {
-            res.json({ likesCount: post.likes.length });
+            res.json({ likesCount: post.likes.length, userLiked: true });
         })
         .catch(err => res.status(500).send('Error liking the post.'));
 });
@@ -351,7 +351,7 @@ app.post('/api/unlikePost', authMiddleware, (req, res) => {
     const { postId } = req.body;
     Post.findByIdAndUpdate(postId, { $pull: { likes: req.userId } }, { new: true })
         .then(post => {
-            res.json({ likesCount: post.likes.length });
+            res.json({ likesCount: post.likes.length, userLiked: false });
         })
         .catch(err => res.status(500).send('Error unliking the post.'));
 });
