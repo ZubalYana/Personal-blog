@@ -302,7 +302,7 @@ $.ajax({
                     </div>
                     <p class="postHashtags">${post.hashtags}</p>
                     <div class="actions">
-                        <div class="likesAmount" style="font-size: 22px; font-weight: 700; margin-right= -23px; margin-bottom: -3px">${post.likes.length}</div>
+                        <div class="likesAmount" style="font-size: 22px; font-weight: 700; margin-right: -13px; margin-top: 2px">${post.likes.length}</div>
                         <i class="likePost ${likeClass}" data-liked="${isLiked}"></i>
                         <i class="fa-solid fa-share-nodes"></i>
                         <i class="fa-solid fa-pencil editPost"></i>
