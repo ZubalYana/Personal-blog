@@ -262,6 +262,17 @@ $('#postForm').submit((event) => {
     });
 });
 
+let userId;
+//get user ID for liked posts
+axios.get('/auth/user')
+    .then((res) => {
+        userId = res.data._id;
+    })
+    .catch((err) => {
+        console.error('Error fetching user ID:', err);
+    });
+
+    
 //get and display all the user's posts
 $.ajax({
     url: '/api/authUserPosts',
@@ -269,6 +280,9 @@ $.ajax({
     success: function(posts) {
         posts.forEach(post => {
             const formattedDate = moment(post.date).fromNow();
+            console.log(post)
+            const isLiked = post.likes.includes(userId); 
+            const likeClass = isLiked ? 'fa-solid fa-thumbs-up liked' : 'fa-regular fa-thumbs-up';
             $('.postsContainer').prepend(
                 `
                 <div class="post" data-id="${post._id}">
@@ -288,7 +302,8 @@ $.ajax({
                     </div>
                     <p class="postHashtags">${post.hashtags}</p>
                     <div class="actions">
-                        <i class="fa-regular fa-thumbs-up"></i>
+                        <div class="likesAmount">${post.likes.length}</div>
+                        <i class="likePost ${likeClass}" data-liked="${isLiked}"></i>
                         <i class="fa-solid fa-share-nodes"></i>
                         <i class="fa-solid fa-pencil editPost"></i>
                         <i class="fa-solid fa-trash-can"></i>
@@ -321,6 +336,49 @@ $.ajax({
     error: function(error) {
         console.error('Error fetching user posts:', error);
     }
+});
+
+$('.likedPosts').click(()=>{
+    $.ajax({
+        url: `/api/user/likedPosts`,
+        type: 'GET',
+        success: function(response) {
+            $('.likedPostsContainer').empty();
+            response.forEach(post => {
+                console.log(post)
+                const formattedDate = moment(post.date).fromNow();
+                const isLiked = post.likes.includes(userId); 
+                const likeClass = isLiked ? 'fa-solid fa-thumbs-up liked' : 'fa-regular fa-thumbs-up';
+                $('.likedPostsContainer').append(
+                    `
+                    <div class="post" data-post='${JSON.stringify(post)}'>
+                        <div class="top">
+                            <div class="author">
+                                <img class="author_pic" src="${post.author.profilePicture}" alt="Profile Picture">
+                                <p class="author_name">${post.author.firstname} ${post.author.lastName}</p>
+                            </div>
+                            <p class="time">${formattedDate}</p>
+                        </div>
+                        <img class="postImg" src="${post.pic}" alt="Post Image">
+                        <h3 class="postTitle">${post.title}</h3>
+                        <div class="postText">${post.body.substring(0, 80)}</div>
+                        <p class="postHashtags">${post.hashtags}</p>
+                        <div class="actions">
+                            <div class="likesAmount">${post.likes.length}</div>
+                            <i class="likePost ${likeClass}" data-liked="${isLiked}"></i>
+                            <i class="fa-solid fa-share-nodes"></i>
+                            <i class="fa-solid fa-pencil editPost"></i>
+                            <i class="fa-solid fa-trash-can"></i>
+                        </div>
+                    </div>
+                    `
+                );
+            });
+        },
+        error: function(error) {
+            console.error('Error fetching user liked posts:', error);
+        }
+    });
 });
 
 //edit post
@@ -957,43 +1015,3 @@ $(document).on('click', '.followingPic', function(e) {
     
 });
 
-    
-    //get and display user's liked posts
-    $('.likedPosts').click(()=>{
-        $.ajax({
-            url: `/api/user/likedPosts`,
-            type: 'GET',
-            success: function(response) {
-                $('.likedPostsContainer').empty();
-                response.forEach(post => {
-                    const formattedDate = moment(post.date).fromNow();
-                    $('.likedPostsContainer').append(
-                        `
-                        <div class="post" data-post='${JSON.stringify(post)}'>
-                            <div class="top">
-                                <div class="author">
-                                    <img class="author_pic" src="${post.author.profilePicture}" alt="Profile Picture">
-                                    <p class="author_name">${post.author.firstname} ${post.author.lastName}</p>
-                                </div>
-                                <p class="time">${formattedDate}</p>
-                            </div>
-                            <img class="postImg" src="${post.pic}" alt="Post Image">
-                            <h3 class="postTitle">${post.title}</h3>
-                            <div class="postText">${post.body.substring(0, 80)}</div>
-                            <p class="postHashtags">${post.hashtags}</p>
-                            <div class="actions">
-                                <i class="fa-regular fa-thumbs-up"></i>
-                                <i class="fa-solid fa-share-nodes"></i>
-                                <i class="fa-solid fa-pencil editPost"></i>
-                                <i class="fa-solid fa-trash-can"></i>
-                            </div>
-                        </div>
-                        `
-                    );
-                });
-            },
-            error: function(error) {
-                console.error('Error fetching user liked posts:', error);
-            }
-        });
-    });
