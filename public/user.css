@@ -1249,6 +1249,13 @@
   font-size: 28px;
   color: #45474B;
   margin-top: 20px;
+  align-items: center;
+}
+.wrap .userProfilePopup .user .posts .userPostsContainer .post .actions .likesAmount {
+  font-size: 22px;
+  font-weight: 700;
+  margin-right: -13px;
+  margin-bottom: -3px;
 }
 .wrap .userProfilePopup .user .posts .userPostsContainer .post i {
   transition: 0.5s ease;
