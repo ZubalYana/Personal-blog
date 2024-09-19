@@ -356,7 +356,16 @@ app.post('/api/unlikePost', authMiddleware, (req, res) => {
         .catch(err => res.status(500).send('Error unliking the post.'));
 });
 
-
+//get user liked posts
+app.get('/api/userLikedPosts/:userId', (req, res) => {
+    const userId = req.params.userId;
+    Post.find({ likes: userId })
+        .populate('author', 'firstname lastName profilePicture')
+        .exec((err, likedPosts) => {
+            if (err) return res.status(500).send(err);
+            res.status(200).json(likedPosts);
+        });
+});
 
 //auth
 app.get('/auth', (req, res) => {
