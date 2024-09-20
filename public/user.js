@@ -266,12 +266,55 @@ let userId;
 //get user ID for liked posts
 axios.get('/auth/user')
     .then((res) => {
-        userId = res.data._id;
+        userId = res.data._id
+        console.log(userId)
+
+        //get and display all the user's liked posts
+        $.ajax({
+            url: `/api/userLikedPosts/${userId}`,
+            type: 'GET',
+            success: function(res) {
+                console.log(res)
+                $('.likedPostsContainer').empty();
+                res.forEach(post => {
+                    console.log(post)
+                    const formattedDate = moment(post.date).fromNow();
+                    const isLiked = post.likes.includes(userId); 
+                    const likeClass = isLiked ? 'fa-solid fa-thumbs-up liked' : 'fa-regular fa-thumbs-up';
+                    $('.likedPostsContainer').append(
+                        `
+                        <div class="post" data-post='${JSON.stringify(post)}'>
+                            <div class="top">
+                                <div class="author">
+                                    <img class="author_pic" src="${post.author?.profilePicture || '.materials/profile pic default.png'}" alt="Profile Picture">
+                                    <p class="author_name">${post.author.firstname} ${post.author.lastName}</p>
+                                </div>
+                                <p class="time">${formattedDate}</p>
+                            </div>
+                            <img class="postImg" src="${post.pic || '.materials/post pic default.png'}" alt="Post Image">
+                            <h3 class="postTitle">${post.title}</h3>
+                            <div class="postText">${post.body.substring(0, 80)}</div>
+                            <p class="postHashtags">${post.hashtags}</p>
+                            <div class="actions">
+                                <div class="likesAmount">${post.likes.length}</div>
+                                <i class="likePost ${likeClass}" data-liked="${isLiked}"></i>
+                                <i class="fa-solid fa-share-nodes"></i>
+                                <i class="fa-solid fa-pencil editPost"></i>
+                                <i class="fa-solid fa-trash-can"></i>
+                            </div>
+                        </div>
+                        `
+                    );
+                });
+            },
+            error: function(error) {
+                console.error('Error fetching user liked posts:', error);
+            }
+        });
     })
     .catch((err) => {
         console.error('Error fetching user ID:', err);
     });
-
 
 //get and display all the user's posts
 $.ajax({
@@ -336,49 +379,6 @@ $.ajax({
     error: function(error) {
         console.error('Error fetching user posts:', error);
     }
-});
-
-$('.likedPosts').click(()=>{
-    $.ajax({
-        url: `/api/user/likedPosts`,
-        type: 'GET',
-        success: function(response) {
-            $('.likedPostsContainer').empty();
-            response.forEach(post => {
-                console.log(post)
-                const formattedDate = moment(post.date).fromNow();
-                const isLiked = post.likes.includes(userId); 
-                const likeClass = isLiked ? 'fa-solid fa-thumbs-up liked' : 'fa-regular fa-thumbs-up';
-                $('.likedPostsContainer').append(
-                    `
-                    <div class="post" data-post='${JSON.stringify(post)}'>
-                        <div class="top">
-                            <div class="author">
-                                <img class="author_pic" src="${post.author.profilePicture}" alt="Profile Picture">
-                                <p class="author_name">${post.author.firstname} ${post.author.lastName}</p>
-                            </div>
-                            <p class="time">${formattedDate}</p>
-                        </div>
-                        <img class="postImg" src="${post.pic}" alt="Post Image">
-                        <h3 class="postTitle">${post.title}</h3>
-                        <div class="postText">${post.body.substring(0, 80)}</div>
-                        <p class="postHashtags">${post.hashtags}</p>
-                        <div class="actions">
-                            <div class="likesAmount">${post.likes.length}</div>
-                            <i class="likePost ${likeClass}" data-liked="${isLiked}"></i>
-                            <i class="fa-solid fa-share-nodes"></i>
-                            <i class="fa-solid fa-pencil editPost"></i>
-                            <i class="fa-solid fa-trash-can"></i>
-                        </div>
-                    </div>
-                    `
-                );
-            });
-        },
-        error: function(error) {
-            console.error('Error fetching user liked posts:', error);
-        }
-    });
 });
 
 //edit post

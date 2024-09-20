@@ -217,7 +217,6 @@ app.get('/api/authUserPosts', authMiddleware, async (req, res) => {
     }
 });
 
-
 //post creation
 app.post('/api/posts', authMiddleware, upload.single('post-pic'), async (req, res) => {
     try {
@@ -357,14 +356,17 @@ app.post('/api/unlikePost', authMiddleware, (req, res) => {
 });
 
 //get user liked posts
-app.get('/api/userLikedPosts/:userId', (req, res) => {
+app.get('/api/userLikedPosts/:userId', async (req, res) => {
     const userId = req.params.userId;
-    Post.find({ likes: userId })
-        .populate('author', 'firstname lastName profilePicture')
-        .exec((err, likedPosts) => {
-            if (err) return res.status(500).send(err);
-            res.status(200).json(likedPosts);
-        });
+    try {
+        const likedPosts = await Post.find({ likes: userId })
+            .populate('author', 'firstname lastName profilePicture')
+            .exec(); 
+        res.status(200).json(likedPosts);
+    } catch (err) {
+        console.error('Error fetching liked posts:', err);
+        res.status(500).json({ message: 'An error occurred while fetching liked posts' });
+    }
 });
 
 //auth
