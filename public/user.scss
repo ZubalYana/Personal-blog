@@ -9,20 +9,17 @@
 }
 ::-webkit-scrollbar {
     width: 12px;
-  }
-  
-  ::-webkit-scrollbar-track {
-    background: #fff;
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background: #45474B;
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
-    background: #1A4D2E;
-  }
-  .likedPostsContainer{
+}
+::-webkit-scrollbar-track {
+   background: #fff;
+} 
+::-webkit-scrollbar-thumb {
+   background: #45474B;
+}
+::-webkit-scrollbar-thumb:hover {
+   background: #1A4D2E;
+}
+.likedPostsContainer{
     width: 100%;
     min-height: 521px;
     display: flex;
