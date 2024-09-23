@@ -676,12 +676,13 @@
             }
 
         }
-        .pagination{
+        .pagination {
             width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
-            .page{
+            
+            .page {
                 margin: 0 40px;
                 width: 45px;
                 height: 45px;
@@ -697,11 +698,19 @@
                 cursor: pointer;
                 transition: 0.3s ease-in-out;
             }
-            .page:hover{
+        
+            .page:hover {
                 background-color: #1A4D2E;
                 color: #fff;
             }
+        
+            .active {
+                background-color: #1A4D2E;
+                color: #fff;
+                border: none;
+            }
         }
+        
     }
     .helpPage{
         width: 100%;

@@ -706,6 +706,11 @@
   background-color: #1A4D2E;
   color: #fff;
 }
+.wrap .blogPage .pagination .active {
+  background-color: #1A4D2E;
+  color: #fff;
+  border: none;
+}
 .wrap .helpPage {
   width: 100%;
   min-height: 100vh;
