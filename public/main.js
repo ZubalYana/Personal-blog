@@ -117,7 +117,6 @@ axios.get('/api/getPosts')
             const profilePic = (post.author && post.author.profilePicture) ? post.author.profilePicture : './materials/profile pic default.png';
             const authorName = post.author ? `${post.author.firstname} ${post.author.lastName}` : 'Unknown Author';
             const postPic = post.pic && post.pic !== '' ? post.pic : './materials/post pic default.png';
-
             $('.postsContainer').prepend(
                 `
                 <div class="post" data-post='${JSON.stringify(post)}'>
@@ -144,6 +143,11 @@ axios.get('/api/getPosts')
                 </div>
                 `
             );
+        }
+        if(res.data.length === 0) {
+            $('.postsContainer').prepend(
+                `No posts yet available.`
+            )
         }
 
         //following checking
