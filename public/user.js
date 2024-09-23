@@ -178,8 +178,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 $('.followingsPopupContainer').css('display', 'none');
             });
         });
-
-
 });
 
 //post screen opening/closing
@@ -439,7 +437,6 @@ $('#editPostPicture').change(function(event) {
         reader.readAsDataURL(file);
     }
 });
-
 
 //logout
 $('#logoutIcon').click(() => {
@@ -1018,4 +1015,3 @@ $(document).on('click', '.followingPic', function(e) {
     });
     
 });
-

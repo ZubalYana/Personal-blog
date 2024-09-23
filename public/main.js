@@ -109,109 +109,75 @@ axios.get('/auth/user')
 //get and display all the posts
 axios.get('/api/getPosts')
     .then((res) => {
-        console.log(res.data);
-        for (let post of res.data) {
-            const isLiked = post.likes.includes(userId); 
-            const likeClass = isLiked ? 'fa-solid fa-thumbs-up liked' : 'fa-regular fa-thumbs-up';
-            const formattedDate = moment(post.date).fromNow();
-            const profilePic = (post.author && post.author.profilePicture) ? post.author.profilePicture : './materials/profile pic default.png';
-            const authorName = post.author ? `${post.author.firstname} ${post.author.lastName}` : 'Unknown Author';
-            const postPic = post.pic && post.pic !== '' ? post.pic : './materials/post pic default.png';
-            $('.postsContainer').prepend(
-                `
-                <div class="post" data-post='${JSON.stringify(post)}'>
-                    <div class="top">
-                        <div class="author">
-                        <div class="authorHendler" style="display: flex; align-items: center; cursor: pointer;">
-                            <img class="author_pic" src="${profilePic}" alt="Profile Picture">
-                            <p class="author_name">${authorName}</p>
+        const posts = res.data;
+        const postsPerPage = 12;
+        const totalPages = Math.ceil(posts.length / postsPerPage);
+        let currentPage = 1;
+        function renderPosts(page = 1) {
+            const start = (page - 1) * postsPerPage;
+            const end = start + postsPerPage;
+            const postsToDisplay = posts.slice(start, end);
+            $('.postsContainer').empty();
+            postsToDisplay.forEach(post => {
+                const isLiked = post.likes.includes(userId);
+                const likeClass = isLiked ? 'fa-solid fa-thumbs-up liked' : 'fa-regular fa-thumbs-up';
+                const formattedDate = moment(post.date).fromNow();
+                const profilePic = post.author?.profilePicture || './materials/profile pic default.png';
+                const authorName = post.author ? `${post.author.firstname} ${post.author.lastName}` : 'Unknown Author';
+                const postPic = post.pic || './materials/post pic default.png';
+
+                $('.postsContainer').prepend(`
+                    <div class="post" data-post='${JSON.stringify(post)}'>
+                        <div class="top">
+                            <div class="author">
+                                <div class="authorHendler" style="display: flex; align-items: center; cursor: pointer;">
+                                    <img class="author_pic" src="${profilePic}" alt="Profile Picture">
+                                    <p class="author_name">${authorName}</p>
+                                </div>
+                                <div class="dot"></div>
+                                <p class="follow" data-user-id="${post.author._id}">follow</p>
+                            </div>
+                            <p class="time">${formattedDate}</p>
                         </div>
-                            <div class="dot"></div>
-                            <p class="follow" data-user-id="${post.author._id}">follow</p>
+                        <img class="postImg" src="${postPic}" alt="Post Image">
+                        <h3 class="postTitle">${post.title}</h3>
+                        <div class="postText">
+                            <span class="postExcerpt">${post.body.substring(0, 80)}</span>
+                            <span class="postFullText" style="display: none;">${post.body.substring(80, 500)}</span>
+                            <a href="#" class="readMore">Read More</a>
                         </div>
-                        <p class="time">${formattedDate}</p>
+                        <p class="postHashtags">${post.hashtags}</p>
+                        <div class="actions">
+                            <div class="likesAmount">${post.likes.length}</div>
+                            <i class="likePost ${likeClass}" data-liked="${isLiked}"></i>
+                            <i class="fa-solid fa-share-nodes"></i>
+                        </div>
                     </div>
-                    <img class="postImg" src="${postPic}" alt="Post Image">
-                    <h3 class="postTitle">${post.title}</h3>
-                    <div class="postText">
-                        <span class="postExcerpt">${post.body.substring(0, 80)}</span>
-                        <span class="postFullText" style="display: none;">${post.body.substring(80, 500)}</span>
-                        <a href="#" class="readMore">Read More</a>
-                    </div>
-                    <p class="postHashtags">${post.hashtags}</p>
-                    <div class="actions">
-                        <div class="likesAmount">${post.likes.length}</div>
-                        <i class="likePost ${likeClass}" data-liked="${isLiked}"></i>
-                        <i class="fa-solid fa-share-nodes"></i>
-                    </div>
-                </div>
-                `
-            );
+                `);
+            });
         }
 
-        //if no posts available
-        if(res.data.length === 0) {
-            $('.postsContainer').prepend(
-                `No posts yet available.`
-            )
-        }
-
-        //pagination
-        if(res.data.length > 12) {
-            const pagesAmount = Math.ceil(res.data.length / 12);
+        function setupPagination(totalPages) {
             const pagination = document.createElement('div');
-            if (pagesAmount > 1) {
             pagination.classList.add('pagination');
-            for (let i = 1; i <= pagesAmount; i++) {
+
+            for (let i = 1; i <= totalPages; i++) {
                 const page = document.createElement('div');
                 page.classList.add('page');
                 page.textContent = i;
                 page.addEventListener('click', () => {
-                    const start = (i - 1) * 12;
-                    const end = start + 12;
-                    const postsToDisplay = res.data.slice(start, end);
-                    $('.postsContainer').empty();
-                    postsToDisplay.forEach(post => {
-                        const formattedDate = new Date(post.createdAt).toLocaleString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
-                        const authorName = post.author ? `${post.author.firstname} ${post.author.lastName}` : 'Unknown Author';
-                        const profilePic = post.author && post.author.profilePicture ? post.author.profilePicture : './materials/profile pic default.png';
-                        const postPic = post.pic && post.pic !== '' ? post.pic : './materials/post pic default.png';
-                        $('.postsContainer').prepend(
-                            `
-                            <div class="post" data-post='${JSON.stringify(post)}'>
-                                <div class="top">
-                                    <div class="author">
-                                    <div class="authorHendler" style="display: flex; align-items: center; cursor: pointer;">
-                                        <img class="author_pic" src="${profilePic}" alt="Profile Picture">
-                                        <p class="author_name">${authorName}</p>
-                                    </div>
-                                        <div class="dot"></div>
-                                        <p class="follow" data-user-id="${post.author._id}">follow</p>
-                                    </div>
-                                    <p class="time">${formattedDate}</p>
-                                </div>
-                                <img class="postImg" src="${postPic}" alt="Post Image">
-                                <h3 class="postTitle">${post.title}</h3>
-                                <div class="postText">
-                                    <span class="postExcerpt">${post.body.substring(0, 80)}</span>
-                                    <span class="postFullText" style="display: none;">${post.body.substring(80, 500)}</span>
-                                    <a href="#" class="readMore">Read More</a>
-                                </div>
-                                <p class="postHashtags">${post.hashtags}</p>
-                                <div class="actions">
-                                    <div class="likesAmount">${post.likes.length}</div>
-                                    <i class="likePost ${post.likes.includes(userId) ? 'fa-solid' : 'fa-regular'}" data-liked="${post.likes.includes(userId)}"></i>
-                                    <i class="fa-solid fa-share-nodes"></i>
-                                </div>
-                            </div>
-                            `
-                        );
-                    })
-                })
+                    currentPage = i;
+                    renderPosts(currentPage);
+                });
                 pagination.appendChild(page);
             }
-            }
             $('.postsContainer').after(pagination);
+        }
+
+        // Initial render
+        renderPosts();
+        if (totalPages > 1) {
+            setupPagination(totalPages);
         }
 
         //following checking
@@ -528,9 +494,7 @@ axios.get('/api/getPosts')
                 .catch(error => {
                     console.error('Error while liking/unliking the post:', error);
                 });
-        });
-        
-                  
+        });              
     })
     .catch((err) => {
         console.error('Error fetching posts:', err);
@@ -578,4 +542,3 @@ $('#gear').click(()=>{
         $('.settingsCon').css('display', 'none')
     })
 })
-
