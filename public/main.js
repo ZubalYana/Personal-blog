@@ -180,6 +180,13 @@ axios.get('/api/getPosts')
         setupPagination(totalPages);
     }
 
+    //active page showing
+    $('.page').each(function() {
+        if ($(this).text() === '1') {
+            $(this).addClass('active');
+        }
+    });
+
         //following checking
         $('.follow').each(function() {
             const userId = $(this).data('user-id');
@@ -499,6 +506,7 @@ axios.get('/api/getPosts')
     .catch((err) => {
         console.error('Error fetching posts:', err);
     });
+
 
 //camera screen cards animations
 $('#cameraPhoto1').click(function() {
