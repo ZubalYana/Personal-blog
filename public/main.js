@@ -186,6 +186,10 @@ axios.get('/api/getPosts')
             $(this).addClass('active');
         }
     });
+    $('.page').click(function() {
+        $('.page').removeClass('active');
+        $(this).addClass('active');
+    })
 
         //following checking
         $('.follow').each(function() {
