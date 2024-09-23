@@ -149,6 +149,16 @@ axios.get('/api/getPosts')
                 `No posts yet available.`
             )
         }
+        // if(res.data.length > 12) {
+        //     //pagination
+        //     $('.postsContainer').prepend(
+        //         `
+        //         <div class="pagination">
+        //             <button id="loadMore">Load More</button>
+        //         </div>
+        //         `
+        //     );
+        // }
 
         //following checking
         $('.follow').each(function() {
