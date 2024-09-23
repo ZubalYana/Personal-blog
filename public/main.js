@@ -148,21 +148,71 @@ axios.get('/api/getPosts')
                 `
             );
         }
+
+        //if no posts available
         if(res.data.length === 0) {
             $('.postsContainer').prepend(
                 `No posts yet available.`
             )
         }
-        // if(res.data.length > 12) {
-        //     //pagination
-        //     $('.postsContainer').prepend(
-        //         `
-        //         <div class="pagination">
-        //             <button id="loadMore">Load More</button>
-        //         </div>
-        //         `
-        //     );
-        // }
+
+        //pagination
+        if(res.data.length > 12) {
+            const pagesAmount = Math.ceil(res.data.length / 12);
+            const pagination = document.createElement('div');
+            if (pagesAmount > 1) {
+            pagination.classList.add('pagination');
+            for (let i = 1; i <= pagesAmount; i++) {
+                const page = document.createElement('div');
+                page.classList.add('page');
+                page.textContent = i;
+                page.addEventListener('click', () => {
+                    const start = (i - 1) * 12;
+                    const end = start + 12;
+                    const postsToDisplay = res.data.slice(start, end);
+                    $('.postsContainer').empty();
+                    postsToDisplay.forEach(post => {
+                        const formattedDate = new Date(post.createdAt).toLocaleString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+                        const authorName = post.author ? `${post.author.firstname} ${post.author.lastName}` : 'Unknown Author';
+                        const profilePic = post.author && post.author.profilePicture ? post.author.profilePicture : './materials/profile pic default.png';
+                        const postPic = post.pic && post.pic !== '' ? post.pic : './materials/post pic default.png';
+                        $('.postsContainer').prepend(
+                            `
+                            <div class="post" data-post='${JSON.stringify(post)}'>
+                                <div class="top">
+                                    <div class="author">
+                                    <div class="authorHendler" style="display: flex; align-items: center; cursor: pointer;">
+                                        <img class="author_pic" src="${profilePic}" alt="Profile Picture">
+                                        <p class="author_name">${authorName}</p>
+                                    </div>
+                                        <div class="dot"></div>
+                                        <p class="follow" data-user-id="${post.author._id}">follow</p>
+                                    </div>
+                                    <p class="time">${formattedDate}</p>
+                                </div>
+                                <img class="postImg" src="${postPic}" alt="Post Image">
+                                <h3 class="postTitle">${post.title}</h3>
+                                <div class="postText">
+                                    <span class="postExcerpt">${post.body.substring(0, 80)}</span>
+                                    <span class="postFullText" style="display: none;">${post.body.substring(80, 500)}</span>
+                                    <a href="#" class="readMore">Read More</a>
+                                </div>
+                                <p class="postHashtags">${post.hashtags}</p>
+                                <div class="actions">
+                                    <div class="likesAmount">${post.likes.length}</div>
+                                    <i class="likePost ${post.likes.includes(userId) ? 'fa-solid' : 'fa-regular'}" data-liked="${post.likes.includes(userId)}"></i>
+                                    <i class="fa-solid fa-share-nodes"></i>
+                                </div>
+                            </div>
+                            `
+                        );
+                    })
+                })
+                pagination.appendChild(page);
+            }
+            }
+            $('.postsContainer').after(pagination);
+        }
 
         //following checking
         $('.follow').each(function() {
