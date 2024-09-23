@@ -700,6 +700,11 @@
   border: #1A4D2E 2px solid;
   border-radius: 50%;
   cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.wrap .blogPage .pagination .page:hover {
+  background-color: #1A4D2E;
+  color: #fff;
 }
 .wrap .helpPage {
   width: 100%;
