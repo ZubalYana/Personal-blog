@@ -680,6 +680,27 @@
 .wrap .blogPage .postsContainer .post i:hover {
   color: #4F6F52;
 }
+.wrap .blogPage .pagination {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrap .blogPage .pagination .page {
+  margin: 0 40px;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 800;
+  color: #1A4D2E;
+  background-color: #fff;
+  border: #1A4D2E 2px solid;
+  border-radius: 50%;
+  cursor: pointer;
+}
 .wrap .helpPage {
   width: 100%;
   min-height: 100vh;
