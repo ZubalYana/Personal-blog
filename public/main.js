@@ -109,11 +109,12 @@ axios.get('/auth/user')
 //get and display all the posts
 axios.get('/api/getPosts')
 .then((res) => {
-    const posts = res.data.reverse();  // Reverse the array here
+
+    //posts display and pagination
+    const posts = res.data.reverse();
     const postsPerPage = 12;
     const totalPages = Math.ceil(posts.length / postsPerPage);
     let currentPage = 1;
-
     function renderPosts(page = 1) {
         const start = (page - 1) * postsPerPage;
         const end = start + postsPerPage;
@@ -158,7 +159,6 @@ axios.get('/api/getPosts')
             `);
         });
     }
-
     function setupPagination(totalPages) {
         const pagination = document.createElement('div');
         pagination.classList.add('pagination');
@@ -175,8 +175,6 @@ axios.get('/api/getPosts')
         }
         $('.postsContainer').after(pagination);
     }
-
-    // Initial render
     renderPosts();
     if (totalPages > 1) {
         setupPagination(totalPages);
