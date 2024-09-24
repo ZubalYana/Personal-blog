@@ -359,6 +359,26 @@ $.ajax({
             
         });
 
+        //posts liking
+        $(document).on('click', '.likePost', function() {
+            const postData = $(this).closest('.post').data('post');
+            const postId = postData._id;
+            const isLiked = $(this).data('liked');
+            const likeApiUrl = isLiked ? '/api/unlikePost' : '/api/likePost';
+            const likePostElement = $(this);
+        
+            axios.post(likeApiUrl, { postId })
+                .then(response => {
+                    const newLikeClass = isLiked ? 'fa-regular fa-thumbs-up' : 'fa-solid fa-thumbs-up liked';
+                    likePostElement.attr('class', `likePost ${newLikeClass}`);
+                    likePostElement.data('liked', !isLiked);
+                    likePostElement.siblings('.likesAmount').text(response.data.likesCount);
+                })
+                .catch(error => {
+                    console.error('Error while liking/unliking the post:', error);
+                });
+        });
+
         //reading more/less
         $(document).on('click', '.readMore', function(e) {
             e.preventDefault();
