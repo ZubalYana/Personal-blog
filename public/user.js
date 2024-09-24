@@ -279,7 +279,7 @@ axios.get('/auth/user')
                     const formattedDate = moment(post.date).fromNow();
                     const isLiked = post.likes.includes(userId); 
                     const likeClass = isLiked ? 'fa-solid fa-thumbs-up liked' : 'fa-regular fa-thumbs-up';
-                    $('.likedPostsContainer').append(
+                    $('.likedPostsContainer').prepend(
                         `
                         <div class="post" data-post='${JSON.stringify(post)}'>
                             <div class="top">
@@ -299,7 +299,7 @@ axios.get('/auth/user')
                             <p class="postHashtags">${post.hashtags}</p>
                             <div class="actions">
                                 <div class="likesAmount">${post.likes.length}</div>
-                                <i class="likePost ${likeClass}" data-liked="${isLiked}"></i>
+                                <i class="likePost ${likeClass}" data-liked="${isLiked}" data-post-id="${post._id}"></i>
                                 <i class="fa-solid fa-share-nodes"></i>
                                 <i class="fa-solid fa-pencil editPost"></i>
                                 <i class="fa-solid fa-trash-can"></i>
@@ -307,6 +307,26 @@ axios.get('/auth/user')
                         </div>
                         `
                     );
+                });
+
+                //liking/unliking
+                $(document).on('click', '.likePost', function () {
+                    const postData = $(this).closest('.post').data('post');
+                    const postId = postData._id;
+                    const isLiked = $(this).data('liked');
+                    const likeApiUrl = isLiked ? '/api/unlikePost' : '/api/likePost';
+                    const likePostElement = $(this);
+                
+                    axios.post(likeApiUrl, { postId })
+                        .then(response => {
+                            const newLikeClass = isLiked ? 'fa-regular fa-thumbs-up' : 'fa-solid fa-thumbs-up liked';
+                            likePostElement.attr('class', `likePost ${newLikeClass}`);
+                            likePostElement.data('liked', !isLiked);
+                            likePostElement.siblings('.likesAmount').text(response.data.likesCount);
+                        })
+                        .catch(error => {
+                            console.error('Error while liking/unliking the post:', error);
+                        });
                 });
             },
             error: function(error) {
