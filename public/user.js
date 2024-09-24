@@ -361,7 +361,7 @@ $.ajax({
 
         //posts liking
         $(document).on('click', '.likePost', function() {
-            const postData = $(this).closest('.post').data('post');
+            const postData = $(this).closest('.post').data('id');
             const postId = postData._id;
             const isLiked = $(this).data('liked');
             const likeApiUrl = isLiked ? '/api/unlikePost' : '/api/likePost';
