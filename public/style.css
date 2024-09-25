@@ -1125,12 +1125,19 @@
   color: #1A4D2E;
 }
 .wrap .userProfilePopup .user .posts .userPostsContainer .post .actions {
-  width: 90px;
+  width: 100px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   font-size: 32px;
   color: #45474B;
   margin-top: 20px;
+}
+.wrap .userProfilePopup .user .posts .userPostsContainer .post .actions .likesAmount {
+  font-size: 22px;
+  font-weight: 700;
+  margin-right: -13px;
+  margin-bottom: -3px;
 }
 .wrap .userProfilePopup .user .posts .userPostsContainer .post i {
   transition: 0.5s ease;
@@ -1222,10 +1229,10 @@
   width: 100px;
   display: flex;
   justify-content: space-between;
-  font-size: 28px;
+  align-items: center;
+  font-size: 32px;
   color: #45474B;
   margin-top: 20px;
-  align-items: center;
 }
 .wrap .userProfilePopup .user .posts .likedPostsContainer .post .actions .likesAmount {
   font-size: 22px;
