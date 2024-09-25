@@ -425,8 +425,6 @@ axios.get('/api/getPosts')
                                             <div class="likesAmount">${post.likes.length}</div>
                                             <i class="likePost ${likeClass}" data-liked="${isLiked}" data-post-id="${post._id}"></i>
                                             <i class="fa-solid fa-share-nodes"></i>
-                                            <i class="fa-solid fa-pencil editPost"></i>
-                                            <i class="fa-solid fa-trash-can"></i>
                                         </div>
                                     </div>
                                     `
