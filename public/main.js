@@ -99,7 +99,8 @@ let userId;
 //get user ID for liked posts
 axios.get('/auth/user')
     .then((res) => {
-        userId = res.data._id;
+        userId = res.data._id
+        console.log(userId)
     })
     .catch((err) => {
         console.error('Error fetching user ID:', err);
@@ -268,11 +269,8 @@ axios.get('/api/getPosts')
         $(document).on('click', '.authorHendler', function(e) {
             e.preventDefault();
             e.stopPropagation();
-        
             const postData = $(this).closest('.post').data('post');
             const targetUserId = postData.author._id;
-        
-        
             $.ajax({
                 url: `/auth/user/${targetUserId}`,
                 type: 'GET',
@@ -331,6 +329,73 @@ axios.get('/api/getPosts')
                         `
                     );
 
+                    //get and display all the target user's liked posts
+                    $.ajax({
+                        url: `/api/userLikedPosts/${targetUserId}`,
+                        type: 'GET',
+                        success: function(res) {
+                            console.log(res)
+                            $('.likedPostsContainer').empty();
+                            res.forEach(post => {
+                                console.log(post)
+                                const formattedDate = moment(post.date).fromNow();
+                                const isLiked = post.likes.includes(userId); 
+                                const likeClass = isLiked ? 'fa-solid fa-thumbs-up liked' : 'fa-regular fa-thumbs-up';
+                                $('.likedPostsContainer').prepend(
+                                    `
+                                    <div class="post" data-post='${JSON.stringify(post)}'>
+                                        <div class="top">
+                                            <div class="author">
+                                                <img class="author_pic" src="${post.author?.profilePicture || '.materials/profile pic default.png'}" alt="Profile Picture">
+                                                <p class="author_name">${post.author.firstname} ${post.author.lastName}</p>
+                                            </div>
+                                            <p class="time">${formattedDate}</p>
+                                        </div>
+                                        <img class="postImg" src="${post.pic || '.materials/post pic default.png'}" alt="Post Image">
+                                        <h3 class="postTitle">${post.title}</h3>
+                                        <div class="postText">
+                                            <span class="postExcerpt">${post.body.substring(0, 80)}</span>
+                                            <span class="postFullText" style="display: none;">${post.body.substring(80, 500)}</span>
+                                            <a href="#" class="readMore">Read More</a>
+                                        </div>
+                                        <p class="postHashtags">${post.hashtags}</p>
+                                        <div class="actions">
+                                            <div class="likesAmount">${post.likes.length}</div>
+                                            <i class="likePost ${likeClass}" data-liked="${isLiked}" data-post-id="${post._id}"></i>
+                                            <i class="fa-solid fa-share-nodes"></i>
+                                            <i class="fa-solid fa-pencil editPost"></i>
+                                            <i class="fa-solid fa-trash-can"></i>
+                                        </div>
+                                    </div>
+                                    `
+                                );
+                            });
+            
+                            //liking/unliking
+                            $(document).on('click', '.likePost', function () {
+                                const postData = $(this).closest('.post').data('post');
+                                const postId = postData._id;
+                                const isLiked = $(this).data('liked');
+                                const likeApiUrl = isLiked ? '/api/unlikePost' : '/api/likePost';
+                                const likePostElement = $(this);
+                            
+                                axios.post(likeApiUrl, { postId })
+                                    .then(response => {
+                                        const newLikeClass = isLiked ? 'fa-regular fa-thumbs-up' : 'fa-solid fa-thumbs-up liked';
+                                        likePostElement.attr('class', `likePost ${newLikeClass}`);
+                                        likePostElement.data('liked', !isLiked);
+                                        likePostElement.siblings('.likesAmount').text(response.data.likesCount);
+                                    })
+                                    .catch(error => {
+                                        console.error('Error while liking/unliking the post:', error);
+                                    });
+                            });
+                        },
+                        error: function(error) {
+                            console.error('Error fetching user liked posts:', error);
+                        }
+                    });
+
                     //main page opening and closing the popup
                     $('.backToMainArrow').click(()=>{
                         $('.userProfilePopup').css('display', 'none');
@@ -376,8 +441,7 @@ axios.get('/api/getPosts')
                         } catch (error) {
                             console.error('Error loading followers:', error);
                         }
-                    }
-                    async function loadFollowings(followings) {
+                    }                    async function loadFollowings(followings) {
                         try {
                             const response = await fetch('/api/getUsersByIds', {
                                 method: 'POST',
@@ -424,7 +488,7 @@ axios.get('/api/getPosts')
                 error: function(xhr) {
                     console.error('Error fetching user data:', xhr.responseText);
                 }
-            });
+            });            
             $.ajax({
                 url: `/api/userPosts?userId=${targetUserId}`,
                 method: 'GET',
