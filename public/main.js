@@ -281,6 +281,8 @@ axios.get('/api/getPosts')
                 
                     posts.forEach(post => {
                         const formattedDate = moment(post.date).fromNow();
+                        const isLiked = post.likes.includes(userId); 
+                        const likeClass = isLiked ? 'fa-solid fa-thumbs-up liked' : 'fa-regular fa-thumbs-up';
                         $('.userPostsContainer').prepend(
                             `
                             <div class="post" data-id="${post._id}">
@@ -300,7 +302,8 @@ axios.get('/api/getPosts')
                                 </div>
                                 <p class="postHashtags">${post.hashtags}</p>
                                 <div class="actions">
-                                    <i class="fa-regular fa-thumbs-up likePost"></i>
+                                    <div class="likesAmount">${post.likes.length}</div>
+                                    <i class="likePost ${likeClass}" data-liked="${isLiked}" data-post-id="${post._id}"></i>
                                     <i class="fa-solid fa-share-nodes"></i>
                                 </div>
                             </div>
@@ -469,7 +472,6 @@ axios.get('/api/getPosts')
                         $('.likedPosts').css('background-color', '#1A4D2E').css('color', '#fff');
                         $('.publishedPosts').css('background-color', '#fff').css('color', '#1A4D2E');
                     });
-
                     $('.publishedPosts').click(() => {
                         $('.likedPostsContainer').css('display', 'none');
                         $('.userPostsContainer').css('display', 'flex');
