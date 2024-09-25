@@ -271,6 +271,66 @@ axios.get('/api/getPosts')
             e.stopPropagation();
             const postData = $(this).closest('.post').data('post');
             const targetUserId = postData.author._id;
+
+            $.ajax({
+                url: `/api/userPosts?userId=${targetUserId}`,
+                method: 'GET',
+                success: function(posts) {
+                    $('.userPostsContainer').empty();
+                    console.log('Author element clicked:', targetUserId);
+                
+                    posts.forEach(post => {
+                        const formattedDate = moment(post.date).fromNow();
+                        $('.userPostsContainer').prepend(
+                            `
+                            <div class="post" data-id="${post._id}">
+                                <div class="top">
+                                    <div class="author">
+                                        <img class="author_pic" src="${post.author.profilePicture}" alt="">
+                                        <p class="author_name">${post.author.firstname} ${post.author.lastName}</p>
+                                    </div>
+                                    <p class="time">${formattedDate}</p>
+                                </div>
+                                <img class="postImg" src="${post.pic}" alt="">
+                                <h3 class="postTitle">${post.title}</h3>
+                                <div class="postText">
+                                    <span class="postExcerpt">${post.body.substring(0, 80)}</span>
+                                    <span class="postFullText" style="display: none;">${post.body.substring(80, 500)}</span>
+                                    <a href="#" class="readMore">Read More</a>
+                                </div>
+                                <p class="postHashtags">${post.hashtags}</p>
+                                <div class="actions">
+                                    <i class="fa-regular fa-thumbs-up likePost"></i>
+                                    <i class="fa-solid fa-share-nodes"></i>
+                                </div>
+                            </div>
+                            `
+                        );
+                    });
+            
+                    // Handle read more/less functionality
+                    $(document).on('click', '.readMore', function(e) {
+                        e.preventDefault();
+                        let $this = $(this);
+                        let $post = $this.closest('.post'); 
+                        let $fullText = $this.siblings('.postFullText');
+                        let $excerpt = $this.siblings('.postExcerpt');
+                    
+                        $fullText.slideToggle(); 
+                        $excerpt.show(); 
+                        $this.text($this.text() === 'Read More' ? 'Read Less' : 'Read More'); 
+                    
+                        if ($this.text() === 'Read Less') {
+                            $post.css('height', 'auto'); 
+                        } else {
+                            $post.css('height', '521px'); 
+                        }
+                    });
+                },
+                error: function(error) {
+                    console.error('Error fetching user posts:', error);
+                }
+            });
             $.ajax({
                 url: `/auth/user/${targetUserId}`,
                 type: 'GET',
@@ -489,65 +549,7 @@ axios.get('/api/getPosts')
                     console.error('Error fetching user data:', xhr.responseText);
                 }
             });            
-            $.ajax({
-                url: `/api/userPosts?userId=${targetUserId}`,
-                method: 'GET',
-                success: function(posts) {
-                    $('.userPostsContainer').empty();
-                    console.log('Author element clicked:', targetUserId);
-                
-                    posts.forEach(post => {
-                        const formattedDate = moment(post.date).fromNow();
-                        $('.userPostsContainer').prepend(
-                            `
-                            <div class="post" data-id="${post._id}">
-                                <div class="top">
-                                    <div class="author">
-                                        <img class="author_pic" src="${post.author.profilePicture}" alt="">
-                                        <p class="author_name">${post.author.firstname} ${post.author.lastName}</p>
-                                    </div>
-                                    <p class="time">${formattedDate}</p>
-                                </div>
-                                <img class="postImg" src="${post.pic}" alt="">
-                                <h3 class="postTitle">${post.title}</h3>
-                                <div class="postText">
-                                    <span class="postExcerpt">${post.body.substring(0, 80)}</span>
-                                    <span class="postFullText" style="display: none;">${post.body.substring(80, 500)}</span>
-                                    <a href="#" class="readMore">Read More</a>
-                                </div>
-                                <p class="postHashtags">${post.hashtags}</p>
-                                <div class="actions">
-                                    <i class="fa-regular fa-thumbs-up likePost"></i>
-                                    <i class="fa-solid fa-share-nodes"></i>
-                                </div>
-                            </div>
-                            `
-                        );
-                    });
-            
-                    // Handle read more/less functionality
-                    $(document).on('click', '.readMore', function(e) {
-                        e.preventDefault();
-                        let $this = $(this);
-                        let $post = $this.closest('.post'); 
-                        let $fullText = $this.siblings('.postFullText');
-                        let $excerpt = $this.siblings('.postExcerpt');
-                    
-                        $fullText.slideToggle(); 
-                        $excerpt.show(); 
-                        $this.text($this.text() === 'Read More' ? 'Read Less' : 'Read More'); 
-                    
-                        if ($this.text() === 'Read Less') {
-                            $post.css('height', 'auto'); 
-                        } else {
-                            $post.css('height', '521px'); 
-                        }
-                    });
-                },
-                error: function(error) {
-                    console.error('Error fetching user posts:', error);
-                }
-            });
+
             
         });
 
