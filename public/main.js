@@ -395,6 +395,7 @@ axios.get('/api/getPosts')
                         url: `/api/userLikedPosts/${targetUserId}`,
                         type: 'GET',
                         success: function(res) {
+
                             console.log(res)
                             $('.likedPostsContainer').empty();
                             res.forEach(post => {
@@ -466,14 +467,14 @@ axios.get('/api/getPosts')
                     // User's posts/liked posts toggling
                     $('.likedPosts').click(() => {
                         $('.likedPostsContainer').css('display', 'flex');
-                        $('.postsContainer').css('display', 'none');
+                        $('.userPostsContainer').css('display', 'none');
                         $('.likedPosts').css('background-color', '#1A4D2E').css('color', '#fff');
                         $('.publishedPosts').css('background-color', '#fff').css('color', '#1A4D2E');
                     });
 
                     $('.publishedPosts').click(() => {
                         $('.likedPostsContainer').css('display', 'none');
-                        $('.postsContainer').css('display', 'flex');
+                        $('.userPostsContainer').css('display', 'flex');
                         $('.likedPosts').css('background-color', '#fff').css('color', '#1A4D2E');
                         $('.publishedPosts').css('background-color', '#1A4D2E').css('color', '#fff');
                     });
