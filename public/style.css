@@ -1138,6 +1138,100 @@
 .wrap .userProfilePopup .user .posts .userPostsContainer .post i:hover {
   color: #4F6F52;
 }
+.wrap .userProfilePopup .user .posts .likedPostsContainer {
+  width: 100%;
+  min-height: 521px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+.wrap .userProfilePopup .user .posts .likedPostsContainer .post {
+  width: 430px;
+  height: 521px;
+  border-radius: 15px;
+  border: #1A4D2E 2px solid;
+  padding: 20px;
+  color: #45474B;
+  margin-bottom: 40px;
+}
+.wrap .userProfilePopup .user .posts .likedPostsContainer .post .top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 45px;
+}
+.wrap .userProfilePopup .user .posts .likedPostsContainer .post .top .author {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+.wrap .userProfilePopup .user .posts .likedPostsContainer .post .top .author .author_pic {
+  width: 45px;
+  height: 45px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.wrap .userProfilePopup .user .posts .likedPostsContainer .post .top .author .authro_name {
+  font-size: 24px;
+  font-weight: 600;
+}
+.wrap .userProfilePopup .user .posts .likedPostsContainer .post .top .time {
+  font-size: 16px;
+  font-weight: 300;
+}
+.wrap .userProfilePopup .user .posts .likedPostsContainer .post .author_name {
+  font-size: 24px;
+  font-weight: 600;
+}
+.wrap .userProfilePopup .user .posts .likedPostsContainer .post .postImg {
+  width: 100%;
+  height: 240px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+  margin: 15px 0;
+}
+.wrap .userProfilePopup .user .posts .likedPostsContainer .post .postTitle {
+  font-size: 28px;
+  font-weight: 700;
+}
+.wrap .userProfilePopup .user .posts .likedPostsContainer .post .postText {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 7px 0;
+}
+.wrap .userProfilePopup .user .posts .likedPostsContainer .post .postText .postFullText {
+  display: none;
+}
+.wrap .userProfilePopup .user .posts .likedPostsContainer .post .readMore {
+  text-decoration: none;
+  color: #2C2E32;
+  font-weight: 600;
+  font-family: Urbanist;
+}
+.wrap .userProfilePopup .user .posts .likedPostsContainer .post .postHashtags {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1A4D2E;
+}
+.wrap .userProfilePopup .user .posts .likedPostsContainer .post .actions {
+  width: 90px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 32px;
+  color: #45474B;
+  margin-top: 20px;
+}
+.wrap .userProfilePopup .user .posts .likedPostsContainer .post i {
+  transition: 0.5s ease;
+}
+.wrap .userProfilePopup .user .posts .likedPostsContainer .post i:hover {
+  color: #4F6F52;
+}
 .wrap .userProfilePopup .followingsPopupContainer {
   width: 100%;
   height: 100vh;
