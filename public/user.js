@@ -337,7 +337,6 @@ axios.get('/auth/user')
     .catch((err) => {
         console.error('Error fetching user ID:', err);
     });
-
 //get and display all the user's posts
 $.ajax({
     url: '/api/authUserPosts',

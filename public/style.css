@@ -827,9 +827,9 @@
   left: 0;
 }
 .wrap .settingsCon .settings {
-  width: 400px;
-  height: 230px;
-  padding: 40px;
+  width: 450px;
+  height: 250px;
+  padding: 30px;
   border-radius: 16px;
   background-color: #fff;
   display: flex;
@@ -840,9 +840,9 @@
 }
 .wrap .settingsCon .settings #settingsXMark {
   position: absolute;
-  top: 40px;
-  right: 40px;
-  font-size: 32px;
+  top: 20px;
+  right: 20px;
+  font-size: 28px;
   color: #45474B;
   transition: 0.5s ease-in-out;
 }
@@ -900,7 +900,6 @@
 .wrap .settingsCon .settings .reportOption:hover {
   color: #1A4D2E;
   font-weight: 500;
-  font-size: 17px;
 }
 .wrap .userProfilePopup {
   width: 100%;
