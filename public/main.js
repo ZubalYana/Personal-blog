@@ -335,6 +335,7 @@ axios.get('/api/getPosts')
                 url: `/auth/user/${targetUserId}`,
                 type: 'GET',
                 success: function(targetUser) {
+                    $('.userPostsContainer').empty();
                     $('.wrap').addClass('no-scroll');
                     console.log(targetUser)
                     $('.userProfilePopup').css('display', 'flex');
@@ -549,7 +550,6 @@ axios.get('/api/getPosts')
                     console.error('Error fetching user data:', xhr.responseText);
                 }
             });            
-
             
         });
 
