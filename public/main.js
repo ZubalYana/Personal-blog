@@ -658,8 +658,30 @@ $('.themeChanger').click(function(){
 function changeTheme(theme){
     if(theme == 'light'){
         $('.themeChanger').text('light')
+        $('body').css('background-color', '#fff')
+        $('body').css('background-color', '#fff')
+        $('.greetingBottom').attr('src', './materials/greeting screen bottom decoration.png')
+        $('.futerTop').attr('src', './materials/greeting screen bottom decoration.png')
+        $('.title').css('color', '#45474B')
+        $('p').css('color', '#45474B')
+        $('#usageArrow1').attr('src', './materials/how to use arrow 1.png')
+        $('#usageArrow2').attr('src', './materials/how to use arrow 2.png')
+        $('#usageArrow3').attr('src', './materials/how to use arrow 3.png')
+        $('.card').css('border', '#45474B 1px solid')
+        $('.cardTitle').css('color', '#45474B')
     }else{
         $('.themeChanger').text('dark')
+        $('body').css('background-color', '#45474B')
+        $('.greetingBottom').attr('src', './materials/greeting screen bottom decoration dark.png')
+        $('.futerTop').attr('src', './materials/greeting screen bottom decoration dark.png')
+        $('.title').css('color', '#fff')
+        $('p').css('color', '#fff')
+        $('#usageArrow1').attr('src', './materials/how to use arrow 1 dark.png')
+        $('#usageArrow2').attr('src', './materials/how to use arrow 2 dark.png')
+        $('#usageArrow3').attr('src', './materials/how to use arrow 3 dark.png')
+        $('#greeting_p').css('color', '#fff')
+        $('.card').css('border', '#fff 1px solid')
+        $('.cardTitle').css('color', '#fff')
     }
 }
 changeTheme(theme);
