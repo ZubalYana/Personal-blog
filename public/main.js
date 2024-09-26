@@ -635,7 +635,7 @@ setTimeout(() => {
 });
 
 //settings
-$('#gear').click(()=>{
+$('.gear').click(()=>{
     $('.settingsCon').css('display', 'flex')
     $('#settingsXMark').click(()=>{
         $('.settingsCon').css('display', 'none')
