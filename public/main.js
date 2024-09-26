@@ -634,9 +634,6 @@ setTimeout(() => {
 
 });
 
-//theme changing
-
-
 //settings popup logic
 $('.gear').click(() => {
     $('.settingsCon').css('display', 'flex');
@@ -644,3 +641,23 @@ $('.gear').click(() => {
         $('.settingsCon').css('display', 'none');
     });
 });
+
+//theme changing
+let theme = localStorage.getItem('theme') || 'light';
+$('.themeChanger').click(function(){
+    if(theme == 'light'){
+        theme = 'dark';
+        localStorage.setItem('theme', theme);
+        changeTheme(theme);
+    }else{
+        theme = 'light';
+        localStorage.setItem('theme', theme);
+        changeTheme(theme);
+    }
+})
+function changeTheme(theme){
+    if(theme == 'light'){
+    }else{
+    }
+}
+changeTheme(theme);
