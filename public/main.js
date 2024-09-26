@@ -657,7 +657,9 @@ $('.themeChanger').click(function(){
 })
 function changeTheme(theme){
     if(theme == 'light'){
+        $('.themeChanger').text('light')
     }else{
+        $('.themeChanger').text('dark')
     }
 }
 changeTheme(theme);

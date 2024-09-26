@@ -838,6 +838,9 @@
   align-items: center;
   position: relative;
   color: #45474B;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .wrap .settingsCon .settings #settingsXMark {
   position: absolute;
