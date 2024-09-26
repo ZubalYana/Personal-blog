@@ -669,6 +669,14 @@ function changeTheme(theme){
         $('#usageArrow3').attr('src', './materials/how to use arrow 3.png')
         $('.card').css('border', '#45474B 1px solid')
         $('.cardTitle').css('color', '#45474B')
+        $('.userIcon').css('color', '#1A4D2E')
+        $('.earthIcon').css('color', '#1A4D2E')
+        $('.handshakeIcon').css('color', '#1A4D2E')
+        $('.asteriskIcon').css('color', '#45474B')
+        $('.locationDotIcon').css('color', '#45474B')
+        $('.mapIcon').css('color', '#45474B')
+        $('.camera').attr('src', './materials/camera.png')
+
     }else{
         $('.themeChanger').text('dark')
         $('body').css('background-color', '#45474B')
@@ -682,6 +690,14 @@ function changeTheme(theme){
         $('#greeting_p').css('color', '#fff')
         $('.card').css('border', '#fff 1px solid')
         $('.cardTitle').css('color', '#fff')
+        $('.userIcon').css('color', '#1a7a40')
+        $('.earthIcon').css('color', '#1a7a40')
+        $('.handshakeIcon').css('color', '#1a7a40')
+        $('.asteriskIcon').css('color', '#fff')
+        $('.locationDotIcon').css('color', '#fff')
+        $('.mapIcon').css('color', '#fff')
+        $('.camera').attr('src', './materials/camera dark.png')
+
     }
 }
 changeTheme(theme);
