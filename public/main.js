@@ -677,7 +677,14 @@ function changeTheme(theme){
         $('.mapIcon').css('color', '#45474B')
         $('.camera').attr('src', './materials/camera.png')
         $('#greeting_p').css('color', '#fff')
-
+        $('.darkHeader').css('color', '#45474B')
+        $('.post').css('border', '#1A4D2E 2px solid')
+        $('.dot').css('background-color', '#45474B')
+        $('.postTitle').css('color', '#45474B')
+        $('.postText').css('color', '#45474B')
+        $('.actions').css('color', '#45474B')
+        $('.readMore').css('color', '#2C2E32')
+        
     }else{
         $('.themeChanger').text('dark')
         $('body').css('background-color', '#45474B')
@@ -698,6 +705,13 @@ function changeTheme(theme){
         $('.locationDotIcon').css('color', '#fff')
         $('.mapIcon').css('color', '#fff')
         $('.camera').attr('src', './materials/camera dark.png')
+        $('.darkHeader').css('color', '#fff')
+        $('.post').css('border', '#789885 2px solid')
+        $('.dot').css('background-color', '#fff')
+        $('.postTitle').css('color', '#fff')
+        $('.postText').css('color', '#fff')
+        $('.actions').css('color', '#fff')
+        $('.readMore').css('color', '#528c69')
 
     }
 }
