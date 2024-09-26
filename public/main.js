@@ -270,8 +270,7 @@ axios.get('/api/getPosts')
             e.preventDefault();
             e.stopPropagation();
             const postData = $(this).closest('.post').data('post');
-            const targetUserId = postData.author._id;
-
+            const targetUserId = postData.author._id;                      
             $.ajax({
                 url: `/api/userPosts?userId=${targetUserId}`,
                 method: 'GET',
@@ -303,14 +302,35 @@ axios.get('/api/getPosts')
                                 <p class="postHashtags">${post.hashtags}</p>
                                 <div class="actions">
                                     <div class="likesAmount">${post.likes.length}</div>
-                                    <i class="likePost ${likeClass}" data-liked="${isLiked}" data-post-id="${post._id}"></i>
+                                    <i class="likeTargetUserPost ${likeClass}" data-liked="${isLiked}" data-post-id="${post._id}"></i>
                                     <i class="fa-solid fa-share-nodes"></i>
                                 </div>
                             </div>
                             `
                         );
                     });
-            
+
+                    //liking/unliking
+                    $(document).on('click', '.likeTargetUserPost', function () {
+                        const postData = $(this).closest('.post').data();
+                        const postId = postData.id;
+                        const isLiked = $(this).data('liked');
+                        const likeApiUrl = isLiked ? '/api/unlikePost' : '/api/likePost';
+                        const likePostElement = $(this);
+                    
+                        axios.post(likeApiUrl, { postId })
+                            .then(response => {
+                                const newLikeClass = isLiked ? 'fa-regular fa-thumbs-up' : 'fa-solid fa-thumbs-up liked';
+                                likePostElement.attr('class', `likePost ${newLikeClass}`);
+                                likePostElement.data('liked', !isLiked);
+                                likePostElement.siblings('.likesAmount').text(response.data.likesCount);
+                            })
+                            .catch(error => {
+                                console.error('Error while liking/unliking the post:', error);
+                            });
+                    });
+
+
                     // Handle read more/less functionality
                     $(document).on('click', '.readMore', function(e) {
                         e.preventDefault();
@@ -465,7 +485,7 @@ axios.get('/api/getPosts')
                         $('.wrap').removeClass('no-scroll');
                     })
 
-                    // User's posts/liked posts toggling
+                    //user's posts/liked posts toggling
                     $('.likedPosts').click(() => {
                         $('.likedPostsContainer').css('display', 'flex');
                         $('.userPostsContainer').css('display', 'none');
