@@ -676,6 +676,7 @@ function changeTheme(theme){
         $('.locationDotIcon').css('color', '#45474B')
         $('.mapIcon').css('color', '#45474B')
         $('.camera').attr('src', './materials/camera.png')
+        $('#greeting_p').css('color', '#fff')
 
     }else{
         $('.themeChanger').text('dark')
