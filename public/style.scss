@@ -1421,8 +1421,15 @@ body.light-theme .locationDotIcon,
 body.light-theme .mapIcon{
     color: #45474B;
 }
-
-
+body.light-theme .darkHeader {
+    color: #45474B;
+}
+body.light-theme .post{
+    border: #45474B 1px solid;
+}
+body.light-theme .readMore{
+    color: #2C2E32;
+}
 /* Dark Theme */
 body.dark-theme .title,
 body.dark-theme p,
@@ -1454,4 +1461,14 @@ body.dark-theme .asteriskIcon,
 body.dark-theme .locationDotIcon,
 body.dark-theme .mapIcon{
     color: #fff !important;
+}
+body.dark-theme .darkHeader {
+    color: #fff !important;
+}
+body.dark-theme .post{
+    background-color: #6c6c6c;
+    border: #6c6c6c 1px solid !important;
+}
+body.dark-theme .readMore{
+    color: #7daa8f !important;
 }
