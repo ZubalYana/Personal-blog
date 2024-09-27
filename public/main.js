@@ -658,9 +658,21 @@ $(document).ready(function() {
         if(theme === 'light'){
             $('body').removeClass('dark-theme').addClass('light-theme');
             $('.themeChanger').text('dark');
+            $('.greetingBottom').attr('src', './materials/greeting screen bottom decoration.png');
+            $('.futerTop').attr('src', './materials/greeting screen bottom decoration.png');
+            $('#usageArrow1').attr('src', './materials/how to use arrow 1.png');
+            $('#usageArrow2').attr('src', './materials/how to use arrow 2.png');
+            $('#usageArrow3').attr('src', './materials/how to use arrow 3.png');
+            $('.camera').attr('src', './materials/camera.png');
         } else {
             $('body').removeClass('light-theme').addClass('dark-theme');
             $('.themeChanger').text('light');
+            $('.greetingBottom').attr('src', './materials/greeting screen bottom decoration dark.png');
+            $('.futerTop').attr('src', './materials/greeting screen bottom decoration dark.png');
+            $('#usageArrow1').attr('src', './materials/how to use arrow 1 dark.png');
+            $('#usageArrow2').attr('src', './materials/how to use arrow 2 dark.png');
+            $('#usageArrow3').attr('src', './materials/how to use arrow 3 dark.png');
+            $('.camera').attr('src', './materials/camera dark.png');
         }
     }
 });

@@ -1392,3 +1392,45 @@
 }
 
 
+//dark theme settings
+/* Light Theme */
+body.light-theme .title,
+body.light-theme p,
+body.light-theme .cardTitle,
+body.light-theme .postTitle,
+body.light-theme .postText,
+body.light-theme .actions {
+    color: #45474B;
+}
+
+body.light-theme .card {
+    border: #45474B 1px solid;
+}
+
+body.light-theme .dot {
+    background-color: #45474B;
+}
+
+/* Dark Theme */
+body.dark-theme .title,
+body.dark-theme p,
+body.dark-theme .cardTitle,
+body.dark-theme .postTitle,
+body.dark-theme .postText,
+body.dark-theme .actions {
+    color: #fff;
+}
+
+body.dark-theme .card {
+    border: #789885 2px solid;
+}
+
+body.dark-theme .dot {
+    background-color: #fff;
+}
+body.dark-theme .postText {
+    color: #fff;
+}
+body.dark-theme {
+    background-color: #45474B;
+}
