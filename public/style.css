@@ -1425,6 +1425,20 @@ body.light-theme .readMore {
   color: #2C2E32;
 }
 
+body.light-theme .postHashtags {
+  color: #1A4D2E;
+}
+
+body.light-theme .actions {
+  color: #45474B;
+}
+
+body.light-theme .actions i:hover {
+  color: #1A4D2E;
+  transform: scale(1.1);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
 /* Dark Theme */
 body.dark-theme .title,
 body.dark-theme p,
@@ -1440,7 +1454,7 @@ body.dark-theme .card {
 }
 
 body.dark-theme .dot {
-  background-color: #fff;
+  background-color: #fff !important;
 }
 
 body.dark-theme .postText {
@@ -1473,5 +1487,19 @@ body.dark-theme .post {
 }
 
 body.dark-theme .readMore {
-  color: #7daa8f !important;
+  color: #adadad !important;
+}
+
+body.dark-theme .postHashtags {
+  color: #51ae75 !important;
+}
+
+body.dark-theme .actions {
+  color: #fff !important;
+}
+
+body.dark-theme .actions i:hover {
+  color: #259851 !important;
+  transform: scale(1.1);
+  transition: transform 0.3s ease, color 0.3s ease;
 }/*# sourceMappingURL=style.css.map */
