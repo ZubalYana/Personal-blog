@@ -1389,12 +1389,28 @@ body.light-theme .actions {
   color: #45474B;
 }
 
+body.light-theme #greeting_p {
+  color: #fff;
+}
+
 body.light-theme .card {
-  border: #45474B 1px solid;
+  border: #45474B 2px solid;
 }
 
 body.light-theme .dot {
   background-color: #45474B;
+}
+
+body.light-theme .userIcon,
+body.light-theme .earthIcon,
+body.light-theme .handshakeIcon {
+  color: #1A4D2E;
+}
+
+body.light-theme .asteriskIcon,
+body.light-theme .locationDotIcon,
+body.light-theme .mapIcon {
+  color: #45474B;
 }
 
 /* Dark Theme */
@@ -1408,7 +1424,7 @@ body.dark-theme .actions {
 }
 
 body.dark-theme .card {
-  border: #789885 2px solid;
+  border: #ffffff 2px solid !important;
 }
 
 body.dark-theme .dot {
@@ -1421,4 +1437,16 @@ body.dark-theme .postText {
 
 body.dark-theme {
   background-color: #45474B;
+}
+
+body.dark-theme .userIcon,
+body.dark-theme .earthIcon,
+body.dark-theme .handshakeIcon {
+  color: #2d6a45 !important;
+}
+
+body.dark-theme .asteriskIcon,
+body.dark-theme .locationDotIcon,
+body.dark-theme .mapIcon {
+  color: #fff !important;
 }/*# sourceMappingURL=style.css.map */
