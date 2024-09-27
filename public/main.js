@@ -643,7 +643,8 @@ $('.gear').click(() => {
 });
 
 //theme changing
-let theme = localStorage.getItem('theme') || 'light';
+$(document).ready(function() {
+    let theme = localStorage.getItem('theme') || 'light';
 $('.themeChanger').click(function(){
     if(theme == 'light'){
         theme = 'dark';
@@ -658,7 +659,6 @@ $('.themeChanger').click(function(){
 function changeTheme(theme){
     if(theme == 'light'){
         $('.themeChanger').text('light')
-        $('body').css('background-color', '#fff')
         $('body').css('background-color', '#fff')
         $('.greetingBottom').attr('src', './materials/greeting screen bottom decoration.png')
         $('.futerTop').attr('src', './materials/greeting screen bottom decoration.png')
@@ -712,7 +712,8 @@ function changeTheme(theme){
         $('.postText').css('color', '#fff')
         $('.actions').css('color', '#fff')
         $('.readMore').css('color', '#528c69')
-
     }
 }
 changeTheme(theme);
+
+});
