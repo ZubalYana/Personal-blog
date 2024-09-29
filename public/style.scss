@@ -1447,7 +1447,9 @@ body.light-theme .pagination .active{
 body.light-theme .info{
     color: #45474B;
 }
-
+body.light-theme .helpArrow{
+    bottom: -120px;
+}
 
 /* Dark Theme */
 body.dark-theme .title,
@@ -1507,4 +1509,7 @@ body.dark-theme .page{
 }
 body.dark-theme .info{
     color: #fff;
+}
+body.dark-theme .helpArrow{
+    top: 220px;
 }
