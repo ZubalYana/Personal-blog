@@ -664,6 +664,8 @@ $(document).ready(function() {
             $('#usageArrow2').attr('src', './materials/how to use arrow 2.png');
             $('#usageArrow3').attr('src', './materials/how to use arrow 3.png');
             $('.camera').attr('src', './materials/camera.png');
+            $('.helpArrow').attr('src', './materials/help arrow.png');
+
         } else {
             $('body').removeClass('light-theme').addClass('dark-theme');
             $('.themeChanger').text('light');
@@ -673,6 +675,8 @@ $(document).ready(function() {
             $('#usageArrow2').attr('src', './materials/how to use arrow 2 dark.png');
             $('#usageArrow3').attr('src', './materials/how to use arrow 3 dark.png');
             $('.camera').attr('src', './materials/camera dark.png');
+            $('.helpArrow').attr('src', './materials/help arrow white.png');
+
         }
     }
 });
