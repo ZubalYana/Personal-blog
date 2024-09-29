@@ -1451,6 +1451,14 @@ body.light-theme .helpArrow {
   bottom: -120px;
 }
 
+body.light-theme .helpCompass {
+  color: #45474B;
+}
+
+body.light-theme .profileIcon {
+  color: #45474B;
+}
+
 /* Dark Theme */
 body.dark-theme .title,
 body.dark-theme p,
@@ -1526,4 +1534,12 @@ body.dark-theme .info {
 
 body.dark-theme .helpArrow {
   top: 220px;
+}
+
+body.dark-theme .helpCompass {
+  color: #fff;
+}
+
+body.light-theme .profileIcon {
+  color: #fff;
 }/*# sourceMappingURL=style.css.map */
