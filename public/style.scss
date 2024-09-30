@@ -1451,10 +1451,10 @@ body.light-theme .helpCompass{
     color: #45474B;
 }
 body.light-theme .profileIcon{
-    color: #45474B;
+    color: #45474B !important;
 }
 body.light-theme .profileIcon:hover{
-    color: #1A4D2E;
+    color: #1A4D2E !important;
 }
 body.light-theme .settingsCon{
     background-color: rgba(0, 0, 0, 0.2549019608);
@@ -1537,10 +1537,10 @@ body.dark-theme .helpCompass{
     color: #fff;
 }
 body.dark-theme .profileIcon{
-    color: #fff;
+    color: #fff !important;
 }
 body.dark-theme .profileIcon:hover{
-    color: #259851;
+    color: #4F6F52 !important;
 }
 body.dark-theme .settingsCon{
     background-color: rgba(0, 0, 0, 0.37) !important;
