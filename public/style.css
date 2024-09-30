@@ -1447,10 +1447,6 @@ body.light-theme .info {
   color: #45474B;
 }
 
-body.light-theme .helpArrow {
-  bottom: -120px;
-}
-
 body.light-theme .helpCompass {
   color: #45474B;
 }
@@ -1461,6 +1457,27 @@ body.light-theme .profileIcon {
 
 body.light-theme .profileIcon:hover {
   color: #1A4D2E;
+}
+
+body.light-theme .settingsCon {
+  background-color: rgba(0, 0, 0, 0.2549019608);
+}
+
+body.light-theme .settings {
+  background-color: #fff;
+  color: #45474B;
+}
+
+body.light-theme .settings h3, #settingsXMark {
+  color: #45474B !important;
+}
+
+body.light-theme #settingsXMark {
+  color: #45474B !important;
+}
+
+body.light-theme select {
+  color: #45474B !important;
 }
 
 /* Dark Theme */
@@ -1536,10 +1553,6 @@ body.dark-theme .info {
   color: #fff;
 }
 
-body.dark-theme .helpArrow {
-  top: 220px;
-}
-
 body.dark-theme .helpCompass {
   color: #fff;
 }
@@ -1550,4 +1563,21 @@ body.dark-theme .profileIcon {
 
 body.dark-theme .profileIcon:hover {
   color: #259851;
+}
+
+body.dark-theme .settingsCon {
+  background-color: rgba(0, 0, 0, 0.37) !important;
+}
+
+body.dark-theme .settings {
+  background-color: #45474B !important;
+  color: #fff !important;
+}
+
+body.dark-theme .settings h3, #settingsXMark {
+  color: #fff !important;
+}
+
+body.dark-theme select {
+  color: #fff !important;
 }/*# sourceMappingURL=style.css.map */
