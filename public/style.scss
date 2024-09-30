@@ -1447,14 +1447,14 @@ body.light-theme .pagination .active{
 body.light-theme .info{
     color: #45474B;
 }
-body.light-theme .helpArrow{
-    bottom: -120px;
-}
 body.light-theme .helpCompass{
     color: #45474B;
 }
 body.light-theme .profileIcon{
     color: #45474B;
+}
+body.light-theme .profileIcon:hover{
+    color: #1A4D2E;
 }
 
 /* Dark Theme */
@@ -1516,12 +1516,12 @@ body.dark-theme .page{
 body.dark-theme .info{
     color: #fff;
 }
-body.dark-theme .helpArrow{
-    top: 220px;
-}
 body.dark-theme .helpCompass{
     color: #fff;
 }
-body.light-theme .profileIcon{
+body.dark-theme .profileIcon{
     color: #fff;
+}
+body.dark-theme .profileIcon:hover{
+    color: #259851;
 }

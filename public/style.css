@@ -1459,6 +1459,10 @@ body.light-theme .profileIcon {
   color: #45474B;
 }
 
+body.light-theme .profileIcon:hover {
+  color: #1A4D2E;
+}
+
 /* Dark Theme */
 body.dark-theme .title,
 body.dark-theme p,
@@ -1540,6 +1544,10 @@ body.dark-theme .helpCompass {
   color: #fff;
 }
 
-body.light-theme .profileIcon {
+body.dark-theme .profileIcon {
   color: #fff;
+}
+
+body.dark-theme .profileIcon:hover {
+  color: #259851;
 }/*# sourceMappingURL=style.css.map */
