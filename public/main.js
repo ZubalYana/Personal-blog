@@ -657,7 +657,7 @@ $(document).ready(function() {
         console.log("Applying theme:", theme); 
         if(theme === 'light'){
             $('body').removeClass('dark-theme').addClass('light-theme');
-            $('.themeChanger').text('dark');
+            $('.themeChanger').text('light');
             $('.greetingBottom').attr('src', './materials/greeting screen bottom decoration.png');
             $('.futerTop').attr('src', './materials/greeting screen bottom decoration.png');
             $('#usageArrow1').attr('src', './materials/how to use arrow 1.png');
@@ -668,7 +668,7 @@ $(document).ready(function() {
 
         } else {
             $('body').removeClass('light-theme').addClass('dark-theme');
-            $('.themeChanger').text('light');
+            $('.themeChanger').text('dark');
             $('.greetingBottom').attr('src', './materials/greeting screen bottom decoration dark.png');
             $('.futerTop').attr('src', './materials/greeting screen bottom decoration dark.png');
             $('#usageArrow1').attr('src', './materials/how to use arrow 1 dark.png');
