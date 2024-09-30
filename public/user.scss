@@ -1492,5 +1492,173 @@
             }
         }
     }
-      
+}
+
+
+
+//dark theme settings
+/* Light Theme */
+body.light-theme .title,
+body.light-theme p,
+body.light-theme .cardTitle,
+body.light-theme .postTitle,
+body.light-theme .postText,
+body.light-theme .actions {
+    color: #45474B;
+}
+body.light-theme #greeting_p{
+    color: #fff;
+}
+body.light-theme .card {
+    border: #45474B 2px solid;
+}
+body.light-theme .dot {
+    background-color: #45474B;
+}
+body.light-theme .userIcon,
+body.light-theme .earthIcon,
+body.light-theme .handshakeIcon{
+    color: #1A4D2E;
+}
+body.light-theme .asteriskIcon,
+body.light-theme .locationDotIcon,
+body.light-theme .mapIcon{
+    color: #45474B;
+}
+body.light-theme .darkHeader {
+    color: #45474B;
+}
+body.light-theme .post{
+    border: #45474B 1px solid;
+}
+body.light-theme .readMore{
+    color: #2C2E32;
+}
+body.light-theme .postHashtags{
+    color: #1A4D2E;
+}
+body.light-theme .actions{
+    color: #45474B;
+}
+body.light-theme .actions i:hover {
+    color: #1A4D2E; 
+    transform: scale(1.1); 
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+body.light-theme .pagination .active{
+    background-color: #1A4D2E; 
+}
+body.light-theme .info{
+    color: #45474B;
+}
+body.light-theme .helpCompass{
+    color: #45474B;
+}
+body.light-theme .profileIcon{
+    color: #45474B !important;
+}
+body.light-theme .iconWhite {
+    color: #fff !important;
+}
+body.light-theme .profileIcon:hover{
+    color: #1A4D2E !important;
+}
+body.light-theme .settingsCon{
+    background-color: rgba(0, 0, 0, 0.2549019608);
+}
+body.light-theme .settings{
+    background-color: #fff;
+    color: #45474B;
+}
+body.light-theme .settings h3, #settingsXMark{
+    color: #45474B !important;
+}
+body.light-theme #settingsXMark{
+    color: #45474B !important;
+}
+body.light-theme select{
+    color: #45474B !important;
+}
+
+
+/* Dark Theme */
+body.dark-theme .title,
+body.dark-theme p,
+body.dark-theme .cardTitle,
+body.dark-theme .postTitle,
+body.dark-theme .postText,
+body.dark-theme .actions {
+    color: #fff;
+}
+
+body.dark-theme .card{
+    border: #ffffff 2px solid !important;
+}
+body.dark-theme .dot {
+    background-color: #fff !important;
+}
+body.dark-theme .postText {
+    color: #fff;
+}
+body.dark-theme {
+    background-color: #45474B;
+}
+body.dark-theme .userIcon,
+body.dark-theme .earthIcon,
+body.dark-theme .handshakeIcon{
+    color: #2d6a45 !important;
+}
+body.dark-theme .asteriskIcon,
+body.dark-theme .locationDotIcon,
+body.dark-theme .mapIcon{
+    color: #fff !important;
+}
+body.dark-theme .darkHeader {
+    color: #fff !important;
+}
+body.dark-theme .post{
+    background-color: #6c6c6c;
+    border: #6c6c6c 1px solid !important;
+}
+body.dark-theme .readMore{
+    color: #adadad !important;
+}
+body.dark-theme .postHashtags{
+    color: #51ae75 !important;
+}
+body.dark-theme .actions{
+    color: #fff !important;
+}
+body.dark-theme .actions i:hover {
+    color: #259851 !important; 
+    transform: scale(1.1);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+body.dark-theme .page{
+    background-color: #259851; 
+}
+body.dark-theme .info{
+    color: #fff;
+}
+body.dark-theme .helpCompass{
+    color: #fff;
+}
+body.dark-theme .profileIcon{
+    color: #fff !important;
+}
+body.dark-theme .profileIcon:hover{
+    color: #4F6F52 !important;
+}
+body.dark-theme .settingsCon{
+    background-color: rgba(0, 0, 0, 0.37) !important;
+}
+body.dark-theme .settings{
+    background-color: #45474B !important;
+    color: #fff !important;
+}
+body.dark-theme .settings h3, #settingsXMark{
+    color: #fff !important;
+}
+body.dark-theme select{
+    color: #fff !important;
 }
