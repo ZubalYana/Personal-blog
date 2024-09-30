@@ -918,11 +918,12 @@
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 9999;
 }
 .wrap .settingsCon .settings {
-  width: 400px;
+  width: 450px;
   height: 230px;
-  padding: 40px;
+  padding: 30px;
   border-radius: 16px;
   background-color: #fff;
   display: flex;
@@ -930,12 +931,15 @@
   align-items: center;
   position: relative;
   color: #45474B;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .wrap .settingsCon .settings #settingsXMark {
   position: absolute;
-  top: 40px;
-  right: 40px;
-  font-size: 32px;
+  top: 20px;
+  right: 20px;
+  font-size: 28px;
   color: #45474B;
   transition: 0.5s ease-in-out;
 }
@@ -946,7 +950,7 @@
   color: #45474B;
   font-size: 32px;
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 .wrap .settingsCon .settings .settingsOption {
   display: flex;
@@ -993,7 +997,6 @@
 .wrap .settingsCon .settings .reportOption:hover {
   color: #1A4D2E;
   font-weight: 500;
-  font-size: 17px;
 }
 .wrap .followingsPopupContainer {
   width: 100%;

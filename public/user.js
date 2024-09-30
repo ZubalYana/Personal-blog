@@ -1053,3 +1053,11 @@ $(document).on('click', '.followingPic', function(e) {
     });
     
 });
+
+//settings popup logic
+$('.gear').click(() => {
+    $('.settingsCon').css('display', 'flex');
+    $('#settingsXMark').click(() => {
+        $('.settingsCon').css('display', 'none');
+    });
+});
