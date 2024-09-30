@@ -1078,9 +1078,43 @@ $(document).ready(function() {
         if(theme === 'light'){
             $('body').removeClass('dark-theme').addClass('light-theme');
             $('.themeChanger').text('light');
+            $('.likedPosts').click(()=>{
+                $('.likedPostsContainer').css('display', 'flex')
+                $('.postsContainer').css('display', 'none')
+                $('.likedPosts').css('background-color', '#1A4D2E')
+                $('.likedPosts').css('color', '#fff')
+                $('.publishedPosts').css('background-color', '#fff')
+                $('.publishedPosts').css('color', '#1A4D2E')
+            })
+            $('.publishedPosts').click(()=>{
+                $('.likedPostsContainer').css('display', 'none')
+                $('.postsContainer').css('display', 'flex')
+                $('.likedPosts').css('background-color', '#fff')
+                $('.likedPosts').css('color', '#1A4D2E')
+                $('.publishedPosts').css('background-color', '#1A4D2E')
+                $('.publishedPosts').css('color', '#fff')
+
+            })
         } else {
             $('body').removeClass('light-theme').addClass('dark-theme');
             $('.themeChanger').text('dark');
+            $('.likedPosts').click(()=>{
+                $('.likedPostsContainer').css('display', 'flex')
+                $('.postsContainer').css('display', 'none')
+                $('.likedPosts').css('background-color', '#09682d !important')
+                $('.likedPosts').css('color', '#fff !important')
+                $('.publishedPosts').css('background-color', '#fff !important')
+                $('.publishedPosts').css('color', '#09682d !important')
+            })
+            $('.publishedPosts').click(()=>{
+                $('.likedPostsContainer').css('display', 'none')
+                $('.postsContainer').css('display', 'flex')
+                $('.likedPosts').css('background-color', '#fff !important')
+                $('.likedPosts').css('color', '#09682d !important')
+                $('.publishedPosts').css('background-color', '#09682d !important')
+                $('.publishedPosts').css('color', '#fff !important')
+
+            })
         }
     }
 });
