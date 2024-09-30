@@ -1455,6 +1455,10 @@ body.light-theme .profileIcon {
   color: #45474B !important;
 }
 
+body.light-theme .iconWhite {
+  color: #fff !important;
+}
+
 body.light-theme .profileIcon:hover {
   color: #1A4D2E !important;
 }
