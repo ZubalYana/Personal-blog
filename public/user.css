@@ -1519,22 +1519,6 @@ body.light-theme .dot {
   background-color: #45474B;
 }
 
-body.light-theme .userIcon,
-body.light-theme .earthIcon,
-body.light-theme .handshakeIcon {
-  color: #1A4D2E;
-}
-
-body.light-theme .asteriskIcon,
-body.light-theme .locationDotIcon,
-body.light-theme .mapIcon {
-  color: #45474B;
-}
-
-body.light-theme .darkHeader {
-  color: #45474B;
-}
-
 body.light-theme .post {
   border: #45474B 1px solid;
 }
@@ -1559,26 +1543,6 @@ body.light-theme .actions i:hover {
 
 body.light-theme .pagination .active {
   background-color: #1A4D2E;
-}
-
-body.light-theme .info {
-  color: #45474B;
-}
-
-body.light-theme .helpCompass {
-  color: #45474B;
-}
-
-body.light-theme .profileIcon {
-  color: #45474B !important;
-}
-
-body.light-theme .iconWhite {
-  color: #fff !important;
-}
-
-body.light-theme .profileIcon:hover {
-  color: #1A4D2E !important;
 }
 
 body.light-theme .settingsCon {
@@ -1628,22 +1592,6 @@ body.dark-theme {
   background-color: #45474B;
 }
 
-body.dark-theme .userIcon,
-body.dark-theme .earthIcon,
-body.dark-theme .handshakeIcon {
-  color: #2d6a45 !important;
-}
-
-body.dark-theme .asteriskIcon,
-body.dark-theme .locationDotIcon,
-body.dark-theme .mapIcon {
-  color: #fff !important;
-}
-
-body.dark-theme .darkHeader {
-  color: #fff !important;
-}
-
 body.dark-theme .post {
   background-color: #6c6c6c;
   border: #6c6c6c 1px solid !important;
@@ -1669,22 +1617,6 @@ body.dark-theme .actions i:hover {
 
 body.dark-theme .page {
   background-color: #259851;
-}
-
-body.dark-theme .info {
-  color: #fff;
-}
-
-body.dark-theme .helpCompass {
-  color: #fff;
-}
-
-body.dark-theme .profileIcon {
-  color: #fff !important;
-}
-
-body.dark-theme .profileIcon:hover {
-  color: #4F6F52 !important;
 }
 
 body.dark-theme .settingsCon {
