@@ -1551,7 +1551,15 @@ body.light-theme #settingsXMark{
 body.light-theme select{
     color: #45474B !important;
 }
-
+body.light-theme .FistLastName{
+    color: #45474B !important;
+}
+body.light-theme .userInfo{
+    color: #45474B !important;
+}
+body.light-theme p{
+    color: #45474B !important;
+}
 
 /* Dark Theme */
 body.dark-theme .title,
@@ -1607,5 +1615,14 @@ body.dark-theme .settings h3, #settingsXMark{
     color: #fff !important;
 }
 body.dark-theme select{
+    color: #fff !important;
+}
+body.dark-theme .FistLastName{
+    color: #fff !important;
+}
+body.dark-theme .userInfo{
+    color: #fff !important;
+}
+body.dark-theme p{
     color: #fff !important;
 }
