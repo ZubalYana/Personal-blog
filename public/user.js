@@ -43,23 +43,33 @@ document.addEventListener('DOMContentLoaded', () => {
             })
 
             //user's posts/liked posts changing
-            $('.likedPosts').click(()=>{
-                $('.likedPostsContainer').css('display', 'flex')
-                $('.postsContainer').css('display', 'none')
-                $('.likedPosts').css('background-color', '#1A4D2E')
-                $('.likedPosts').css('color', '#fff')
-                $('.publishedPosts').css('background-color', '#fff')
-                $('.publishedPosts').css('color', '#1A4D2E')
-            })
-            $('.publishedPosts').click(()=>{
-                $('.likedPostsContainer').css('display', 'none')
-                $('.postsContainer').css('display', 'flex')
-                $('.likedPosts').css('background-color', '#fff')
-                $('.likedPosts').css('color', '#1A4D2E')
-                $('.publishedPosts').css('background-color', '#1A4D2E')
-                $('.publishedPosts').css('color', '#fff')
+            function switchTab(activeTab, inactiveTab, showContainer, hideContainer) {
+                activeTab.addClass('active');
+                inactiveTab.removeClass('active');
+                showContainer.show();
+                hideContainer.hide();
+            }
 
-            })
+            // Initial active state
+            $('.publishedPosts').addClass('active');
+
+            // Event listeners for tab switching
+            $('.likedPosts').click(() => {
+                switchTab(
+                    $('.likedPosts'),
+                    $('.publishedPosts'),
+                    $('.likedPostsContainer'),
+                    $('.postsContainer')
+                );
+            });
+            $('.publishedPosts').click(() => {
+                switchTab(
+                    $('.publishedPosts'),
+                    $('.likedPosts'),
+                    $('.postsContainer'),
+                    $('.likedPostsContainer')
+                );
+            });
 
             //display followers and followings
             async function loadFollowers(followers) {
