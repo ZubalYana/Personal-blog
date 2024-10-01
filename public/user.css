@@ -312,18 +312,7 @@
   height: 62px;
   cursor: pointer;
 }
-.wrap .user .posts .postsChanging .publishedPosts {
-  width: 50%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: Josefin Sans;
-  font-size: 32px;
-  font-weight: 600;
-  background-color: #1A4D2E;
-  color: #fff;
-}
+.wrap .user .posts .postsChanging .publishedPosts,
 .wrap .user .posts .postsChanging .likedPosts {
   width: 50%;
   height: 100%;
@@ -333,6 +322,21 @@
   font-family: Josefin Sans;
   font-size: 32px;
   font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.wrap .user .posts .postsChanging .publishedPosts {
+  background-color: #1A4D2E;
+  color: #fff;
+}
+.wrap .user .posts .postsChanging .likedPosts {
+  background-color: #fff;
+  color: #1A4D2E;
+}
+.wrap .user .posts .postsChanging .activeTab {
+  background-color: #1A4D2E;
+  color: #fff;
+}
+.wrap .user .posts .postsChanging .inactiveTab {
   background-color: #fff;
   color: #1A4D2E;
 }
