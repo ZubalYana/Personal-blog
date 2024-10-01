@@ -1590,7 +1590,10 @@ body.light-theme .burger:hover .line {
   background-color: #fff !important;
 }
 
-body.light-theme .menuContainer:hover .burger .line {
+body.dark-theme .menuContainer:hover {
+  background-color: #1A4D2E !important;
+}
+body.dark-theme .menuContainer:hover .burger .line {
   background-color: #fff !important;
 }
 
@@ -1701,6 +1704,9 @@ body.dark-theme .burger:hover .line {
   background-color: #fff !important;
 }
 
+body.dark-theme .menuContainer:hover {
+  background-color: #09682d !important;
+}
 body.dark-theme .menuContainer:hover .burger .line {
   background-color: #fff !important;
 }

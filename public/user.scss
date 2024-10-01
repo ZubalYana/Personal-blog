@@ -1571,8 +1571,11 @@ body.dark-theme .line{
 body.light-theme .burger:hover .line{
     background-color: #fff !important;
 }
-body.light-theme .menuContainer:hover .burger .line{
-    background-color: #fff !important;
+body.dark-theme .menuContainer:hover{
+    background-color: #1A4D2E !important;
+    .burger .line{
+        background-color: #fff !important;
+    }
 }
 body.light-theme .postsChanging{
     border-bottom: #1A4D2E 3px solid !important;
@@ -1659,8 +1662,11 @@ body.dark-theme .line{
 body.dark-theme .burger:hover .line{
     background-color: #fff !important;
 }
-body.dark-theme .menuContainer:hover .burger .line{
-    background-color: #fff !important;
+body.dark-theme .menuContainer:hover{
+    background-color: #09682d !important;
+    .burger .line{
+        background-color: #fff !important;
+    }
 }
 body.dark-theme .postsChanging{
     border-bottom: #09682d 3px solid !important;
