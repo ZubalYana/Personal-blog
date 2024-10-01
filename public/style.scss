@@ -1442,7 +1442,7 @@ body.light-theme .actions i:hover {
     transition: transform 0.3s ease, color 0.3s ease;
 }
 body.light-theme .pagination .active{
-    background-color: #1A4D2E; 
+    background-color: #1A4D2E !important; 
 }
 body.light-theme .info{
     color: #45474B;
@@ -1531,8 +1531,12 @@ body.dark-theme .actions i:hover {
     transition: transform 0.3s ease, color 0.3s ease;
 }
 body.dark-theme .page{
-    background-color: #259851; 
+    background-color: #fff ; 
 }
+body.light-theme .pagination .active{
+    background-color: #259851 !important; 
+}
+
 body.dark-theme .info{
     color: #fff;
 }
