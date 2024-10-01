@@ -324,21 +324,13 @@
   font-weight: 600;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
-.wrap .user .posts .postsChanging .publishedPosts {
-  background-color: #1A4D2E;
-  color: #fff;
-}
-.wrap .user .posts .postsChanging .likedPosts {
+.wrap .user .posts .postsChanging .publishedPosts, .wrap .user .posts .postsChanging .likedPosts {
   background-color: #fff;
   color: #1A4D2E;
 }
-.wrap .user .posts .postsChanging .activeTab {
+.wrap .user .posts .postsChanging .active {
   background-color: #1A4D2E;
   color: #fff;
-}
-.wrap .user .posts .postsChanging .inactiveTab {
-  background-color: #fff;
-  color: #1A4D2E;
 }
 .wrap .user .posts .postsContainer {
   width: 100%;

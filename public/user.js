@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                     <div class="posts">
                         <div class="postsChanging">
-                            <div class="publishedPosts">Published posts</div>
+                            <div class="publishedPosts active">Published posts</div>
                             <div class="likedPosts">Liked posts</div>
                         </div>
                         <div class="postsContainer"></div>
