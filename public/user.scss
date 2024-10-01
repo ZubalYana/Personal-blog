@@ -1601,6 +1601,40 @@ body.light-theme #postTitle{
 body.dark-theme input::placeholder, textarea::placeholder {
     color: #adadad !important;
 }
+body.light-theme .profileEditingCon{
+    background-color: rgba(0, 0, 0, 0.2549019608) !important;
+}
+body.light-theme .prodileEditingPopup{
+    background-color: #fff !important;
+    color: #45474B !important;
+}
+body.light-theme h3{
+    color: #45474B !important;
+}
+body.light-theme input, textarea{
+    background-color: #fff !important;
+    color: #45474B !important;
+}
+body.light-theme #editDescription{
+    background-color: #fff !important;
+    color: #45474B !important;
+}
+body.light-theme #cancelEditing{
+    border: #45474B 1px solid !important;
+}
+body.light-theme #cancelEditing:hover{
+    background-color: #45474B !important;
+    color: #fff !important;
+}
+body.light-theme #edit{
+    background-color: #1A4D2E !important;
+    color: #fff !important;
+}
+body.light-theme #edit:hover{
+    background-color: #45474B !important;
+    border: none !important;
+    color: #fff !important;
+}
 
 
 
@@ -1709,4 +1743,34 @@ body.dark-theme #postTitle{
 }
 body.dark-theme input::placeholder, textarea::placeholder {
     color: #cdcdcd !important;
+}
+body.dark-theme .profileEditingCon{
+    background-color: rgba(0, 0, 0, 0.37) !important;
+}
+body.dark-theme .prodileEditingPopup{
+    background-color: #45474B !important;
+    color: #fff !important;
+}
+body.dark-theme h3{
+    color: #fff !important;
+}
+body.dark-theme input, textarea{
+    background-color: #45474B !important;
+    color: #fff !important;
+}
+body.dark-theme #cancelEditing{
+    border: #fff 1px solid !important;
+}
+body.dark-theme #cancelEditing:hover{
+    background-color: #fff !important;
+    color: #45474B !important;
+}
+body.dark-theme #edit{
+    background-color: #09682d !important;
+    color: #fff !important;
+}
+body.dark-theme #edit:hover{
+    background-color: #fff !important;
+    border: #09682d 1px solid !important;
+    color: #09682d !important;
 }
