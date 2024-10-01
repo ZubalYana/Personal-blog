@@ -1582,16 +1582,13 @@ body.light-theme .following_text {
   color: #45474B !important;
 }
 
-body.dark-theme .publishedPosts {
-  background-color: #1A4D2E !important;
-}
-
-body.dark-theme .line {
-  background-color: #1A4D2E !important;
-}
-
 body.light-theme .postsChanging {
   border-bottom: #1A4D2E 3px solid !important;
+}
+
+body.light-theme .active {
+  background-color: #1A4D2E;
+  color: #fff;
 }
 
 /* Dark Theme */
@@ -1680,16 +1677,8 @@ body.dark-theme .amount, .following_text {
   color: #fff !important;
 }
 
-body.dark-theme .likedPosts {
-  color: #09682d !important;
-}
-
 body.dark-theme .backToMainArrow {
   color: #1b8d47 !important;
-}
-
-body.dark-theme .publishedPosts {
-  background-color: #09682d !important;
 }
 
 body.dark-theme .line {
@@ -1698,4 +1687,9 @@ body.dark-theme .line {
 
 body.dark-theme .postsChanging {
   border-bottom: #09682d 3px solid !important;
+}
+
+body.dark-theme .active {
+  background-color: #09682d !important;
+  color: #fff;
 }/*# sourceMappingURL=user.css.map */
