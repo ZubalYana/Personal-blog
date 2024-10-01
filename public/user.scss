@@ -1565,13 +1565,13 @@ body.light-theme .amount, .following_text{
 body.light-theme .following_text{
     color: #45474B !important;
 }
-body.dark-theme .line{
+body.light-theme .line{
     background-color: #1A4D2E !important;
 }
 body.light-theme .burger:hover .line{
     background-color: #fff !important;
 }
-body.dark-theme .menuContainer:hover{
+body.light-theme .menuContainer:hover{
     background-color: #1A4D2E !important;
     .burger .line{
         background-color: #fff !important;
@@ -1584,6 +1584,27 @@ body.light-theme .active {
     background-color: #1A4D2E;
     color: #fff;
 }
+body.light-theme .postCreation{
+    background-color: #fff !important;
+    color: #45474B !important;
+}
+body.light-theme #postCreation_xmark{
+    color: #1A4D2E !important;
+}
+body.light-theme .postTitle{
+    color: #1A4D2E !important;
+}
+body.light-theme #postTitle{
+    background-color: #fff !important;
+    color: #45474B !important;
+}
+body.dark-theme input::placeholder, textarea::placeholder {
+    color: #adadad !important;
+}
+
+
+
+
 
 /* Dark Theme */
 body.dark-theme .title,
@@ -1674,4 +1695,18 @@ body.dark-theme .postsChanging{
 body.dark-theme .active {
     background-color: #09682d !important;
     color: #fff;
+}
+body.dark-theme .postCreation{
+    background-color: #45474B !important;
+    color: #fff !important;
+}
+body.dark-theme #postCreation_xmark{
+    color: #4F6F52 !important;
+}
+body.dark-theme #postTitle{
+    background-color: #45474B !important;
+    color: #fff !important;
+}
+body.dark-theme input::placeholder, textarea::placeholder {
+    color: #cdcdcd !important;
 }
