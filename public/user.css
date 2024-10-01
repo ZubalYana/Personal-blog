@@ -1611,6 +1611,10 @@ body.light-theme .postCreation {
   color: #45474B !important;
 }
 
+body.light-theme .postCreation input, .postCreation textarea {
+  background-color: rgba(0, 0, 0, 0.0745098039) !important;
+}
+
 body.light-theme #postCreation_xmark {
   color: #1A4D2E !important;
 }
@@ -1624,12 +1628,20 @@ body.light-theme #postTitle {
   color: #45474B !important;
 }
 
-body.dark-theme input::-moz-placeholder, textarea::-moz-placeholder {
+body.light-theme input::-moz-placeholder {
   color: #adadad !important;
 }
 
-body.dark-theme input::placeholder, textarea::placeholder {
+body.light-theme input::placeholder {
   color: #adadad !important;
+}
+
+body.light-theme .postCreation textarea::-moz-placeholder {
+  color: #fff !important;
+}
+
+body.light-theme .postCreation textarea::placeholder {
+  color: #fff !important;
 }
 
 body.light-theme .profileEditingCon {
@@ -1792,6 +1804,10 @@ body.dark-theme .active {
 body.dark-theme .postCreation {
   background-color: #45474B !important;
   color: #fff !important;
+}
+
+body.dark-theme .postCreation input, .postCreation textarea {
+  background-color: rgba(0, 0, 0, 0.247) !important;
 }
 
 body.dark-theme #postCreation_xmark {
