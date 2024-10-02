@@ -201,7 +201,7 @@ $('#postCreation_xmark').click(()=>{
     $('.backToMainArrow').css('display', 'flex')
     $('body').css('overflow', 'auto')
 })
-$('#cancel').click(()=>{
+$('#cancelPosting').click(()=>{
     $('.postCreation').css('display', 'none')
     $('.backToMainArrow').css('display', 'flex')
     $('body').css('overflow', 'auto')
