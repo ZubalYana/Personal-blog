@@ -1751,6 +1751,19 @@ body.dark-theme .deleteFollower {
   background: #1A4D2E;
 }
 
+body.light-theme .following {
+  border: #45474B 1px solid !important;
+  color: #45474B !important;
+}
+
+body.light-theme .followingName {
+  color: #45474B !important;
+}
+
+body.light-theme .followingsPopup_unfollow {
+  color: #45474B !important;
+}
+
 /* Dark Theme */
 body.dark-theme .title,
 body.dark-theme p,
@@ -1999,4 +2012,17 @@ body.dark-theme .deleteFollower {
 }
 .dark-theme ::-webkit-scrollbar-thumb:hover {
   background: #09682d;
+}
+
+body.dark-theme .showFollowingsCon .following {
+  border: #fff 1px solid !important;
+  color: #fff !important;
+}
+
+body.dark-theme .followingName {
+  color: #fff !important;
+}
+
+body.dark-theme .followingsPopup_unfollow {
+  color: #fff !important;
 }/*# sourceMappingURL=user.css.map */
