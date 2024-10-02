@@ -194,14 +194,17 @@ document.addEventListener('DOMContentLoaded', () => {
 $('#plus').click(()=>{
     $('.postCreation').css('display', 'flex')
     $('.backToMainArrow').css('display', 'none')
+    $('body').css('overflow', 'hidden')
 })
 $('#postCreation_xmark').click(()=>{
     $('.postCreation').css('display', 'none')
     $('.backToMainArrow').css('display', 'flex')
+    $('body').css('overflow', 'auto')
 })
 $('#cancel').click(()=>{
     $('.postCreation').css('display', 'none')
     $('.backToMainArrow').css('display', 'flex')
+    $('body').css('overflow', 'auto')
 })
 
 //post img displaying
