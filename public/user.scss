@@ -317,7 +317,7 @@
                     transition: background-color 0.3s ease, color 0.3s ease;
                 }
                 .publishedPosts, .likedPosts {
-                    background-color: #fff;
+                    background-color: #ffffff00;
                     color: #1A4D2E;
                 }
             
@@ -1735,6 +1735,12 @@ body.dark-theme .postsChanging{
 body.dark-theme .active {
     background-color: #09682d !important;
     color: #fff;
+}
+body.dark-theme .likedPosts {
+    color: #fff !important;
+}
+body.dark-theme .publishedPosts  {
+    color: #fff !important;
 }
 body.dark-theme .postCreation{
     background-color: #45474B !important;
