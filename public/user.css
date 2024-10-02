@@ -5,13 +5,13 @@
 }
 
 ::-moz-selection {
-  background-color: #45474B;
-  color: #fff;
+  background-color: var(--selection-bg);
+  color: var(--selection-color);
 }
 
 ::selection {
-  background-color: #45474B;
-  color: #fff;
+  background-color: var(--selection-bg);
+  color: var(--selection-color);
 }
 
 ::-webkit-scrollbar {
@@ -1734,6 +1734,11 @@ body.dark-theme .deleteFollower {
   color: #45474B !important;
 }
 
+.light-theme {
+  --selection-bg: #45474B;
+  --selection-color: #fff;
+}
+
 /* Dark Theme */
 body.dark-theme .title,
 body.dark-theme p,
@@ -1965,4 +1970,9 @@ body.dark-theme .followerName {
 
 body.dark-theme .deleteFollower {
   color: #fff !important;
+}
+
+.dark-theme {
+  --selection-bg: #fff;
+  --selection-color: #45474B;
 }/*# sourceMappingURL=user.css.map */

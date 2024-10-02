@@ -1107,7 +1107,6 @@ $(document).ready(function() {
                 $('.likedPosts').css('color', '#1A4D2E')
                 $('.publishedPosts').css('background-color', '#1A4D2E')
                 $('.publishedPosts').css('color', '#fff')
-
             })
         } else {
             $('body').removeClass('light-theme').addClass('dark-theme');
@@ -1127,7 +1126,6 @@ $(document).ready(function() {
                 $('.likedPosts').css('color', '#09682d !important')
                 $('.publishedPosts').css('background-color', '#09682d !important')
                 $('.publishedPosts').css('color', '#fff !important')
-
             })
         }
     }
