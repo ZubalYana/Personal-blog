@@ -1661,8 +1661,23 @@ body.light-theme #confirm:hover{
     border: none !important;
     color: #fff !important;
 }
-
-
+body.light-theme .followingsPopup{
+    background-color: #fff !important;
+    color: #45474B !important;
+}
+body.light-theme #followingXmark{
+    color: #45474B !important;
+}
+body.light-theme .follower{
+    border: #45474B 1px solid !important;
+    color: #45474B !important;
+}
+body.dark-theme .followerName{
+    color: #45474B !important;
+}
+body.dark-theme .deleteFollower{
+    color: #45474B !important;
+}
 
 
 /* Dark Theme */
@@ -1828,3 +1843,21 @@ body.dark-theme #confirm:hover{
     border: #09682d 1px solid !important;
     color: #09682d !important;
 }
+body.dark-theme .followingsPopup{
+    background-color: #45474B !important;
+    color: #fff !important;
+}
+body.dark-theme #followingXmark{
+    color: #fff !important;
+}
+body.dark-theme .follower{
+    border: #fff 1px solid !important;
+    color: #fff !important;
+}
+body.dark-theme .followerName{
+    color: #fff !important;
+}
+body.dark-theme .deleteFollower{
+    color: #fff !important;
+}
+
