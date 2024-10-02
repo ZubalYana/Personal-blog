@@ -1764,6 +1764,34 @@ body.light-theme .followingsPopup_unfollow {
   color: #45474B !important;
 }
 
+body.light-theme .postEditingPopup {
+  background-color: #fff !important;
+  color: #45474B !important;
+}
+body.light-theme .postEditingPopup h3 {
+  color: #45474B !important;
+}
+
+body.light-theme #cancelPostEditing {
+  border: #45474B 1px solid !important;
+}
+
+body.light-theme #cancelPostEditing:hover {
+  background-color: #45474B !important;
+  color: #fff !important;
+}
+
+body.light-theme #editPost {
+  background-color: #1A4D2E !important;
+  color: #fff !important;
+}
+
+body.light-theme #editPost:hover {
+  background-color: #45474B !important;
+  border: none !important;
+  color: #fff !important;
+}
+
 /* Dark Theme */
 body.dark-theme .title,
 body.dark-theme p,
@@ -2025,4 +2053,32 @@ body.dark-theme .followingName {
 
 body.dark-theme .followingsPopup_unfollow {
   color: #fff !important;
+}
+
+body.dark-theme .postEditingPopup {
+  background-color: #45474B !important;
+  color: #fff !important;
+}
+body.dark-theme .postEditingPopup h3 {
+  color: #fff !important;
+}
+
+body.dark-theme #cancelPostEditing {
+  border: #fff 1px solid !important;
+}
+
+body.dark-theme #cancelPostEditing:hover {
+  background-color: #fff !important;
+  color: #45474B !important;
+}
+
+body.dark-theme #editPost {
+  background-color: #09682d !important;
+  color: #fff !important;
+}
+
+body.dark-theme #editPost:hover {
+  background-color: #fff !important;
+  border: #09682d 1px solid !important;
+  color: #09682d !important;
 }/*# sourceMappingURL=user.css.map */
