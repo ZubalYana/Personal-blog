@@ -1738,6 +1738,18 @@ body.dark-theme .deleteFollower {
   --selection-bg: #45474B;
   --selection-color: #fff;
 }
+.light-theme ::-webkit-scrollbar {
+  width: 12px;
+}
+.light-theme ::-webkit-scrollbar-track {
+  background: #fff;
+}
+.light-theme ::-webkit-scrollbar-thumb {
+  background: #45474B;
+}
+.light-theme ::-webkit-scrollbar-thumb:hover {
+  background: #1A4D2E;
+}
 
 /* Dark Theme */
 body.dark-theme .title,
@@ -1975,4 +1987,16 @@ body.dark-theme .deleteFollower {
 .dark-theme {
   --selection-bg: #fff;
   --selection-color: #45474B;
+}
+.dark-theme ::-webkit-scrollbar {
+  width: 12px;
+}
+.dark-theme ::-webkit-scrollbar-track {
+  background: #45474B;
+}
+.dark-theme ::-webkit-scrollbar-thumb {
+  background: #fff;
+}
+.dark-theme ::-webkit-scrollbar-thumb:hover {
+  background: #09682d;
 }/*# sourceMappingURL=user.css.map */
