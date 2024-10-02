@@ -1687,6 +1687,31 @@ body.light-theme #edit:hover {
   color: #fff !important;
 }
 
+body.light-theme .message {
+  background-color: #fff !important;
+  color: #45474B !important;
+}
+
+body.light-theme #cancel {
+  border: #45474B 1px solid !important;
+}
+
+body.light-theme #cancel:hover {
+  background-color: #45474B !important;
+  color: #fff !important;
+}
+
+body.light-theme #confirm {
+  background-color: #1A4D2E !important;
+  color: #fff !important;
+}
+
+body.light-theme #confirm:hover {
+  background-color: #45474B !important;
+  border: none !important;
+  color: #fff !important;
+}
+
 /* Dark Theme */
 body.dark-theme .title,
 body.dark-theme p,
@@ -1868,6 +1893,31 @@ body.dark-theme #edit {
 }
 
 body.dark-theme #edit:hover {
+  background-color: #fff !important;
+  border: #09682d 1px solid !important;
+  color: #09682d !important;
+}
+
+body.dark-theme .message {
+  background-color: #45474B !important;
+  color: #fff !important;
+}
+
+body.dark-theme #cancel {
+  border: #fff 1px solid !important;
+}
+
+body.dark-theme #cancel:hover {
+  background-color: #fff !important;
+  color: #45474B !important;
+}
+
+body.dark-theme #confirm {
+  background-color: #09682d !important;
+  color: #fff !important;
+}
+
+body.dark-theme #confirm:hover {
   background-color: #fff !important;
   border: #09682d 1px solid !important;
   color: #09682d !important;
