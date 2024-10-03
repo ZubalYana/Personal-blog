@@ -1475,6 +1475,10 @@ body.light-theme #settingsXMark{
 body.light-theme select{
     color: #45474B !important;
 }
+body.light-theme .userProfilePopup{
+    background-color: #fff;
+    color: #45474B;
+}
 
 
 /* Dark Theme */
@@ -1560,5 +1564,9 @@ body.dark-theme .settings h3, #settingsXMark{
     color: #fff !important;
 }
 body.dark-theme select{
+    color: #fff !important;
+}
+body.dark-theme .userProfilePopup{
+    background-color: #45474B !important;
     color: #fff !important;
 }
