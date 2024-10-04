@@ -1638,8 +1638,12 @@ body.light-theme .followingName{
 body.light-theme .followingsPopup_unfollow{
     color: #45474B !important;
 }
-
-
+body.light-theme #logo_text{
+    color: #fff !important;
+}
+body.light-theme #greeting_p{
+    color: #fff !important;
+}
 
 /* Dark Theme */
 body.dark-theme .title,
@@ -1733,11 +1737,6 @@ body.dark-theme .userProfilePopup{
 body.dark-theme .backToMainArrow{
     color: #259851 !important;
 }
-
-
-///
-/// 
-/// 
 body.dark-theme .FistLastName{
     color: #fff !important;
 }
@@ -1886,5 +1885,8 @@ body.dark-theme .followingName{
     color: #fff !important;
 }
 body.dark-theme .followingsPopup_unfollow{
+    color: #fff !important;
+}
+body.dark-theme #logo_text{
     color: #fff !important;
 }

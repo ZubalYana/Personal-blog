@@ -1691,6 +1691,14 @@ body.light-theme .followingsPopup_unfollow {
   color: #45474B !important;
 }
 
+body.light-theme #logo_text {
+  color: #fff !important;
+}
+
+body.light-theme #greeting_p {
+  color: #fff !important;
+}
+
 /* Dark Theme */
 body.dark-theme .title,
 body.dark-theme p,
@@ -1996,5 +2004,9 @@ body.dark-theme .followingName {
 }
 
 body.dark-theme .followingsPopup_unfollow {
+  color: #fff !important;
+}
+
+body.dark-theme #logo_text {
   color: #fff !important;
 }/*# sourceMappingURL=style.css.map */
