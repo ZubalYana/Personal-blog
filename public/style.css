@@ -1528,7 +1528,7 @@ body.light-theme .postsChanging {
   border-bottom: #1A4D2E 3px solid !important;
 }
 
-body.light-theme .active {
+body.light-theme .activeTab {
   background-color: #1A4D2E;
   color: #fff;
 }
