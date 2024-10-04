@@ -1022,14 +1022,16 @@
                 display: flex;
                 flex-direction: column;
                 margin-top: 40px;
-                .postsChanging{
+                .postsChanging {
                     width: 100%;
                     display: flex;
                     justify-content: space-between;
                     border-bottom: #1A4D2E 3px solid;
                     height: 62px;
                     cursor: pointer;
-                    .publishedPosts{
+                    
+                    .publishedPosts,
+                    .likedPosts {
                         width: 50%;
                         height: 100%;
                         display: flex;
@@ -1038,20 +1040,16 @@
                         font-family: Josefin Sans;
                         font-size: 32px;
                         font-weight: 600;
+                        transition: background-color 0.3s ease, color 0.3s ease;
+                    }
+                    .publishedPosts, .likedPosts {
+                        background-color: #ffffff00;
+                        color: #1A4D2E;
+                    }
+                
+                    .active {
                         background-color: #1A4D2E;
                         color: #fff;
-                    }
-                    .likedPosts{
-                        width: 50%;
-                        height: 100%;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        font-family: Josefin Sans;
-                        font-size: 32px;
-                        font-weight: 600;
-                        background-color: #fff;
-                        color: #1A4D2E;
                     }
                 }
                 .userPostsContainer{

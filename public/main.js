@@ -486,18 +486,34 @@ axios.get('/api/getPosts')
                     })
 
                     //user's posts/liked posts toggling
+                    function switchTab(activeTab, inactiveTab, showContainer, hideContainer) {
+                        activeTab.addClass('active');
+                        inactiveTab.removeClass('active');
+                        showContainer.show();
+                        hideContainer.hide();
+                    }
+        
+                    // Initial active state
+                    $('.publishedPosts').addClass('active');
+        
+                    // Event listeners for tab switching
                     $('.likedPosts').click(() => {
-                        $('.likedPostsContainer').css('display', 'flex');
-                        $('.userPostsContainer').css('display', 'none');
-                        $('.likedPosts').css('background-color', '#1A4D2E').css('color', '#fff');
-                        $('.publishedPosts').css('background-color', '#fff').css('color', '#1A4D2E');
+                        switchTab(
+                            $('.likedPosts'),
+                            $('.publishedPosts'),
+                            $('.likedPostsContainer'),
+                            $('.postsContainer')
+                        );
                     });
                     $('.publishedPosts').click(() => {
-                        $('.likedPostsContainer').css('display', 'none');
-                        $('.userPostsContainer').css('display', 'flex');
-                        $('.likedPosts').css('background-color', '#fff').css('color', '#1A4D2E');
-                        $('.publishedPosts').css('background-color', '#1A4D2E').css('color', '#fff');
+                        switchTab(
+                            $('.publishedPosts'),
+                            $('.likedPosts'),
+                            $('.postsContainer'),
+                            $('.likedPostsContainer')
+                        );
                     });
+
         
                     // Load followers and followings
                     async function loadFollowers(followers) {

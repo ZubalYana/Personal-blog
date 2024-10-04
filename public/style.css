@@ -1024,18 +1024,7 @@
   height: 62px;
   cursor: pointer;
 }
-.wrap .userProfilePopup .user .posts .postsChanging .publishedPosts {
-  width: 50%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: Josefin Sans;
-  font-size: 32px;
-  font-weight: 600;
-  background-color: #1A4D2E;
-  color: #fff;
-}
+.wrap .userProfilePopup .user .posts .postsChanging .publishedPosts,
 .wrap .userProfilePopup .user .posts .postsChanging .likedPosts {
   width: 50%;
   height: 100%;
@@ -1045,8 +1034,15 @@
   font-family: Josefin Sans;
   font-size: 32px;
   font-weight: 600;
-  background-color: #fff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.wrap .userProfilePopup .user .posts .postsChanging .publishedPosts, .wrap .userProfilePopup .user .posts .postsChanging .likedPosts {
+  background-color: rgba(255, 255, 255, 0);
   color: #1A4D2E;
+}
+.wrap .userProfilePopup .user .posts .postsChanging .active {
+  background-color: #1A4D2E;
+  color: #fff;
 }
 .wrap .userProfilePopup .user .posts .userPostsContainer {
   width: 100%;
