@@ -502,14 +502,14 @@ axios.get('/api/getPosts')
                             $('.likedPosts'),
                             $('.publishedPosts'),
                             $('.likedPostsContainer'),
-                            $('.postsContainer')
+                            $('.userPostsContainer')
                         );
                     });
                     $('.publishedPosts').click(() => {
                         switchTab(
                             $('.publishedPosts'),
                             $('.likedPosts'),
-                            $('.postsContainer'),
+                            $('.userPostsContainer'),
                             $('.likedPostsContainer')
                         );
                     });
