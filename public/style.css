@@ -1489,6 +1489,212 @@ body.light-theme .userProfilePopup {
   color: #45474B;
 }
 
+body.light-theme .backToMainArrow {
+  color: #1A4D2E !important;
+}
+
+body.light-theme .FistLastName {
+  color: #45474B !important;
+}
+
+body.light-theme .userInfo {
+  color: #45474B !important;
+}
+
+body.light-theme p {
+  color: #45474B !important;
+}
+
+body.light-theme .amount, .following_text {
+  color: #45474B !important;
+}
+
+body.light-theme .following_text {
+  color: #45474B !important;
+}
+
+body.light-theme .line {
+  background-color: #1A4D2E !important;
+}
+
+body.light-theme .burger:hover .line {
+  background-color: #fff !important;
+}
+
+body.light-theme .menuContainer:hover {
+  background-color: #1A4D2E !important;
+}
+body.light-theme .menuContainer:hover .burger .line {
+  background-color: #fff !important;
+}
+
+body.light-theme .postsChanging {
+  border-bottom: #1A4D2E 3px solid !important;
+}
+
+body.light-theme .active {
+  background-color: #1A4D2E;
+  color: #fff;
+}
+
+body.light-theme .postCreation {
+  background-color: #fff !important;
+  color: #45474B !important;
+}
+
+body.light-theme .postCreation input, .postCreation textarea {
+  background-color: rgba(0, 0, 0, 0.0745098039) !important;
+}
+
+body.light-theme #postCreation_xmark {
+  color: #1A4D2E !important;
+}
+
+body.light-theme .postTitle {
+  color: #1A4D2E !important;
+}
+
+body.light-theme #postTitle {
+  background-color: #fff !important;
+  color: #45474B !important;
+}
+
+body.light-theme input::-moz-placeholder {
+  color: #adadad !important;
+}
+
+body.light-theme input::placeholder {
+  color: #adadad !important;
+}
+
+body.light-theme .postCreation textarea::-moz-placeholder {
+  color: #fff !important;
+}
+
+body.light-theme .postCreation textarea::placeholder {
+  color: #fff !important;
+}
+
+body.light-theme .profileEditingCon {
+  background-color: rgba(0, 0, 0, 0.2549019608) !important;
+}
+
+body.light-theme .prodileEditingPopup {
+  background-color: #fff !important;
+  color: #45474B !important;
+}
+
+body.light-theme h3 {
+  color: #45474B !important;
+}
+
+body.light-theme input, textarea {
+  background-color: #fff !important;
+  color: #45474B !important;
+}
+
+body.light-theme #editDescription {
+  background-color: #fff !important;
+  color: #45474B !important;
+}
+
+body.light-theme #cancelEditing {
+  border: #45474B 1px solid !important;
+}
+
+body.light-theme #cancelEditing:hover {
+  background-color: #45474B !important;
+  color: #fff !important;
+}
+
+body.light-theme #edit {
+  background-color: #1A4D2E !important;
+  color: #fff !important;
+}
+
+body.light-theme #edit:hover {
+  background-color: #45474B !important;
+  border: none !important;
+  color: #fff !important;
+}
+
+body.light-theme .message {
+  background-color: #fff !important;
+  color: #45474B !important;
+}
+
+body.light-theme #cancel {
+  border: #45474B 1px solid !important;
+}
+
+body.light-theme #cancel:hover {
+  background-color: #45474B !important;
+  color: #fff !important;
+}
+
+body.light-theme #confirm {
+  background-color: #1A4D2E !important;
+  color: #fff !important;
+}
+
+body.light-theme #confirm:hover {
+  background-color: #45474B !important;
+  border: none !important;
+  color: #fff !important;
+}
+
+body.light-theme .followingsPopup {
+  background-color: #fff !important;
+  color: #45474B !important;
+}
+
+body.light-theme #followingXmark {
+  color: #45474B !important;
+}
+
+body.light-theme .follower {
+  border: #45474B 1px solid !important;
+  color: #45474B !important;
+}
+
+body.dark-theme .followerName {
+  color: #45474B !important;
+}
+
+body.dark-theme .deleteFollower {
+  color: #45474B !important;
+}
+
+.light-theme {
+  --selection-bg: #45474B;
+  --selection-color: #fff;
+}
+.light-theme ::-webkit-scrollbar {
+  width: 12px;
+}
+.light-theme ::-webkit-scrollbar-track {
+  background: #fff;
+}
+.light-theme ::-webkit-scrollbar-thumb {
+  background: #45474B;
+}
+.light-theme ::-webkit-scrollbar-thumb:hover {
+  background: #1A4D2E;
+}
+
+body.light-theme .following {
+  border: #45474B 1px solid !important;
+  color: #45474B !important;
+}
+
+body.light-theme .followingName {
+  color: #45474B !important;
+}
+
+body.light-theme .followingsPopup_unfollow {
+  color: #45474B !important;
+}
+
 /* Dark Theme */
 body.dark-theme .title,
 body.dark-theme p,
@@ -1558,7 +1764,7 @@ body.dark-theme .page {
   background-color: #fff;
 }
 
-body.light-theme .pagination .active {
+body.light-theme .pagination .activeTab {
   background-color: #259851 !important;
 }
 
@@ -1597,5 +1803,202 @@ body.dark-theme select {
 
 body.dark-theme .userProfilePopup {
   background-color: #45474B !important;
+  color: #fff !important;
+}
+
+body.dark-theme .backToMainArrow {
+  color: #259851 !important;
+}
+
+body.dark-theme .FistLastName {
+  color: #fff !important;
+}
+
+body.dark-theme .userInfo {
+  color: #fff !important;
+}
+
+body.dark-theme p {
+  color: #fff !important;
+}
+
+body.dark-theme .amount, .following_text {
+  color: #fff !important;
+}
+
+body.dark-theme .backToMainArrow {
+  color: #1b8d47 !important;
+}
+
+body.dark-theme .line {
+  background-color: #1b8d47 !important;
+}
+
+body.dark-theme .burger:hover .line {
+  background-color: #fff !important;
+}
+
+body.dark-theme .menuContainer:hover {
+  background-color: #09682d !important;
+}
+body.dark-theme .menuContainer:hover .burger .line {
+  background-color: #fff !important;
+}
+
+body.dark-theme .postsChanging {
+  border-bottom: #09682d 3px solid !important;
+}
+
+body.dark-theme .activeTab {
+  background-color: #09682d !important;
+  color: #fff;
+}
+
+body.dark-theme .likedPosts {
+  color: #fff !important;
+}
+
+body.dark-theme .publishedPosts {
+  color: #fff !important;
+}
+
+body.dark-theme .postCreation {
+  background-color: #45474B !important;
+  color: #fff !important;
+}
+
+body.dark-theme .postCreation input, .postCreation textarea {
+  background-color: rgba(0, 0, 0, 0.247) !important;
+}
+
+body.dark-theme #postCreation_xmark {
+  color: #4F6F52 !important;
+}
+
+body.dark-theme #postTitle {
+  background-color: #45474B !important;
+  color: #fff !important;
+}
+
+body.dark-theme input::-moz-placeholder, textarea::-moz-placeholder {
+  color: #cdcdcd !important;
+}
+
+body.dark-theme input::placeholder, textarea::placeholder {
+  color: #cdcdcd !important;
+}
+
+body.dark-theme .profileEditingCon {
+  background-color: rgba(0, 0, 0, 0.37) !important;
+}
+
+body.dark-theme .prodileEditingPopup {
+  background-color: #45474B !important;
+  color: #fff !important;
+}
+
+body.dark-theme h3 {
+  color: #fff !important;
+}
+
+body.dark-theme input, textarea {
+  background-color: #45474B !important;
+  color: #fff !important;
+}
+
+body.dark-theme #cancelEditing {
+  border: #fff 1px solid !important;
+}
+
+body.dark-theme #cancelEditing:hover {
+  background-color: #fff !important;
+  color: #45474B !important;
+}
+
+body.dark-theme #edit {
+  background-color: #09682d !important;
+  color: #fff !important;
+}
+
+body.dark-theme #edit:hover {
+  background-color: #fff !important;
+  border: #09682d 1px solid !important;
+  color: #09682d !important;
+}
+
+body.dark-theme .message {
+  background-color: #45474B !important;
+  color: #fff !important;
+}
+
+body.dark-theme #cancel {
+  border: #fff 1px solid !important;
+}
+
+body.dark-theme #cancel:hover {
+  background-color: #fff !important;
+  color: #45474B !important;
+}
+
+body.dark-theme #confirm {
+  background-color: #09682d !important;
+  color: #fff !important;
+}
+
+body.dark-theme #confirm:hover {
+  background-color: #fff !important;
+  border: #09682d 1px solid !important;
+  color: #09682d !important;
+}
+
+body.dark-theme .followingsPopup {
+  background-color: #45474B !important;
+  color: #fff !important;
+}
+
+body.dark-theme #followingXmark {
+  color: #fff !important;
+}
+
+body.dark-theme .follower {
+  border: #fff 1px solid !important;
+  color: #fff !important;
+}
+
+body.dark-theme .followerName {
+  color: #fff !important;
+}
+
+body.dark-theme .deleteFollower {
+  color: #fff !important;
+}
+
+.dark-theme {
+  --selection-bg: #fff;
+  --selection-color: #45474B;
+}
+.dark-theme ::-webkit-scrollbar {
+  width: 12px;
+}
+.dark-theme ::-webkit-scrollbar-track {
+  background: #45474B;
+}
+.dark-theme ::-webkit-scrollbar-thumb {
+  background: #fff;
+}
+.dark-theme ::-webkit-scrollbar-thumb:hover {
+  background: #09682d;
+}
+
+body.dark-theme .showFollowingsCon .following {
+  border: #fff 1px solid !important;
+  color: #fff !important;
+}
+
+body.dark-theme .followingName {
+  color: #fff !important;
+}
+
+body.dark-theme .followingsPopup_unfollow {
   color: #fff !important;
 }/*# sourceMappingURL=style.css.map */
