@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
             $('.backToMainArrow').click(()=>{
                 window.location.href = '/';
             })
-
+            
             //user's posts/liked posts changing
             function switchTab(activeTab, inactiveTab, showContainer, hideContainer) {
                 activeTab.addClass('active');
