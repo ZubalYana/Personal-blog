@@ -1792,6 +1792,14 @@ body.light-theme #editPost:hover {
   color: #fff !important;
 }
 
+body.light-theme #followersCon {
+  border: none !important;
+}
+
+body.light-theme #followingsCon {
+  border: none !important;
+}
+
 /* Dark Theme */
 body.dark-theme .title,
 body.dark-theme p,
