@@ -539,7 +539,8 @@ axios.get('/api/getPosts')
                         } catch (error) {
                             console.error('Error loading followers:', error);
                         }
-                    }                    async function loadFollowings(followings) {
+                    }                    
+                    async function loadFollowings(followings) {
                         try {
                             const response = await fetch('/api/getUsersByIds', {
                                 method: 'POST',

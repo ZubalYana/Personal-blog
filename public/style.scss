@@ -1896,3 +1896,10 @@ body.dark-theme .followingsPopup_unfollow{
 body.dark-theme #logo_text{
     color: #fff !important;
 }
+body.dark-theme{
+    .postsChanging{
+        .active{
+            background-color: #09682d  !important; 
+        }
+    }
+}
