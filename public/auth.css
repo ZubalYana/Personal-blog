@@ -342,4 +342,24 @@ body {
   right: 0px;
   top: 380px;
   z-index: 2;
+}
+
+body.light-theme .wrap {
+  background-color: #fff;
+}
+body.light-theme .wrap .auth .logIn {
+  color: #45474B;
+}
+body.light-theme .wrap .registration .logIn {
+  color: #45474B;
+}
+
+body.dark-theme .wrap {
+  background-color: #45474B !important;
+}
+body.dark-theme .wrap .auth .logIn {
+  color: #fff !important;
+}
+body.dark-theme .wrap .registration .logIn {
+  color: #fff !important;
 }/*# sourceMappingURL=auth.css.map */

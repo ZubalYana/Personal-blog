@@ -349,3 +349,33 @@ body{
     }
 
 }
+body.light-theme{
+    .wrap{
+        background-color: #fff;
+        .auth{
+            .logIn{
+                color: #45474B;
+            }
+        }
+        .registration{
+            .logIn{
+                color: #45474B;
+            }
+        }
+    }
+}
+body.dark-theme{
+    .wrap{
+        background-color: #45474B !important;
+        .auth{
+            .logIn{
+                color: #fff !important;
+            }
+        }
+        .registration{
+            .logIn{
+                color: #fff !important;
+            }
+        }
+    }
+}

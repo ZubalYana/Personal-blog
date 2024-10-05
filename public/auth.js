@@ -304,3 +304,26 @@ setTimeout(() => {
         $(this).css('left', '-160px');
 }, 2000);
 });
+
+//theme changing
+$(document).ready(function() {
+    let theme = localStorage.getItem('theme') || 'light';
+    applyTheme(theme);
+
+    $('.themeChanger').click(function(){
+        theme = (theme === 'light') ? 'dark' : 'light';
+        localStorage.setItem('theme', theme);
+        applyTheme(theme);
+    });
+
+    function applyTheme(theme){
+        console.log("Applying theme:", theme); 
+        if(theme === 'light'){
+            $('body').removeClass('dark-theme').addClass('light-theme');
+            $('.themeChanger').text('light');
+        } else {
+            $('body').removeClass('light-theme').addClass('dark-theme');
+            $('.themeChanger').text('dark');
+        }
+    }
+});
