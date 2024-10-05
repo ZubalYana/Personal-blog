@@ -37,8 +37,8 @@ document.getElementById('profile-pic').addEventListener('change', function(event
     }
 });
 
+//theme changing
 $(document).ready(function() {
-    // Theme changing logic
     let theme = localStorage.getItem('theme') || 'light';
     applyTheme(theme);
 
@@ -53,11 +53,11 @@ $(document).ready(function() {
         if(theme === 'light'){
             $('body').removeClass('dark-theme').addClass('light-theme');
             $('.themeChanger').text('Light Theme');
-            $('#profile-pic-preview').attr('src', './materials/profile-pic-default.png');
+            $('#profile-pic-preview').attr('src', './materials/profile pic default.png');
         } else {
             $('body').removeClass('light-theme').addClass('dark-theme');
             $('.themeChanger').text('Dark Theme');
-            $('#profile-pic-preview').attr('src', './materials/profile-pic-default-light.png');
+            $('#profile-pic-preview').attr('src', './materials/profile pic default light.png');
         }
     }
 
