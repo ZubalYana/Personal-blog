@@ -349,6 +349,33 @@ body{
     }
 
 }
+//password rules styles adjusting
+.light-theme {
+    --valid-color: #4F6F52; /* Dark green */
+    --invalid-color: #4d1a1a; /* Dark red */
+    --font-weight-valid: 500;
+    --font-weight-invalid: 300;
+}
+
+.dark-theme {
+    --valid-color: #a8d5ba; /* Light green */
+    --invalid-color: #ff6f6f; /* Light red */
+    --font-weight-valid: 500;
+    --font-weight-invalid: 300;
+}
+
+/* Password Rule Styles */
+.password-rule {
+    color: var(--invalid-color);
+    font-weight: var(--font-weight-invalid);
+    transition: color 0.3s, font-weight 0.3s;
+}
+
+.password-rule.valid {
+    color: var(--valid-color);
+    font-weight: var(--font-weight-valid);
+}
+
 body.light-theme{
     .wrap{
         background-color: #fff;
@@ -369,6 +396,9 @@ body.light-theme{
             color: #45474B;
         }
         label{
+            color: #45474B;
+        }
+        .passwordRules{
             color: #45474B;
         }
     }
@@ -393,6 +423,9 @@ body.dark-theme{
             color: #fff !important;
         }
         label{
+            color: #fff !important;
+        }
+        .passwordRules{
             color: #fff !important;
         }
     }

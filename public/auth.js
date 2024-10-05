@@ -37,6 +37,106 @@ document.getElementById('profile-pic').addEventListener('change', function(event
     }
 });
 
+$(document).ready(function() {
+    // Theme changing logic
+    let theme = localStorage.getItem('theme') || 'light';
+    applyTheme(theme);
+
+    $('.themeChanger').click(function(){
+        theme = (theme === 'light') ? 'dark' : 'light';
+        localStorage.setItem('theme', theme);
+        applyTheme(theme);
+    });
+
+    function applyTheme(theme){
+        console.log("Applying theme:", theme); 
+        if(theme === 'light'){
+            $('body').removeClass('dark-theme').addClass('light-theme');
+            $('.themeChanger').text('Light Theme');
+            $('#profile-pic-preview').attr('src', './materials/profile-pic-default.png');
+        } else {
+            $('body').removeClass('light-theme').addClass('dark-theme');
+            $('.themeChanger').text('Dark Theme');
+            $('#profile-pic-preview').attr('src', './materials/profile-pic-default-light.png');
+        }
+    }
+
+    // Password validation conditions
+    let countOfSymbolsCondition = false;
+    let bigLetterCondition = false;
+    let smallLetterCondition = false;
+    let numberCondition = false;
+    let specialCaseCondition = false;
+
+    // Password validation functions
+    function checkAmountOfSymbols(password) {
+        if (password.length >= 8 && password.length <= 12) {
+            $('#countOfSymbols').addClass('valid');
+            countOfSymbolsCondition = true;
+        } else {
+            $('#countOfSymbols').removeClass('valid');
+            countOfSymbolsCondition = false;
+        }
+    }
+
+    function checkSpecialCase(password) {
+        let hasSpecialSymbols = /[!@#$%^&*(){}+=]/.test(password);
+        if (hasSpecialSymbols) {
+            $('#specialSymbols').addClass('valid');
+            specialCaseCondition = true;
+        } else {
+            $('#specialSymbols').removeClass('valid');
+            specialCaseCondition = false;
+        }
+    }
+
+    function checkBigLetter(password) {
+        let hasBigLetter = /[A-Z]/.test(password);
+        if (hasBigLetter) {
+            $('#bigLetter').addClass('valid');
+            bigLetterCondition = true;
+        } else {
+            $('#bigLetter').removeClass('valid');
+            bigLetterCondition = false;
+        }
+    }
+
+    function checkSmallLetter(password) {
+        let hasSmallLetter = /[a-z]/.test(password);
+        if (hasSmallLetter) {
+            $('#smallLetter').addClass('valid');
+            smallLetterCondition = true;
+        } else {
+            $('#smallLetter').removeClass('valid');
+            smallLetterCondition = false;
+        }
+    }
+
+    function checkNumber(password) {
+        let hasNumber = /\d/.test(password);
+        if (hasNumber) {
+            $('#numbers').addClass('valid');
+            numberCondition = true;
+        } else {
+            $('#numbers').removeClass('valid');
+            numberCondition = false;
+        }
+    }
+
+    // Periodically check password validity
+    setInterval(() => {
+        let password = $('#password').val();
+        checkAmountOfSymbols(password);
+        checkSpecialCase(password); 
+        checkBigLetter(password);
+        checkSmallLetter(password);
+        checkNumber(password);
+    }, 500);
+
+    // Other existing JavaScript code...
+});
+
+
 //password hiding and displaying
 $('.showPasswordSignIn').click(function() {
     let passwordInput = $('#password');
@@ -75,74 +175,68 @@ let numberCondition;
 let specialCaseCondition;
 
 // password checking
-let password = $('#password').val();
-function checkamountOfSymbols(password) {
-    if (password.length >= 8 && password.length <= 12) {
-        $('#countOfSymbols').css('color', '#4F6F52');
-        $('#countOfSymbols').css('font-weight', '500');
-        countOfSymbolsCondition = true;
-    } else {
-        $('#countOfSymbols').css('font-weight', '300');
-        $('#countOfSymbols').css('color', '#4d1a1a');
-        countOfSymbolsCondition = false;
-    }
-}
-function checkSpecialCase(password) {
-    let hasSpecialSymbols = /[!@#$%^&*(){}+=]/.test(password);
-    if (hasSpecialSymbols) {
-        $('#specialSymbols').css('color', '#4F6F52');
-        $('#specialSymbols').css('font-weight', '500');
-        specialCaseCondition = true;
-    } else {
-        $('#specialSymbols').css('color', '#4d1a1a');
-        $('#specialSymbols').css('font-weight', '300');
-        specialCaseCondition = false;
-    }
-}
-function bigletter(password) {
-    let hasbigletter = /[A-Z]/.test(password);
-    if (hasbigletter) {
-        $('#bigLetter').css('color', '#4F6F52');
-        $('#bigLetter').css('font-weight', '500');
-        bigLetterCondition = true;
-    } else {
-        $('#bigLetter').css('color', '#4d1a1a');
-        $('#bigLetter').css('font-weight', '300');
-        bigLetterCondition = false;
-    }
-}
-function smallLetter(password) {
-    let hassmallletter = /[a-z]/.test(password);
-    if (hassmallletter) {
-        $('#smallLetter').css('color', '#4F6F52');
-        $('#smallLetter').css('font-weight', '500');
-        smallLetterCondition = true;
-    } else {
-        $('#smallLetter').css('color', '#4d1a1a');
-        $('#smallLetter').css('font-weight', '300');
-        smallLetterCondition = false;
-    }
-}
-function number(password) {
-    let hasnumber = /\d/.test(password);
-    if (hasnumber) {
-        $('#numbers').css('color', '#4F6F52');
-        $('#numbers').css('font-weight', '500');
-        numberCondition = true;
-    } else {
-        $('#numbers').css('color', '#4d1a1a');
-        $('#numbers').css('font-weight', '300');
-        numberCondition = false;
-    }
-}
-setInterval(() => {
-    let password = $('#password').val();
-    checkamountOfSymbols(password);
-    checkSpecialCase(password); 
-    bigletter(password);
-    smallLetter(password);
-    number(password);
-}, 500);
+// let password = $('#password').val();
+// function checkAmountOfSymbols(password) {
+//     if (password.length >= 8 && password.length <= 12) {
+//         $('#countOfSymbols').addClass('valid');
+//         countOfSymbolsCondition = true;
+//     } else {
+//         $('#countOfSymbols').removeClass('valid');
+//         countOfSymbolsCondition = false;
+//     }
+// }
+
+// function checkSpecialCase(password) {
+//     let hasSpecialSymbols = /[!@#$%^&*(){}+=]/.test(password);
+//     if (hasSpecialSymbols) {
+//         $('#specialSymbols').addClass('valid');
+//         specialCaseCondition = true;
+//     } else {
+//         $('#specialSymbols').removeClass('valid');
+//         specialCaseCondition = false;
+//     }
+// }
+
+// function checkBigLetter(password) {
+//     let hasBigLetter = /[A-Z]/.test(password);
+//     if (hasBigLetter) {
+//         $('#bigLetter').addClass('valid');
+//         bigLetterCondition = true;
+//     } else {
+//         $('#bigLetter').removeClass('valid');
+//         bigLetterCondition = false;
+//     }
+// }
+
+// function checkSmallLetter(password) {
+//     let hasSmallLetter = /[a-z]/.test(password);
+//     if (hasSmallLetter) {
+//         $('#smallLetter').addClass('valid');
+//         smallLetterCondition = true;
+//     } else {
+//         $('#smallLetter').removeClass('valid');
+//         smallLetterCondition = false;
+//     }
+// }
+
+// function checkNumber(password) {
+//     let hasNumber = /\d/.test(password);
+//     if (hasNumber) {
+//         $('#numbers').addClass('valid');
+//         numberCondition = true;
+//     } else {
+//         $('#numbers').removeClass('valid');
+//         numberCondition = false;
+//     }
+// }
+// setInterval(() => {
+//     let password = $('#password').val();
+//     checkamountOfSymbols(password);
+//     checkSpecialCase(password); 
+//     bigletter(password);
+//     smallLetter(password);
+//     number(password);
+// }, 500);
 
 //sign in and log in pages changing
 $('.loginButton').click(()=>{
@@ -306,26 +400,26 @@ setTimeout(() => {
 });
 
 //theme changing
-$(document).ready(function() {
-    let theme = localStorage.getItem('theme') || 'light';
-    applyTheme(theme);
+// $(document).ready(function() {
+//     let theme = localStorage.getItem('theme') || 'light';
+//     applyTheme(theme);
 
-    $('.themeChanger').click(function(){
-        theme = (theme === 'light') ? 'dark' : 'light';
-        localStorage.setItem('theme', theme);
-        applyTheme(theme);
-    });
+//     $('.themeChanger').click(function(){
+//         theme = (theme === 'light') ? 'dark' : 'light';
+//         localStorage.setItem('theme', theme);
+//         applyTheme(theme);
+//     });
 
-    function applyTheme(theme){
-        console.log("Applying theme:", theme); 
-        if(theme === 'light'){
-            $('body').removeClass('dark-theme').addClass('light-theme');
-            $('.themeChanger').text('light');
-            $('#profile-pic-preview').attr('src', './materials/profile pic default.png');
-        } else {
-            $('body').removeClass('light-theme').addClass('dark-theme');
-            $('.themeChanger').text('dark');
-            $('#profile-pic-preview').attr('src', './materials/profile pic default light.png');
-        }
-    }
-});
+//     function applyTheme(theme){
+//         console.log("Applying theme:", theme); 
+//         if(theme === 'light'){
+//             $('body').removeClass('dark-theme').addClass('light-theme');
+//             $('.themeChanger').text('light');
+//             $('#profile-pic-preview').attr('src', './materials/profile pic default.png');
+//         } else {
+//             $('body').removeClass('light-theme').addClass('dark-theme');
+//             $('.themeChanger').text('dark');
+//             $('#profile-pic-preview').attr('src', './materials/profile pic default light.png');
+//         }
+//     }
+// });
