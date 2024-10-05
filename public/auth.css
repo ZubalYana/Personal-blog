@@ -353,6 +353,15 @@ body.light-theme .wrap .auth .logIn {
 body.light-theme .wrap .registration .logIn {
   color: #45474B;
 }
+body.light-theme .wrap h2 {
+  color: #45474B;
+}
+body.light-theme .wrap p {
+  color: #45474B;
+}
+body.light-theme .wrap label {
+  color: #45474B;
+}
 
 body.dark-theme .wrap {
   background-color: #45474B !important;
@@ -361,5 +370,14 @@ body.dark-theme .wrap .auth .logIn {
   color: #fff !important;
 }
 body.dark-theme .wrap .registration .logIn {
+  color: #fff !important;
+}
+body.dark-theme .wrap h2 {
+  color: #fff !important;
+}
+body.dark-theme .wrap p {
+  color: #fff !important;
+}
+body.dark-theme .wrap label {
   color: #fff !important;
 }/*# sourceMappingURL=auth.css.map */

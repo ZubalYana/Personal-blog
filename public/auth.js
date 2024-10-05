@@ -321,9 +321,11 @@ $(document).ready(function() {
         if(theme === 'light'){
             $('body').removeClass('dark-theme').addClass('light-theme');
             $('.themeChanger').text('light');
+            $('#profile-pic-preview').attr('src', './materials/profile pic default.png');
         } else {
             $('body').removeClass('light-theme').addClass('dark-theme');
             $('.themeChanger').text('dark');
+            $('#profile-pic-preview').attr('src', './materials/profile pic default light.png');
         }
     }
 });

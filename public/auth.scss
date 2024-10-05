@@ -362,6 +362,15 @@ body.light-theme{
                 color: #45474B;
             }
         }
+        h2{
+            color: #45474B;
+        }
+        p{
+            color: #45474B;
+        }
+        label{
+            color: #45474B;
+        }
     }
 }
 body.dark-theme{
@@ -376,6 +385,15 @@ body.dark-theme{
             .logIn{
                 color: #fff !important;
             }
+        }
+        h2{
+            color: #fff !important;
+        }
+        p{
+            color: #fff !important;
+        }
+        label{
+            color: #fff !important;
         }
     }
 }
