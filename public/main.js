@@ -487,14 +487,14 @@ axios.get('/api/getPosts')
 
                     //user's posts/liked posts toggling
                     function switchTab(activeTab, inactiveTab, showContainer, hideContainer) {
-                        activeTab.addClass('activeTab');
-                        inactiveTab.removeClass('activeTab');
+                        activeTab.addClass('active');
+                        inactiveTab.removeClass('active');
                         showContainer.show();
                         hideContainer.hide();
                     }
         
                     // Initial active state
-                    $('.publishedPosts').addClass('activeTab');
+                    $('.publishedPosts').addClass('active');
         
                     // Event listeners for tab switching
                     $('.likedPosts').click(() => {
