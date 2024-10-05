@@ -1,0 +1,11 @@
+@media screen and (max-width: 1440px) {
+  .wrap {
+    padding: 30px;
+  }
+  .wrap .user .posts .postsContainer .post {
+    width: 420px;
+  }
+  .wrap .user .posts .likedPostsContainer .post {
+    width: 420px;
+  }
+}/*# sourceMappingURL=userResponsive.css.map */

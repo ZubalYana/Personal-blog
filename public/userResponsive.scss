@@ -1,0 +1,21 @@
+@media screen and (max-width: 1440px) {
+    .wrap{
+        padding: 30px;
+        .user{
+            .posts{
+                .postsContainer{
+                    .post{
+                        width: 420px;
+                    }
+                }
+                .likedPostsContainer{
+                    .post{
+                        width: 420px;
+                    }
+                }
+            }
+        }
+    }
+
+
+}
