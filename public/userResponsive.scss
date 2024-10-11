@@ -67,6 +67,9 @@
 @media screen and (max-width: 426px) {
     .wrap{
         padding: 10px;
+        .menuContainer{
+            z-index: 9998;
+        }
         .user{
             padding: 20px;
             padding-top: 50px;
@@ -106,7 +109,7 @@
             .posts{
                 .postsChanging{
                     .publishedPosts, .likedPosts{
-                        font-size: 24px;
+                        font-size: 22px;
                     }
                 }
                 .postsContainer{

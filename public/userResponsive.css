@@ -44,6 +44,9 @@
   .wrap {
     padding: 10px;
   }
+  .wrap .menuContainer {
+    z-index: 9998;
+  }
   .wrap .user {
     padding: 20px;
     padding-top: 50px;
@@ -82,7 +85,7 @@
     margin-left: 3px;
   }
   .wrap .user .posts .postsChanging .publishedPosts, .wrap .user .posts .postsChanging .likedPosts {
-    font-size: 24px;
+    font-size: 22px;
   }
   .wrap .user .posts .postsContainer .post {
     width: 100%;
