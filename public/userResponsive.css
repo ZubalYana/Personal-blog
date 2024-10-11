@@ -8,4 +8,35 @@
   .wrap .user .posts .likedPostsContainer .post {
     width: 420px;
   }
+}
+@media screen and (max-width: 768px) {
+  .wrap {
+    padding: 20px;
+  }
+  .wrap .user .userInfo .description {
+    font-size: 15px;
+  }
+  .wrap .user .userInfo .placesVisited {
+    font-size: 14px;
+  }
+  .wrap .user .userInfo .placesVisited .visitedPlaces {
+    font-size: 14px;
+    margin-left: 3px;
+  }
+  .wrap .user .userInfo .placesToVisit {
+    font-size: 14px;
+  }
+  .wrap .user .userInfo .placesToVisit .toVisitPlaces {
+    font-size: 14px;
+    margin-left: 3px;
+  }
+  .wrap .user .posts .postsChanging .publishedPosts, .wrap .user .posts .postsChanging .likedPosts {
+    font-size: 24px;
+  }
+  .wrap .user .posts .postsContainer .post {
+    width: 100%;
+  }
+  .wrap .user .posts .likedPostsContainer .post {
+    width: 100%;
+  }
 }/*# sourceMappingURL=userResponsive.css.map */

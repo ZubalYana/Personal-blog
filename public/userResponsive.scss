@@ -19,3 +19,48 @@
 
 
 }
+@media screen and (max-width: 768px) {
+    .wrap{
+        padding: 20px;
+        .user{
+            .userInfo{
+                .description{
+                    font-size: 15px;
+                }
+                .placesVisited{
+                    font-size: 14px;
+                    .visitedPlaces{
+                        font-size: 14px;
+                        margin-left: 3px;
+                    }
+                }
+                .placesToVisit{
+                    font-size: 14px;
+                    .toVisitPlaces{
+                        font-size: 14px;
+                        margin-left: 3px;
+                    }
+                }
+            }
+            .posts{
+                .postsChanging{
+                    .publishedPosts, .likedPosts{
+                        font-size: 24px;
+                    }
+                }
+                .postsContainer{
+                    .post{
+                        width: 100%;
+                    }
+                }
+                .likedPostsContainer{
+                    .post{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+
+}
