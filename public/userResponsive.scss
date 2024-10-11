@@ -64,3 +64,64 @@
 
 
 }
+@media screen and (max-width: 426px) {
+    .wrap{
+        padding: 10px;
+        .user{
+            padding: 20px;
+            padding-top: 50px;
+            width: 425px;
+            position: absolute;
+            .userInfo{
+                width: 100%;
+                .userPicture{
+                    width: 100px;
+                    height: 100px;
+                }
+                .FistLastName{
+                    font-size: 24px;
+                }
+                .email{
+                    font-size: 14px;
+                }
+                .description{
+                    width: 80%;
+                    font-size: 12px;
+                }
+                .placesVisited{
+                    font-size: 14px;
+                    .visitedPlaces{
+                        font-size: 14px;
+                        margin-left: 0px;
+                    }
+                }
+                .placesToVisit{
+                    font-size: 14px;
+                    .toVisitPlaces{
+                        font-size: 14px;
+                        margin-left: 3px;
+                    }
+                }
+            }
+            .posts{
+                .postsChanging{
+                    .publishedPosts, .likedPosts{
+                        font-size: 24px;
+                    }
+                }
+                .postsContainer{
+                    .post{
+                        width: 100%;
+                    }
+                }
+                .likedPostsContainer{
+                    .post{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+
+}
