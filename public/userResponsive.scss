@@ -131,6 +131,123 @@
             .prodileEditingPopup{
                 width: 100%;
                 padding: 30px 20px;
+
+                h3{
+                    font-size: 24px;
+                }
+                #editPlacesVisited{
+                    width: 100%;
+                }
+                #editPlacesToVisit{
+                    width: 100%;
+                }
+            }
+        }
+        .settingsCon{
+            width: 100%;
+            padding: 0 20px;
+        }
+        .messageCon{
+            width: 100%;
+            padding: 0 20px;
+            z-index: 9999;
+            .message{
+                width: 100%;
+                padding: 25px;
+            }
+        }
+        .postCreation{
+            width: 100%;
+            z-index: 9999;
+            padding: 0 20px;
+            .postPicture{
+                img{
+                    width: 300px;
+                }
+            }
+            .prodileEditingPopup{
+                width: 100%;
+                padding: 30px 20px;
+                h3{
+                    font-size: 24px;
+                }
+                #editPlacesVisited{
+                    width: 100%;
+                }
+                #editPlacesToVisit{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 376px) {
+    .wrap{
+        padding: 0px;
+        .menuContainer{
+            z-index: 9998;
+        }
+        .user{
+            padding: 10px;
+            padding-top: 30px;
+            width: 425px;
+            position: absolute;
+            .userInfo{
+                width: 100%;
+                .userPicture{
+                    width: 100px;
+                    height: 100px;
+                }
+                .FistLastName{
+                    font-size: 24px;
+                }
+                .email{
+                    font-size: 14px;
+                }
+                .description{
+                    width: 80%;
+                    font-size: 12px;
+                }
+                .placesVisited{
+                    font-size: 14px;
+                    .visitedPlaces{
+                        font-size: 14px;
+                        margin-left: 0px;
+                    }
+                }
+                .placesToVisit{
+                    font-size: 14px;
+                    .toVisitPlaces{
+                        font-size: 14px;
+                        margin-left: 3px;
+                    }
+                }
+            }
+            .posts{
+                .postsChanging{
+                    .publishedPosts, .likedPosts{
+                        font-size: 22px;
+                    }
+                }
+                .postsContainer{
+                    .post{
+                        width: 100%;
+                    }
+                }
+                .likedPostsContainer{
+                    .post{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .profileEditingCon{
+            width: 100%;
+            z-index: 9999;
+            padding: 0 20px;
+            .prodileEditingPopup{
+                width: 100%;
+                padding: 30px 20px;
                 h3{
                     font-size: 24px;
                 }
@@ -166,6 +283,4 @@
             }
         }
     }
-
-
 }

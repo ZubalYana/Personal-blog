@@ -111,6 +111,112 @@
   .wrap .profileEditingCon .prodileEditingPopup #editPlacesToVisit {
     width: 100%;
   }
+  .wrap .settingsCon {
+    width: 100%;
+    padding: 0 20px;
+  }
+  .wrap .messageCon {
+    width: 100%;
+    padding: 0 20px;
+    z-index: 9999;
+  }
+  .wrap .messageCon .message {
+    width: 100%;
+    padding: 25px;
+  }
+  .wrap .postCreation {
+    width: 100%;
+    z-index: 9999;
+    padding: 0 20px;
+  }
+  .wrap .postCreation .postPicture img {
+    width: 300px;
+  }
+  .wrap .postCreation .prodileEditingPopup {
+    width: 100%;
+    padding: 30px 20px;
+  }
+  .wrap .postCreation .prodileEditingPopup h3 {
+    font-size: 24px;
+  }
+  .wrap .postCreation .prodileEditingPopup #editPlacesVisited {
+    width: 100%;
+  }
+  .wrap .postCreation .prodileEditingPopup #editPlacesToVisit {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 376px) {
+  .wrap {
+    padding: 0px;
+  }
+  .wrap .menuContainer {
+    z-index: 9998;
+  }
+  .wrap .user {
+    padding: 10px;
+    padding-top: 30px;
+    width: 425px;
+    position: absolute;
+  }
+  .wrap .user .userInfo {
+    width: 100%;
+  }
+  .wrap .user .userInfo .userPicture {
+    width: 100px;
+    height: 100px;
+  }
+  .wrap .user .userInfo .FistLastName {
+    font-size: 24px;
+  }
+  .wrap .user .userInfo .email {
+    font-size: 14px;
+  }
+  .wrap .user .userInfo .description {
+    width: 80%;
+    font-size: 12px;
+  }
+  .wrap .user .userInfo .placesVisited {
+    font-size: 14px;
+  }
+  .wrap .user .userInfo .placesVisited .visitedPlaces {
+    font-size: 14px;
+    margin-left: 0px;
+  }
+  .wrap .user .userInfo .placesToVisit {
+    font-size: 14px;
+  }
+  .wrap .user .userInfo .placesToVisit .toVisitPlaces {
+    font-size: 14px;
+    margin-left: 3px;
+  }
+  .wrap .user .posts .postsChanging .publishedPosts, .wrap .user .posts .postsChanging .likedPosts {
+    font-size: 22px;
+  }
+  .wrap .user .posts .postsContainer .post {
+    width: 100%;
+  }
+  .wrap .user .posts .likedPostsContainer .post {
+    width: 100%;
+  }
+  .wrap .profileEditingCon {
+    width: 100%;
+    z-index: 9999;
+    padding: 0 20px;
+  }
+  .wrap .profileEditingCon .prodileEditingPopup {
+    width: 100%;
+    padding: 30px 20px;
+  }
+  .wrap .profileEditingCon .prodileEditingPopup h3 {
+    font-size: 24px;
+  }
+  .wrap .profileEditingCon .prodileEditingPopup #editPlacesVisited {
+    width: 100%;
+  }
+  .wrap .profileEditingCon .prodileEditingPopup #editPlacesToVisit {
+    width: 100%;
+  }
   .wrap .postCreation {
     width: 100%;
     z-index: 9999;
