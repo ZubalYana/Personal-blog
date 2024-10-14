@@ -200,14 +200,17 @@
 }
 @media screen and (max-width: 376px) {
   .wrap {
-    padding: 0px;
+    padding: 2px;
+    width: 100%;
+    position: absolute;
   }
   .wrap .menuContainer {
     z-index: 9998;
   }
   .wrap .user {
+    width: 100%;
     padding: 10px;
-    padding-top: 30px;
+    padding-top: 50px;
     width: 425px;
     position: absolute;
   }
@@ -215,35 +218,41 @@
     width: 100%;
   }
   .wrap .user .userInfo .userPicture {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
   }
   .wrap .user .userInfo .FistLastName {
-    font-size: 24px;
+    font-size: 20px;
   }
   .wrap .user .userInfo .email {
-    font-size: 14px;
+    font-size: 12px;
   }
   .wrap .user .userInfo .description {
     width: 80%;
     font-size: 12px;
   }
   .wrap .user .userInfo .placesVisited {
-    font-size: 14px;
+    font-size: 12px;
   }
   .wrap .user .userInfo .placesVisited .visitedPlaces {
-    font-size: 14px;
+    font-size: 12px;
     margin-left: 0px;
   }
   .wrap .user .userInfo .placesToVisit {
-    font-size: 14px;
+    font-size: 12px;
   }
   .wrap .user .userInfo .placesToVisit .toVisitPlaces {
-    font-size: 14px;
+    font-size: 12px;
     margin-left: 3px;
+  }
+  .wrap .user .posts .postsChanging {
+    width: 100%;
   }
   .wrap .user .posts .postsChanging .publishedPosts, .wrap .user .posts .postsChanging .likedPosts {
     font-size: 22px;
+  }
+  .wrap .user .posts .postsContainer {
+    width: 100%;
   }
   .wrap .user .posts .postsContainer .post {
     width: 100%;

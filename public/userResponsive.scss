@@ -238,53 +238,58 @@
 }
 @media screen and (max-width: 376px) {
     .wrap{
-        padding: 0px;
+        padding: 2px;
+        width: 100%;
+        position: absolute;
         .menuContainer{
             z-index: 9998;
         }
         .user{
+            width: 100%;
             padding: 10px;
-            padding-top: 30px;
+            padding-top: 50px;
             width: 425px;
             position: absolute;
             .userInfo{
                 width: 100%;
                 .userPicture{
-                    width: 100px;
-                    height: 100px;
+                    width: 80px;
+                    height: 80px;
                 }
                 .FistLastName{
-                    font-size: 24px;
+                    font-size: 20px;
                 }
                 .email{
-                    font-size: 14px;
+                    font-size: 12px;
                 }
                 .description{
                     width: 80%;
                     font-size: 12px;
                 }
                 .placesVisited{
-                    font-size: 14px;
+                    font-size: 12px;
                     .visitedPlaces{
-                        font-size: 14px;
+                        font-size: 12px;
                         margin-left: 0px;
                     }
                 }
                 .placesToVisit{
-                    font-size: 14px;
+                    font-size: 12px;
                     .toVisitPlaces{
-                        font-size: 14px;
+                        font-size: 12px;
                         margin-left: 3px;
                     }
                 }
             }
             .posts{
                 .postsChanging{
+                    width: 100%;
                     .publishedPosts, .likedPosts{
                         font-size: 22px;
                     }
                 }
                 .postsContainer{
+                    width: 100%;
                     .post{
                         width: 100%;
                     }
