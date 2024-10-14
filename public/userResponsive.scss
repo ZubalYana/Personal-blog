@@ -193,6 +193,47 @@
                 }
             }
         }
+        .postEditingCon{
+            width: 100%;
+            z-index: 9999;
+            padding: 0 20px;
+            .postEditingPopup{
+                width: 100%;
+                padding: 20px;
+                height: 470px;
+                .editing{
+                    flex-direction: column;
+                    .post-picture-container{
+                        width: 100%;
+                        height: 150px;
+                        #currentPostPicture{
+                            width: 100%;
+                            height: 100%;
+                        }
+                        #editPostPicture{
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                    .inputs{
+                        margin-top: 12px;
+                        #editBody{
+                            margin-top: 9px;
+                            height: 70px;
+                        }
+                    }
+
+
+                }
+                .buttons{
+                    margin-top: 0px;
+                }
+                h3{
+                    margin-bottom: 0px;
+                }
+
+            }
+        }
     }
 }
 @media screen and (max-width: 376px) {

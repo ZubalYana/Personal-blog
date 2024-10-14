@@ -159,6 +159,44 @@
     top: 20px;
     right: 20px;
   }
+  .wrap .postEditingCon {
+    width: 100%;
+    z-index: 9999;
+    padding: 0 20px;
+  }
+  .wrap .postEditingCon .postEditingPopup {
+    width: 100%;
+    padding: 20px;
+    height: 470px;
+  }
+  .wrap .postEditingCon .postEditingPopup .editing {
+    flex-direction: column;
+  }
+  .wrap .postEditingCon .postEditingPopup .editing .post-picture-container {
+    width: 100%;
+    height: 150px;
+  }
+  .wrap .postEditingCon .postEditingPopup .editing .post-picture-container #currentPostPicture {
+    width: 100%;
+    height: 100%;
+  }
+  .wrap .postEditingCon .postEditingPopup .editing .post-picture-container #editPostPicture {
+    width: 100%;
+    height: 100%;
+  }
+  .wrap .postEditingCon .postEditingPopup .editing .inputs {
+    margin-top: 12px;
+  }
+  .wrap .postEditingCon .postEditingPopup .editing .inputs #editBody {
+    margin-top: 9px;
+    height: 70px;
+  }
+  .wrap .postEditingCon .postEditingPopup .buttons {
+    margin-top: 0px;
+  }
+  .wrap .postEditingCon .postEditingPopup h3 {
+    margin-bottom: 0px;
+  }
 }
 @media screen and (max-width: 376px) {
   .wrap {
