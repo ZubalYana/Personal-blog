@@ -179,6 +179,20 @@
                 }
             }
         }
+        .followingsPopupContainer{
+            width: 100%;
+            z-index: 9999;
+            padding: 0 20px;
+            .followingsPopup{
+                width: 100%;
+                padding: 20px;
+                padding-top: 25px;
+                #followingXmark{
+                    top: 20px;
+                    right: 20px;
+                }
+            }
+        }
     }
 }
 @media screen and (max-width: 376px) {
