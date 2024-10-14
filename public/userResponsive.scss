@@ -19,6 +19,43 @@
 
 
 }
+@media screen and (max-width: 1024px) {
+    .wrap{
+        padding: 30px;
+        .user{
+            .posts{
+                .postsContainer{
+                    .post{
+                        width: 420px;
+                    }
+                }
+                .likedPostsContainer{
+                    .post{
+                        width: 420px;
+                    }
+                }
+            }
+        }
+        #postForm{
+            .postCreation{
+                .inputsAndPic{
+                    .inputs{
+                        width: 45%;
+                        textarea{
+                            width: 100%;
+                        }
+                    }
+                    .postPicture{
+                        label{
+                            width: 500px;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}
 @media screen and (max-width: 768px) {
     .wrap{
         padding: 20px;

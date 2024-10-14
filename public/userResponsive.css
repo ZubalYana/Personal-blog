@@ -9,6 +9,26 @@
     width: 420px;
   }
 }
+@media screen and (max-width: 1024px) {
+  .wrap {
+    padding: 30px;
+  }
+  .wrap .user .posts .postsContainer .post {
+    width: 420px;
+  }
+  .wrap .user .posts .likedPostsContainer .post {
+    width: 420px;
+  }
+  .wrap #postForm .postCreation .inputsAndPic .inputs {
+    width: 45%;
+  }
+  .wrap #postForm .postCreation .inputsAndPic .inputs textarea {
+    width: 100%;
+  }
+  .wrap #postForm .postCreation .inputsAndPic .postPicture label {
+    width: 500px;
+  }
+}
 @media screen and (max-width: 768px) {
   .wrap {
     padding: 20px;
