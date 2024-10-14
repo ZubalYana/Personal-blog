@@ -111,4 +111,25 @@
   .wrap .profileEditingCon .prodileEditingPopup #editPlacesToVisit {
     width: 100%;
   }
+  .wrap .postCreation {
+    width: 100%;
+    z-index: 9999;
+    padding: 0 20px;
+  }
+  .wrap .postCreation .postPicture img {
+    width: 300px;
+  }
+  .wrap .postCreation .prodileEditingPopup {
+    width: 100%;
+    padding: 30px 20px;
+  }
+  .wrap .postCreation .prodileEditingPopup h3 {
+    font-size: 24px;
+  }
+  .wrap .postCreation .prodileEditingPopup #editPlacesVisited {
+    width: 100%;
+  }
+  .wrap .postCreation .prodileEditingPopup #editPlacesToVisit {
+    width: 100%;
+  }
 }/*# sourceMappingURL=userResponsive.css.map */

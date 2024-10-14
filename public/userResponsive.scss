@@ -142,6 +142,29 @@
                 }
             }
         }
+        .postCreation{
+            width: 100%;
+            z-index: 9999;
+            padding: 0 20px;
+            .postPicture{
+                img{
+                    width: 300px;
+                }
+            }
+            .prodileEditingPopup{
+                width: 100%;
+                padding: 30px 20px;
+                h3{
+                    font-size: 24px;
+                }
+                #editPlacesVisited{
+                    width: 100%;
+                }
+                #editPlacesToVisit{
+                    width: 100%;
+                }
+            }
+        }
     }
 
 

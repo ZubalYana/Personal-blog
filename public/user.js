@@ -352,88 +352,94 @@ axios.get('/auth/user')
     });
 
 //get and display all the user's posts
-$.ajax({
-    url: '/api/authUserPosts',
-    method: 'GET',
-    success: function(posts) {
-        posts.forEach(post => {
-            const formattedDate = moment(post.date).fromNow();
-            console.log(post)
-            const isLiked = post.likes.includes(userId); 
-            const likeClass = isLiked ? 'fa-solid fa-thumbs-up liked' : 'fa-regular fa-thumbs-up';
-            $('.postsContainer').prepend(
-                `
-                <div class="post" data-id="${post._id}">
-                    <div class="top">
-                        <div class="author">
-                            <img class="author_pic" src="${post.author.profilePicture}" alt="">
-                            <p class="authro_name">${post.author.firstname} ${post.author.lastName}</p>
-                        </div>
-                        <p class="time">${formattedDate}</p>
-                    </div>
-                    <img class="postImg" src="${post.pic}" alt="">
-                    <h3 class="postTitle">${post.title}</h3>
-                    <div class="postText">
-                        <span class="postExcerpt">${post.body.substring(0, 80)}</span>
-                        <span class="postFullText" style="display: none;">${post.body.substring(80, 500)}</span>
-                        <a href="#" class="readMore">Read More</a>
-                    </div>
-                    <p class="postHashtags">${post.hashtags}</p>
-                    <div class="actions">
-                        <div class="likesAmount" style="font-size: 22px; font-weight: 700; margin-right: -13px; margin-top: 2px">${post.likes.length}</div>
-                        <i class="likePost ${likeClass}" data-liked="${isLiked}"></i>
-                        <i class="fa-solid fa-share-nodes"></i>
-                        <i class="fa-solid fa-pencil editPost"></i>
-                        <i class="fa-solid fa-trash-can"></i>
-                    </div>
-                </div>
-                `
-            );
-            
-        });
+$(document).ready(function() {
+    fetchUserPosts();
 
-        //posts liking
-        $(document).on('click', '.likePost', function() {
-            const postId = $(this).closest('.post').data('id');
-            const isLiked = $(this).data('liked');
-            const likeApiUrl = isLiked ? '/api/unlikePost' : '/api/likePost';
-            const likePostElement = $(this);
-        
-            axios.post(likeApiUrl, { postId })
-                .then(response => {
-                    const newLikeClass = isLiked ? 'fa-regular fa-thumbs-up' : 'fa-solid fa-thumbs-up liked';
-                    likePostElement.attr('class', `likePost ${newLikeClass}`);
-                    likePostElement.data('liked', !isLiked);
-                    likePostElement.siblings('.likesAmount').text(response.data.likesCount);
-                })
-                .catch(error => {
-                    console.error('Error while liking/unliking the post:', error);
-                });
-        });
+    // Event delegation should be outside AJAX success to prevent multiple bindings
+    $(document).on('click', '.likePost', function() {
+        const postId = $(this).closest('.post').data('id');
+        const isLiked = $(this).data('liked');
+        const likeApiUrl = isLiked ? '/api/unlikePost' : '/api/likePost';
+        const likePostElement = $(this);
+    
+        axios.post(likeApiUrl, { postId })
+            .then(response => {
+                const newLikeClass = isLiked ? 'fa-regular fa-thumbs-up' : 'fa-solid fa-thumbs-up liked';
+                likePostElement.attr('class', `likePost ${newLikeClass}`);
+                likePostElement.data('liked', !isLiked);
+                likePostElement.siblings('.likesAmount').text(response.data.likesCount);
+            })
+            .catch(error => {
+                console.error('Error while liking/unliking the post:', error);
+            });
+    });
 
-        //reading more/less
-        $(document).on('click', '.readMore', function(e) {
-            e.preventDefault();
-            var $this = $(this);
-            var $post = $this.closest('.post'); 
-            var $fullText = $this.siblings('.postFullText');
-            var $excerpt = $this.siblings('.postExcerpt');
-        
-            $fullText.slideToggle(); 
-            $excerpt.show(); 
-            $this.text($this.text() === 'Read More' ? 'Read Less' : 'Read More'); 
-        
-            if ($this.text() === 'Read Less') {
-                $post.css('height', 'auto'); 
-            } else {
-                $post.css('height', '521px'); 
-            }
-        });
-    },
-    error: function(error) {
-        console.error('Error fetching user posts:', error);
-    }
+    $(document).on('click', '.readMore', function(e) {
+        e.preventDefault();
+        var $this = $(this);
+        var $post = $this.closest('.post'); 
+        var $fullText = $this.siblings('.postFullText');
+        var $excerpt = $this.siblings('.postExcerpt');
+    
+        $fullText.slideToggle(); 
+        $excerpt.show(); 
+        $this.text($this.text() === 'Read More' ? 'Read Less' : 'Read More'); 
+    
+        if ($this.text() === 'Read Less') {
+            $post.css('height', 'auto'); 
+        } else {
+            $post.css('height', '521px'); 
+        }
+    });
 });
+
+function fetchUserPosts() {
+    $.ajax({
+        url: '/api/authUserPosts',
+        method: 'GET',
+        success: function(posts) {
+            console.log('Fetched posts:', posts);
+            $('.postsContainer').empty(); // Clear existing posts
+            posts.forEach(post => {
+                const formattedDate = moment(post.date).fromNow();
+                const isLiked = post.likes.includes(userId); 
+                const likeClass = isLiked ? 'fa-solid fa-thumbs-up liked' : 'fa-regular fa-thumbs-up';
+                $('.postsContainer').prepend(
+                    `
+                    <div class="post" data-id="${post._id}">
+                        <div class="top">
+                            <div class="author">
+                                <img class="author_pic" src="${post.author.profilePicture}" alt="">
+                                <p class="author_name">${post.author.firstname} ${post.author.lastName}</p>
+                            </div>
+                            <p class="time">${formattedDate}</p>
+                        </div>
+                        <img class="postImg" src="${post.pic}" alt="">
+                        <h3 class="postTitle">${post.title}</h3>
+                        <div class="postText">
+                            <span class="postExcerpt">${post.body.substring(0, 80)}</span>
+                            <span class="postFullText" style="display: none;">${post.body.substring(80, 500)}</span>
+                            <a href="#" class="readMore">Read More</a>
+                        </div>
+                        <p class="postHashtags">${post.hashtags}</p>
+                        <div class="actions">
+                            <div class="likesAmount" style="font-size: 22px; font-weight: 700; margin-right: -13px; margin-top: 2px">${post.likes.length}</div>
+                            <i class="likePost ${likeClass}" data-liked="${isLiked}"></i>
+                            <i class="fa-solid fa-share-nodes"></i>
+                            <i class="fa-solid fa-pencil editPost"></i>
+                            <i class="fa-solid fa-trash-can"></i>
+                        </div>
+                    </div>
+                    `
+                );
+            });
+        },
+        error: function(error) {
+            console.error('Error fetching user posts:', error);
+        }
+    });
+}
+
 
 //edit post
 let postId;
