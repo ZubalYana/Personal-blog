@@ -97,6 +97,32 @@
                 }
             }
         }
+        #postForm{
+            .postCreation{
+                .inputsAndPic{
+                    height: 340px;
+                    .inputs{
+                        width: 45%;
+                        height: 100%;
+
+                        textarea{
+                            width: 100%;
+                        }
+                        #postText{
+                            height: 200px;
+                            margin-bottom: 10px;
+                        }
+                    }
+                    .postPicture{
+                        label{
+                            width: 360px;
+                            height: 100%;
+                        }
+                    }
+
+                }
+            }
+        }
     }
 
 

@@ -59,6 +59,24 @@
   .wrap .user .posts .likedPostsContainer .post {
     width: 100%;
   }
+  .wrap #postForm .postCreation .inputsAndPic {
+    height: 340px;
+  }
+  .wrap #postForm .postCreation .inputsAndPic .inputs {
+    width: 45%;
+    height: 100%;
+  }
+  .wrap #postForm .postCreation .inputsAndPic .inputs textarea {
+    width: 100%;
+  }
+  .wrap #postForm .postCreation .inputsAndPic .inputs #postText {
+    height: 200px;
+    margin-bottom: 10px;
+  }
+  .wrap #postForm .postCreation .inputsAndPic .postPicture label {
+    width: 360px;
+    height: 100%;
+  }
 }
 @media screen and (max-width: 426px) {
   .wrap {
