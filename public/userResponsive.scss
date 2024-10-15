@@ -363,13 +363,47 @@
                 }
                 .postsContainer{
                     width: 100%;
+                    justify-content: center;
                     .post{
-                        width: 100%;
+                        width: 85%;
+                        height: 510px;
+                        .postTitle{
+                            font-size: 24px;
+                        }
+                        .postText{
+                            font-size: 14px;
+                        }
+                        .postHashtags{
+                            font-size: 18px;
+                        }
+                        .actions{
+                            width: 150px;
+                            .likesAmount{
+                                margin-right: -5px !important;
+                            }
+                        }
                     }
                 }
                 .likedPostsContainer{
+                    width: 100%;
+                    justify-content: center;
                     .post{
-                        width: 100%;
+                        width: 85%;
+                        height: 510px;
+                        .postTitle{
+                            font-size: 24px;
+                        }
+                        .postText{
+                            font-size: 14px;
+                        }
+                        .postHashtags{
+                            font-size: 18px;
+                        }
+                        .actions{
+                            .likesAmount{
+                                margin-right: -5px !important;
+                            }
+                        }
                     }
                 }
             }

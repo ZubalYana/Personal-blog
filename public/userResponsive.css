@@ -299,12 +299,46 @@
   }
   .wrap .user .posts .postsContainer {
     width: 100%;
+    justify-content: center;
   }
   .wrap .user .posts .postsContainer .post {
+    width: 85%;
+    height: 510px;
+  }
+  .wrap .user .posts .postsContainer .post .postTitle {
+    font-size: 24px;
+  }
+  .wrap .user .posts .postsContainer .post .postText {
+    font-size: 14px;
+  }
+  .wrap .user .posts .postsContainer .post .postHashtags {
+    font-size: 18px;
+  }
+  .wrap .user .posts .postsContainer .post .actions {
+    width: 150px;
+  }
+  .wrap .user .posts .postsContainer .post .actions .likesAmount {
+    margin-right: -5px !important;
+  }
+  .wrap .user .posts .likedPostsContainer {
     width: 100%;
+    justify-content: center;
   }
   .wrap .user .posts .likedPostsContainer .post {
-    width: 100%;
+    width: 85%;
+    height: 510px;
+  }
+  .wrap .user .posts .likedPostsContainer .post .postTitle {
+    font-size: 24px;
+  }
+  .wrap .user .posts .likedPostsContainer .post .postText {
+    font-size: 14px;
+  }
+  .wrap .user .posts .likedPostsContainer .post .postHashtags {
+    font-size: 18px;
+  }
+  .wrap .user .posts .likedPostsContainer .post .actions .likesAmount {
+    margin-right: -5px !important;
   }
   .wrap .profileEditingCon {
     width: 100%;

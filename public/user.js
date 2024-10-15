@@ -310,7 +310,7 @@ axios.get('/auth/user')
                                 <a href="#" class="readMore">Read More</a>
                             </div>
                             <p class="postHashtags">${post.hashtags}</p>
-                            <div class="actions" style="width: 90px">
+                            <div class="actions" style="width: 75px">
                                 <div class="likesAmount">${post.likes.length}</div>
                                 <i class="likePost ${likeClass}" data-liked="${isLiked}" data-post-id="${post._id}"></i>
                                 <i class="fa-solid fa-share-nodes"></i>
