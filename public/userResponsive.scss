@@ -308,6 +308,7 @@
             top: 15px;
             right: 15px;
             .burger{
+                height: 32px;
                 .line{
                     height: 5px;
                 }
@@ -341,6 +342,7 @@
                 }
                 .placesVisited{
                     font-size: 12px;
+                    width: 80%;
                     .visitedPlaces{
                         font-size: 12px;
                         margin-left: 0px;
@@ -348,15 +350,26 @@
                 }
                 .placesToVisit{
                     font-size: 12px;
+                    width: 80%;
                     .toVisitPlaces{
                         font-size: 12px;
                         margin-left: 3px;
                     }
                 }
+                .followings{
+                    .following{
+                        .amount{
+                            font-size: 28px;
+                        }
+                        .following_text{
+                            font-size: 18px;
+                        }
+                    }
+                }
+
             }
             .posts{
                 .postsChanging{
-                    width: 100%;
                     .publishedPosts, .likedPosts{
                         font-size: 22px;
                     }

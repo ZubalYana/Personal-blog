@@ -246,6 +246,9 @@
     top: 15px;
     right: 15px;
   }
+  .wrap .menuContainer .burger {
+    height: 32px;
+  }
   .wrap .menuContainer .burger .line {
     height: 5px;
   }
@@ -279,6 +282,7 @@
   }
   .wrap .user .userInfo .placesVisited {
     font-size: 12px;
+    width: 80%;
   }
   .wrap .user .userInfo .placesVisited .visitedPlaces {
     font-size: 12px;
@@ -286,13 +290,17 @@
   }
   .wrap .user .userInfo .placesToVisit {
     font-size: 12px;
+    width: 80%;
   }
   .wrap .user .userInfo .placesToVisit .toVisitPlaces {
     font-size: 12px;
     margin-left: 3px;
   }
-  .wrap .user .posts .postsChanging {
-    width: 100%;
+  .wrap .user .userInfo .followings .following .amount {
+    font-size: 28px;
+  }
+  .wrap .user .userInfo .followings .following .following_text {
+    font-size: 18px;
   }
   .wrap .user .posts .postsChanging .publishedPosts, .wrap .user .posts .postsChanging .likedPosts {
     font-size: 22px;
