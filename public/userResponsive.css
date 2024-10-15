@@ -238,12 +238,16 @@
 }
 @media screen and (max-width: 376px) {
   .wrap {
-    padding: 2px;
+    padding: 0px;
     width: 100%;
-    position: absolute;
   }
   .wrap .menuContainer {
     z-index: 9998;
+    top: 15px;
+    right: 15px;
+  }
+  .wrap .menuContainer .burger .line {
+    height: 5px;
   }
   .wrap .user {
     width: 100%;
@@ -251,6 +255,10 @@
     padding-top: 50px;
     width: 425px;
     position: absolute;
+  }
+  .wrap .user .backToMainArrow {
+    top: 20px;
+    left: 40px;
   }
   .wrap .user .userInfo {
     width: 100%;
