@@ -242,6 +242,7 @@
     width: 100%;
     min-height: 100vh;
     box-sizing: border-box;
+    overflow-x: hidden;
   }
   .wrap .menuContainer {
     z-index: 9998;
@@ -259,9 +260,11 @@
     padding: 10px;
     padding-top: 50px;
     position: relative;
+    max-width: 100%;
   }
   .wrap .user .userInfo {
     width: 100%;
+    max-width: 99%;
   }
   .wrap .user .userInfo .userPicture {
     width: 80px;
@@ -271,6 +274,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
   }
   .wrap .posts .postsContainer {
     width: 100%;
@@ -278,9 +282,13 @@
   }
   .wrap .posts .postsContainer .post {
     width: 85%;
+    max-width: 100%;
     height: auto;
   }
   .wrap .posts .postsContainer .post .postTitle {
     font-size: 24px;
   }
+}
+* {
+  box-sizing: border-box;
 }/*# sourceMappingURL=userResponsive.css.map */

@@ -301,6 +301,8 @@
         width: 100%;
         min-height: 100vh;
         box-sizing: border-box;
+        overflow-x: hidden; // Ensure no horizontal scroll
+
         .menuContainer {
             z-index: 9998;
             top: 15px;
@@ -312,28 +314,34 @@
                 }
             }
         }
+
         .user {
             width: 100%;
             padding: 10px;
             padding-top: 50px;
             position: relative;
+            max-width: 100%; // Ensure the user section never exceeds viewport width
             .userInfo {
                 width: 100%;
+                max-width: 99%; // Prevent overflowing on small screens
                 .userPicture {
                     width: 80px;
                     height: 80px;
                 }
             }
         }
+
         .posts {
             display: flex;
             flex-direction: column;
             align-items: center;
+            width: 100%;
             .postsContainer {
                 width: 100%;
                 justify-content: center;
                 .post {
                     width: 85%;
+                    max-width: 100%; 
                     height: auto;
                     .postTitle {
                         font-size: 24px;
@@ -342,4 +350,8 @@
             }
         }
     }
+}
+
+* {
+    box-sizing: border-box;
 }
