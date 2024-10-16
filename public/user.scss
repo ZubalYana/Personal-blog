@@ -19,108 +19,7 @@
 ::-webkit-scrollbar-thumb:hover {
    background: #1A4D2E;
 }
-.likedPostsContainer{
-    width: 100%;
-    min-height: 521px;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 30px;
-    flex-wrap: wrap;
-    .post{
-        width: 430px;
-        height: 521px;
-        border-radius: 15px;
-        border: #1A4D2E 2px solid;
-        padding: 20px;
-        color: #45474B;
-        margin-bottom: 40px;
-        .top{
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 45px;
-            .author{
-                display: flex;
-                height: 100%;
-                align-items: center;
-                .author_pic{
-                    width: 45px;
-                    height: 45px;
-                    object-fit: cover;
-                    border-radius: 50%;
-                    margin-right: 10px;
 
-                }
-                .authro_name{
-                    font-size: 24px;
-                    font-weight: 600;
-                }
-            }
-            .time{
-                font-size: 16px;
-                font-weight: 300;
-            }
-        }
-        .author_name{
-            font-size: 24px;
-            font-weight: 600;
-        }
-        .postImg{
-            width: 100%;
-            height: 240px;
-            object-fit: cover;
-            border-radius: 10px;
-            margin: 15px 0;
-        }
-        .postTitle{
-            font-size: 28px;
-            font-weight: 700;
-        }
-        .postText{
-            font-size: 16px;
-            font-weight: 400;
-            margin: 7px 0;
-        }
-        .postText .postFullText {
-            display: none;
-        }
-        .readMore{
-            text-decoration: none;
-            color: #2C2E32;
-            font-weight: 600;
-            font-family: Urbanist;
-        }
-        .postHashtags{
-            font-size: 20px;
-            font-weight: 700;
-            color: #1A4D2E;
-        }
-        .actions{
-            width: 180px;
-            display: flex;
-            justify-content: space-between;
-            font-size: 28px;
-            color: #45474B;
-            margin-top: 20px;
-            align-items: center;
-            .likesAmount{
-                font-size: 22px;
-                font-weight: 700;
-                margin-right: -13px;
-                margin-bottom: -3px;
-            }
-        }
-        i{
-            transition: 0.5s ease;
-
-        }
-        i:hover{
-            color: #4F6F52;
-        }
-    }
-
-}
 .wrap{
     width: 100%;
     min-height: 100vh;
@@ -401,12 +300,19 @@
                         color: #1A4D2E;
                     }
                     .actions{
-                        width: 180px;
+                        width: 170px;
                         display: flex;
                         justify-content: space-between;
                         font-size: 28px;
                         color: #45474B;
                         margin-top: 20px;
+                        align-items: center;
+                        .likesAmount{
+                            font-size: 22px;
+                            font-weight: 700;
+                            margin-right: -10px;
+                            margin-bottom: -3px;
+                        }
                     }
                     i{
                         transition: 0.5s ease;
@@ -417,6 +323,108 @@
                     }
                 }
     
+            }
+            .likedPostsContainer{
+                width: 100%;
+                min-height: 521px;
+                display: flex;
+                justify-content: space-between;
+                margin-top: 30px;
+                flex-wrap: wrap;
+                .post{
+                    width: 430px;
+                    height: 521px;
+                    border-radius: 15px;
+                    border: #1A4D2E 2px solid;
+                    padding: 20px;
+                    color: #45474B;
+                    margin-bottom: 40px;
+                    .top{
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        height: 45px;
+                        .author{
+                            display: flex;
+                            height: 100%;
+                            align-items: center;
+                            .author_pic{
+                                width: 45px;
+                                height: 45px;
+                                object-fit: cover;
+                                border-radius: 50%;
+                                margin-right: 10px;
+            
+                            }
+                            .authro_name{
+                                font-size: 24px;
+                                font-weight: 600;
+                            }
+                        }
+                        .time{
+                            font-size: 16px;
+                            font-weight: 300;
+                        }
+                    }
+                    .author_name{
+                        font-size: 24px;
+                        font-weight: 600;
+                    }
+                    .postImg{
+                        width: 100%;
+                        height: 240px;
+                        object-fit: cover;
+                        border-radius: 10px;
+                        margin: 15px 0;
+                    }
+                    .postTitle{
+                        font-size: 28px;
+                        font-weight: 700;
+                    }
+                    .postText{
+                        font-size: 16px;
+                        font-weight: 400;
+                        margin: 7px 0;
+                    }
+                    .postText .postFullText {
+                        display: none;
+                    }
+                    .readMore{
+                        text-decoration: none;
+                        color: #2C2E32;
+                        font-weight: 600;
+                        font-family: Urbanist;
+                    }
+                    .postHashtags{
+                        font-size: 20px;
+                        font-weight: 700;
+                        color: #1A4D2E;
+                    }
+                    .actions{
+                        width: 90px;
+                        display: flex;
+                        justify-content: space-between;
+                        font-size: 28px;
+                        color: #45474B;
+                        margin-top: 20px;
+                        align-items: center;
+                        .likesAmount{
+                            font-size: 22px;
+                            font-weight: 700;
+                            margin-right: -13px;
+                            margin-bottom: -3px;
+                        }
+                    }
+                    i{
+                        transition: 0.5s ease;
+            
+                    }
+                    i:hover{
+                        color: #4F6F52;
+                    }
+                }
+            
             }
         }
     }
