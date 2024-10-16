@@ -273,7 +273,7 @@ $('#postForm').submit((event) => {
     });
 });
 
-// user.js
+//displaying posts, liking , editing, deleting
 $(document).ready(function() {
     let userId;
 
@@ -347,7 +347,7 @@ $(document).ready(function() {
                         <a href="#" class="readMore">Read More</a>
                     </div>
                     <p class="postHashtags">${post.hashtags}</p>
-                    <div class="actions" style="width: 75px">
+                    <div class="actions">
                         <div class="likesAmount">${post.likes.length}</div>
                         <i class="likePost ${likeClass}" data-liked="${isLiked}" data-post-id="${post._id}"></i>
                         <i class="fa-solid fa-share-nodes"></i>
