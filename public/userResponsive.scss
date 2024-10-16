@@ -16,8 +16,6 @@
             }
         }
     }
-
-
 }
 @media screen and (max-width: 1024px) {
     .wrap{
@@ -124,8 +122,6 @@
             }
         }
     }
-
-
 }
 @media screen and (max-width: 426px) {
     .wrap{
@@ -300,171 +296,48 @@
     }
 }
 @media screen and (max-width: 376px) {
-    .wrap{
+    .wrap {
         padding: 0px;
         width: 100%;
-        .menuContainer{
+        min-height: 100vh;
+        box-sizing: border-box;
+        .menuContainer {
             z-index: 9998;
             top: 15px;
             right: 15px;
-            .burger{
+            .burger {
                 height: 32px;
-                .line{
+                .line {
                     height: 5px;
                 }
             }
         }
-        .user{
+        .user {
             width: 100%;
             padding: 10px;
             padding-top: 50px;
-            width: 425px;
-            position: absolute;
-            .backToMainArrow{
-                top: 20px;
-                left: 40px;
-            }
-            .userInfo{
+            position: relative;
+            .userInfo {
                 width: 100%;
-                .userPicture{
+                .userPicture {
                     width: 80px;
                     height: 80px;
                 }
-                .FistLastName{
-                    font-size: 20px;
-                }
-                .email{
-                    font-size: 12px;
-                }
-                .description{
-                    width: 80%;
-                    font-size: 12px;
-                }
-                .placesVisited{
-                    font-size: 12px;
-                    width: 80%;
-                    .visitedPlaces{
-                        font-size: 12px;
-                        margin-left: 0px;
-                    }
-                }
-                .placesToVisit{
-                    font-size: 12px;
-                    width: 80%;
-                    .toVisitPlaces{
-                        font-size: 12px;
-                        margin-left: 3px;
-                    }
-                }
-                .followings{
-                    .following{
-                        .amount{
-                            font-size: 28px;
-                        }
-                        .following_text{
-                            font-size: 18px;
-                        }
-                    }
-                }
-
             }
-            .posts{
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                .postsChanging{
+        }
+        .posts {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .postsContainer {
+                width: 100%;
+                justify-content: center;
+                .post {
                     width: 85%;
-                    display: flex;
-                    justify-content: center;
-                    .publishedPosts, .likedPosts{
-                        font-size: 22px;
+                    height: auto;
+                    .postTitle {
+                        font-size: 24px;
                     }
-                }
-                .postsContainer{
-                    width: 100%;
-                    justify-content: center;
-                    .post{
-                        width: 85%;
-                        height: 510px;
-                        .postTitle{
-                            font-size: 24px;
-                        }
-                        .postText{
-                            font-size: 14px;
-                        }
-                        .postHashtags{
-                            font-size: 18px;
-                        }
-                        .actions{
-                            width: 150px;
-                            .likesAmount{
-                                margin-right: -5px !important;
-                            }
-                        }
-                    }
-                }
-                .likedPostsContainer{
-                    width: 100%;
-                    justify-content: center;
-                    .post{
-                        width: 85%;
-                        height: 510px;
-                        .postTitle{
-                            font-size: 24px;
-                        }
-                        .postText{
-                            font-size: 14px;
-                        }
-                        .postHashtags{
-                            font-size: 18px;
-                        }
-                        .actions{
-                            .likesAmount{
-                                margin-right: -5px !important;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        .profileEditingCon{
-            width: 100%;
-            z-index: 9999;
-            padding: 0 20px;
-            .prodileEditingPopup{
-                width: 100%;
-                padding: 30px 20px;
-                h3{
-                    font-size: 24px;
-                }
-                #editPlacesVisited{
-                    width: 100%;
-                }
-                #editPlacesToVisit{
-                    width: 100%;
-                }
-            }
-        }
-        .postCreation{
-            width: 100%;
-            z-index: 9999;
-            padding: 0 20px;
-            .postPicture{
-                img{
-                    width: 300px;
-                }
-            }
-            .prodileEditingPopup{
-                width: 100%;
-                padding: 30px 20px;
-                h3{
-                    font-size: 24px;
-                }
-                #editPlacesVisited{
-                    width: 100%;
-                }
-                #editPlacesToVisit{
-                    width: 100%;
                 }
             }
         }

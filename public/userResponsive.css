@@ -240,6 +240,8 @@
   .wrap {
     padding: 0px;
     width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
   }
   .wrap .menuContainer {
     z-index: 9998;
@@ -256,12 +258,7 @@
     width: 100%;
     padding: 10px;
     padding-top: 50px;
-    width: 425px;
-    position: absolute;
-  }
-  .wrap .user .backToMainArrow {
-    top: 20px;
-    left: 40px;
+    position: relative;
   }
   .wrap .user .userInfo {
     width: 100%;
@@ -270,131 +267,20 @@
     width: 80px;
     height: 80px;
   }
-  .wrap .user .userInfo .FistLastName {
-    font-size: 20px;
-  }
-  .wrap .user .userInfo .email {
-    font-size: 12px;
-  }
-  .wrap .user .userInfo .description {
-    width: 80%;
-    font-size: 12px;
-  }
-  .wrap .user .userInfo .placesVisited {
-    font-size: 12px;
-    width: 80%;
-  }
-  .wrap .user .userInfo .placesVisited .visitedPlaces {
-    font-size: 12px;
-    margin-left: 0px;
-  }
-  .wrap .user .userInfo .placesToVisit {
-    font-size: 12px;
-    width: 80%;
-  }
-  .wrap .user .userInfo .placesToVisit .toVisitPlaces {
-    font-size: 12px;
-    margin-left: 3px;
-  }
-  .wrap .user .userInfo .followings .following .amount {
-    font-size: 28px;
-  }
-  .wrap .user .userInfo .followings .following .following_text {
-    font-size: 18px;
-  }
-  .wrap .user .posts {
+  .wrap .posts {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  .wrap .user .posts .postsChanging {
-    width: 85%;
-    display: flex;
-    justify-content: center;
-  }
-  .wrap .user .posts .postsChanging .publishedPosts, .wrap .user .posts .postsChanging .likedPosts {
-    font-size: 22px;
-  }
-  .wrap .user .posts .postsContainer {
+  .wrap .posts .postsContainer {
     width: 100%;
     justify-content: center;
   }
-  .wrap .user .posts .postsContainer .post {
+  .wrap .posts .postsContainer .post {
     width: 85%;
-    height: 510px;
+    height: auto;
   }
-  .wrap .user .posts .postsContainer .post .postTitle {
+  .wrap .posts .postsContainer .post .postTitle {
     font-size: 24px;
-  }
-  .wrap .user .posts .postsContainer .post .postText {
-    font-size: 14px;
-  }
-  .wrap .user .posts .postsContainer .post .postHashtags {
-    font-size: 18px;
-  }
-  .wrap .user .posts .postsContainer .post .actions {
-    width: 150px;
-  }
-  .wrap .user .posts .postsContainer .post .actions .likesAmount {
-    margin-right: -5px !important;
-  }
-  .wrap .user .posts .likedPostsContainer {
-    width: 100%;
-    justify-content: center;
-  }
-  .wrap .user .posts .likedPostsContainer .post {
-    width: 85%;
-    height: 510px;
-  }
-  .wrap .user .posts .likedPostsContainer .post .postTitle {
-    font-size: 24px;
-  }
-  .wrap .user .posts .likedPostsContainer .post .postText {
-    font-size: 14px;
-  }
-  .wrap .user .posts .likedPostsContainer .post .postHashtags {
-    font-size: 18px;
-  }
-  .wrap .user .posts .likedPostsContainer .post .actions .likesAmount {
-    margin-right: -5px !important;
-  }
-  .wrap .profileEditingCon {
-    width: 100%;
-    z-index: 9999;
-    padding: 0 20px;
-  }
-  .wrap .profileEditingCon .prodileEditingPopup {
-    width: 100%;
-    padding: 30px 20px;
-  }
-  .wrap .profileEditingCon .prodileEditingPopup h3 {
-    font-size: 24px;
-  }
-  .wrap .profileEditingCon .prodileEditingPopup #editPlacesVisited {
-    width: 100%;
-  }
-  .wrap .profileEditingCon .prodileEditingPopup #editPlacesToVisit {
-    width: 100%;
-  }
-  .wrap .postCreation {
-    width: 100%;
-    z-index: 9999;
-    padding: 0 20px;
-  }
-  .wrap .postCreation .postPicture img {
-    width: 300px;
-  }
-  .wrap .postCreation .prodileEditingPopup {
-    width: 100%;
-    padding: 30px 20px;
-  }
-  .wrap .postCreation .prodileEditingPopup h3 {
-    font-size: 24px;
-  }
-  .wrap .postCreation .prodileEditingPopup #editPlacesVisited {
-    width: 100%;
-  }
-  .wrap .postCreation .prodileEditingPopup #editPlacesToVisit {
-    width: 100%;
   }
 }/*# sourceMappingURL=userResponsive.css.map */
