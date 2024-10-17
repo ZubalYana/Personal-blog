@@ -392,6 +392,150 @@
   .wrap .prodileEditingPopup .buttons div {
     width: 130px !important;
   }
+  .wrap #postForm .postCreation {
+    width: 100%;
+    z-index: 9999;
+    padding: 20px;
+    flex-direction: column;
+  }
+  .wrap #postForm .postCreation #postCreation_xmark {
+    top: 20px;
+    right: 20px;
+  }
+  .wrap #postForm .postCreation #postTitle {
+    font-size: 24px;
+    margin-bottom: -18px;
+  }
+  .wrap #postForm .postCreation #postTitle::-moz-placeholder {
+    font-size: 32px;
+  }
+  .wrap #postForm .postCreation #postTitle::placeholder {
+    font-size: 32px;
+  }
+  .wrap #postForm .postCreation .inputsAndPic {
+    flex-direction: column;
+  }
+  .wrap #postForm .postCreation .inputsAndPic .inputs {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .wrap #postForm .postCreation .inputsAndPic .inputs #postText {
+    height: 90px;
+    font-size: 14px;
+    padding: 10px;
+  }
+  .wrap #postForm .postCreation .inputsAndPic .inputs #postText::-moz-placeholder {
+    font-size: 14px;
+  }
+  .wrap #postForm .postCreation .inputsAndPic .inputs #postText::placeholder {
+    font-size: 14px;
+  }
+  .wrap #postForm .postCreation .inputsAndPic .inputs #postHashtags {
+    height: 70px;
+    font-size: 16px;
+    padding: 10px;
+  }
+  .wrap #postForm .postCreation .inputsAndPic .inputs #postHashtags::-moz-placeholder {
+    font-size: 16px;
+  }
+  .wrap #postForm .postCreation .inputsAndPic .inputs #postHashtags::placeholder {
+    font-size: 16px;
+  }
+  .wrap #postForm .postCreation .postPicture {
+    width: 100%;
+    margin-top: 10px;
+    height: 250px;
+  }
+  .wrap #postForm .postCreation .postPicture label {
+    width: 100% !important;
+  }
+  .wrap #postForm .postCreation .postPicture label #post-pic-preview {
+    width: 100%;
+  }
+  .wrap #postForm .postCreation .buttons {
+    width: 100%;
+    padding: 0;
+    margin-top: 60px;
+  }
+  .wrap #postForm .postCreation .buttons button {
+    width: 150px !important;
+    height: 60px;
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 321px) {
+  .wrap #postForm .postCreation {
+    width: 100%;
+    z-index: 9999;
+    padding: 20px;
+    flex-direction: column;
+  }
+  .wrap #postForm .postCreation #postCreation_xmark {
+    top: 20px;
+    right: 20px;
+  }
+  .wrap #postForm .postCreation #postTitle {
+    font-size: 24px;
+    margin-bottom: -18px;
+  }
+  .wrap #postForm .postCreation #postTitle::-moz-placeholder {
+    font-size: 32px;
+  }
+  .wrap #postForm .postCreation #postTitle::placeholder {
+    font-size: 32px;
+  }
+  .wrap #postForm .postCreation .inputsAndPic {
+    flex-direction: column;
+  }
+  .wrap #postForm .postCreation .inputsAndPic .inputs {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .wrap #postForm .postCreation .inputsAndPic .inputs #postText {
+    height: 90px;
+    font-size: 14px;
+    padding: 10px;
+  }
+  .wrap #postForm .postCreation .inputsAndPic .inputs #postText::-moz-placeholder {
+    font-size: 14px;
+  }
+  .wrap #postForm .postCreation .inputsAndPic .inputs #postText::placeholder {
+    font-size: 14px;
+  }
+  .wrap #postForm .postCreation .inputsAndPic .inputs #postHashtags {
+    height: 70px;
+    font-size: 16px;
+    padding: 10px;
+  }
+  .wrap #postForm .postCreation .inputsAndPic .inputs #postHashtags::-moz-placeholder {
+    font-size: 16px;
+  }
+  .wrap #postForm .postCreation .inputsAndPic .inputs #postHashtags::placeholder {
+    font-size: 16px;
+  }
+  .wrap #postForm .postCreation .postPicture {
+    width: 100%;
+    margin-top: 10px;
+    height: 250px;
+  }
+  .wrap #postForm .postCreation .postPicture label {
+    width: 100% !important;
+  }
+  .wrap #postForm .postCreation .postPicture label #post-pic-preview {
+    width: 100%;
+  }
+  .wrap #postForm .postCreation .buttons {
+    width: 100%;
+    padding: 0;
+    margin-top: 60px;
+  }
+  .wrap #postForm .postCreation .buttons button {
+    width: 120px !important;
+    height: 60px;
+    font-size: 24px;
+  }
 }
 * {
   box-sizing: border-box;
