@@ -463,6 +463,32 @@
     height: 60px;
     font-size: 24px;
   }
+  .wrap .followingsPopupContainer {
+    width: 100%;
+    z-index: 9999;
+    padding: 0 20px;
+  }
+  .wrap .followingsPopupContainer .followingsPopup {
+    width: 100%;
+    padding: 20px;
+    padding-top: 25px;
+  }
+  .wrap .followingsPopupContainer .followingsPopup #followingXmark {
+    top: 20px;
+    right: 20px;
+  }
+  .wrap .followingsPopupContainer .followingsPopup .followers h3 {
+    font-size: 24px;
+  }
+  .wrap .followingsPopupContainer .followingsPopup .followers .follower .followerName {
+    font-size: 20px !important;
+  }
+  .wrap .followingsPopupContainer .followingsPopup .followingsPopupStage h3 {
+    font-size: 24px;
+  }
+  .wrap .followingsPopupContainer .followingsPopup .followingsPopupStage .showFollowingsCon .following .followingName {
+    font-size: 20px !important;
+  }
 }
 @media screen and (max-width: 321px) {
   .wrap #postForm .postCreation {

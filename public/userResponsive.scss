@@ -278,7 +278,6 @@
                 }
             }
         }
-
         .followingsPopupContainer{
             width: 100%;
             z-index: 9999;
@@ -513,6 +512,44 @@
                         font-size: 24px;
                     }
                 }
+            }
+        }
+        .followingsPopupContainer{
+            width: 100%;
+            z-index: 9999;
+            padding: 0 20px;
+            .followingsPopup{
+                width: 100%;
+                padding: 20px;
+                padding-top: 25px;
+                #followingXmark{
+                    top: 20px;
+                    right: 20px;
+                }
+                .followers{
+                    h3{
+                        font-size: 24px;
+                    }
+                    .follower{
+                        .followerName{
+                            font-size: 20px !important;
+                        }
+                    }
+                }
+                .followingsPopupStage{
+                    h3{
+                        font-size: 24px;
+                    }
+                    .showFollowingsCon{
+
+                        .following{
+                            .followingName{
+                                font-size: 20px !important;
+                            }
+                        }
+                    }
+                }
+
             }
         }
     }
