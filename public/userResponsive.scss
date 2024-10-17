@@ -215,29 +215,68 @@
                 padding: 25px;
             }
         }
-        .postCreation{
-            width: 100%;
-            z-index: 9999;
-            padding: 0 20px;
-            .postPicture{
-                img{
-                    width: 300px;
-                }
-            }
-            .prodileEditingPopup{
+        #postForm{
+            .postCreation{
                 width: 100%;
-                padding: 30px 20px;
-                h3{
+                z-index: 9999;
+                padding: 20px;
+                flex-direction: column;
+                #postCreation_xmark{
+                    top: 20px;
+                    right: 20px;
+                }
+                #postTitle{
                     font-size: 24px;
+                    margin-bottom: -18px;
+                    &::placeholder{
+                        font-size: 32px;
+                    }
                 }
-                #editPlacesVisited{
-                    width: 100%;
+                .inputsAndPic{
+                    flex-direction: column;
+                    .inputs{
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        #postText{
+                            height: 90px;
+                            font-size: 14px;
+                            padding: 10px;
+                            &::placeholder{
+                                font-size: 14px;
+                            }
+                        }
+                        #postHashtags{
+                            height: 70px;
+                            font-size: 16px;
+                            padding: 10px;
+                            &::placeholder{
+                                font-size: 16px;
+                            }
+                        }
+                    }
                 }
-                #editPlacesToVisit{
+                .postPicture{
                     width: 100%;
+                    margin-top: 10px;
+                    height: 200px;
+                    label{
+                        width: 100% !important;
+                        #post-pic-preview{
+                            width: 100%;
+                        }
+                    }
+                }
+                .buttons{
+                    width: 100%;
+                    padding: 0 20px;
+                    div{
+                        width: 130px !important;
+                    }
                 }
             }
         }
+
         .followingsPopupContainer{
             width: 100%;
             z-index: 9999;
