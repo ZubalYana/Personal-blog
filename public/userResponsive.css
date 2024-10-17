@@ -215,7 +215,7 @@
   .wrap #postForm .postCreation .postPicture {
     width: 100%;
     margin-top: 10px;
-    height: 200px;
+    height: 250px;
   }
   .wrap #postForm .postCreation .postPicture label {
     width: 100% !important;
@@ -226,9 +226,11 @@
   .wrap #postForm .postCreation .buttons {
     width: 100%;
     padding: 0 20px;
+    margin-top: 60px;
   }
-  .wrap #postForm .postCreation .buttons div {
-    width: 130px !important;
+  .wrap #postForm .postCreation .buttons button {
+    width: 150px !important;
+    height: 70px;
   }
   .wrap .followingsPopupContainer {
     width: 100%;

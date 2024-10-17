@@ -259,7 +259,7 @@
                 .postPicture{
                     width: 100%;
                     margin-top: 10px;
-                    height: 200px;
+                    height: 250px;
                     label{
                         width: 100% !important;
                         #post-pic-preview{
@@ -270,8 +270,10 @@
                 .buttons{
                     width: 100%;
                     padding: 0 20px;
-                    div{
-                        width: 130px !important;
+                    margin-top: 60px;
+                    button{
+                        width: 150px !important;
+                        height: 70px;
                     }
                 }
             }
