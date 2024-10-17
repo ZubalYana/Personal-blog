@@ -316,7 +316,6 @@
                 }
             }
         }
-
         .user {
             width: 100%;
             padding: 10px;
@@ -359,7 +358,6 @@
 
             }
         }
-
         .posts {
             display: flex;
             flex-direction: column;
@@ -375,6 +373,28 @@
                     .postTitle {
                         font-size: 24px;
                     }
+                }
+            }
+        }
+        .postEditingPopup{
+            .buttons{
+                width: 100%;
+                padding: 0 20px;
+                div{
+                    width: 130px !important;
+                }
+            }
+        }
+        .message{
+            height: 180px !important;
+            #messageText{
+                font-size: 24px;
+            }
+            .buttons{
+                width: 100%;
+                padding: 0 20px;
+                div{
+                    width: 130px !important;
                 }
             }
         }
