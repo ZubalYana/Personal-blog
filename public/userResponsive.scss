@@ -398,6 +398,18 @@
                 }
             }
         }
+        .prodileEditingPopup{
+            #editDescription{
+                margin-bottom: 15px;
+            }
+            .buttons{
+                width: 100%;
+                padding: 0 20px;
+                div{
+                    width: 130px !important;
+                }
+            }
+        }
     }
 }
 

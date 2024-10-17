@@ -333,6 +333,16 @@
   .wrap .message .buttons div {
     width: 130px !important;
   }
+  .wrap .prodileEditingPopup #editDescription {
+    margin-bottom: 15px;
+  }
+  .wrap .prodileEditingPopup .buttons {
+    width: 100%;
+    padding: 0 20px;
+  }
+  .wrap .prodileEditingPopup .buttons div {
+    width: 130px !important;
+  }
 }
 * {
   box-sizing: border-box;
