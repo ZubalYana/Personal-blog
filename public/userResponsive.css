@@ -237,6 +237,9 @@
   }
 }
 @media screen and (max-width: 376px) {
+  ::-webkit-scrollbar {
+    width: 5px !important;
+  }
   .wrap {
     padding: 0px;
     width: 100%;
@@ -262,6 +265,10 @@
     position: relative;
     max-width: 100%;
   }
+  .wrap .user .backToMainArrow {
+    top: 20px;
+    left: 20px;
+  }
   .wrap .user .userInfo {
     width: 100%;
     max-width: 99%;
@@ -269,6 +276,24 @@
   .wrap .user .userInfo .userPicture {
     width: 80px;
     height: 80px;
+  }
+  .wrap .user .userInfo .placesVisited {
+    font-size: 12px;
+  }
+  .wrap .user .userInfo .placesVisited .visitedPlaces {
+    font-size: 12px;
+  }
+  .wrap .user .userInfo .placesToVisit {
+    font-size: 12px;
+  }
+  .wrap .user .userInfo .placesToVisit .toVisitPlaces {
+    font-size: 12px;
+  }
+  .wrap .user .userInfo .followings .following .amount {
+    font-size: 30px;
+  }
+  .wrap .user .userInfo .followings .following .following_text {
+    font-size: 18px;
   }
   .wrap .posts {
     display: flex;

@@ -296,13 +296,15 @@
     }
 }
 @media screen and (max-width: 376px) {
+    ::-webkit-scrollbar {
+        width: 5px !important;
+    }
     .wrap {
         padding: 0px;
         width: 100%;
         min-height: 100vh;
         box-sizing: border-box;
-        overflow-x: hidden; // Ensure no horizontal scroll
-
+        overflow-x: hidden; 
         .menuContainer {
             z-index: 9998;
             top: 15px;
@@ -320,14 +322,41 @@
             padding: 10px;
             padding-top: 50px;
             position: relative;
-            max-width: 100%; // Ensure the user section never exceeds viewport width
+            max-width: 100%; 
+            .backToMainArrow{
+                top: 20px;
+                left: 20px;
+            }
             .userInfo {
                 width: 100%;
-                max-width: 99%; // Prevent overflowing on small screens
+                max-width: 99%; 
                 .userPicture {
                     width: 80px;
                     height: 80px;
                 }
+                .placesVisited{
+                    font-size: 12px;
+                    .visitedPlaces{
+                        font-size: 12px;
+                    }
+                }
+                .placesToVisit{
+                    font-size: 12px;
+                    .toVisitPlaces{
+                        font-size: 12px;
+                    }
+                }
+                .followings{
+                    .following{
+                        .amount{
+                            font-size: 30px;
+                        }
+                        .following_text{
+                            font-size: 18px;
+                        }
+                    }
+                }
+
             }
         }
 
