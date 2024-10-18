@@ -1,6 +1,6 @@
 @media screen and (max-width: 1440px) {
   .wrap .mainPage .greenting .background-video {
-    width: 1440px !important;
+    width: 100% !important;
   }
   .wrap .mainPage .howToUse #usageArrow2 {
     left: 340px;
@@ -16,5 +16,83 @@
   }
   .wrap .mainPage .camera .cameraCon #cameraPhoto3 {
     left: 790px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .wrap .mainPage .greenting .background-video {
+    width: 100% !important;
+  }
+  .wrap .mainPage .howToUse #usageArrow2 {
+    display: none;
+  }
+  .wrap .mainPage .howToUse #usageArrow3 {
+    display: none;
+  }
+  .wrap .mainPage .howToUse .cards .card {
+    width: 290px;
+  }
+  .wrap .mainPage .camera .cameraCon #cameraPhoto1 {
+    left: 70px;
+  }
+  .wrap .mainPage .camera .cameraCon #cameraPhoto2 {
+    left: 60px;
+  }
+  .wrap .mainPage .camera .cameraCon #cameraPhoto3 {
+    left: 590px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .wrap .mainPage .greenting {
+    background-color: aqua;
+  }
+  .wrap .mainPage .greenting .background-video {
+    width: 100% !important;
+  }
+  .wrap .mainPage .greenting .greeting_elements .textAndBtnsCon .textCon #greeting_p {
+    width: 100% !important;
+    font-size: 22px;
+  }
+  .wrap .mainPage .howToUse #usageArrow1 {
+    width: 400px;
+    top: 130px;
+    left: 60px;
+  }
+  .wrap .mainPage .howToUse #usageArrow2 {
+    display: none;
+  }
+  .wrap .mainPage .howToUse #usageArrow3 {
+    display: none;
+  }
+  .wrap .mainPage .howToUse .cards .card {
+    width: 290px;
+  }
+  .wrap .mainPage .howToUse .subtitle {
+    font-size: 20px;
+    width: 100%;
+  }
+  .wrap .mainPage .howToUse .title {
+    font-size: 42px;
+  }
+  .wrap .mainPage .camera .subtitle {
+    font-size: 22px;
+    width: 100%;
+  }
+  .wrap .mainPage .camera .title {
+    font-size: 42px;
+  }
+  .wrap .mainPage .camera .cameraCon .camera {
+    width: 400px;
+  }
+  .wrap .mainPage .camera .cameraCon .cameraPhoto {
+    width: 200px;
+  }
+  .wrap .mainPage .camera .cameraCon #cameraPhoto1 {
+    left: 70px;
+  }
+  .wrap .mainPage .camera .cameraCon #cameraPhoto2 {
+    left: 60px;
+  }
+  .wrap .mainPage .camera .cameraCon #cameraPhoto3 {
+    left: 420px;
   }
 }/*# sourceMappingURL=styleResponsive.css.map */

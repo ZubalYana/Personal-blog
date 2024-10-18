@@ -3,7 +3,7 @@
         .mainPage{
             .greenting{
                 .background-video{
-                    width: 1440px !important;
+                    width: 100% !important;
                 }
             }
             .howToUse{
@@ -24,6 +24,119 @@
                     }
                     #cameraPhoto3{
                         left: 790px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 1024px) {
+    .wrap{
+        .mainPage{
+            .greenting{
+                .background-video{
+                    width: 100% !important;
+                }
+            }
+            .howToUse{
+                #usageArrow2{
+                    display: none;
+                }
+                #usageArrow3{
+                    display: none;
+                }
+                .cards{
+                    .card{
+                        width: 290px;
+                    }
+                }
+            }
+            .camera{
+                .cameraCon{
+                    #cameraPhoto1{
+                        left: 70px;
+                    }
+                    #cameraPhoto2{
+                        left: 60px;
+                    }
+                    #cameraPhoto3{
+                        left: 590px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .wrap{
+        .mainPage{
+            .greenting{
+                background-color: aqua;
+
+                .background-video{
+                    width: 100% !important;
+                }
+                .greeting_elements{
+                    .textAndBtnsCon{
+                        .textCon{
+                            #greeting_p{
+                                width: 100% !important;
+                                font-size: 22px;
+                            }
+                        }
+                    }
+
+                }
+
+            }
+            .howToUse{
+                #usageArrow1{
+                    width: 400px;
+                    top: 130px;
+                    left: 60px;
+                }
+                #usageArrow2{
+                    display: none;
+                }
+                #usageArrow3{
+                    display: none;
+                }
+                .cards{
+                    .card{
+                        width: 290px;
+                    }
+                }
+                .subtitle{
+                    font-size: 20px;
+                    width: 100%;
+                }
+                .title{
+                    font-size: 42px;
+                }
+            }
+            .camera{
+                .subtitle{
+                    font-size: 22px;
+                    width: 100%;
+                }
+                .title{
+                    font-size: 42px;
+                }
+                .cameraCon{
+                    .camera{
+                        width: 400px;
+                    }
+                    .cameraPhoto{
+                        width: 200px;
+                    }
+                    #cameraPhoto1{
+                        left: 70px;
+                    }
+                    #cameraPhoto2{
+                        left: 60px;
+                    }
+                    #cameraPhoto3{
+                        left: 420px;
                     }
                 }
             }
