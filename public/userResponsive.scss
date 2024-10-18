@@ -556,71 +556,265 @@
 }
 @media screen and (max-width: 321px) {
     .wrap {
-    #postForm{
-        .postCreation{
-            width: 100%;
-            z-index: 9999;
-            padding: 20px;
-            flex-direction: column;
-            #postCreation_xmark{
-                top: 20px;
-                right: 20px;
-            }
-            #postTitle{
-                font-size: 24px;
-                margin-bottom: -18px;
-                &::placeholder{
-                    font-size: 32px;
+        padding: 0px;
+        width: 100%;
+        min-height: 100vh;
+        box-sizing: border-box;
+        overflow-x: hidden; 
+        .menuContainer {
+            z-index: 9998;
+            top: 15px;
+            right: 15px;
+            .burger {
+                height: 32px;
+                .line {
+                    height: 5px;
                 }
             }
-            .inputsAndPic{
-                flex-direction: column;
-                .inputs{
-                    width: 100%;
-                    display: flex;
-                    justify-content: space-between;
-                    #postText{
-                        height: 90px;
-                        font-size: 14px;
-                        padding: 10px;
-                        &::placeholder{
-                            font-size: 14px;
-                        }
+        }
+        .user {
+            width: 100%;
+            padding: 10px;
+            padding-top: 50px;
+            position: relative;
+            max-width: 100%; 
+            .backToMainArrow{
+                top: 20px;
+                left: 20px;
+            }
+            .userInfo {
+                width: 100%;
+                max-width: 99%; 
+                .userPicture {
+                    width: 80px;
+                    height: 80px;
+                }
+                .placesVisited{
+                    font-size: 10px;
+                    .visitedPlaces{
+                        font-size: 10px;
                     }
-                    #postHashtags{
-                        height: 70px;
-                        font-size: 16px;
-                        padding: 10px;
-                        &::placeholder{
+                }
+                .placesToVisit{
+                    font-size: 10px;
+                    .toVisitPlaces{
+                        font-size: 10px;
+                    }
+                }
+                .followings{
+                    .following{
+                        .amount{
+                            font-size: 28px;
+                        }
+                        .following_text{
                             font-size: 16px;
                         }
                     }
                 }
+
             }
-            .postPicture{
+        }
+        .posts {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            .postsContainer {
                 width: 100%;
-                margin-top: 10px;
-                height: 250px;
-                label{
-                    width: 100% !important;
-                    #post-pic-preview{
-                        width: 100%;
+                justify-content: center;
+                .post {
+                    width: 85%;
+                    max-width: 100%; 
+                    height: auto;
+                    .postTitle {
+                        font-size: 24px;
                     }
                 }
             }
-            .buttons{
-                width: 100%;
-                padding: 0;
-                margin-top: 60px;
-                button{
-                    width: 120px !important;
-                    height: 60px;
-                    font-size: 24px;
+            .postsChanging{
+                .publishedPosts{
+                    font-size: 16px !important;
+                }
+                .likedPosts{
+                    font-size: 16px !important;
+
                 }
             }
         }
+        .postEditingPopup{
+            .editing{
+                .inputs{
+                    input{
+                        width: 200px !important;
+                    }
+                    #editTitle{
+                        width: 240px !important;
+                    }
+                }
+            }
+
+
+            .buttons{
+                width: 280px !important;
+                padding: 0 20px;
+                div{
+                    width: 110px !important;
+                }
+            }
+        }
+        .message{
+            height: 180px !important;
+            #messageText{
+                font-size: 20px;
+            }
+            .buttons{
+                width: 280px !important;
+                padding: 0 20px;
+                div{
+                    width: 110px !important;
+                }
+            }
+        }
+        .prodileEditingPopup{
+            #editDescription{
+                margin-bottom: 15px;
+            }
+            .buttons{
+                width: 280px !important;
+                padding: 0 20px;
+                div{
+                    width: 110px !important;
+                    font-size: 14px;
+                }
+            }
+            .profile-picture-container{
+                width: 80px;
+                height: 80px;
+                #currentProfilePicture{
+                    width: 80px !important;
+                    height: 80px !important;
+                }
+            }
+            .nameCon{
+                input{
+                    font-size: 14px !important;
+                }
+                #editName{
+                    width: 60px;
+                }
+            }
+            #editEmail{
+                font-size: 12px !important;
+                width: 100px;
+            }
+        }
+        #postForm{
+            .postCreation{
+                width: 100%;
+                z-index: 9999;
+                padding: 20px;
+                flex-direction: column;
+                #postCreation_xmark{
+                    top: 20px;
+                    right: 20px;
+                }
+                #postTitle{
+                    font-size: 24px;
+                    margin-bottom: -18px;
+                    &::placeholder{
+                        font-size: 32px;
+                    }
+                }
+                .inputsAndPic{
+                    flex-direction: column;
+                    .inputs{
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        #postText{
+                            height: 90px;
+                            font-size: 14px;
+                            padding: 10px;
+                            &::placeholder{
+                                font-size: 14px;
+                            }
+                        }
+                        #postHashtags{
+                            height: 70px;
+                            font-size: 16px;
+                            padding: 10px;
+                            &::placeholder{
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+                .postPicture{
+                    width: 100%;
+                    margin-top: 10px;
+                    height: 250px;
+                    label{
+                        width: 100% !important;
+                        #post-pic-preview{
+                            width: 100%;
+                        }
+                    }
+                }
+                .buttons{
+                    width: 100%;
+                    padding: 0;
+                    margin-top: 60px;
+                    button{
+                        width: 120px !important;
+                        height: 60px;
+                        font-size: 24px;
+                    }
+                }
+            }
+        }
+        .followingsPopupContainer{
+            width: 100%;
+            z-index: 9999;
+            padding: 0 20px;
+            .followingsPopup{
+                width: 100%;
+                padding: 20px;
+                padding-top: 25px;
+                #followingXmark{
+                    top: 20px;
+                    right: 20px;
+                }
+                .followers{
+                    h3{
+                        font-size: 24px;
+                    }
+                    .follower{
+                        .followerName{
+                            font-size: 18px !important;
+                        }
+                    }
+                }
+                .followingsPopupStage{
+                    h3{
+                        font-size: 24px;
+                    }
+                    .showFollowingsCon{
+
+                        .following{
+                            .followingName{
+                                font-size: 18px !important;
+                            }
+                            .followingsPopup_unfollow{
+                                font-size: 14px;
+                                font-weight: 600;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
     }
-}
 }
 
 * {
