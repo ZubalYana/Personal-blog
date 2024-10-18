@@ -61,7 +61,7 @@
   width: 100%;
   height: 80px;
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   z-index: 333;
 }
 .wrap .mainPage .greeting .background-video {
@@ -394,7 +394,7 @@
   height: 103px;
   transform: rotate(180deg);
   position: absolute;
-  top: 0;
+  top: -1px;
   z-index: 6;
 }
 .wrap .mainPage .futer .futerContent {
