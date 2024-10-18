@@ -2,4 +2,19 @@
   .wrap .mainPage .greenting .background-video {
     width: 1440px !important;
   }
+  .wrap .mainPage .howToUse #usageArrow2 {
+    left: 340px;
+  }
+  .wrap .mainPage .howToUse #usageArrow3 {
+    left: 900px;
+  }
+  .wrap .mainPage .camera .cameraCon #cameraPhoto1 {
+    left: 270px;
+  }
+  .wrap .mainPage .camera .cameraCon #cameraPhoto2 {
+    left: 260px;
+  }
+  .wrap .mainPage .camera .cameraCon #cameraPhoto3 {
+    left: 790px;
+  }
 }/*# sourceMappingURL=styleResponsive.css.map */
