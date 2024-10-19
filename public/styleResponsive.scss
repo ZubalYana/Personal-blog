@@ -398,27 +398,38 @@
                 }
             }
             .futer{
+                min-height: 555px;
                 .futerContent{
-                    padding: 150px 30px 30px 30px;
+                    padding: 150px 15px 15px 15px;
                     .basic{
+                        flex-direction: column;
                         .newslatter{
+                            h3{
+                                font-size: 22px;
+                            }
+                            p{
+                                font-size: 12px;
+                            }
                             .inputCon{
-                                width: 330px;
+                                width: 385px;
+                                height: 65px;
                                 input{
-                                    font-size: 18px;
+                                    font-size: 16px;
                                     &placeholder{
-                                        font-size: 18px;
+                                        font-size: 16px;
                                     }
                                 }
                                 .inputBtn{
                                     font-size: 16px;
                                     width: 120px;
+                                    height: 47px;
                                 }
                             }
                         }
                         .navigation{
                             width: 220px;
                             .nav_column{
+                                align-items: flex-start;
                                 .nav_title{
                                     font-size: 24px;
                                 }
@@ -430,9 +441,9 @@
                     }
                     .mediaCon{
                         .media{
-                            width: 440px;
+                            width: 90%;
                             i{
-                                font-size: 36px;
+                                font-size: 24px;
                             }
                         }
                     }

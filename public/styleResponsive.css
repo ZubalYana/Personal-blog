@@ -319,24 +319,41 @@
   .wrap .mainPage .camera .cameraCon #cameraPhoto3 {
     left: 210px;
   }
+  .wrap .mainPage .futer {
+    min-height: 555px;
+  }
   .wrap .mainPage .futer .futerContent {
-    padding: 150px 30px 30px 30px;
+    padding: 150px 15px 15px 15px;
+  }
+  .wrap .mainPage .futer .futerContent .basic {
+    flex-direction: column;
+  }
+  .wrap .mainPage .futer .futerContent .basic .newslatter h3 {
+    font-size: 22px;
+  }
+  .wrap .mainPage .futer .futerContent .basic .newslatter p {
+    font-size: 12px;
   }
   .wrap .mainPage .futer .futerContent .basic .newslatter .inputCon {
-    width: 330px;
+    width: 385px;
+    height: 65px;
   }
   .wrap .mainPage .futer .futerContent .basic .newslatter .inputCon input {
-    font-size: 18px;
+    font-size: 16px;
   }
   .wrap .mainPage .futer .futerContent .basic .newslatter .inputCon inputplaceholder {
-    font-size: 18px;
+    font-size: 16px;
   }
   .wrap .mainPage .futer .futerContent .basic .newslatter .inputCon .inputBtn {
     font-size: 16px;
     width: 120px;
+    height: 47px;
   }
   .wrap .mainPage .futer .futerContent .basic .navigation {
     width: 220px;
+  }
+  .wrap .mainPage .futer .futerContent .basic .navigation .nav_column {
+    align-items: flex-start;
   }
   .wrap .mainPage .futer .futerContent .basic .navigation .nav_column .nav_title {
     font-size: 24px;
@@ -345,9 +362,9 @@
     font-size: 14px;
   }
   .wrap .mainPage .futer .futerContent .mediaCon .media {
-    width: 440px;
+    width: 90%;
   }
   .wrap .mainPage .futer .futerContent .mediaCon .media i {
-    font-size: 36px;
+    font-size: 24px;
   }
 }/*# sourceMappingURL=styleResponsive.css.map */
