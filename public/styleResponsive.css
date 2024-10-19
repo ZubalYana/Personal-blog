@@ -196,4 +196,158 @@
   .wrap .mainPage .futer .futerContent .mediaCon .media i {
     font-size: 36px;
   }
+}
+@media screen and (max-width: 426px) {
+  .wrap .mainPage .greeting .greeting_elements {
+    padding: 30px;
+  }
+  .wrap .mainPage .greeting .greeting_elements .header .logo {
+    width: 157px;
+    font-size: 26px;
+  }
+  .wrap .mainPage .greeting .greeting_elements .header .nav {
+    font-size: 18px;
+    width: 250px;
+  }
+  .wrap .mainPage .greeting .greeting_elements .header .iconsCon {
+    width: 90px;
+    font-size: 28px;
+  }
+  .wrap .mainPage .greeting .greeting_elements .textAndBtnsCon .textCon h1 {
+    font-size: 48px;
+  }
+  .wrap .mainPage .greeting .greeting_elements .textAndBtnsCon .textCon #greeting_p {
+    width: 100%;
+    font-size: 18px !important;
+  }
+  .wrap .mainPage .greeting .greeting_elements .textAndBtnsCon .btnsCon {
+    width: 460px;
+  }
+  .wrap .mainPage .greeting .greeting_elements .textAndBtnsCon .btnsCon button {
+    width: 200px;
+    height: 80px;
+    font-size: 24px;
+  }
+  .wrap .mainPage .howToUse #usageArrow1 {
+    width: 300px;
+    top: 130px;
+    left: 60px;
+  }
+  .wrap .mainPage .howToUse #usageArrow2 {
+    display: none;
+  }
+  .wrap .mainPage .howToUse #usageArrow3 {
+    display: none;
+  }
+  .wrap .mainPage .howToUse .cards {
+    margin-top: 100px;
+  }
+  .wrap .mainPage .howToUse .cards .card {
+    width: 110px;
+    height: 140px;
+    padding: 10px;
+  }
+  .wrap .mainPage .howToUse .cards .card .cardTitle {
+    font-size: 14px;
+  }
+  .wrap .mainPage .howToUse .cards .card .cardSubtitle {
+    font-size: 8px;
+    width: 100%;
+  }
+  .wrap .mainPage .howToUse .cards .card .cardIconsCon .checkIcon {
+    display: none;
+  }
+  .wrap .mainPage .howToUse .cards .card .cardIconsCon .penIcon {
+    display: none;
+  }
+  .wrap .mainPage .howToUse .cards .card .cardIconsCon .asteriskIcon {
+    display: none;
+  }
+  .wrap .mainPage .howToUse .cards .card .cardIconsCon .planeIcon {
+    display: none;
+  }
+  .wrap .mainPage .howToUse .cards .card .cardIconsCon .locationDotIcon {
+    display: none;
+  }
+  .wrap .mainPage .howToUse .cards .card .cardIconsCon .earthIcon {
+    display: none;
+  }
+  .wrap .mainPage .howToUse .cards .card .cardIconsCon .arrowIcon {
+    display: none;
+  }
+  .wrap .mainPage .howToUse .cards .card .cardIconsCon .handshakeIcon {
+    display: none;
+  }
+  .wrap .mainPage .howToUse .cards .card .cardIconsCon .mapIcon {
+    display: none;
+  }
+  .wrap .mainPage .howToUse .cards .card .cardIconsCon .userIcon {
+    font-size: 42px;
+  }
+  .wrap .mainPage .howToUse .cards .card .cardIconsCon .magnifyingGlassIcon {
+    font-size: 42px;
+  }
+  .wrap .mainPage .howToUse .cards .card .cardIconsCon .shareIcon {
+    font-size: 42px;
+  }
+  .wrap .mainPage .howToUse .subtitle {
+    font-size: 14px;
+    width: 100%;
+  }
+  .wrap .mainPage .howToUse .title {
+    font-size: 24px;
+  }
+  .wrap .mainPage .camera .subtitle {
+    font-size: 14px;
+    width: 100%;
+  }
+  .wrap .mainPage .camera .title {
+    font-size: 24px;
+  }
+  .wrap .mainPage .camera .cameraCon .camera {
+    width: 300px !important;
+  }
+  .wrap .mainPage .camera .cameraCon .cameraPhoto {
+    width: 120px;
+  }
+  .wrap .mainPage .camera .cameraCon #cameraPhoto1 {
+    left: 20px;
+  }
+  .wrap .mainPage .camera .cameraCon #cameraPhoto2 {
+    left: 10px;
+  }
+  .wrap .mainPage .camera .cameraCon #cameraPhoto3 {
+    left: 210px;
+  }
+  .wrap .mainPage .futer .futerContent {
+    padding: 150px 30px 30px 30px;
+  }
+  .wrap .mainPage .futer .futerContent .basic .newslatter .inputCon {
+    width: 330px;
+  }
+  .wrap .mainPage .futer .futerContent .basic .newslatter .inputCon input {
+    font-size: 18px;
+  }
+  .wrap .mainPage .futer .futerContent .basic .newslatter .inputCon inputplaceholder {
+    font-size: 18px;
+  }
+  .wrap .mainPage .futer .futerContent .basic .newslatter .inputCon .inputBtn {
+    font-size: 16px;
+    width: 120px;
+  }
+  .wrap .mainPage .futer .futerContent .basic .navigation {
+    width: 220px;
+  }
+  .wrap .mainPage .futer .futerContent .basic .navigation .nav_column .nav_title {
+    font-size: 24px;
+  }
+  .wrap .mainPage .futer .futerContent .basic .navigation .nav_column .nav_option {
+    font-size: 14px;
+  }
+  .wrap .mainPage .futer .futerContent .mediaCon .media {
+    width: 440px;
+  }
+  .wrap .mainPage .futer .futerContent .mediaCon .media i {
+    font-size: 36px;
+  }
 }/*# sourceMappingURL=styleResponsive.css.map */

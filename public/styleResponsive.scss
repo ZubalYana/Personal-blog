@@ -255,3 +255,189 @@
         }
     }
 }
+@media screen and (max-width: 426px) {
+    .wrap{
+        .mainPage{
+            .greeting{
+                .greeting_elements{
+                    padding: 30px;
+                    .header{
+                        .logo{
+                            width: 157px;
+                            font-size: 26px;
+                        }
+                        .nav{
+                            font-size: 18px;
+                            width: 250px;
+                        }
+                        .iconsCon{
+                            width: 90px;
+                            font-size: 28px;
+                        }
+                    }
+                    .textAndBtnsCon{
+                        .textCon{
+                            h1{
+                                font-size: 48px;
+                            }
+                            #greeting_p{
+                                width: 100%;
+                                font-size: 18px !important;
+                            }
+                        }
+                        .btnsCon{
+                            width: 460px;
+                            button{
+                                width: 200px;
+                                height: 80px;
+                                font-size: 24px;
+                            }
+                        }
+                    }
+
+                }
+
+            }
+            .howToUse{
+                #usageArrow1{
+                    width: 300px;
+                    top: 130px;
+                    left: 60px;
+                }
+                #usageArrow2{
+                    display: none;
+                }
+                #usageArrow3{
+                    display: none;
+                }
+                .cards{
+                    margin-top: 100px;
+                    .card{
+                        width: 110px;
+                        height: 140px;
+                        padding: 10px;
+                        .cardTitle{
+                            font-size: 14px;
+                        }
+                        .cardSubtitle{
+                            font-size: 8px;
+                            width: 100%;
+                        }
+                        .cardIconsCon{
+                            .checkIcon{
+                                display: none;
+                            }
+                            .penIcon{
+                                display: none;
+                            }
+                            .asteriskIcon{
+                                display: none;
+                            }
+                            .planeIcon{
+                                display: none;
+                            }
+                            .locationDotIcon{
+                                display: none;
+                            }
+                            .earthIcon{
+                                display: none;
+                            }
+                            .arrowIcon{
+                                display: none;
+                            }
+                            .handshakeIcon{
+                                display: none;
+                            }
+                            .mapIcon{
+                                display: none;
+                            }
+                            .userIcon{
+                                font-size: 42px;
+                            }
+                            .magnifyingGlassIcon{
+                                font-size: 42px;
+                            }
+                            .shareIcon{
+                                font-size: 42px;
+                            }
+                        }
+                    }
+                }
+                .subtitle{
+                    font-size: 14px;
+                    width: 100%;
+                }
+                .title{
+                    font-size: 24px;
+                }
+            }
+            .camera{
+                .subtitle{
+                    font-size: 14px;
+                    width: 100%;
+                }
+                .title{
+                    font-size: 24px;
+                }
+                .cameraCon{
+                    .camera{
+                        width: 300px !important;
+                    }
+                    .cameraPhoto{
+                        width: 120px;
+                    }
+                    #cameraPhoto1{
+                        left: 20px;
+                    }
+                    #cameraPhoto2{
+                        left: 10px;
+                    }
+                    #cameraPhoto3{
+                        left: 210px;
+                    }
+                }
+            }
+            .futer{
+                .futerContent{
+                    padding: 150px 30px 30px 30px;
+                    .basic{
+                        .newslatter{
+                            .inputCon{
+                                width: 330px;
+                                input{
+                                    font-size: 18px;
+                                    &placeholder{
+                                        font-size: 18px;
+                                    }
+                                }
+                                .inputBtn{
+                                    font-size: 16px;
+                                    width: 120px;
+                                }
+                            }
+                        }
+                        .navigation{
+                            width: 220px;
+                            .nav_column{
+                                .nav_title{
+                                    font-size: 24px;
+                                }
+                                .nav_option{
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+                    }
+                    .mediaCon{
+                        .media{
+                            width: 440px;
+                            i{
+                                font-size: 36px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
