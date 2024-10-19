@@ -42,15 +42,38 @@
   }
 }
 @media screen and (max-width: 768px) {
-  .wrap .mainPage .greenting {
-    background-color: aqua;
-  }
-  .wrap .mainPage .greenting .background-video {
+  .wrap .mainPage .greeting .background-video {
     width: 100% !important;
   }
-  .wrap .mainPage .greenting .greeting_elements .textAndBtnsCon .textCon #greeting_p {
-    width: 100% !important;
-    font-size: 22px;
+  .wrap .mainPage .greeting .greeting_elements {
+    padding: 30px;
+  }
+  .wrap .mainPage .greeting .greeting_elements .header .logo {
+    width: 157px;
+    font-size: 26px;
+  }
+  .wrap .mainPage .greeting .greeting_elements .header .nav {
+    font-size: 18px;
+    width: 250px;
+  }
+  .wrap .mainPage .greeting .greeting_elements .header .iconsCon {
+    width: 90px;
+    font-size: 28px;
+  }
+  .wrap .mainPage .greeting .greeting_elements .textAndBtnsCon .textCon h1 {
+    font-size: 48px;
+  }
+  .wrap .mainPage .greeting .greeting_elements .textAndBtnsCon .textCon #greeting_p {
+    width: 100%;
+    font-size: 18px !important;
+  }
+  .wrap .mainPage .greeting .greeting_elements .textAndBtnsCon .btnsCon {
+    width: 460px;
+  }
+  .wrap .mainPage .greeting .greeting_elements .textAndBtnsCon .btnsCon button {
+    width: 200px;
+    height: 80px;
+    font-size: 24px;
   }
   .wrap .mainPage .howToUse #usageArrow1 {
     width: 400px;
@@ -63,22 +86,69 @@
   .wrap .mainPage .howToUse #usageArrow3 {
     display: none;
   }
+  .wrap .mainPage .howToUse .cards {
+    margin-top: 100px;
+  }
   .wrap .mainPage .howToUse .cards .card {
-    width: 290px;
+    width: 200px;
+    height: 250px;
+  }
+  .wrap .mainPage .howToUse .cards .card .cardTitle {
+    font-size: 24px;
+  }
+  .wrap .mainPage .howToUse .cards .card .cardSubtitle {
+    font-size: 14px;
+    width: 100%;
+  }
+  .wrap .mainPage .howToUse .cards .card .cardIconsCon .checkIcon {
+    display: none;
+  }
+  .wrap .mainPage .howToUse .cards .card .cardIconsCon .penIcon {
+    display: none;
+  }
+  .wrap .mainPage .howToUse .cards .card .cardIconsCon .asteriskIcon {
+    display: none;
+  }
+  .wrap .mainPage .howToUse .cards .card .cardIconsCon .planeIcon {
+    display: none;
+  }
+  .wrap .mainPage .howToUse .cards .card .cardIconsCon .locationDotIcon {
+    display: none;
+  }
+  .wrap .mainPage .howToUse .cards .card .cardIconsCon .earthIcon {
+    display: none;
+  }
+  .wrap .mainPage .howToUse .cards .card .cardIconsCon .arrowIcon {
+    display: none;
+  }
+  .wrap .mainPage .howToUse .cards .card .cardIconsCon .handshakeIcon {
+    display: none;
+  }
+  .wrap .mainPage .howToUse .cards .card .cardIconsCon .mapIcon {
+    display: none;
+  }
+  .wrap .mainPage .howToUse .cards .card .cardIconsCon .userIcon {
+    font-size: 80px;
+  }
+  .wrap .mainPage .howToUse .cards .card .cardIconsCon .magnifyingGlassIcon {
+    font-size: 80px;
+  }
+  .wrap .mainPage .howToUse .cards .card .cardIconsCon .shareIcon {
+    font-size: 80px;
   }
   .wrap .mainPage .howToUse .subtitle {
-    font-size: 20px;
+    font-size: 18px;
     width: 100%;
   }
   .wrap .mainPage .howToUse .title {
-    font-size: 42px;
+    font-size: 36px;
   }
   .wrap .mainPage .camera .subtitle {
-    font-size: 22px;
+    font-size: 18px;
     width: 100%;
   }
   .wrap .mainPage .camera .title {
-    font-size: 42px;
+    font-size: 36px;
   }
   .wrap .mainPage .camera .cameraCon .camera {
     width: 400px;
@@ -94,5 +164,17 @@
   }
   .wrap .mainPage .camera .cameraCon #cameraPhoto3 {
     left: 420px;
+  }
+  .wrap .mainPage .futer .futerContent {
+    padding: 150px 30px 30px 30px;
+  }
+  .wrap .mainPage .futer .futerContent .basic .newslatter .inputCon {
+    width: 320px;
+  }
+  .wrap .mainPage .futer .futerContent .basic .navigation .nav_column .nav_title {
+    font-size: 24px;
+  }
+  .wrap .mainPage .futer .futerContent .basic .navigation .nav_column .nav_option {
+    font-size: 14px;
   }
 }/*# sourceMappingURL=styleResponsive.css.map */

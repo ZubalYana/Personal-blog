@@ -70,18 +70,42 @@
 @media screen and (max-width: 768px) {
     .wrap{
         .mainPage{
-            .greenting{
-                background-color: aqua;
-
+            .greeting{
                 .background-video{
                     width: 100% !important;
                 }
                 .greeting_elements{
+                    padding: 30px;
+                    .header{
+                        .logo{
+                            width: 157px;
+                            font-size: 26px;
+                        }
+                        .nav{
+                            font-size: 18px;
+                            width: 250px;
+                        }
+                        .iconsCon{
+                            width: 90px;
+                            font-size: 28px;
+                        }
+                    }
                     .textAndBtnsCon{
                         .textCon{
+                            h1{
+                                font-size: 48px;
+                            }
                             #greeting_p{
-                                width: 100% !important;
-                                font-size: 22px;
+                                width: 100%;
+                                font-size: 18px !important;
+                            }
+                        }
+                        .btnsCon{
+                            width: 460px;
+                            button{
+                                width: 200px;
+                                height: 80px;
+                                font-size: 24px;
                             }
                         }
                     }
@@ -102,25 +126,72 @@
                     display: none;
                 }
                 .cards{
+                    margin-top: 100px;
                     .card{
-                        width: 290px;
+                        width: 200px;
+                        height: 250px;
+                        .cardTitle{
+                            font-size: 24px;
+                        }
+                        .cardSubtitle{
+                            font-size: 14px;
+                            width: 100%;
+                        }
+                        .cardIconsCon{
+                            .checkIcon{
+                                display: none;
+                            }
+                            .penIcon{
+                                display: none;
+                            }
+                            .asteriskIcon{
+                                display: none;
+                            }
+                            .planeIcon{
+                                display: none;
+                            }
+                            .locationDotIcon{
+                                display: none;
+                            }
+                            .earthIcon{
+                                display: none;
+                            }
+                            .arrowIcon{
+                                display: none;
+                            }
+                            .handshakeIcon{
+                                display: none;
+                            }
+                            .mapIcon{
+                                display: none;
+                            }
+                            .userIcon{
+                                font-size: 80px;
+                            }
+                            .magnifyingGlassIcon{
+                                font-size: 80px;
+                            }
+                            .shareIcon{
+                                font-size: 80px;
+                            }
+                        }
                     }
                 }
                 .subtitle{
-                    font-size: 20px;
+                    font-size: 18px;
                     width: 100%;
                 }
                 .title{
-                    font-size: 42px;
+                    font-size: 36px;
                 }
             }
             .camera{
                 .subtitle{
-                    font-size: 22px;
+                    font-size: 18px;
                     width: 100%;
                 }
                 .title{
-                    font-size: 42px;
+                    font-size: 36px;
                 }
                 .cameraCon{
                     .camera{
@@ -137,6 +208,28 @@
                     }
                     #cameraPhoto3{
                         left: 420px;
+                    }
+                }
+            }
+            .futer{
+                .futerContent{
+                    padding: 150px 30px 30px 30px;
+                    .basic{
+                        .newslatter{
+                            .inputCon{
+                                width: 320px;
+                            }
+                        }
+                        .navigation{
+                            .nav_column{
+                                .nav_title{
+                                    font-size: 24px;
+                                }
+                                .nav_option{
+                                    font-size: 14px;
+                                }
+                            }
+                        }
                     }
                 }
             }

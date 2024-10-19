@@ -1715,6 +1715,10 @@ body.light-theme .futer .futerContent .mediaCon p {
   color: #fff !important;
 }
 
+body.light-theme .futer .futerContent .basic .newslatter p {
+  color: #fff !important;
+}
+
 /* Dark Theme */
 body.dark-theme .title,
 body.dark-theme p,
