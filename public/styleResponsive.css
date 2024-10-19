@@ -169,12 +169,31 @@
     padding: 150px 30px 30px 30px;
   }
   .wrap .mainPage .futer .futerContent .basic .newslatter .inputCon {
-    width: 320px;
+    width: 330px;
+  }
+  .wrap .mainPage .futer .futerContent .basic .newslatter .inputCon input {
+    font-size: 18px;
+  }
+  .wrap .mainPage .futer .futerContent .basic .newslatter .inputCon inputplaceholder {
+    font-size: 18px;
+  }
+  .wrap .mainPage .futer .futerContent .basic .newslatter .inputCon .inputBtn {
+    font-size: 16px;
+    width: 120px;
+  }
+  .wrap .mainPage .futer .futerContent .basic .navigation {
+    width: 220px;
   }
   .wrap .mainPage .futer .futerContent .basic .navigation .nav_column .nav_title {
     font-size: 24px;
   }
   .wrap .mainPage .futer .futerContent .basic .navigation .nav_column .nav_option {
     font-size: 14px;
+  }
+  .wrap .mainPage .futer .futerContent .mediaCon .media {
+    width: 440px;
+  }
+  .wrap .mainPage .futer .futerContent .mediaCon .media i {
+    font-size: 36px;
   }
 }/*# sourceMappingURL=styleResponsive.css.map */
