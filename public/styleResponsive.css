@@ -198,6 +198,12 @@
   }
 }
 @media screen and (max-width: 426px) {
+  ::-webkit-scrollbar {
+    width: 2px !important;
+  }
+  .wrap {
+    overflow-x: hidden;
+  }
   .wrap .mainPage .greeting .greeting_elements {
     padding: 30px;
   }
@@ -214,19 +220,19 @@
     font-size: 28px;
   }
   .wrap .mainPage .greeting .greeting_elements .textAndBtnsCon .textCon h1 {
-    font-size: 48px;
+    font-size: 36px;
   }
   .wrap .mainPage .greeting .greeting_elements .textAndBtnsCon .textCon #greeting_p {
     width: 100%;
-    font-size: 18px !important;
+    font-size: 14px !important;
   }
   .wrap .mainPage .greeting .greeting_elements .textAndBtnsCon .btnsCon {
-    width: 460px;
+    width: 370px;
   }
   .wrap .mainPage .greeting .greeting_elements .textAndBtnsCon .btnsCon button {
-    width: 200px;
-    height: 80px;
-    font-size: 24px;
+    width: 160px;
+    height: 60px;
+    font-size: 22px;
   }
   .wrap .mainPage .howToUse #usageArrow1 {
     width: 300px;
