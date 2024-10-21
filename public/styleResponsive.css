@@ -212,12 +212,12 @@
     font-size: 26px;
   }
   .wrap .mainPage .greeting .greeting_elements .header .nav {
-    font-size: 18px;
-    width: 250px;
+    display: none;
   }
   .wrap .mainPage .greeting .greeting_elements .header .iconsCon {
     width: 90px;
     font-size: 28px;
+    display: none;
   }
   .wrap .mainPage .greeting .greeting_elements .textAndBtnsCon .textCon h1 {
     font-size: 36px;
