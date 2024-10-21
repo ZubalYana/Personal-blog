@@ -322,10 +322,12 @@
 
             }
             .howToUse{
+                padding: 20px;
+                height: 65vh;
                 #usageArrow1{
-                    width: 300px;
-                    top: 130px;
-                    left: 60px;
+                    width: 380px;
+                    top: 80px;
+                    left: 30px;
                 }
                 #usageArrow2{
                     display: none;
@@ -394,7 +396,8 @@
                     font-size: 24px;
                 }
             }
-            .camera{
+            .cameraScreen{
+                height: 80vh;
                 .subtitle{
                     font-size: 14px;
                     width: 100%;
@@ -403,6 +406,7 @@
                     font-size: 24px;
                 }
                 .cameraCon{
+                    height: auto;
                     .camera{
                         width: 300px !important;
                     }
