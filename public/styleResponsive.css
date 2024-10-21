@@ -205,7 +205,8 @@
     overflow-x: hidden;
   }
   .wrap .mainPage .greeting .greeting_elements {
-    padding: 30px;
+    padding: 20px;
+    height: 90vh;
   }
   .wrap .mainPage .greeting .greeting_elements .header .logo {
     width: 157px;
@@ -218,6 +219,22 @@
     width: 90px;
     font-size: 28px;
     display: none;
+  }
+  .wrap .mainPage .greeting .greeting_elements .header .burger {
+    width: 42px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .wrap .mainPage .greeting .greeting_elements .header .burger .burger_row {
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 6px;
+  }
+  .wrap .mainPage .greeting .greeting_elements .textAndBtnsCon {
+    height: 76vh;
   }
   .wrap .mainPage .greeting .greeting_elements .textAndBtnsCon .textCon h1 {
     font-size: 36px;

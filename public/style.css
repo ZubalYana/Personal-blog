@@ -124,6 +124,9 @@
   justify-content: space-between;
   font-size: 32px;
 }
+.wrap .mainPage .greeting .greeting_elements .header .burger {
+  display: none;
+}
 .wrap .mainPage .greeting .greeting_elements .textAndBtnsCon {
   width: 100%;
   display: flex;

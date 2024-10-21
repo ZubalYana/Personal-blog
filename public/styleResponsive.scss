@@ -263,8 +263,13 @@
         overflow-x: hidden;
         .mainPage{
             .greeting{
+                .background-video{
+                    // height: 90vh !important;
+                }
                 .greeting_elements{
-                    padding: 30px;
+                    padding: 20px;
+                    height: 90vh;
+
                     .header{
                         .logo{
                             width: 157px;
@@ -278,8 +283,22 @@
                             font-size: 28px;
                             display: none;
                         }
+                        .burger{
+                            width: 42px;
+                            height: 30px;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                            .burger_row{
+                                width: 100%;
+                                height: 4px;
+                                background-color: #fff;
+                                border-radius: 6px;
+                            }
+                        }
                     }
                     .textAndBtnsCon{
+                        height: 76vh;
                         .textCon{
                             h1{
                                 font-size: 36px;
