@@ -209,7 +209,6 @@
     width: 100%;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.368627451);
-    display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
@@ -223,200 +222,200 @@
     background-color: #fff;
     padding: 15px;
   }
-  .wrap .mainPage .burgerPopupContainer .greeting .greeting_elements {
+  .wrap .mainPage .greeting .greeting_elements {
     padding: 20px;
     height: 90vh;
   }
-  .wrap .mainPage .burgerPopupContainer .greeting .greeting_elements .header .logo {
+  .wrap .mainPage .greeting .greeting_elements .header .logo {
     width: 157px;
     font-size: 26px;
   }
-  .wrap .mainPage .burgerPopupContainer .greeting .greeting_elements .header .nav {
+  .wrap .mainPage .greeting .greeting_elements .header .nav {
     display: none;
   }
-  .wrap .mainPage .burgerPopupContainer .greeting .greeting_elements .header .iconsCon {
+  .wrap .mainPage .greeting .greeting_elements .header .iconsCon {
     width: 90px;
     font-size: 28px;
     display: none;
   }
-  .wrap .mainPage .burgerPopupContainer .greeting .greeting_elements .header .burger {
+  .wrap .mainPage .greeting .greeting_elements .header .burger {
     width: 42px;
     height: 30px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
-  .wrap .mainPage .burgerPopupContainer .greeting .greeting_elements .header .burger .burger_row {
+  .wrap .mainPage .greeting .greeting_elements .header .burger .burger_row {
     width: 100%;
     height: 4px;
     background-color: #fff;
     border-radius: 6px;
   }
-  .wrap .mainPage .burgerPopupContainer .greeting .greeting_elements .textAndBtnsCon {
+  .wrap .mainPage .greeting .greeting_elements .textAndBtnsCon {
     height: 76vh;
   }
-  .wrap .mainPage .burgerPopupContainer .greeting .greeting_elements .textAndBtnsCon .textCon h1 {
+  .wrap .mainPage .greeting .greeting_elements .textAndBtnsCon .textCon h1 {
     font-size: 36px;
   }
-  .wrap .mainPage .burgerPopupContainer .greeting .greeting_elements .textAndBtnsCon .textCon #greeting_p {
+  .wrap .mainPage .greeting .greeting_elements .textAndBtnsCon .textCon #greeting_p {
     width: 100%;
     font-size: 14px !important;
   }
-  .wrap .mainPage .burgerPopupContainer .greeting .greeting_elements .textAndBtnsCon .btnsCon {
+  .wrap .mainPage .greeting .greeting_elements .textAndBtnsCon .btnsCon {
     width: 370px;
   }
-  .wrap .mainPage .burgerPopupContainer .greeting .greeting_elements .textAndBtnsCon .btnsCon button {
+  .wrap .mainPage .greeting .greeting_elements .textAndBtnsCon .btnsCon button {
     width: 160px;
     height: 60px;
     font-size: 22px;
   }
-  .wrap .mainPage .burgerPopupContainer .howToUse {
+  .wrap .mainPage .howToUse {
     padding: 20px;
     height: 65vh;
   }
-  .wrap .mainPage .burgerPopupContainer .howToUse #usageArrow1 {
+  .wrap .mainPage .howToUse #usageArrow1 {
     width: 380px;
     top: 80px;
     left: 30px;
   }
-  .wrap .mainPage .burgerPopupContainer .howToUse #usageArrow2 {
+  .wrap .mainPage .howToUse #usageArrow2 {
     display: none;
   }
-  .wrap .mainPage .burgerPopupContainer .howToUse #usageArrow3 {
+  .wrap .mainPage .howToUse #usageArrow3 {
     display: none;
   }
-  .wrap .mainPage .burgerPopupContainer .howToUse .cards {
+  .wrap .mainPage .howToUse .cards {
     margin-top: 70px;
   }
-  .wrap .mainPage .burgerPopupContainer .howToUse .cards .card {
+  .wrap .mainPage .howToUse .cards .card {
     width: 110px;
     height: 140px;
     padding: 10px;
   }
-  .wrap .mainPage .burgerPopupContainer .howToUse .cards .card .cardTitle {
+  .wrap .mainPage .howToUse .cards .card .cardTitle {
     font-size: 14px;
   }
-  .wrap .mainPage .burgerPopupContainer .howToUse .cards .card .cardSubtitle {
+  .wrap .mainPage .howToUse .cards .card .cardSubtitle {
     font-size: 8px;
     width: 100%;
   }
-  .wrap .mainPage .burgerPopupContainer .howToUse .cards .card .cardIconsCon .checkIcon {
+  .wrap .mainPage .howToUse .cards .card .cardIconsCon .checkIcon {
     display: none;
   }
-  .wrap .mainPage .burgerPopupContainer .howToUse .cards .card .cardIconsCon .penIcon {
+  .wrap .mainPage .howToUse .cards .card .cardIconsCon .penIcon {
     display: none;
   }
-  .wrap .mainPage .burgerPopupContainer .howToUse .cards .card .cardIconsCon .asteriskIcon {
+  .wrap .mainPage .howToUse .cards .card .cardIconsCon .asteriskIcon {
     display: none;
   }
-  .wrap .mainPage .burgerPopupContainer .howToUse .cards .card .cardIconsCon .planeIcon {
+  .wrap .mainPage .howToUse .cards .card .cardIconsCon .planeIcon {
     display: none;
   }
-  .wrap .mainPage .burgerPopupContainer .howToUse .cards .card .cardIconsCon .locationDotIcon {
+  .wrap .mainPage .howToUse .cards .card .cardIconsCon .locationDotIcon {
     display: none;
   }
-  .wrap .mainPage .burgerPopupContainer .howToUse .cards .card .cardIconsCon .earthIcon {
+  .wrap .mainPage .howToUse .cards .card .cardIconsCon .earthIcon {
     display: none;
   }
-  .wrap .mainPage .burgerPopupContainer .howToUse .cards .card .cardIconsCon .arrowIcon {
+  .wrap .mainPage .howToUse .cards .card .cardIconsCon .arrowIcon {
     display: none;
   }
-  .wrap .mainPage .burgerPopupContainer .howToUse .cards .card .cardIconsCon .handshakeIcon {
+  .wrap .mainPage .howToUse .cards .card .cardIconsCon .handshakeIcon {
     display: none;
   }
-  .wrap .mainPage .burgerPopupContainer .howToUse .cards .card .cardIconsCon .mapIcon {
+  .wrap .mainPage .howToUse .cards .card .cardIconsCon .mapIcon {
     display: none;
   }
-  .wrap .mainPage .burgerPopupContainer .howToUse .cards .card .cardIconsCon .userIcon {
+  .wrap .mainPage .howToUse .cards .card .cardIconsCon .userIcon {
     font-size: 42px;
   }
-  .wrap .mainPage .burgerPopupContainer .howToUse .cards .card .cardIconsCon .magnifyingGlassIcon {
+  .wrap .mainPage .howToUse .cards .card .cardIconsCon .magnifyingGlassIcon {
     font-size: 42px;
   }
-  .wrap .mainPage .burgerPopupContainer .howToUse .cards .card .cardIconsCon .shareIcon {
+  .wrap .mainPage .howToUse .cards .card .cardIconsCon .shareIcon {
     font-size: 42px;
   }
-  .wrap .mainPage .burgerPopupContainer .howToUse .subtitle {
+  .wrap .mainPage .howToUse .subtitle {
     font-size: 14px;
     width: 100%;
   }
-  .wrap .mainPage .burgerPopupContainer .howToUse .title {
+  .wrap .mainPage .howToUse .title {
     font-size: 24px;
   }
-  .wrap .mainPage .burgerPopupContainer .cameraScreen {
+  .wrap .mainPage .cameraScreen {
     height: 80vh;
   }
-  .wrap .mainPage .burgerPopupContainer .cameraScreen .subtitle {
+  .wrap .mainPage .cameraScreen .subtitle {
     font-size: 14px;
     width: 100%;
   }
-  .wrap .mainPage .burgerPopupContainer .cameraScreen .title {
+  .wrap .mainPage .cameraScreen .title {
     font-size: 24px;
   }
-  .wrap .mainPage .burgerPopupContainer .cameraScreen .cameraCon {
+  .wrap .mainPage .cameraScreen .cameraCon {
     height: auto;
   }
-  .wrap .mainPage .burgerPopupContainer .cameraScreen .cameraCon .camera {
+  .wrap .mainPage .cameraScreen .cameraCon .camera {
     width: 300px !important;
   }
-  .wrap .mainPage .burgerPopupContainer .cameraScreen .cameraCon .cameraPhoto {
+  .wrap .mainPage .cameraScreen .cameraCon .cameraPhoto {
     width: 120px;
   }
-  .wrap .mainPage .burgerPopupContainer .cameraScreen .cameraCon #cameraPhoto1 {
+  .wrap .mainPage .cameraScreen .cameraCon #cameraPhoto1 {
     left: 20px;
   }
-  .wrap .mainPage .burgerPopupContainer .cameraScreen .cameraCon #cameraPhoto2 {
+  .wrap .mainPage .cameraScreen .cameraCon #cameraPhoto2 {
     left: 10px;
   }
-  .wrap .mainPage .burgerPopupContainer .cameraScreen .cameraCon #cameraPhoto3 {
+  .wrap .mainPage .cameraScreen .cameraCon #cameraPhoto3 {
     left: 210px;
   }
-  .wrap .mainPage .burgerPopupContainer .futer {
+  .wrap .mainPage .futer {
     min-height: 555px;
   }
-  .wrap .mainPage .burgerPopupContainer .futer .futerContent {
+  .wrap .mainPage .futer .futerContent {
     padding: 150px 15px 15px 15px;
   }
-  .wrap .mainPage .burgerPopupContainer .futer .futerContent .basic {
+  .wrap .mainPage .futer .futerContent .basic {
     flex-direction: column;
   }
-  .wrap .mainPage .burgerPopupContainer .futer .futerContent .basic .newslatter h3 {
+  .wrap .mainPage .futer .futerContent .basic .newslatter h3 {
     font-size: 22px;
   }
-  .wrap .mainPage .burgerPopupContainer .futer .futerContent .basic .newslatter p {
+  .wrap .mainPage .futer .futerContent .basic .newslatter p {
     font-size: 12px;
   }
-  .wrap .mainPage .burgerPopupContainer .futer .futerContent .basic .newslatter .inputCon {
+  .wrap .mainPage .futer .futerContent .basic .newslatter .inputCon {
     width: 385px;
     height: 65px;
   }
-  .wrap .mainPage .burgerPopupContainer .futer .futerContent .basic .newslatter .inputCon input {
+  .wrap .mainPage .futer .futerContent .basic .newslatter .inputCon input {
     font-size: 16px;
   }
-  .wrap .mainPage .burgerPopupContainer .futer .futerContent .basic .newslatter .inputCon inputplaceholder {
+  .wrap .mainPage .futer .futerContent .basic .newslatter .inputCon inputplaceholder {
     font-size: 16px;
   }
-  .wrap .mainPage .burgerPopupContainer .futer .futerContent .basic .newslatter .inputCon .inputBtn {
+  .wrap .mainPage .futer .futerContent .basic .newslatter .inputCon .inputBtn {
     font-size: 16px;
     width: 120px;
     height: 47px;
   }
-  .wrap .mainPage .burgerPopupContainer .futer .futerContent .basic .navigation {
+  .wrap .mainPage .futer .futerContent .basic .navigation {
     width: 220px;
   }
-  .wrap .mainPage .burgerPopupContainer .futer .futerContent .basic .navigation .nav_column {
+  .wrap .mainPage .futer .futerContent .basic .navigation .nav_column {
     align-items: flex-start;
   }
-  .wrap .mainPage .burgerPopupContainer .futer .futerContent .basic .navigation .nav_column .nav_title {
+  .wrap .mainPage .futer .futerContent .basic .navigation .nav_column .nav_title {
     font-size: 24px;
   }
-  .wrap .mainPage .burgerPopupContainer .futer .futerContent .basic .navigation .nav_column .nav_option {
+  .wrap .mainPage .futer .futerContent .basic .navigation .nav_column .nav_option {
     font-size: 14px;
   }
-  .wrap .mainPage .burgerPopupContainer .futer .futerContent .mediaCon .media {
+  .wrap .mainPage .futer .futerContent .mediaCon .media {
     width: 90%;
   }
-  .wrap .mainPage .burgerPopupContainer .futer .futerContent .mediaCon .media i {
+  .wrap .mainPage .futer .futerContent .mediaCon .media i {
     font-size: 24px;
   }
 }/*# sourceMappingURL=styleResponsive.css.map */

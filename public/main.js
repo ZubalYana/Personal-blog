@@ -698,3 +698,9 @@ $(document).ready(function() {
     }
 });
 
+$('.burger').click(()=>{
+    $('.burgerPopupContainer').css('display', 'flex');
+    $('.burgerPopupXmark').click(()=>{
+        $('.burgerPopupContainer').css('display', 'none');
+    });
+}); 

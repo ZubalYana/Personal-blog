@@ -262,12 +262,11 @@
     .wrap{
         overflow-x: hidden;
         .mainPage{
-            .burgerPopupContainer{
+    .burgerPopupContainer{
                 display: none;
                 width: 100%;
                 height: 100vh;
                 background-color: #0000005e;
-                display: flex;
                 justify-content: center;
                 align-items: center;
                 padding: 20px;
@@ -279,221 +278,222 @@
                     align-items: center;
                     background-color: #fff;
                     padding: 15px;
-                }
-            .greeting{
-                .background-video{
-                    // height: 90vh !important;
-                }
-                .greeting_elements{
-                    padding: 20px;
-                    height: 90vh;
 
-                    .header{
-                        .logo{
-                            width: 157px;
-                            font-size: 26px;
-                        }
-                        .nav{
-                            display: none;
-                        }
-                        .iconsCon{
-                            width: 90px;
-                            font-size: 28px;
-                            display: none;
-                        }
-                        .burger{
-                            width: 42px;
-                            height: 30px;
-                            display: flex;
-                            flex-direction: column;
-                            justify-content: space-between;
-                            .burger_row{
-                                width: 100%;
-                                height: 4px;
-                                background-color: #fff;
-                                border-radius: 6px;
-                            }
-                        }
-                    }
-                    .textAndBtnsCon{
-                        height: 76vh;
-                        .textCon{
-                            h1{
-                                font-size: 36px;
-                            }
-                            #greeting_p{
-                                width: 100%;
-                                font-size: 14px !important;
-                            }
-                        }
-                        .btnsCon{
-                            width: 370px;
-                            button{
-                                width: 160px;
-                                height: 60px;
-                                font-size: 22px;
-                            }
-                        }
-                    }
+        }
+    }
+    .greeting{
+        .background-video{
+            // height: 90vh !important;
+        }
+        .greeting_elements{
+            padding: 20px;
+            height: 90vh;
 
+            .header{
+                .logo{
+                    width: 157px;
+                    font-size: 26px;
                 }
-
-            }
-            .howToUse{
-                padding: 20px;
-                height: 65vh;
-                #usageArrow1{
-                    width: 380px;
-                    top: 80px;
-                    left: 30px;
-                }
-                #usageArrow2{
+                .nav{
                     display: none;
                 }
-                #usageArrow3{
+                .iconsCon{
+                    width: 90px;
+                    font-size: 28px;
                     display: none;
                 }
-                .cards{
-                    margin-top: 70px;
-                    .card{
-                        width: 110px;
-                        height: 140px;
-                        padding: 10px;
-                        .cardTitle{
-                            font-size: 14px;
-                        }
-                        .cardSubtitle{
-                            font-size: 8px;
-                            width: 100%;
-                        }
-                        .cardIconsCon{
-                            .checkIcon{
-                                display: none;
-                            }
-                            .penIcon{
-                                display: none;
-                            }
-                            .asteriskIcon{
-                                display: none;
-                            }
-                            .planeIcon{
-                                display: none;
-                            }
-                            .locationDotIcon{
-                                display: none;
-                            }
-                            .earthIcon{
-                                display: none;
-                            }
-                            .arrowIcon{
-                                display: none;
-                            }
-                            .handshakeIcon{
-                                display: none;
-                            }
-                            .mapIcon{
-                                display: none;
-                            }
-                            .userIcon{
-                                font-size: 42px;
-                            }
-                            .magnifyingGlassIcon{
-                                font-size: 42px;
-                            }
-                            .shareIcon{
-                                font-size: 42px;
-                            }
-                        }
-                    }
-                }
-                .subtitle{
-                    font-size: 14px;
-                    width: 100%;
-                }
-                .title{
-                    font-size: 24px;
-                }
-            }
-            .cameraScreen{
-                height: 80vh;
-                .subtitle{
-                    font-size: 14px;
-                    width: 100%;
-                }
-                .title{
-                    font-size: 24px;
-                }
-                .cameraCon{
-                    height: auto;
-                    .camera{
-                        width: 300px !important;
-                    }
-                    .cameraPhoto{
-                        width: 120px;
-                    }
-                    #cameraPhoto1{
-                        left: 20px;
-                    }
-                    #cameraPhoto2{
-                        left: 10px;
-                    }
-                    #cameraPhoto3{
-                        left: 210px;
+                .burger{
+                    width: 42px;
+                    height: 30px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    .burger_row{
+                        width: 100%;
+                        height: 4px;
+                        background-color: #fff;
+                        border-radius: 6px;
                     }
                 }
             }
-            .futer{
-                min-height: 555px;
-                .futerContent{
-                    padding: 150px 15px 15px 15px;
-                    .basic{
-                        flex-direction: column;
-                        .newslatter{
-                            h3{
-                                font-size: 22px;
-                            }
-                            p{
-                                font-size: 12px;
-                            }
-                            .inputCon{
-                                width: 385px;
-                                height: 65px;
-                                input{
-                                    font-size: 16px;
-                                    &placeholder{
-                                        font-size: 16px;
-                                    }
-                                }
-                                .inputBtn{
-                                    font-size: 16px;
-                                    width: 120px;
-                                    height: 47px;
-                                }
-                            }
-                        }
-                        .navigation{
-                            width: 220px;
-                            .nav_column{
-                                align-items: flex-start;
-                                .nav_title{
-                                    font-size: 24px;
-                                }
-                                .nav_option{
-                                    font-size: 14px;
-                                }
-                            }
-                        }
+            .textAndBtnsCon{
+                height: 76vh;
+                .textCon{
+                    h1{
+                        font-size: 36px;
                     }
-                    .mediaCon{
-                        .media{
-                            width: 90%;
-                            i{
-                                font-size: 24px;
-                            }
-                        }
+                    #greeting_p{
+                        width: 100%;
+                        font-size: 14px !important;
+                    }
+                }
+                .btnsCon{
+                    width: 370px;
+                    button{
+                        width: 160px;
+                        height: 60px;
+                        font-size: 22px;
+                    }
+                }
+            }
+
+        }
+
+    }
+    .howToUse{
+        padding: 20px;
+        height: 65vh;
+        #usageArrow1{
+            width: 380px;
+            top: 80px;
+            left: 30px;
+        }
+        #usageArrow2{
+            display: none;
+        }
+        #usageArrow3{
+            display: none;
+        }
+        .cards{
+            margin-top: 70px;
+            .card{
+                width: 110px;
+                height: 140px;
+                padding: 10px;
+                .cardTitle{
+                    font-size: 14px;
+                }
+                .cardSubtitle{
+                    font-size: 8px;
+                    width: 100%;
+                }
+                .cardIconsCon{
+                    .checkIcon{
+                        display: none;
+                    }
+                    .penIcon{
+                        display: none;
+                    }
+                    .asteriskIcon{
+                        display: none;
+                    }
+                    .planeIcon{
+                        display: none;
+                    }
+                    .locationDotIcon{
+                        display: none;
+                    }
+                    .earthIcon{
+                        display: none;
+                    }
+                    .arrowIcon{
+                        display: none;
+                    }
+                    .handshakeIcon{
+                        display: none;
+                    }
+                    .mapIcon{
+                        display: none;
+                    }
+                    .userIcon{
+                        font-size: 42px;
+                    }
+                    .magnifyingGlassIcon{
+                        font-size: 42px;
+                    }
+                    .shareIcon{
+                        font-size: 42px;
                     }
                 }
             }
         }
+        .subtitle{
+            font-size: 14px;
+            width: 100%;
+        }
+        .title{
+            font-size: 24px;
+        }
+    }
+    .cameraScreen{
+        height: 80vh;
+        .subtitle{
+            font-size: 14px;
+            width: 100%;
+        }
+        .title{
+            font-size: 24px;
+        }
+        .cameraCon{
+            height: auto;
+            .camera{
+                width: 300px !important;
+            }
+            .cameraPhoto{
+                width: 120px;
+            }
+            #cameraPhoto1{
+                left: 20px;
+            }
+            #cameraPhoto2{
+                left: 10px;
+            }
+            #cameraPhoto3{
+                left: 210px;
+            }
+        }
+    }
+    .futer{
+        min-height: 555px;
+        .futerContent{
+            padding: 150px 15px 15px 15px;
+            .basic{
+                flex-direction: column;
+                .newslatter{
+                    h3{
+                        font-size: 22px;
+                    }
+                    p{
+                        font-size: 12px;
+                    }
+                    .inputCon{
+                        width: 385px;
+                        height: 65px;
+                        input{
+                            font-size: 16px;
+                            &placeholder{
+                                font-size: 16px;
+                            }
+                        }
+                        .inputBtn{
+                            font-size: 16px;
+                            width: 120px;
+                            height: 47px;
+                        }
+                    }
+                }
+                .navigation{
+                    width: 220px;
+                    .nav_column{
+                        align-items: flex-start;
+                        .nav_title{
+                            font-size: 24px;
+                        }
+                        .nav_option{
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+            .mediaCon{
+                .media{
+                    width: 90%;
+                    i{
+                        font-size: 24px;
+                    }
+                }
+            }
+        }
+    }
     }
 }}
