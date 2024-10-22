@@ -262,6 +262,24 @@
     .wrap{
         overflow-x: hidden;
         .mainPage{
+            .burgerPopupContainer{
+                display: none;
+                width: 100%;
+                height: 100vh;
+                background-color: #0000005e;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 20px;
+                .burgerPopup{
+                    width: 100%;
+                    height: 400px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: #fff;
+                    padding: 15px;
+                }
             .greeting{
                 .background-video{
                     // height: 90vh !important;
@@ -478,4 +496,4 @@
             }
         }
     }
-}
+}}
