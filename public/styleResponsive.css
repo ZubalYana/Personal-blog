@@ -498,4 +498,311 @@
   .wrap .mainPage .futer .futerContent .mediaCon .media i {
     font-size: 24px;
   }
+}
+@media screen and (max-width: 376px) {
+  ::-webkit-scrollbar {
+    width: 2px !important;
+  }
+  .wrap {
+    overflow-x: hidden;
+  }
+  .wrap .mainPage .burgerPopupContainer {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.368627451);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+  }
+  .wrap .mainPage .burgerPopupContainer .burgerPopup {
+    width: 100%;
+    height: 210px;
+    display: flex;
+    background-color: #fff;
+    padding: 20px;
+    position: relative;
+    border-radius: 20px;
+    flex-direction: column;
+  }
+  .wrap .mainPage .burgerPopupContainer .burgerPopup .burgerPopupXmark {
+    font-size: 24px;
+    top: 20px;
+    right: 20px;
+    position: absolute;
+  }
+  .wrap .mainPage .burgerPopupContainer .burgerPopup .navAndSettings {
+    display: flex;
+  }
+  .wrap .mainPage .burgerPopupContainer .burgerPopup .navAndSettings .nav {
+    width: 70px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .wrap .mainPage .burgerPopupContainer .burgerPopup .navAndSettings .nav .navEl {
+    font-size: 24px;
+    font-weight: 400;
+  }
+  .wrap .mainPage .burgerPopupContainer .burgerPopup .navAndSettings .nav .active {
+    font-weight: 600;
+  }
+  .wrap .mainPage .burgerPopupContainer .burgerPopup .navAndSettings .settings {
+    width: 200px;
+    display: flex;
+    margin-left: 20px;
+    flex-direction: column;
+  }
+  .wrap .mainPage .burgerPopupContainer .burgerPopup .navAndSettings .settings .settingsOption {
+    display: flex;
+    margin-bottom: 12px;
+    width: 100%;
+  }
+  .wrap .mainPage .burgerPopupContainer .burgerPopup .navAndSettings .settings .settingsOption span {
+    font-size: 20px;
+    font-weight: 300;
+    margin-right: 10px;
+  }
+  .wrap .mainPage .burgerPopupContainer .burgerPopup .navAndSettings .settings .settingsOption select {
+    font-family: Urbanist;
+    font-size: 20px;
+    font-weight: 700;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #45474B;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: url("data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjNDU0NzRDIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTcsMTBsNSw1IDUsLTVaIi8+PC9zdmc+") no-repeat right 10px center;
+    padding-right: 10px;
+  }
+  .wrap .mainPage .burgerPopupContainer .burgerPopup .navAndSettings .settings .settingsOption .themeChanger {
+    font-family: Urbanist;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+  }
+  .wrap .mainPage .burgerPopupContainer .burgerPopup .reportOption {
+    display: flex;
+    margin-top: 25px;
+    width: 100%;
+    align-items: center;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+  }
+  .wrap .mainPage .burgerPopupContainer .burgerPopup .reportOption span {
+    margin-left: 7px;
+  }
+  .wrap .mainPage .burgerPopupContainer .burgerPopup .reportOption:hover {
+    color: #1A4D2E;
+    font-weight: 500;
+  }
+  .wrap .mainPage .greeting .greeting_elements {
+    padding: 20px;
+    height: 90vh;
+  }
+  .wrap .mainPage .greeting .greeting_elements .header .logo {
+    width: 157px;
+    font-size: 26px;
+  }
+  .wrap .mainPage .greeting .greeting_elements .header .nav {
+    display: none;
+  }
+  .wrap .mainPage .greeting .greeting_elements .header .iconsCon {
+    width: 90px;
+    font-size: 28px;
+    display: none;
+  }
+  .wrap .mainPage .greeting .greeting_elements .header .burger {
+    width: 42px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .wrap .mainPage .greeting .greeting_elements .header .burger .burger_row {
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 6px;
+  }
+  .wrap .mainPage .greeting .greeting_elements .textAndBtnsCon {
+    height: 76vh;
+  }
+  .wrap .mainPage .greeting .greeting_elements .textAndBtnsCon .textCon h1 {
+    font-size: 36px;
+  }
+  .wrap .mainPage .greeting .greeting_elements .textAndBtnsCon .textCon #greeting_p {
+    width: 100%;
+    font-size: 14px !important;
+  }
+  .wrap .mainPage .greeting .greeting_elements .textAndBtnsCon .btnsCon {
+    width: 290px;
+  }
+  .wrap .mainPage .greeting .greeting_elements .textAndBtnsCon .btnsCon button {
+    width: 130px;
+    height: 60px;
+    font-size: 20px;
+  }
+  .wrap .mainPage .howToUse {
+    padding: 20px;
+    height: 55vh;
+  }
+  .wrap .mainPage .howToUse #usageArrow1 {
+    width: 280px;
+    top: 90px;
+    left: 30px;
+  }
+  .wrap .mainPage .howToUse #usageArrow2 {
+    display: none;
+  }
+  .wrap .mainPage .howToUse #usageArrow3 {
+    display: none;
+  }
+  .wrap .mainPage .howToUse .cards {
+    margin-top: 70px;
+  }
+  .wrap .mainPage .howToUse .cards .card {
+    width: 103px;
+    height: 140px;
+    padding: 7px;
+  }
+  .wrap .mainPage .howToUse .cards .card .cardTitle {
+    font-size: 14px;
+  }
+  .wrap .mainPage .howToUse .cards .card .cardSubtitle {
+    font-size: 8px;
+    width: 100%;
+  }
+  .wrap .mainPage .howToUse .cards .card .cardIconsCon .checkIcon {
+    display: none;
+  }
+  .wrap .mainPage .howToUse .cards .card .cardIconsCon .penIcon {
+    display: none;
+  }
+  .wrap .mainPage .howToUse .cards .card .cardIconsCon .asteriskIcon {
+    display: none;
+  }
+  .wrap .mainPage .howToUse .cards .card .cardIconsCon .planeIcon {
+    display: none;
+  }
+  .wrap .mainPage .howToUse .cards .card .cardIconsCon .locationDotIcon {
+    display: none;
+  }
+  .wrap .mainPage .howToUse .cards .card .cardIconsCon .earthIcon {
+    display: none;
+  }
+  .wrap .mainPage .howToUse .cards .card .cardIconsCon .arrowIcon {
+    display: none;
+  }
+  .wrap .mainPage .howToUse .cards .card .cardIconsCon .handshakeIcon {
+    display: none;
+  }
+  .wrap .mainPage .howToUse .cards .card .cardIconsCon .mapIcon {
+    display: none;
+  }
+  .wrap .mainPage .howToUse .cards .card .cardIconsCon .userIcon {
+    font-size: 42px;
+  }
+  .wrap .mainPage .howToUse .cards .card .cardIconsCon .magnifyingGlassIcon {
+    font-size: 42px;
+  }
+  .wrap .mainPage .howToUse .cards .card .cardIconsCon .shareIcon {
+    font-size: 42px;
+  }
+  .wrap .mainPage .howToUse .subtitle {
+    font-size: 12px;
+    width: 100%;
+  }
+  .wrap .mainPage .howToUse .title {
+    font-size: 18px;
+  }
+  .wrap .mainPage .cameraScreen {
+    height: 64vh;
+  }
+  .wrap .mainPage .cameraScreen .subtitle {
+    font-size: 12px;
+    width: 100%;
+  }
+  .wrap .mainPage .cameraScreen .title {
+    font-size: 18px;
+    text-align: center;
+  }
+  .wrap .mainPage .cameraScreen .cameraCon {
+    height: auto;
+    margin-top: 30px;
+  }
+  .wrap .mainPage .cameraScreen .cameraCon .camera {
+    width: 280px !important;
+  }
+  .wrap .mainPage .cameraScreen .cameraCon .cameraPhoto {
+    width: 100px;
+  }
+  .wrap .mainPage .cameraScreen .cameraCon #cameraPhoto1 {
+    left: 20px;
+  }
+  .wrap .mainPage .cameraScreen .cameraCon #cameraPhoto2 {
+    left: 10px;
+  }
+  .wrap .mainPage .cameraScreen .cameraCon #cameraPhoto3 {
+    left: 170px;
+  }
+  .wrap .mainPage .futer {
+    min-height: 530px;
+  }
+  .wrap .mainPage .futer .futerContent {
+    padding: 150px 15px 15px 15px;
+  }
+  .wrap .mainPage .futer .futerContent .basic {
+    flex-direction: column;
+  }
+  .wrap .mainPage .futer .futerContent .basic .newslatter h3 {
+    font-size: 22px;
+  }
+  .wrap .mainPage .futer .futerContent .basic .newslatter p {
+    font-size: 12px;
+  }
+  .wrap .mainPage .futer .futerContent .basic .newslatter .inputCon {
+    width: 340px;
+    height: 65px;
+  }
+  .wrap .mainPage .futer .futerContent .basic .newslatter .inputCon input {
+    font-size: 16px;
+  }
+  .wrap .mainPage .futer .futerContent .basic .newslatter .inputCon inputplaceholder {
+    font-size: 16px;
+  }
+  .wrap .mainPage .futer .futerContent .basic .newslatter .inputCon .inputBtn {
+    font-size: 16px;
+    width: 120px;
+    height: 47px;
+  }
+  .wrap .mainPage .futer .futerContent .basic .navigation {
+    width: 220px;
+  }
+  .wrap .mainPage .futer .futerContent .basic .navigation .nav_column {
+    align-items: flex-start;
+  }
+  .wrap .mainPage .futer .futerContent .basic .navigation .nav_column .nav_title {
+    font-size: 18px;
+  }
+  .wrap .mainPage .futer .futerContent .basic .navigation .nav_column .nav_option {
+    font-size: 12px;
+  }
+  .wrap .mainPage .futer .futerContent .mediaCon .media {
+    width: 90%;
+  }
+  .wrap .mainPage .futer .futerContent .mediaCon .media i {
+    font-size: 24px;
+  }
+  .wrap .mainPage .futer .futerContent .mediaCon p {
+    font-size: 8px;
+  }
 }/*# sourceMappingURL=styleResponsive.css.map */
