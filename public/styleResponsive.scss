@@ -276,7 +276,7 @@
                 z-index: 9999;
                 .burgerPopup{
                     width: 100%;
-                    height: 300px;
+                    height: 210px;
                     display: flex;
                     background-color: #fff;
                     padding: 20px;
@@ -308,8 +308,59 @@
                         .settings{
                             width: 200px;
                             display: flex;
-                            justify-content: space-between;
+                            margin-left: 20px;
+                            flex-direction: column;
+                            .settingsOption {
+                                display: flex;
+                                margin-bottom: 12px;
+                                width: 100%;
+                          
+                                span {
+                                  font-size: 20px;
+                                  font-weight: 300;
+                                  margin-right: 10px;
+                                }
+                          
+                                select {
+                                  font-family: Urbanist;
+                                  font-size: 20px;
+                                  font-weight: 700;
+                                  border: none;
+                                  outline: none;
+                                  cursor: pointer;
+                                  color: #45474B;
+                                  appearance: none; 
+                                  -webkit-appearance: none;
+                                  -moz-appearance: none; 
+                                  background: url('data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjNDU0NzRDIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTcsMTBsNSw1IDUsLTVaIi8+PC9zdmc+') no-repeat right 10px center; 
+                                  padding-right: 10px; 
+                                }
+                          
+                                .themeChanger {
+                                  font-family: Urbanist;
+                                  font-size: 20px;
+                                  font-weight: 700;
+                                  cursor: pointer;
+                                  transition: 0.5s ease-in-out;
+                                }
+                              }
                         }
+                    }
+                    .reportOption{
+                        display: flex;
+                        margin-top: 25px;
+                        width: 100%;
+                        align-items: center;
+                        transition: 0.5s ease-in-out;
+                        cursor: pointer;
+                        span{
+                            margin-left: 7px;
+                        }
+            
+                    }
+                    .reportOption:hover{
+                        color: #1A4D2E;
+                        font-weight: 500;
                     }
 
 
