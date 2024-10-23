@@ -232,6 +232,23 @@
     right: 20px;
     position: absolute;
   }
+  .wrap .mainPage .burgerPopupContainer .burgerPopup .nav {
+    width: 70px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .wrap .mainPage .burgerPopupContainer .burgerPopup .nav .navEl {
+    font-size: 24px;
+    font-weight: 400;
+  }
+  .wrap .mainPage .burgerPopupContainer .burgerPopup .nav .active {
+    font-weight: 600;
+  }
+  .wrap .mainPage .burgerPopupContainer .burgerPopup .iconsCon i {
+    color: #333;
+  }
   .wrap .mainPage .greeting .greeting_elements {
     padding: 20px;
     height: 90vh;

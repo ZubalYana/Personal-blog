@@ -288,6 +288,26 @@
                         right: 20px;
                         position: absolute;
                     }
+                    .nav{
+                        width: 70px;
+                        height: 120px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        .navEl{
+                            font-size: 24px;
+                            font-weight: 400;
+                        }
+                        .active{
+                            font-weight: 600;
+                        }
+                    }
+                    .iconsCon{
+                        i{
+                            color: #333;
+
+                        }
+                    }
 
         }
     }
