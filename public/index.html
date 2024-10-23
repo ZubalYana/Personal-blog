@@ -20,15 +20,36 @@
             <div class="burgerPopupContainer" style="display: none;">
                 <div class="burgerPopup">
                     <i class="fa-solid fa-xmark burgerPopupXmark"></i>
-                    <div class="nav">
-                        <div class="navEl home active">Home</div>
-                        <div class="navEl blog">Blog</div>
-                        <div class="navEl help">Help</div>
+                    <div class="navAndSettings">
+                        <div class="nav">
+                            <div class="navEl home active">Home</div>
+                            <div class="navEl blog">Blog</div>
+                            <div class="navEl help">Help</div>
+                        </div>
+                        <div class="settings">
+                            <div class="settingsOption">
+                                <span>Language:</span>
+                                <select name="Language" id="languageChanger">
+                                    <option value="English">Eng.</option>
+                                    <option value="French">Fr.</option>
+                                    <option value="Ukrainian">Укр.</option>
+                                    <option value="Polish">Pol.</option>
+                                    <option value="Japanese">日本語</option>
+                                    <option value="Chinese">中文</option>
+                                </select>
+                            </div>
+                            <div class="settingsOption">
+                                <span>Theme:</span>
+                                <div class="themeChanger">light</div>
+                            </div>
+                        </div>
                     </div>
-                    <!-- <div class="iconsCon">
-                        <i class="fa-regular fa-circle-user iconWhite profileIcon"></i>
-                        <i class="fa-solid fa-gear iconWhite gear"></i>
-                    </div> -->
+
+
+                    <div class="reportOption">
+                        <i class="fa-regular fa-flag"></i>
+                        <span id="report">Report about a problem</span>
+                    </div>
                 </div>
             </div>
             <div class="greeting screen">

@@ -282,32 +282,36 @@
                     padding: 20px;
                     position: relative;
                     border-radius: 20px;
+                    flex-direction: column;
                     .burgerPopupXmark{
                         font-size: 24px;
                         top: 20px;
                         right: 20px;
                         position: absolute;
                     }
-                    .nav{
-                        width: 70px;
-                        height: 120px;
+                    .navAndSettings{
                         display: flex;
-                        flex-direction: column;
-                        justify-content: space-between;
-                        .navEl{
-                            font-size: 24px;
-                            font-weight: 400;
+                        .nav{
+                            width: 70px;
+                            height: 120px;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                            .navEl{
+                                font-size: 24px;
+                                font-weight: 400;
+                            }
+                            .active{
+                                font-weight: 600;
+                            }
                         }
-                        .active{
-                            font-weight: 600;
+                        .settings{
+                            width: 200px;
+                            display: flex;
+                            justify-content: space-between;
                         }
                     }
-                    .iconsCon{
-                        i{
-                            color: #333;
 
-                        }
-                    }
 
         }
     }

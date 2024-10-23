@@ -225,6 +225,7 @@
     padding: 20px;
     position: relative;
     border-radius: 20px;
+    flex-direction: column;
   }
   .wrap .mainPage .burgerPopupContainer .burgerPopup .burgerPopupXmark {
     font-size: 24px;
@@ -232,22 +233,27 @@
     right: 20px;
     position: absolute;
   }
-  .wrap .mainPage .burgerPopupContainer .burgerPopup .nav {
+  .wrap .mainPage .burgerPopupContainer .burgerPopup .navAndSettings {
+    display: flex;
+  }
+  .wrap .mainPage .burgerPopupContainer .burgerPopup .navAndSettings .nav {
     width: 70px;
     height: 120px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
-  .wrap .mainPage .burgerPopupContainer .burgerPopup .nav .navEl {
+  .wrap .mainPage .burgerPopupContainer .burgerPopup .navAndSettings .nav .navEl {
     font-size: 24px;
     font-weight: 400;
   }
-  .wrap .mainPage .burgerPopupContainer .burgerPopup .nav .active {
+  .wrap .mainPage .burgerPopupContainer .burgerPopup .navAndSettings .nav .active {
     font-weight: 600;
   }
-  .wrap .mainPage .burgerPopupContainer .burgerPopup .iconsCon i {
-    color: #333;
+  .wrap .mainPage .burgerPopupContainer .burgerPopup .navAndSettings .settings {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
   }
   .wrap .mainPage .greeting .greeting_elements {
     padding: 20px;
