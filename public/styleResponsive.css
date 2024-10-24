@@ -650,6 +650,30 @@
   }
   .wrap .blogPage .postsContainer .post {
     width: 100%;
+    padding: 15px;
+    height: auto;
+  }
+  .wrap .blogPage .postsContainer .post .top .time {
+    font-size: 14px;
+  }
+  .wrap .blogPage .postsContainer .post .top .author .author_name {
+    font-size: 20px;
+  }
+  .wrap .blogPage .postsContainer .post .top .author .follow {
+    font-size: 18px;
+  }
+  .wrap .blogPage .postsContainer .post .postTitle {
+    font-size: 24px;
+  }
+  .wrap .blogPage .postsContainer .post .postText {
+    font-size: 14px;
+  }
+  .wrap .blogPage .postsContainer .post .postHashtags {
+    font-size: 16px;
+  }
+  .wrap .blogPage .postsContainer .post .actions {
+    font-size: 30px;
+    width: 90px;
   }
 }
 @media screen and (max-width: 376px) {

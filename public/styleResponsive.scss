@@ -750,6 +750,35 @@
         .postsContainer{
             .post{
                 width: 100%;
+                padding: 15px;
+                height: auto;
+                .top{
+                    .time{
+                        font-size: 14px;
+                    }
+                    .author{
+                        .author_name{
+                            font-size: 20px;
+                        }
+                        .follow{
+                            font-size: 18px;
+                        }
+                    }
+
+                }
+                .postTitle{
+                    font-size: 24px;
+                }
+                .postText{
+                    font-size: 14px;
+                }
+                .postHashtags{ 
+                    font-size: 16px;
+                }
+                .actions{
+                    font-size: 30px;
+                    width: 90px;
+                }
             }
         }
     }
