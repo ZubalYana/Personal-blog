@@ -202,6 +202,24 @@
   .wrap .mainPage .futer .futerContent .mediaCon .media i {
     font-size: 36px;
   }
+  .wrap .blogPage {
+    padding: 30px;
+  }
+  .wrap .blogPage .header .logo {
+    width: 157px;
+    font-size: 26px;
+  }
+  .wrap .blogPage .header .nav {
+    font-size: 18px;
+    width: 250px;
+  }
+  .wrap .blogPage .header .iconsCon {
+    width: 90px;
+    font-size: 28px;
+  }
+  .wrap .blogPage .postsContainer .post {
+    width: 100%;
+  }
 }
 @media screen and (max-width: 426px) {
   ::-webkit-scrollbar {

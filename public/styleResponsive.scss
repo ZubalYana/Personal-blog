@@ -267,6 +267,28 @@
                 }
             }
         }
+        .blogPage{
+            padding: 30px;
+            .header{
+                .logo{
+                    width: 157px;
+                    font-size: 26px;
+                }
+                .nav{
+                    font-size: 18px;
+                    width: 250px;
+                }
+                .iconsCon{
+                    width: 90px;
+                    font-size: 28px;
+                }
+            }
+            .postsContainer{
+                .post{
+                    width: 100%;
+                }
+            }
+        }
     }
 }
 @media screen and (max-width: 426px) {
