@@ -43,6 +43,9 @@
   .wrap .mainPage .camera .cameraCon #cameraPhoto3 {
     left: 590px;
   }
+  .wrap .blogPage .postsContainer .post {
+    width: 450px;
+  }
 }
 @media screen and (max-width: 768px) {
   .wrap .mainPage .greeting .background-video {

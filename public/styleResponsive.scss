@@ -72,6 +72,13 @@
                 }
             }
         }
+        .blogPage{
+            .postsContainer{
+                .post{
+                    width: 450px;
+                }
+            }
+        }
     }
 }
 @media screen and (max-width: 768px) {
