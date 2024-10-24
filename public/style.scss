@@ -539,6 +539,9 @@
             color: #45474B;
             align-items: flex-end;
             height: 5vh;
+            .burger{
+                display: none;
+            }
             .logo{
                 width: 195px;
                 display: flex;

@@ -547,6 +547,9 @@
   align-items: flex-end;
   height: 5vh;
 }
+.wrap .blogPage .header .burger {
+  display: none;
+}
 .wrap .blogPage .header .logo {
   width: 195px;
   display: flex;
