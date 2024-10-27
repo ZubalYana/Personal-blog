@@ -248,6 +248,43 @@
         </div>
         <div class="helpPage">
             <img src="./materials/help arrow.png" class="helpArrow" alt="">
+            <div class="burgerPopupContainer" style="display: none;">
+                <div class="burgerPopup">
+                    <i class="fa-solid fa-xmark burgerPopupXmark"></i>
+                    <div class="navAndSettings">
+                        <div class="nav">
+                            <div class="navEl home">Home</div>
+                            <div class="navEl blog">Blog</div>
+                            <div class="navEl help active">Help</div>
+                        </div>
+                        <div class="settings">
+                            <div class="settingsOption">
+                                <span>Language:</span>
+                                <select name="Language" id="languageChanger">
+                                    <option value="English">Eng.</option>
+                                    <option value="French">Fr.</option>
+                                    <option value="Ukrainian">Укр.</option>
+                                    <option value="Polish">Pol.</option>
+                                    <option value="Japanese">日本語</option>
+                                    <option value="Chinese">中文</option>
+                                </select>
+                            </div>
+                            <div class="settingsOption">
+                                <span>Theme:</span>
+                                <div class="themeChanger">light</div>
+                            </div>
+                            <i class="fa-regular fa-circle-user profileIcon"></i>
+
+                        </div>
+                    </div>
+
+
+                    <div class="reportOption">
+                        <i class="fa-regular fa-flag"></i>
+                        <span id="report">Report about a problem</span>
+                    </div>
+                </div>
+            </div>
             <div class="header darkHeader">
                 <div class="logo">
                     <i class="fa-regular fa-compass"></i><h3>Travelog</h3>
@@ -260,6 +297,11 @@
                 <div class="iconsCon">
                     <i class="fa-regular fa-circle-user icon profileIcon"></i>
                     <i class="fa-solid fa-gear gear"></i>
+                </div>
+                <div class="burger">
+                    <div class="burger_row"></div>
+                    <div class="burger_row"></div>
+                    <div class="burger_row"></div>
                 </div>
             </div>
             <div class="content">
