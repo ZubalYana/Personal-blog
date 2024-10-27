@@ -971,19 +971,23 @@
         }
         .content{
             margin-top: 40px;
+            flex-direction: column;
             .info{
                 z-index: 8888;
+                width: 100%;
                 h2{
-                    font-size: 48px;
+                    font-size: 32px;
                 }
                 p{
-                    font-size: 20px;
+                    font-size: 18px;
                 }
                 h6{
                     font-size: 18px;
                 }
             }
             .compassCon{
+                width: 100%;
+                height: 380px;
                 .helpCompass{
                     font-size: 280px;
                 }
@@ -1858,6 +1862,159 @@
                 font-size: 14px;
                 width: 30px;
                 height: 30px;
+            }
+        }
+    }
+    .helpPage{
+        .burgerPopupContainer{
+            display: none;
+            width: 100%;
+            height: 100vh;
+            background-color: #0000005e;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 9999;
+            .burgerPopup{
+                width: 100%;
+                height: 210px;
+                display: flex;
+                background-color: #fff;
+                padding: 20px;
+                position: relative;
+                border-radius: 20px;
+                flex-direction: column;
+                .burgerPopupXmark{
+                    font-size: 24px;
+                    top: 20px;
+                    right: 20px;
+                    position: absolute;
+                }
+                .navAndSettings{
+                    display: flex;
+                    .nav{
+                        width: 70px;
+                        height: 120px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        .navEl{
+                            font-size: 22px;
+                            font-weight: 400;
+                        }
+                        .active{
+                            font-weight: 600;
+                        }
+                    }
+                    .settings{
+                        width: 200px;
+                        display: flex;
+                        margin-left: 20px;
+                        flex-direction: column;
+                        .settingsOption {
+                            display: flex;
+                            margin-bottom: 12px;
+                            width: 100%;
+                      
+                            span {
+                              font-size: 16px;
+                              font-weight: 300;
+                              margin-right: 10px;
+                            }
+                      
+                            select {
+                              font-family: Urbanist;
+                              font-size: 20px;
+                              font-weight: 700;
+                              border: none;
+                              outline: none;
+                              cursor: pointer;
+                              color: #45474B;
+                              appearance: none; 
+                              -webkit-appearance: none;
+                              -moz-appearance: none; 
+                              background: url('data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjNDU0NzRDIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTcsMTBsNSw1IDUsLTVaIi8+PC9zdmc+') no-repeat right 10px center; 
+                              padding-right: 10px; 
+                            }
+                      
+                            .themeChanger {
+                              font-family: Urbanist;
+                              font-size: 20px;
+                              font-weight: 700;
+                              cursor: pointer;
+                              transition: 0.5s ease-in-out;
+                            }
+                          }
+                    }
+                }
+                .reportOption{
+                    display: flex;
+                    margin-top: 25px;
+                    width: 100%;
+                    align-items: center;
+                    transition: 0.5s ease-in-out;
+                    cursor: pointer;
+                    span{
+                        margin-left: 7px;
+                    }
+        
+                }
+                .reportOption:hover{
+                    color: #1A4D2E;
+                    font-weight: 500;
+                }
+
+
+    }
+        }
+        .header{
+            .logo{
+                width: 125px;
+                font-size: 20px;
+            }
+            .nav{
+                display: none;
+            }
+            .iconsCon{
+                width: 90px;
+                font-size: 28px;
+                display: none;
+            }
+            .burger{
+                width: 38px;
+                height: 25px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                .burger_row{
+                    width: 100%;
+                    height: 3px;
+                    background-color: #333;
+                    border-radius: 6px;
+                }
+            }
+        }
+        .content{
+            .info{
+                z-index: 8888;
+                width: 100%;
+                h2{
+                    font-size: 28px;
+                }
+                p{
+                    font-size: 16px;
+                }
+                h6{
+                    font-size: 18px;
+                }
+            }
+            .compassCon{
+                .helpCompass{
+                    font-size: 240px;
+                }
             }
         }
     }

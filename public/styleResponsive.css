@@ -849,18 +849,24 @@
   }
   .wrap .helpPage .content {
     margin-top: 40px;
+    flex-direction: column;
   }
   .wrap .helpPage .content .info {
     z-index: 8888;
+    width: 100%;
   }
   .wrap .helpPage .content .info h2 {
-    font-size: 48px;
+    font-size: 32px;
   }
   .wrap .helpPage .content .info p {
-    font-size: 20px;
+    font-size: 18px;
   }
   .wrap .helpPage .content .info h6 {
     font-size: 18px;
+  }
+  .wrap .helpPage .content .compassCon {
+    width: 100%;
+    height: 380px;
   }
   .wrap .helpPage .content .compassCon .helpCompass {
     font-size: 280px;
@@ -1665,5 +1671,144 @@
     font-size: 14px;
     width: 30px;
     height: 30px;
+  }
+  .wrap .helpPage .burgerPopupContainer {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.368627451);
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+  }
+  .wrap .helpPage .burgerPopupContainer .burgerPopup {
+    width: 100%;
+    height: 210px;
+    display: flex;
+    background-color: #fff;
+    padding: 20px;
+    position: relative;
+    border-radius: 20px;
+    flex-direction: column;
+  }
+  .wrap .helpPage .burgerPopupContainer .burgerPopup .burgerPopupXmark {
+    font-size: 24px;
+    top: 20px;
+    right: 20px;
+    position: absolute;
+  }
+  .wrap .helpPage .burgerPopupContainer .burgerPopup .navAndSettings {
+    display: flex;
+  }
+  .wrap .helpPage .burgerPopupContainer .burgerPopup .navAndSettings .nav {
+    width: 70px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .wrap .helpPage .burgerPopupContainer .burgerPopup .navAndSettings .nav .navEl {
+    font-size: 22px;
+    font-weight: 400;
+  }
+  .wrap .helpPage .burgerPopupContainer .burgerPopup .navAndSettings .nav .active {
+    font-weight: 600;
+  }
+  .wrap .helpPage .burgerPopupContainer .burgerPopup .navAndSettings .settings {
+    width: 200px;
+    display: flex;
+    margin-left: 20px;
+    flex-direction: column;
+  }
+  .wrap .helpPage .burgerPopupContainer .burgerPopup .navAndSettings .settings .settingsOption {
+    display: flex;
+    margin-bottom: 12px;
+    width: 100%;
+  }
+  .wrap .helpPage .burgerPopupContainer .burgerPopup .navAndSettings .settings .settingsOption span {
+    font-size: 16px;
+    font-weight: 300;
+    margin-right: 10px;
+  }
+  .wrap .helpPage .burgerPopupContainer .burgerPopup .navAndSettings .settings .settingsOption select {
+    font-family: Urbanist;
+    font-size: 20px;
+    font-weight: 700;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #45474B;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: url("data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjNDU0NzRDIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTcsMTBsNSw1IDUsLTVaIi8+PC9zdmc+") no-repeat right 10px center;
+    padding-right: 10px;
+  }
+  .wrap .helpPage .burgerPopupContainer .burgerPopup .navAndSettings .settings .settingsOption .themeChanger {
+    font-family: Urbanist;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+  }
+  .wrap .helpPage .burgerPopupContainer .burgerPopup .reportOption {
+    display: flex;
+    margin-top: 25px;
+    width: 100%;
+    align-items: center;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+  }
+  .wrap .helpPage .burgerPopupContainer .burgerPopup .reportOption span {
+    margin-left: 7px;
+  }
+  .wrap .helpPage .burgerPopupContainer .burgerPopup .reportOption:hover {
+    color: #1A4D2E;
+    font-weight: 500;
+  }
+  .wrap .helpPage .header .logo {
+    width: 125px;
+    font-size: 20px;
+  }
+  .wrap .helpPage .header .nav {
+    display: none;
+  }
+  .wrap .helpPage .header .iconsCon {
+    width: 90px;
+    font-size: 28px;
+    display: none;
+  }
+  .wrap .helpPage .header .burger {
+    width: 38px;
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .wrap .helpPage .header .burger .burger_row {
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+    border-radius: 6px;
+  }
+  .wrap .helpPage .content .info {
+    z-index: 8888;
+    width: 100%;
+  }
+  .wrap .helpPage .content .info h2 {
+    font-size: 28px;
+  }
+  .wrap .helpPage .content .info p {
+    font-size: 16px;
+  }
+  .wrap .helpPage .content .info h6 {
+    font-size: 18px;
+  }
+  .wrap .helpPage .content .compassCon .helpCompass {
+    font-size: 240px;
   }
 }/*# sourceMappingURL=styleResponsive.css.map */
