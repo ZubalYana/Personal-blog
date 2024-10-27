@@ -1455,6 +1455,9 @@
   .wrap .blogPage .postsContainer .post .top .author .follow {
     font-size: 14px;
   }
+  .wrap .blogPage .postsContainer .post .top .author .dot {
+    margin: 0 6px;
+  }
   .wrap .blogPage .postsContainer .post .postTitle {
     font-size: 22px;
   }
