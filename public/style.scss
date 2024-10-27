@@ -724,6 +724,9 @@
         padding: 40px 40px 0 40px;
         flex-direction: column;
         overflow: hidden;
+        .burgerPopupContainer{
+            display: none;
+        }
         .helpArrow{
             position: absolute;
             bottom: 0px;
@@ -738,6 +741,9 @@
             color: #45474B;
             align-items: flex-end;
             height: 5vh;
+            .burger{
+                display: none;
+            }
             .logo{
                 width: 195px;
                 display: flex;

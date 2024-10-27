@@ -725,6 +725,9 @@
   flex-direction: column;
   overflow: hidden;
 }
+.wrap .helpPage .burgerPopupContainer {
+  display: none;
+}
 .wrap .helpPage .helpArrow {
   position: absolute;
   bottom: 0px;
@@ -739,6 +742,9 @@
   color: #45474B;
   align-items: flex-end;
   height: 5vh;
+}
+.wrap .helpPage .header .burger {
+  display: none;
 }
 .wrap .helpPage .header .logo {
   width: 195px;
