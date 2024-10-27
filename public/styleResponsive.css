@@ -311,6 +311,10 @@
     cursor: pointer;
     transition: 0.5s ease-in-out;
   }
+  .wrap .mainPage .burgerPopupContainer .burgerPopup .navAndSettings .settings .profileIcon {
+    color: #45474B;
+    font-size: 32px;
+  }
   .wrap .mainPage .burgerPopupContainer .burgerPopup .reportOption {
     display: flex;
     margin-top: 25px;
@@ -607,6 +611,10 @@
     font-weight: 700;
     cursor: pointer;
     transition: 0.5s ease-in-out;
+  }
+  .wrap .blogPage .burgerPopupContainer .burgerPopup .navAndSettings .settings .profileIcon {
+    color: #45474B;
+    font-size: 32px;
   }
   .wrap .blogPage .burgerPopupContainer .burgerPopup .reportOption {
     display: flex;

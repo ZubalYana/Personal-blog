@@ -380,6 +380,10 @@
                                   transition: 0.5s ease-in-out;
                                 }
                               }
+                            .profileIcon{
+                                color: #45474B;
+                                font-size: 32px;
+                            }
                         }
                     }
                     .reportOption{
@@ -698,6 +702,10 @@
                               transition: 0.5s ease-in-out;
                             }
                           }
+                          .profileIcon{
+                            color: #45474B;
+                            font-size: 32px;
+                        }
                     }
                 }
                 .reportOption{
@@ -1149,7 +1157,7 @@
     }
     .wrap{
         overflow-x: hidden;
-        .mainPage{
+    .mainPage{
     .burgerPopupContainer{
                 display: none;
                 width: 100%;
