@@ -967,11 +967,18 @@
                 }
                 .nameAndFollow{
                     display: flex;
+                    align-items: center;
+                    margin-top: 15px;
+                    margin-bottom: 5px;
                     .FistLastName{
                         font-size: 32px;
                         font-weight: 600;
-                        margin-top: 15px;
-                        margin-bottom: 5px;
+                    }
+                    .followBtn{
+                        font-size: 24px;
+                        font-weight: 600;
+                        cursor: pointer;
+                        margin-left: 15px;
                     }
                 }
                 .email{

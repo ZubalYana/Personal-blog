@@ -370,7 +370,7 @@ axios.get('/api/getPosts')
                         if (response.data.isFollowing) {
                             followBtn.text('following').css({
                                 color: '#1A4D2E',
-                                fontWeight: '500'
+                                fontWeight: '600'
                             });
                         } else {
                             followBtn.text('follow').css({
@@ -382,7 +382,8 @@ axios.get('/api/getPosts')
                     .catch((error) => {
                         console.error('Error checking follow status:', error);
                     });
-                
+                    
+                    //populating the user profile
                     $('.userProfilePopup').html(
                         `
                         <div class="user">
