@@ -965,11 +965,14 @@
                     object-fit: cover;
                     background-color: #f0f0f0;
                 }
-                .FistLastName{
-                    font-size: 32px;
-                    font-weight: 600;
-                    margin-top: 15px;
-                    margin-bottom: 5px;
+                .nameAndFollow{
+                    display: flex;
+                    .FistLastName{
+                        font-size: 32px;
+                        font-weight: 600;
+                        margin-top: 15px;
+                        margin-bottom: 5px;
+                    }
                 }
                 .email{
                     font-weight: 300;

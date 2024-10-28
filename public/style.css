@@ -959,7 +959,10 @@
      object-fit: cover;
   background-color: #f0f0f0;
 }
-.wrap .userProfilePopup .user .userInfo .FistLastName {
+.wrap .userProfilePopup .user .userInfo .nameAndFollow {
+  display: flex;
+}
+.wrap .userProfilePopup .user .userInfo .nameAndFollow .FistLastName {
   font-size: 32px;
   font-weight: 600;
   margin-top: 15px;

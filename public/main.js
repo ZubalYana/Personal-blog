@@ -362,6 +362,26 @@ axios.get('/api/getPosts')
                     $('.wrap').addClass('no-scroll');
                     console.log(targetUser)
                     $('.userProfilePopup').css('display', 'flex');
+                    
+                    axios.get(`/api/checkFollow/${targetUserId}`)
+                    .then((response) => {
+                        const followBtn = $('.followBtn');
+                        if (response.data.isFollowing) {
+                            followBtn.text('following').css({
+                                color: '#1A4D2E',
+                                fontWeight: '500'
+                            });
+                        } else {
+                            followBtn.text('follow').css({
+                                color: '#45474B',
+                                fontWeight: '400'
+                            });
+                        }
+                    })
+                    .catch((error) => {
+                        console.error('Error checking follow status:', error);
+                    });
+                
                     $('.userProfilePopup').html(
                         `
                         <div class="user">
@@ -369,7 +389,10 @@ axios.get('/api/getPosts')
                             <!-- User Info -->
                             <div class="userInfo">
                                 <img class="userPicture" src="/${targetUser.profilePicture}" alt="profile picture">
-                                <h2 class="FistLastName">${targetUser.firstname} ${targetUser.lastName}</h2>
+                                <div class="nameAndFollow">
+                                    <h2 class="FistLastName">${targetUser.firstname} ${targetUser.lastName}</h2>
+                                  <div class="followBtn"></div>
+                                </div>
                                 <p class="email">${targetUser.email}</p>
                                 <p class="description">${targetUser.profileDescription}</p>
                                 <span class="placesVisited">Visited: <p class='visitedPlaces'>${targetUser.placesVisited}</p></span>
@@ -698,6 +721,7 @@ $(document).ready(function() {
     }
 });
 
+//burger menu
 $('.burger').click(()=>{
     $('.burgerPopupContainer').css('display', 'flex');
     $('.burgerPopupXmark').click(()=>{
