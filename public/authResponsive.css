@@ -65,11 +65,14 @@
   .wrap .logIn {
     width: 85%;
   }
+  .wrap .logIn .placeCard {
+    display: none;
+  }
   .wrap .logIn h2 {
-    font-size: 38px;
+    font-size: 32px;
     align-items: center;
   }
   .wrap .logIn p {
-    font-size: 18px;
+    font-size: 16px;
   }
 }/*# sourceMappingURL=authResponsive.css.map */
