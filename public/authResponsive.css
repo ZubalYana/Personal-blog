@@ -75,4 +75,65 @@
   .wrap .logIn p {
     font-size: 16px;
   }
+}
+@media screen and (max-width: 426px) {
+  .wrap {
+    overflow-y: auto;
+    padding: 30px;
+  }
+  .wrap .registration {
+    width: 100%;
+    min-height: 100vh;
+  }
+  .wrap .registration h2 {
+    font-size: 32px;
+    text-align: center;
+    margin-top: 30px;
+  }
+  .wrap .registration p {
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+  .wrap .registration .registrationForm {
+    width: 100%;
+    height: 100%;
+  }
+  .wrap .registration .registrationForm .forms {
+    flex-direction: column;
+  }
+  .wrap .registration .registrationForm .forms .registrationFormLeft {
+    width: 100%;
+  }
+  .wrap .registration .registrationForm .forms .registrationFormLeft .nameAndLastname {
+    width: 100%;
+    flex-direction: column;
+  }
+  .wrap .registration .registrationForm .forms .registrationFormLeft .nameAndLastname .formGroup {
+    width: 100%;
+  }
+  .wrap .registration .registrationForm .forms .registrationFormLeft .passwordRules {
+    font-size: 12px;
+  }
+  .wrap .registration .registrationForm .forms .registrationFormRight {
+    width: 100%;
+    margin-top: 10px;
+  }
+  .wrap .registration .registrationForm .buttons {
+    margin-top: 25px 0;
+  }
+  .wrap .logIn {
+    width: 85%;
+  }
+  .wrap .logIn .placeCard {
+    display: none;
+  }
+  .wrap .logIn h2 {
+    font-size: 32px;
+    align-items: center;
+  }
+  .wrap .logIn p {
+    font-size: 16px;
+  }
 }/*# sourceMappingURL=authResponsive.css.map */

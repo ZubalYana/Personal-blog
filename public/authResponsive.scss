@@ -92,4 +92,65 @@
         }
     }
 }
+@media screen and (max-width: 426px) {
+    .wrap{
+        overflow-y: auto;
+        padding: 30px;
+        .registration{
+            width: 100%;
+            min-height: 100vh;
+            h2{
+                font-size: 32px;
+                text-align: center;
+                margin-top: 30px;
+            }
+            p{
+                font-size: 14px;
+                width: 100%;
+                text-align: center;
+                margin-top: 10px;
+            }
+            .registrationForm{
+                width: 100%;
+                height: 100%;
+                .forms{
+                    flex-direction: column;
+                    .registrationFormLeft{
+                        width: 100%;
+                        .nameAndLastname{
+                            width: 100%;
+                            flex-direction: column;
+                            .formGroup{
+                                width: 100%;
+                            }
+                        }
+                        .passwordRules{
+                            font-size: 12px;
+                        }
+                    }
+                    .registrationFormRight{
+                        width: 100%;
+                        margin-top: 10px;
+                    }
+                }
+                .buttons{
+                    margin-top: 25px 0;
+                }
+            }
+        }
+        .logIn{
+            width: 85%;
+            .placeCard{
+                display: none;
+            }
+            h2{
+                font-size: 32px;
+                align-items: center;
+            }
+            p{
+                font-size: 16px;
+            }
+        }
+    }
+}
 
