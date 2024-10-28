@@ -362,7 +362,8 @@ axios.get('/api/getPosts')
                     $('.wrap').addClass('no-scroll');
                     console.log(targetUser)
                     $('.userProfilePopup').css('display', 'flex');
-                    
+
+                    //check wheather the user is followed 
                     axios.get(`/api/checkFollow/${targetUserId}`)
                     .then((response) => {
                         const followBtn = $('.followBtn');
@@ -435,6 +436,41 @@ axios.get('/api/getPosts')
         </div>  
                         `
                     );
+
+                    //following/unfollowing directly inside the user profile
+                    $('.followBtn').click(function() {
+                        axios.get('/auth/user')
+                            .then((authRes) => {
+                                const userWhoFollows = authRes.data._id;
+                    
+                                if (userWhoFollows === targetUserId) {
+                                    alert('You cannot follow yourself!');
+                                    return;
+                                }
+                    
+                                const followAction = $(this).text() === 'follow' ? 'follow' : 'unfollow';
+                                axios.post(`/api/${followAction}/${targetUserId}`)
+                                    .then(() => {
+                                        if (followAction === 'follow') {
+                                            $(this).text('following').css({
+                                                color: '#1A4D2E',
+                                                fontWeight: '500'
+                                            });
+                                        } else {
+                                            $(this).text('follow').css({
+                                                color: '#45474B',
+                                                fontWeight: '400'
+                                            });
+                                        }
+                                    })
+                                    .catch((error) => {
+                                        console.error(`Error ${followAction}ing user:`, error);
+                                    });
+                            })
+                            .catch((error) => {
+                                console.error('Error fetching current user:', error);
+                            });
+                    });
 
                     //get and display all the target user's liked posts
                     $.ajax({
