@@ -153,4 +153,88 @@
   .wrap .logIn .formGroup .passwordContainer #LogInpassword {
     width: 100% !important;
   }
+}
+@media screen and (max-width: 376px) {
+  .wrap {
+    overflow-y: auto;
+    padding: 0;
+  }
+  .wrap .registration {
+    width: 100%;
+    padding: 20px;
+  }
+  .wrap .registration h2 {
+    font-size: 32px;
+    text-align: center;
+    margin: 0;
+  }
+  .wrap .registration p {
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+  .wrap .registration .registrationForm {
+    width: 100%;
+    height: 100%;
+  }
+  .wrap .registration .registrationForm .forms {
+    flex-direction: column;
+  }
+  .wrap .registration .registrationForm .forms .registrationFormLeft {
+    width: 100%;
+  }
+  .wrap .registration .registrationForm .forms .registrationFormLeft .nameAndLastname {
+    width: 100%;
+    flex-direction: column;
+  }
+  .wrap .registration .registrationForm .forms .registrationFormLeft .nameAndLastname .formGroup {
+    width: 100%;
+  }
+  .wrap .registration .registrationForm .forms .registrationFormLeft .passwordRules {
+    font-size: 11px;
+  }
+  .wrap .registration .registrationForm .forms .registrationFormRight {
+    width: 100%;
+    margin-top: 10px;
+  }
+  .wrap .registration .registrationForm .buttons {
+    width: 100%;
+  }
+  .wrap .registration .registrationForm .buttons button {
+    width: 47%;
+  }
+  .wrap .logIn {
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+  }
+  .wrap .logIn h2 {
+    font-size: 32px;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+  .wrap .logIn p {
+    font-size: 14px;
+    text-align: center;
+  }
+  .wrap .logIn form .buttons {
+    width: 100%;
+  }
+  .wrap .logIn form .buttons button {
+    width: 47%;
+  }
+  .wrap .logIn .formGroup {
+    width: 100%;
+  }
+  .wrap .logIn .formGroup input {
+    width: 100% !important;
+  }
+  .wrap .logIn .formGroup .passwordContainer {
+    width: 100% !important;
+  }
+  .wrap .logIn .formGroup .passwordContainer #LogInpassword {
+    width: 100% !important;
+  }
 }/*# sourceMappingURL=authResponsive.css.map */
