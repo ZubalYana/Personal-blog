@@ -969,11 +969,17 @@
   font-size: 32px;
   font-weight: 600;
 }
+.wrap .userProfilePopup .user .userInfo .nameAndFollow .round {
+  width: 7px;
+  height: 7px;
+  background-color: #45474B;
+  border-radius: 50%;
+  margin: 0 10px;
+}
 .wrap .userProfilePopup .user .userInfo .nameAndFollow .followBtn {
   font-size: 24px;
   font-weight: 600;
   cursor: pointer;
-  margin-left: 15px;
 }
 .wrap .userProfilePopup .user .userInfo .email {
   font-weight: 300;

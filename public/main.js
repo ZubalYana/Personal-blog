@@ -393,7 +393,8 @@ axios.get('/api/getPosts')
                                 <img class="userPicture" src="/${targetUser.profilePicture}" alt="profile picture">
                                 <div class="nameAndFollow">
                                     <h2 class="FistLastName">${targetUser.firstname} ${targetUser.lastName}</h2>
-                                  <div class="followBtn"></div>
+                                    <div class="round"></div>
+                                    <div class="followBtn"></div>
                                 </div>
                                 <p class="email">${targetUser.email}</p>
                                 <p class="description">${targetUser.profileDescription}</p>
