@@ -467,7 +467,7 @@ axios.get('/api/getPosts')
                                     })
                                     .catch((error) => {
                                         console.error(`Error ${followAction}ing user:`, error);
-                                    });
+                                    });   
                             })
                             .catch((error) => {
                                 console.error('Error fetching current user:', error);
@@ -544,6 +544,20 @@ axios.get('/api/getPosts')
                     $('.backToMainArrow').click(()=>{
                         $('.userProfilePopup').css('display', 'none');
                         $('.wrap').removeClass('no-scroll');
+                        $('.follow').each(function() {
+                            const userId = $(this).data('user-id');
+                            axios.get(`/api/checkFollow/${userId}`)
+                                .then((response) => {
+                                    if (response.data.isFollowing) {
+                                        $(this).text('following');
+                                        $(this).css('color', '#1A4D2E')
+                                        $(this).css('font-weight', '500')
+                                    }
+                                })
+                                .catch((error) => {
+                                    console.error('Error checking follow status:', error);
+                                });
+                        });  
                     })
 
                     //user's posts/liked posts toggling
