@@ -29,4 +29,47 @@
   .wrap .logIn p {
     font-size: 18px;
   }
+}
+@media screen and (max-width: 768px) {
+  .wrap {
+    padding: 30px;
+  }
+  .wrap .registration {
+    width: 100%;
+    height: 100vh;
+  }
+  .wrap .registration .placeCard {
+    display: none;
+  }
+  .wrap .registration h2 {
+    font-size: 32px;
+    align-items: center;
+    margin-top: 30px;
+  }
+  .wrap .registration p {
+    font-size: 16px;
+  }
+  .wrap .registration .registrationForm {
+    width: 100%;
+    height: 100%;
+  }
+  .wrap .registration .registrationForm .forms .registrationFormLeft .nameAndLastname .formGroup {
+    width: 160px;
+  }
+  .wrap .registration .registrationForm .forms .registrationFormLeft .passwordRules {
+    font-size: 12px;
+  }
+  .wrap .registration .registrationForm .buttons {
+    margin-top: 25px;
+  }
+  .wrap .logIn {
+    width: 85%;
+  }
+  .wrap .logIn h2 {
+    font-size: 38px;
+    align-items: center;
+  }
+  .wrap .logIn p {
+    font-size: 18px;
+  }
 }/*# sourceMappingURL=authResponsive.css.map */
