@@ -1,0 +1,28 @@
+@media screen and (max-width: 1024px) {
+    .wrap{
+        padding: 0;
+        overflow: hidden;
+
+        .registration{
+            width: 85%;
+            h2{
+                font-size: 38px;
+                align-items: center;
+            }
+            p{
+                font-size: 18px;
+            }
+            .registrationForm{
+                .forms{
+                    .registrationFormLeft{
+                        .nameAndLastname{
+                            .formGroup{
+                                width: 200px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
