@@ -259,3 +259,91 @@
         }
     }
 }
+@media screen and (max-width: 321px) {
+    .wrap{
+        overflow-y: auto;
+        padding: 0;
+        .registration{
+            width: 100%;
+            padding: 20px;
+
+            h2{
+                font-size: 28px;
+                text-align: center;
+                margin: 0;
+            }
+            p{
+                font-size: 12px;
+                width: 100%;
+                text-align: center;
+                margin-top: 10px;
+            }
+            .registrationForm{
+                width: 100%;
+                height: 100%;
+                .forms{
+                    flex-direction: column;
+                    .registrationFormLeft{
+                        width: 100%;
+                        .nameAndLastname{
+                            width: 100%;
+                            flex-direction: column;
+                            .formGroup{
+                                width: 100%;
+                            }
+                        }
+                        .passwordRules{
+                            font-size: 8px;
+                        }
+                    }
+                    .registrationFormRight{
+                        width: 100%;
+                        margin-top: 10px;
+                    }
+                }
+                .buttons{
+                    width: 100%;
+                    button{
+                        width: 47%;
+                    }
+                }
+            }
+        }
+        .logIn{
+            width: 100%;
+            height: 100vh;
+            padding: 20px;
+            h2{
+                font-size: 28px;
+                align-items: center;
+                text-align: center;
+                width: 100%;
+            }
+            p{
+                font-size: 12px;
+                text-align: center;
+            }
+            form{
+                .buttons{
+                    width: 100%;
+                    button{
+                        width: 47%;
+                    }
+                }
+            }
+            .formGroup{
+                width: 100%;
+                input{
+                    width: 100% !important;
+                }
+                .passwordContainer{
+                    width: 100% !important;
+                    #LogInpassword{
+                        width: 100% !important;
+                    }
+                }
+            }
+            
+        }
+    }
+}
