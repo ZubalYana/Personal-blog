@@ -600,7 +600,7 @@ $(document).on('click', '.followerPic', function(e) {
             $('.backToMainArrow').css('display', 'none');
             console.log(targetUser)
             $('.userProfilePopup').css('display', 'flex');
-            
+
             //check wheather the user is followed 
             axios.get(`/api/checkFollow/${targetUserId}`)
             .then((response) => {
@@ -621,7 +621,6 @@ $(document).on('click', '.followerPic', function(e) {
                 console.error('Error checking follow status:', error);
             });
 
-
             $('.userProfilePopup').html(
                 `
                 <div class="user">
@@ -641,7 +640,7 @@ $(document).on('click', '.followerPic', function(e) {
                         <span class="placesToVisit">Wants to visit: <p class='toVisitPlaces' >${targetUser.placesToVisit}</p></span>
                         <div class="followings">
                             <div class="following" id="followersCon">
-                                <span class="amount">${targetUser.followers.length}</span>
+                                <span class="amount" id="followerCountValue">${targetUser.followers.length}</span>
                                 <span class="following_text">followers</span>
                             </div>
                             <div class="following" id="followingsCon">
@@ -677,7 +676,6 @@ $(document).on('click', '.followerPic', function(e) {
 </div>  
                 `
             );
-
 
             //following/unfollowing directly inside the user profile
             $('.followBtn').click(function () {
