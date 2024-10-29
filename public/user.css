@@ -1451,12 +1451,27 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
-.wrap .userProfilePopup .followingsPopupContainer .followingsPopup .followers .followersCon .follower .followerName {
+.wrap .userProfilePopup .followingsPopupContainer .followingsPopup .followers .followersCon .follower .nameAndFollow {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+.wrap .userProfilePopup .followingsPopupContainer .followingsPopup .followers .followersCon .follower .nameAndFollow .FistLastName {
+  font-size: 32px;
+  font-weight: 600;
+}
+.wrap .userProfilePopup .followingsPopupContainer .followingsPopup .followers .followersCon .follower .nameAndFollow .round {
+  width: 7px;
+  height: 7px;
+  background-color: #45474B;
+  border-radius: 50%;
+  margin: 0 10px;
+}
+.wrap .userProfilePopup .followingsPopupContainer .followingsPopup .followers .followersCon .follower .nameAndFollow .followBtn {
   font-size: 24px;
   font-weight: 600;
-  color: #2C2E32;
-  margin-left: 10px;
-  font-family: Urbanist;
+  cursor: pointer;
 }
 .wrap .userProfilePopup .followingsPopupContainer .followingsPopup .followers .followersCon .follower .deleteFollower {
   position: absolute;

@@ -893,6 +893,26 @@ $(document).on('click', '.followingPic', function(e) {
 
             console.log(targetUser)
             $('.userProfilePopup').css('display', 'flex');
+
+            //check wheather the user is followed 
+            axios.get(`/api/checkFollow/${targetUserId}`)
+                .then((response) => {
+                            const followBtn = $('.followBtn');
+                            if (response.data.isFollowing) {
+                                followBtn.text('following').css({
+                                    color: '#1A4D2E',
+                                    fontWeight: '600'
+                                });
+                            } else {
+                                followBtn.text('follow').css({
+                                    color: '#45474B',
+                                    fontWeight: '400'
+                                });
+                            }
+                })
+                .catch((error) => {
+                    console.error('Error checking follow status:', error);
+                });
             $('.userProfilePopup').html(
                 `
                 <div class="user">
@@ -901,7 +921,11 @@ $(document).on('click', '.followingPic', function(e) {
                     <!-- User Info -->
                     <div class="userInfo">
                         <img class="userPicture" src="/${targetUser.profilePicture}" alt="profile picture">
-                        <h2 class="FistLastName">${targetUser.firstname} ${targetUser.lastName}</h2>
+                                <div class="nameAndFollow">
+                                    <h2 class="FistLastName">${targetUser.firstname} ${targetUser.lastName}</h2>
+                                    <div class="round"></div>
+                                    <div class="followBtn"></div>
+                                </div>
                         <p class="email">${targetUser.email}</p>
                         <p class="description">${targetUser.profileDescription}</p>
                         <span class="placesVisited">Visited: <p class='visitedPlaces'>${targetUser.placesVisited}</p></span>
@@ -944,6 +968,46 @@ $(document).on('click', '.followingPic', function(e) {
 </div>  
                 `
             );
+
+            //following/unfollowing directly inside the user profile
+            $('.followBtn').click(function () {
+                axios.get('/auth/user')
+                    .then((authRes) => {
+                        const userWhoFollows = authRes.data._id;
+            
+                        if (userWhoFollows === targetUserId) {
+                            alert('You cannot follow yourself!');
+                            return;
+                        }
+            
+                        const followAction = $(this).text() === 'follow' ? 'follow' : 'unfollow';
+                        axios.post(`/api/${followAction}/${targetUserId}`)
+                            .then(() => {
+                                if (followAction === 'follow') {
+                                    $(this).text('following').css({
+                                        color: '#1A4D2E',
+                                        fontWeight: '500'
+                                    });
+                                    const currentCount = parseInt($('#followerCountValue').text(), 10);
+                                    $('#followerCountValue').text(currentCount + 1);
+            
+                                } else {
+                                    $(this).text('follow').css({
+                                        color: '#45474B',
+                                        fontWeight: '400'
+                                    });
+                                    const currentCount = parseInt($('#followerCountValue').text(), 10);
+                                    $('#followerCountValue').text(currentCount - 1);
+                                }
+                            })
+                            .catch((error) => {
+                                console.error(`Error ${followAction}ing user:`, error);
+                            });
+                    })
+                    .catch((error) => {
+                        console.error('Error fetching current user:', error);
+                    });
+            });
 
             //main page opening and closing the popup
             $('.followerBackToMainArrow').click(()=>{
