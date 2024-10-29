@@ -1168,11 +1168,27 @@
      object-fit: cover;
   background-color: #f0f0f0;
 }
-.wrap .userProfilePopup .user .userInfo .FistLastName {
-  font-size: 32px;
-  font-weight: 600;
+.wrap .userProfilePopup .user .userInfo .nameAndFollow {
+  display: flex;
+  align-items: center;
   margin-top: 15px;
   margin-bottom: 5px;
+}
+.wrap .userProfilePopup .user .userInfo .nameAndFollow .FistLastName {
+  font-size: 32px;
+  font-weight: 600;
+}
+.wrap .userProfilePopup .user .userInfo .nameAndFollow .round {
+  width: 7px;
+  height: 7px;
+  background-color: #45474B;
+  border-radius: 50%;
+  margin: 0 10px;
+}
+.wrap .userProfilePopup .user .userInfo .nameAndFollow .followBtn {
+  font-size: 24px;
+  font-weight: 600;
+  cursor: pointer;
 }
 .wrap .userProfilePopup .user .userInfo .email {
   font-weight: 300;

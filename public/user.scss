@@ -1163,11 +1163,27 @@
                     object-fit: cover;
                     background-color: #f0f0f0;
                 }
-                .FistLastName{
-                    font-size: 32px;
-                    font-weight: 600;
+                .nameAndFollow{
+                    display: flex;
+                    align-items: center;
                     margin-top: 15px;
                     margin-bottom: 5px;
+                    .FistLastName{
+                        font-size: 32px;
+                        font-weight: 600;
+                    }
+                    .round{
+                        width: 7px;
+                        height: 7px;
+                        background-color: #45474B;
+                        border-radius: 50%;
+                        margin: 0 10px;
+                    }
+                    .followBtn{
+                        font-size: 24px;
+                        font-weight: 600;
+                        cursor: pointer;
+                    }
                 }
                 .email{
                     font-weight: 300;
