@@ -402,7 +402,7 @@ axios.get('/api/getPosts')
                                 <span class="placesToVisit">Wants to visit: <p class='toVisitPlaces' >${targetUser.placesToVisit}</p></span>
                                 <div class="followings">
                                     <div class="following" id="followersCon">
-                                        <span class="amount">${targetUser.followers.length}</span>
+                                        <span class="amount" id="followerCountValue">${targetUser.followers.length}</span>
                                         <span class="following_text">followers</span>
                                     </div>
                                     <div class="following" id="followingsCon">
@@ -440,7 +440,7 @@ axios.get('/api/getPosts')
                     );
 
                     //following/unfollowing directly inside the user profile
-                    $('.followBtn').click(function() {
+                    $('.followBtn').click(function () {
                         axios.get('/auth/user')
                             .then((authRes) => {
                                 const userWhoFollows = authRes.data._id;
@@ -458,16 +458,21 @@ axios.get('/api/getPosts')
                                                 color: '#1A4D2E',
                                                 fontWeight: '500'
                                             });
+                                            const currentCount = parseInt($('#followerCountValue').text(), 10);
+                                            $('#followerCountValue').text(currentCount + 1);
+                    
                                         } else {
                                             $(this).text('follow').css({
                                                 color: '#45474B',
                                                 fontWeight: '400'
                                             });
+                                            const currentCount = parseInt($('#followerCountValue').text(), 10);
+                                            $('#followerCountValue').text(currentCount - 1);
                                         }
                                     })
                                     .catch((error) => {
                                         console.error(`Error ${followAction}ing user:`, error);
-                                    });   
+                                    });
                             })
                             .catch((error) => {
                                 console.error('Error fetching current user:', error);
