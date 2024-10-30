@@ -1,3 +1,57 @@
+//global variables
+async function loadFollowers(followers) {
+    try {
+        const response = await fetch('/api/getUsersByIds', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ ids: followers })
+        });
+        const followersData = await response.json();
+        for (let follower of followersData) {
+            $('.followersCon').append(
+                `
+                <div class="follower" data-id="${follower._id}">
+                   <img class="followerPic" src="${follower.profilePicture}" alt="${follower.firstname} ${follower.lastName}">
+                   <div class="followerName">${follower.firstname} ${follower.lastName}</div>
+                   <i class="fa-solid fa-trash-can deleteFollower"></i>
+                </div>      
+                `
+            );
+        }
+    } catch (error) {
+        console.error('Error loading followers:', error);
+    }
+}
+async function loadFollowings(followings) {
+    try {
+        const response = await fetch('/api/getUsersByIds', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ ids: followings })
+        });
+
+        const followinhssData = await response.json();
+
+        for (let following of followinhssData) {
+            $('.showFollowingsCon').prepend(
+                `
+                <div class="following" data-id="${following._id}">
+                   <img class="followingPic" src="${following.profilePicture}" alt="${following.firstname} ${following.lastName}">
+                   <div class="followingName">${following.firstname} ${following.lastName}</div>
+                   <div class="followingsPopup_unfollow">unfollow</div>
+                </div>              
+                `
+            );
+        }
+    } catch (error) {
+        console.error('Error loading followers:', error);
+    }
+}
+
 //getting and displaying user's info
 document.addEventListener('DOMContentLoaded', () => {
     axios.get('/auth/user')
@@ -126,6 +180,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             loadFollowers(res.data.followers);
             loadFollowings(res.data.followings);
+
 
             //removing followers and unfollowing followings
             $(document).on('click', '.deleteFollower', function() {
@@ -587,10 +642,8 @@ $('#gear').click(()=>{
 $(document).on('click', '.followerPic', function(e) {
     e.preventDefault();
     e.stopPropagation();
-
     const targetUserId = $(this).closest('.follower').data('id');
     console.log(targetUserId);
-
 
     $.ajax({
         url: `/auth/user/${targetUserId}`,
@@ -722,7 +775,14 @@ $(document).on('click', '.followerPic', function(e) {
                 $('.userProfilePopup').css('display', 'none');
                 $('.wrap').removeClass('no-scroll');
                 $('.backToMainArrow').css('display', 'flex');
+                $('.followersCon').empty();
+                axios.get('/auth/user')
+                .then(res => {
+                    console.log(res.data);
+                    loadFollowers(res.data.followers);
+                })
             })
+            
 
             // User's posts/liked posts toggling
             $('.likedPosts').click(() => {
@@ -880,7 +940,6 @@ $(document).on('click', '.followerPic', function(e) {
 $(document).on('click', '.followingPic', function(e) {
     e.preventDefault();
     e.stopPropagation();
-
     const targetUserId = $(this).closest('.following').data('id');
     console.log(targetUserId);
 
@@ -1014,7 +1073,6 @@ $(document).on('click', '.followingPic', function(e) {
                 $('.userProfilePopup').css('display', 'none');
                 $('.wrap').removeClass('no-scroll');
                 $('.backToMainArrow').css('display', 'flex');
-
             })
 
             // User's posts/liked posts toggling
