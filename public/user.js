@@ -10,7 +10,7 @@ async function loadFollowers(followers) {
         });
         const followersData = await response.json();
         for (let follower of followersData) {
-            $('.followersCon').append(
+            $('.followersCon').prepend(
                 `
                 <div class="follower" data-id="${follower._id}">
                    <img class="followerPic" src="${follower.profilePicture}" alt="${follower.firstname} ${follower.lastName}">
@@ -1077,6 +1077,33 @@ $(document).on('click', '.followingPic', function(e) {
                 axios.get('/auth/user')
                 .then(res => {
                     console.log(res.data);
+                    async function loadFollowings(followings) {
+                        try {
+                            const response = await fetch('/api/getUsersByIds', {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json'
+                                },
+                                body: JSON.stringify({ ids: followings })
+                            });
+                    
+                            const followinhssData = await response.json();
+                    
+                            for (let following of followinhssData) {
+                                $('.showFollowingsCon').prepend(
+                                    `
+                                    <div class="following" data-id="${following._id}">
+                                       <img class="followingPic" src="${following.profilePicture}" alt="${following.firstname} ${following.lastName}">
+                                       <div class="followingName">${following.firstname} ${following.lastName}</div>
+                                       <div class="followingsPopup_unfollow">unfollow</div>
+                                    </div>              
+                                    `
+                                );
+                            }
+                        } catch (error) {
+                            console.error('Error loading followers:', error);
+                        }
+                    }
                     loadFollowings(res.data.followings);
                 })
             })
