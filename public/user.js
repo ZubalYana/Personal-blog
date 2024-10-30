@@ -10,7 +10,7 @@ async function loadFollowers(followers) {
         });
         const followersData = await response.json();
         for (let follower of followersData) {
-            $('.followersCon').prepend(
+            $('.followersCon').append(
                 `
                 <div class="follower" data-id="${follower._id}">
                    <img class="followerPic" src="${follower.profilePicture}" alt="${follower.firstname} ${follower.lastName}">
@@ -125,63 +125,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 );
             });
 
-            //display followers and followings
-            async function loadFollowers(followers) {
-                try {
-                    const response = await fetch('/api/getUsersByIds', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify({ ids: followers })
-                    });
-                    const followersData = await response.json();
-                    for (let follower of followersData) {
-                        $('.followersCon').append(
-                            `
-                            <div class="follower" data-id="${follower._id}">
-                               <img class="followerPic" src="${follower.profilePicture}" alt="${follower.firstname} ${follower.lastName}">
-                               <div class="followerName">${follower.firstname} ${follower.lastName}</div>
-                               <i class="fa-solid fa-trash-can deleteFollower"></i>
-                            </div>      
-                            `
-                        );
-                    }
-                } catch (error) {
-                    console.error('Error loading followers:', error);
-                }
-            }
-            async function loadFollowings(followings) {
-                try {
-                    const response = await fetch('/api/getUsersByIds', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify({ ids: followings })
-                    });
-            
-                    const followinhssData = await response.json();
-            
-                    for (let following of followinhssData) {
-                        $('.showFollowingsCon').prepend(
-                            `
-                            <div class="following" data-id="${following._id}">
-                               <img class="followingPic" src="${following.profilePicture}" alt="${following.firstname} ${following.lastName}">
-                               <div class="followingName">${following.firstname} ${following.lastName}</div>
-                               <div class="followingsPopup_unfollow">unfollow</div>
-                            </div>              
-                            `
-                        );
-                    }
-                } catch (error) {
-                    console.error('Error loading followers:', error);
-                }
-            }
-            loadFollowers(res.data.followers);
-            loadFollowings(res.data.followings);
-
-
             //removing followers and unfollowing followings
             $(document).on('click', '.deleteFollower', function() {
                 const followerId = $(this).closest('.follower').data('id');
@@ -233,11 +176,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 $('.followingsPopupContainer').css('display', 'flex');
                 $('.followers').css('display', 'flex');
                 $('.followingsPopupStage').css('display', 'none');
+                $('.followersCon').empty();
+                loadFollowers(res.data.followers);
             });
             $(document).on('click', '#followingsCon', function() {
                 $('.followingsPopupContainer').css('display', 'flex');
                 $('.followers').css('display', 'none');
                 $('.followingsPopupStage').css('display', 'flex');
+                $('.showFollowingsCon').empty();
+                loadFollowings(res.data.followings);
             });
             $('#followingXmark').click(() => {
                 $('.followingsPopupContainer').css('display', 'none');
