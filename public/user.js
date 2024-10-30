@@ -130,6 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 alert('why doesn\'t it work?')
                 const followerId = $(this).closest('.follower').data('id');
                 $('.followingsPopupContainer').css('display', 'none')
+                $('.messageCon').css('display', 'flex')
                 $('#messageText').text('Delete this person from followers?')
                 $('#confirm').text('Delete')
                 $('#confirm').click(()=>{
