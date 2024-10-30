@@ -127,11 +127,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
             //removing followers and unfollowing followings
             $(document).on('click', '.deleteFollower', function() {
-                alert('why doesn\'t it work?')
                 const followerId = $(this).closest('.follower').data('id');
                 $('.followingsPopupContainer').css('display', 'none')
+                $('.message').css('padding', '35px')
                 $('.messageCon').css('display', 'flex')
                 $('#messageText').text('Delete this person from followers?')
+                $('#cancel').click(()=>{
+                    $('.messageCon').css('display', 'none')
+                })
                 $('#confirm').text('Delete')
                 $('#confirm').click(()=>{
                     axios.delete(`/api/removeFollower/${followerId}`)
