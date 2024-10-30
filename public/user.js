@@ -127,6 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             //removing followers and unfollowing followings
             $(document).on('click', '.deleteFollower', function() {
+                alert('why doesn\'t it work?')
                 const followerId = $(this).closest('.follower').data('id');
                 $('.followingsPopupContainer').css('display', 'none')
                 $('#messageText').text('Delete this person from followers?')
@@ -723,10 +724,37 @@ $(document).on('click', '.followerPic', function(e) {
                 $('.wrap').removeClass('no-scroll');
                 $('.backToMainArrow').css('display', 'flex');
                 $('.followersCon').empty();
+
                 axios.get('/auth/user')
                 .then(res => {
                     console.log(res.data);
+                    async function loadFollowers(followers) {
+                        try {
+                            const response = await fetch('/api/getUsersByIds', {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json'
+                                },
+                                body: JSON.stringify({ ids: followers })
+                            });
+                            const followersData = await response.json();
+                            for (let follower of followersData) {
+                                $('.followersCon').append(
+                                    `
+                                    <div class="follower" data-id="${follower._id}">
+                                       <img class="followerPic" src="${follower.profilePicture}" alt="${follower.firstname} ${follower.lastName}">
+                                       <div class="followerName">${follower.firstname} ${follower.lastName}</div>
+                                       <i class="fa-solid fa-trash-can deleteFollower"></i>
+                                    </div>      
+                                    `
+                                );
+                            }
+                        } catch (error) {
+                            console.error('Error loading followers:', error);
+                        }
+                    }
                     loadFollowers(res.data.followers);
+
                 })
             })
             
@@ -1021,6 +1049,7 @@ $(document).on('click', '.followingPic', function(e) {
                 $('.wrap').removeClass('no-scroll');
                 $('.backToMainArrow').css('display', 'flex');
                 $('.showFollowingsCon').empty();
+
                 axios.get('/auth/user')
                 .then(res => {
                     console.log(res.data);
