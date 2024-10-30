@@ -932,7 +932,7 @@ $(document).on('click', '.followingPic', function(e) {
                         <span class="placesToVisit">Wants to visit: <p class='toVisitPlaces' >${targetUser.placesToVisit}</p></span>
                         <div class="followings">
                             <div class="following" id="followersCon">
-                                <span class="amount">${targetUser.followers.length}</span>
+                                <span class="amount" id="followerCountValue">${targetUser.followers.length}</span>
                                 <span class="following_text">followers</span>
                             </div>
                             <div class="following" id="followingsCon">
