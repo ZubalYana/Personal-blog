@@ -1073,6 +1073,12 @@ $(document).on('click', '.followingPic', function(e) {
                 $('.userProfilePopup').css('display', 'none');
                 $('.wrap').removeClass('no-scroll');
                 $('.backToMainArrow').css('display', 'flex');
+                $('.showFollowingsCon').empty();
+                axios.get('/auth/user')
+                .then(res => {
+                    console.log(res.data);
+                    loadFollowings(res.data.followings);
+                })
             })
 
             // User's posts/liked posts toggling
