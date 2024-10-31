@@ -114,7 +114,11 @@ axios.get('/api/getPosts')
                 </div>
                 <img class="postImg" src="${postPic}" alt="Post Image" onerror="this.onerror=null; this.src='./materials/post pic default.png';">
                 <h3 class="postTitle">${post.title}</h3>
-                <p class="postText">${post.body}</p>
+                    <div class="postText">
+                        <span class="postExcerpt">${post.body.substring(0, 80)}</span>
+                        <span class="postFullText" style="display: none;">${post.body.substring(80, 500)}</span>
+                        <a href="#" class="readMore">Read More</a>
+                    </div>
                 <p class="postHashtags">${post.hashtags}</p>
                 <div class="actions">
                     <i class="fa-regular fa-flag"></i>
@@ -124,6 +128,25 @@ axios.get('/api/getPosts')
             `
         );
     }
+    
+    //reading more/less
+    $(document).on('click', '.readMore', function(e) {
+        e.preventDefault();
+        let $this = $(this);
+        let $post = $this.closest('.post'); 
+        let $fullText = $this.siblings('.postFullText');
+        let $excerpt = $this.siblings('.postExcerpt');
+    
+        $fullText.slideToggle(); 
+        $excerpt.show(); 
+        $this.text($this.text() === 'Read More' ? 'Read Less' : 'Read More'); 
+    
+        if ($this.text() === 'Read Less') {
+            $post.css('height', 'auto'); 
+        } else {
+            $post.css('height', '521px'); 
+        }
+    });
 
     // Handle post deletion
     $(document).on('click', '.fa-trash-can', function () {
