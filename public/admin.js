@@ -36,7 +36,7 @@ axios.get('/api/getUser')
                         <div class="user"  data-id='${user._id}'>
                         <div class="icons">
                             <i class="fa-regular fa-flag"></i>
-                            <i class="fa-solid fa-trash-can" id='delete${user._id}'></i>
+                            <i class="fa-solid fa-trash-can userDelete" id='delete${user._id}'></i>
                         </div>
 
                 <div class="topInfo">
@@ -60,7 +60,7 @@ axios.get('/api/getUser')
     }
 
     //users deleting
-    $(document).on('click', '.fa-trash-can', function () {
+    $(document).on('click', '.userDelete', function () {
         $('#messageText').text('Are you sure you want to delete the user?')
         $('.confirm').text('Delete')
         $('.messageCon').css('display', 'flex')
