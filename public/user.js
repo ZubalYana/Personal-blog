@@ -596,7 +596,6 @@ $(document).on('click', '.followerPic', function(e) {
     e.stopPropagation();
     const targetUserId = $(this).closest('.follower').data('id');
     console.log(targetUserId);
-
     $.ajax({
         url: `/auth/user/${targetUserId}`,
         type: 'GET',
