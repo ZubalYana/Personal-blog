@@ -481,6 +481,7 @@ app.delete('/api/removeFollower/:id', authMiddleware, async (req, res) => {
     }
 });
 
+//newSlatter subscribtion
 router.post('/subscribe', async (req, res) => {
     const { email } = req.body;
     if (!email || !/\S+@\S+\.\S+/.test(email)) {
@@ -494,7 +495,6 @@ router.post('/subscribe', async (req, res) => {
     await newSubscriber.save();
     res.status(201).send('Subscribed successfully');
 });
-  
 module.exports = router;
 
 //admin
