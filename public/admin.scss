@@ -381,13 +381,38 @@
         height: 95vh;
         justify-content: flex-start;
         align-items: flex-start;
-        .editorContainer{
+        .newSlatter_form{
             display: flex;
             flex-direction: column;
-            margin-top: 30px;
-            width: 700px;
-            height: 400px;
+            .editorContainer{
+                display: flex;
+                flex-direction: column;
+                margin-top: 30px;
+                width: 650px;
+                height: 400px;
+            }
+            .newSlatter_btn{
+                width: 170px;
+                height: 60px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #fff;
+                color: #1A4D2E;
+                border: #1A4D2E 2px solid;
+                transition: 0.4s ease-in-out;
+                cursor: pointer;
+                font-size: 20px;
+                font-weight: 600;
+                margin-top: 20px;
+                border-radius: 16px;
+            }
+            .newSlatter_btn:hover{
+                background-color: #1A4D2E;
+                color: #fff;
+            }
         }
+
     }
 
 }
