@@ -10,6 +10,8 @@ const PORT = process.env.PORT || 3000;
 const JWT_SECRET = 'your_jwt_secret';
 const multer = require('multer');
 const Post = require('./models/Post')
+const Subscriber = require('./models/Subscriber')
+const router = express.Router();
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
         cb(null, 'uploads/');
@@ -103,7 +105,6 @@ app.post('/auth/logout', (req, res) => {
     res.clearCookie('token');
     res.status(200).json({ message: 'Logged out successfully' });
 });
-
 
 //middleware
 const authMiddleware = (req, res, next) => {
@@ -479,6 +480,22 @@ app.delete('/api/removeFollower/:id', authMiddleware, async (req, res) => {
         res.status(500).json({ message: 'An error occurred while removing follower', error: error.message });
     }
 });
+
+router.post('/subscribe', async (req, res) => {
+    const { email } = req.body;
+    if (!email || !/\S+@\S+\.\S+/.test(email)) {
+      return res.status(400).send('Invalid email');
+    }
+    const existingSubscriber = await Subscriber.findOne({ email });
+    if (existingSubscriber) {
+      return res.status(409).send('Email already subscribed');
+    }
+    const newSubscriber = new Subscriber({ email, subscribedAt: new Date() });
+    await newSubscriber.save();
+    res.status(201).send('Subscribed successfully');
+});
+  
+module.exports = router;
 
 //admin
 app.get('/admin', (req, res) => {

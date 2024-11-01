@@ -187,4 +187,6 @@ const quill = new Quill('#editor', {
     },
     placeholder: 'Compose an epic...',
     theme: 'snow', // or 'bubble'
-  });
+});
+
+const Subscriber = require('./models/Subscriber')
