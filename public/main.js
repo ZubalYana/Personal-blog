@@ -785,3 +785,33 @@ $('.burger').click(()=>{
         $('.burgerPopupContainer').css('display', 'none');
     });
 }); 
+
+//newSletter subcription
+$('#newsletterSubscribe').click(async () => {
+    const email = $('#newslatterEmail').val().trim();
+
+    if (!email || !/\S+@\S+\.\S+/.test(email)) {
+        alert('Please enter a valid email address.');
+        return;
+    }
+
+    const data = { email };
+
+    try {
+        const response = await fetch('/subscribe', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data),
+        });
+        if (response.ok) {
+            alert('Subscribed successfully!');
+            $('#newslatterEmail').val(''); 
+        } else {
+            alert(await response.text());
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        alert('There was an error subscribing.');
+    }
+});
+
