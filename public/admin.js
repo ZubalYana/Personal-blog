@@ -189,31 +189,21 @@ const quill = new Quill('#editor', {
     theme: 'snow', // or 'bubble'
 });
 
-//model connection
-const Subscriber = require('./models/Subscriber')
-
 //newsletter submission
-document.getElementById('sendButton').addEventListener('click', async () => {
-    const email = document.getElementById('emailInput').value;
+$('.newSlatter_btn').click(async () => {
+    alert('Sending newsletter...');
     const content = quill.root.innerHTML;
 
-    // Validate email and content
-    if (!email || !/\S+@\S+\.\S+/.test(email)) {
-        alert('Please enter a valid email address.');
-        return;
-    }
     if (!content.trim()) {
         alert('Please enter content for the newsletter.');
         return;
     }
 
-    const data = { email, content };
-
     try {
         const response = await fetch('/send-newsletter', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(data),
+            body: JSON.stringify({ content }),
         });
 
         if (response.ok) {

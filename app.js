@@ -11,7 +11,8 @@ const JWT_SECRET = 'your_jwt_secret';
 const multer = require('multer');
 const Post = require('./models/Post')
 const Subscriber = require('./models/Subscriber')
-const router = express.Router();
+const nodemailer = require('nodemailer');
+const { simpleParser } = require('mailparser');
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
         cb(null, 'uploads/');
@@ -501,23 +502,48 @@ app.post('/subscribe', async (req, res) => {
     }
 });
 
+//nodemailer
+const transporter = nodemailer.createTransport({
+    service: 'gmail', 
+    auth: {
+        user: 'yanazubal2345@gmail.com',
+        pass: 'ioil iqsl jwbr skqn'
+    }
+});
+
 //newsLetter sending
 app.post('/send-newsletter', async (req, res) => {
-    const { email, content } = req.body;
+    const { content } = req.body;
 
-    if (!email || !/\S+@\S+\.\S+/.test(email)) {
-        return res.status(400).send('Invalid email');
-    }
     if (!content) {
         return res.status(400).send('Content is required');
     }
 
-    // Logic to process the newsletter content (e.g., send via email service)
-    // For simplicity, we'll assume the newsletter is "sent"
-    console.log(`Sending newsletter to ${email} with content:`, content);
+    try {
+        const subscribers = await Subscriber.find({});
+        if (!subscribers.length) {
+            return res.status(404).send('No subscribers found');
+        }
 
-    res.status(200).send('Newsletter sent successfully');
+        for (const subscriber of subscribers) {
+            const mailOptions = {
+                from: 'your-email@gmail.com', 
+                to: subscriber.email, 
+                subject: 'Your Newsletter',
+                html: content 
+            };
+
+            await transporter.sendMail(mailOptions);
+            console.log(`Newsletter sent to ${subscriber.email}`);
+        }
+
+        res.status(200).send('Newsletter sent successfully to all subscribers');
+    } catch (error) {
+        console.error('Error sending newsletter:', error);
+        res.status(500).send('Error sending newsletter');
+    }
 });
+
 
 //admin
 app.get('/admin', (req, res) => {
