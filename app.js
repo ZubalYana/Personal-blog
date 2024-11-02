@@ -501,6 +501,24 @@ app.post('/subscribe', async (req, res) => {
     }
 });
 
+//newsLetter sending
+app.post('/send-newsletter', async (req, res) => {
+    const { email, content } = req.body;
+
+    if (!email || !/\S+@\S+\.\S+/.test(email)) {
+        return res.status(400).send('Invalid email');
+    }
+    if (!content) {
+        return res.status(400).send('Content is required');
+    }
+
+    // Logic to process the newsletter content (e.g., send via email service)
+    // For simplicity, we'll assume the newsletter is "sent"
+    console.log(`Sending newsletter to ${email} with content:`, content);
+
+    res.status(200).send('Newsletter sent successfully');
+});
+
 //admin
 app.get('/admin', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'admin.html'));

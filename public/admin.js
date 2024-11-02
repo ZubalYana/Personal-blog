@@ -194,35 +194,35 @@ const Subscriber = require('./models/Subscriber')
 
 //newsletter submission
 document.getElementById('sendButton').addEventListener('click', async () => {
-    // Get the email and editor content
     const email = document.getElementById('emailInput').value;
-    const content = quill.root.innerHTML; // Gets HTML content from the editor
-  
-    // Basic email validation
+    const content = quill.root.innerHTML;
+
+    // Validate email and content
     if (!email || !/\S+@\S+\.\S+/.test(email)) {
-      alert('Please enter a valid email address.');
-      return;
+        alert('Please enter a valid email address.');
+        return;
     }
-  
-    // Prepare the data to send to the server
+    if (!content.trim()) {
+        alert('Please enter content for the newsletter.');
+        return;
+    }
+
     const data = { email, content };
-  
-    // Send the data to the server
+
     try {
-      const response = await fetch('/subscribe', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
-      });
-  
-      if (response.ok) {
-        alert('Newsletter sent successfully!');
-      } else {
-        alert(await response.text());
-      }
+        const response = await fetch('/send-newsletter', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data),
+        });
+
+        if (response.ok) {
+            alert('Newsletter sent successfully!');
+        } else {
+            alert(await response.text());
+        }
     } catch (error) {
-      console.error('Error:', error);
-      alert('There was an error sending the newsletter.');
+        console.error('Error:', error);
+        alert('There was an error sending the newsletter.');
     }
-  
 });
