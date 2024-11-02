@@ -482,20 +482,24 @@ app.delete('/api/removeFollower/:id', authMiddleware, async (req, res) => {
 });
 
 //newSlatter subscribtion
-router.post('/subscribe', async (req, res) => {
+app.post('/subscribe', async (req, res) => {
     const { email } = req.body;
     if (!email || !/\S+@\S+\.\S+/.test(email)) {
-      return res.status(400).send('Invalid email');
+        return res.status(400).send('Invalid email');
     }
-    const existingSubscriber = await Subscriber.findOne({ email });
-    if (existingSubscriber) {
-      return res.status(409).send('Email already subscribed');
+    try {
+        const existingSubscriber = await Subscriber.findOne({ email });
+        if (existingSubscriber) {
+            return res.status(409).send('Email already subscribed');
+        }
+        const newSubscriber = new Subscriber({ email, subscribedAt: new Date() });
+        await newSubscriber.save();
+        res.status(201).send('Subscribed successfully');
+    } catch (error) {
+        console.error('Error saving subscriber:', error);
+        res.status(500).send('Server error');
     }
-    const newSubscriber = new Subscriber({ email, subscribedAt: new Date() });
-    await newSubscriber.save();
-    res.status(201).send('Subscribed successfully');
 });
-module.exports = router;
 
 //admin
 app.get('/admin', (req, res) => {
