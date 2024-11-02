@@ -53,6 +53,67 @@
   cursor: pointer;
   transition: 0.5s ease-in-out;
 }
+.wrap .messageCon {
+  width: 100%;
+  height: 100vh;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.2549019608);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+.wrap .messageCon .message {
+  width: 580px;
+  height: 200px;
+  padding: 25px;
+  border-radius: 16px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wrap .messageCon .message h3 {
+  color: #45474B;
+  font-size: 32px;
+  font-weight: 600;
+}
+.wrap .messageCon .message .buttons {
+  width: 350px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.wrap .messageCon .message .buttons div {
+  width: 150px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 600;
+  font-family: Josefin Sans;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+.wrap .messageCon .message .buttons .cancel {
+  border: #1A4D2E 2px solid;
+}
+.wrap .messageCon .message .buttons .cancel:hover {
+  background-color: #45474B;
+  color: #fff;
+}
+.wrap .messageCon .message .buttons .confirm {
+  background-color: #1A4D2E;
+  color: #fff;
+}
+.wrap .messageCon .message .buttons .confirm:hover {
+  background-color: #45474B;
+  color: #fff;
+}
 .wrap .mainPage {
   width: 100%;
   flex-direction: column;
@@ -404,7 +465,7 @@
   width: 100%;
   height: 200px;
   color: #fff;
-  z-index: 9999;
+  z-index: 9000;
   position: relative;
   padding: 150px 40px 40px 40px;
 }

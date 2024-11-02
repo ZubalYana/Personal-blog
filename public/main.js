@@ -804,7 +804,14 @@ $('#newsletterSubscribe').click(async () => {
             body: JSON.stringify(data),
         });
         if (response.ok) {
-            alert('Subscribed successfully!');
+            $('#messageText').text('Thank you for subscribing to our newsletter!');
+            $('.confirm').text('OK');
+            $('.cancel').css('display', 'none');
+            $('.buttons').css('width', '100%');
+            $('.confirm').click(() => {
+                $('.messageCon').css('display', 'none');
+            })
+            $('.messageCon').css('display', 'flex');
             $('#newslatterEmail').val(''); 
         } else {
             alert(await response.text());
