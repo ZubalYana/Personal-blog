@@ -24,6 +24,8 @@ $('.newsletter').click(()=>{
     $('.newsletter').css('font-weight', '600')
 })
 
+
+
 //display all the users
 axios.get('/api/getUser')
 .then((res) => {
