@@ -25,37 +25,49 @@ const storage = multer.diskStorage({
 const session = require('express-session');
 const router = express.Router();
 
+// Middleware
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(session({
-    secret: 'your_secret_key', 
+    secret: 'your_secret_key', // Replace with a secure key
     resave: false,
     saveUninitialized: true,
-    cookie: { secure: false } 
+    cookie: { secure: false } // Set to true if using HTTPS
 }));
 
+// Admin credentials
 const admins = [
     { adminName: 'Yana', adminPass: '1111' }
 ];
 
+// Login Form Route
+app.get('/admin-login', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'admin-login.html')); // Serve the login form
+});
+
+// Login Endpoint
 app.post('/admin-login', (req, res) => {
     const { adminName, adminPass } = req.body;
     const admin = admins.find(a => a.adminName === adminName && a.adminPass === adminPass);
     if (admin) {
-        req.session.isAdmin = true;
+        req.session.isAdmin = true; // Mark the session as authenticated
         res.status(200).json({ success: true, message: 'Login successful' });
     } else {
         res.status(401).json({ success: false, message: 'Invalid credentials' });
     }
 });
 
+// Middleware to Protect /admin
 function isAdmin(req, res, next) {
     if (req.session && req.session.isAdmin) {
-        return next();
+        return next(); // Proceed to the next middleware or route
     }
-    res.status(403).json({ message: 'Access denied' });
+    res.status(403).json({ message: 'Access denied' }); // Deny access if not authenticated
 }
 
+// Protected Admin Panel Route
 app.get('/admin', isAdmin, (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'admin.html'));
+    res.sendFile(path.join(__dirname, 'public', 'admin.html')); // Serve the admin panel
 });
 
 
