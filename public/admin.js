@@ -175,7 +175,6 @@ axios.get('/api/getPosts')
     console.error('Error fetching posts:', err);
 });
 
-
 //newSlatter form
 const quill = new Quill('#editor', {
     modules: {

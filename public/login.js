@@ -1,7 +1,6 @@
 document.getElementById('adminLoginBtn').addEventListener('click', async () => {
     const adminName = document.getElementById('adminName').value;
     const adminPass = document.getElementById('adminPass').value;
-
     try {
         const response = await fetch('/admin-login', {
             method: 'POST',
@@ -11,10 +10,10 @@ document.getElementById('adminLoginBtn').addEventListener('click', async () => {
         const result = await response.json();
 
         if (response.ok) {
-            alert(result.message); // Notify success
-            window.location.href = '/admin'; // Redirect to admin panel
+            alert(result.message); 
+            window.location.href = '/admin'; 
         } else {
-            alert(result.message); // Notify invalid credentials
+            alert(result.message); 
         }
     } catch (error) {
         console.error('Error:', error);
