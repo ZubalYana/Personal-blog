@@ -22,6 +22,34 @@ const storage = multer.diskStorage({
         cb(null, file.fieldname + '-' + uniqueSuffix + path.extname(file.originalname));
     }
 });
+const router = express.Router();
+
+const admins = [
+    { adminName: 'Yana', adminPass: '1111' }
+];
+router.post('/admin-login', (req, res) => {
+    const { adminName, adminPass } = req.body;
+    const admin = admins.find(a => a.adminName === adminName && a.adminPass === adminPass);
+    if (admin) {
+        req.session.isAdmin = true;
+        res.status(200).json({ success: true, message: 'Login successful' });
+    } else {
+        res.status(401).json({ success: false, message: 'Invalid credentials' });
+    }
+});
+function isAdmin(req, res, next) {
+    if (req.session && req.session.isAdmin) {
+        return next();
+    }
+    res.status(403).json({ message: 'Access denied' });
+}
+module.exports = { router, isAdmin };
+const { isAdmin } = require('./adminAuth');
+
+//admin
+app.get('/admin', isAdmin, (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'admin.html'));
+});
 
 const upload = multer({ storage: storage });
 mongoose.connect(`mongodb+srv://zubalana0:${process.env.password}@cluster0.z7w5ka9.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`)
@@ -544,10 +572,9 @@ app.post('/send-newsletter', async (req, res) => {
     }
 });
 
-//admin
-app.get('/admin', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'admin.html'));
-});
+
+
+
 
 app.listen(PORT, ()=>{
     console.log(`Server works on PORT: ${PORT}`)
