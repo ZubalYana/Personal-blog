@@ -22,12 +22,21 @@ const storage = multer.diskStorage({
         cb(null, file.fieldname + '-' + uniqueSuffix + path.extname(file.originalname));
     }
 });
+const session = require('express-session');
 const router = express.Router();
+
+app.use(session({
+    secret: 'your_secret_key', 
+    resave: false,
+    saveUninitialized: true,
+    cookie: { secure: false } 
+}));
 
 const admins = [
     { adminName: 'Yana', adminPass: '1111' }
 ];
-router.post('/admin-login', (req, res) => {
+
+app.post('/admin-login', (req, res) => {
     const { adminName, adminPass } = req.body;
     const admin = admins.find(a => a.adminName === adminName && a.adminPass === adminPass);
     if (admin) {
@@ -37,19 +46,18 @@ router.post('/admin-login', (req, res) => {
         res.status(401).json({ success: false, message: 'Invalid credentials' });
     }
 });
+
 function isAdmin(req, res, next) {
     if (req.session && req.session.isAdmin) {
         return next();
     }
     res.status(403).json({ message: 'Access denied' });
 }
-module.exports = { router, isAdmin };
-const { isAdmin } = require('./adminAuth');
 
-//admin
 app.get('/admin', isAdmin, (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'admin.html'));
 });
+
 
 const upload = multer({ storage: storage });
 mongoose.connect(`mongodb+srv://zubalana0:${process.env.password}@cluster0.z7w5ka9.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`)
